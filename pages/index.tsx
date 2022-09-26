@@ -6,6 +6,8 @@ import { usePage } from "./api/page";
 
 const Home: NextPage = () => {
   const getPage = usePage(9);
+  const { data, error } = getPage;
+  console.log(data);
   return (
     <div className={styles.container}>
       <Head>
