@@ -1,7 +1,8 @@
 import { useQuery, gql } from "@apollo/client";
+import { pageVariables } from "./__generated__/page";
 
 export const usePage = (id: number) => {
-  const { data, loading, error } = useQuery(
+  const { data, loading, error } = useQuery<pageVariables>(
     gql`
       query page($id: ID!) {
         page(id: $id, idType: DATABASE_ID) {
