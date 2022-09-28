@@ -20,7 +20,7 @@ const Home: NextPage = () => {
   const { components } = data?.page as page_page;
 
   return (
-    <div>
+    <div className="p-4">
       <Head>
         <title>{title}</title>
         {description && <meta name="description" content={description} />}
