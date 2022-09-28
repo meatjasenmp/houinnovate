@@ -21,11 +21,6 @@ export const usePage = (id: string) => {
                   id
                   mediaItemUrl
                 }
-                videoCover {
-                  id
-                  mediaItemUrl
-                  altText
-                }
                 image {
                   id
                   mediaItemUrl

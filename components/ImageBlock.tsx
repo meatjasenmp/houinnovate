@@ -1,14 +1,8 @@
 import Image from "next/future/image";
-import {
-  page_page_components_componentBlocks_image,
-  page_page_components_componentBlocks_videoCover,
-} from "../pages/api/__generated__/page";
+import { page_page_components_componentBlocks_image } from "../pages/api/__generated__/page";
 
 interface ImageBlockProps {
-  image:
-    | page_page_components_componentBlocks_image
-    | page_page_components_componentBlocks_videoCover
-    | null;
+  image: page_page_components_componentBlocks_image | null;
   height: string;
   width: string;
 }

@@ -19,8 +19,7 @@ interface ComponentBlocksProps {
 const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
   if (!blockContent) return null;
 
-  const { type, video, image, header, content, videoCta, videoCover } =
-    blockContent;
+  const { type, video, image, header, content, videoCta } = blockContent;
   const { contentEditor, pageLinkSelect, pageLinkButton } =
     content as page_page_components_componentBlocks_content;
 
@@ -29,13 +28,8 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
       <div className={styles.hero__banner}>
         <div className={styles.hero__banner_background}>
           {type === "video" && (
-            <div className={styles.hero__banner_video__block_container}>
-              <div className={styles.hero__banner_video__image_block}>
-                <ImageBlock width="1920" height="1080" image={videoCover} />
-              </div>
-              <div className={styles.hero__banner_video__block}>
-                <VideoBlock video={video} />
-              </div>
+            <div className={styles.hero__banner_video__block}>
+              <VideoBlock video={video} />
             </div>
           )}
           {type === "image" && (

@@ -19,22 +19,6 @@ export interface page_page_components_componentBlocks_video {
   mediaItemUrl: string | null;
 }
 
-export interface page_page_components_componentBlocks_videoCover {
-  __typename: "MediaItem";
-  /**
-   * The globally unique identifier of the attachment object.
-   */
-  id: string;
-  /**
-   * Url of the mediaItem
-   */
-  mediaItemUrl: string | null;
-  /**
-   * Alternative text to display when resource is not displayed
-   */
-  altText: string | null;
-}
-
 export interface page_page_components_componentBlocks_image {
   __typename: "MediaItem";
   /**
@@ -84,7 +68,6 @@ export interface page_page_components_componentBlocks {
   __typename: "Page_Components_ComponentBlocks_HeroBanner";
   type: string | null;
   video: page_page_components_componentBlocks_video | null;
-  videoCover: page_page_components_componentBlocks_videoCover | null;
   image: page_page_components_componentBlocks_image | null;
   header: string | null;
   content: page_page_components_componentBlocks_content | null;
