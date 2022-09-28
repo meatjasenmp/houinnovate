@@ -2,7 +2,7 @@ import {
   page_page_components_componentBlocks,
   page_page_components_componentBlocks_content,
 } from "../pages/api/__generated__/page";
-import { HeaderTextSizes } from "./helpers";
+import { HeaderTextSizes } from "../styles/helpers";
 import ContentEditor from "./ContentEditor";
 import VideoBlock from "./VideoBlock";
 import ImageBlock from "./ImageBlock";

@@ -5,9 +5,7 @@ interface ButtonProps {
 
 const Button = ({ label, onClick }: ButtonProps) => {
   const handleClick = () => {
-    if (onClick) {
-      onClick();
-    }
+    if (onClick) onClick();
   };
   return <button onClick={handleClick}>{label}</button>;
 };
