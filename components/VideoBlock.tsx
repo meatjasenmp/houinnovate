@@ -6,7 +6,7 @@ interface VideoBlockProps {
 
 const VideoBlock = ({ video }: VideoBlockProps) => {
   return (
-    <video width="100%" height="auto">
+    <video width="100%">
       {video?.mediaItemUrl && <source src={video.mediaItemUrl} />}
     </video>
   );

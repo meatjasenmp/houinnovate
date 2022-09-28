@@ -24,10 +24,14 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
     content as page_page_components_componentBlocks_content;
 
   return (
-    <section className="w-screen">
+    <section className="w-screen h-[100vh] overflow-hidden">
       <div className={styles.hero__banner}>
         <div className={styles.hero__banner_background}>
-          {type === "video" && <VideoBlock video={video} />}
+          {type === "video" && (
+            <div className={styles.hero__banner_video__block}>
+              <VideoBlock video={video} />
+            </div>
+          )}
           {type === "image" && <ImageBlock image={image} />}
         </div>
 
