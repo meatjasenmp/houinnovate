@@ -1,5 +1,9 @@
 import { useQuery, gql } from "@apollo/client";
-import { page, pageVariables } from "./__generated__/page";
+import {
+  page,
+  pageVariables,
+  page_generalSettings,
+} from "./__generated__/page";
 
 export const usePage = (id: string) => {
   const { data, loading, error } = useQuery<page, pageVariables>(
@@ -38,6 +42,10 @@ export const usePage = (id: string) => {
               }
             }
           }
+        }
+        generalSettings {
+          title
+          description
         }
       }
     `,

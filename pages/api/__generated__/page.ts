@@ -91,11 +91,27 @@ export interface page_page {
   components: page_page_components | null;
 }
 
+export interface page_generalSettings {
+  __typename: "GeneralSettings";
+  /**
+   * Site title.
+   */
+  title: string | null;
+  /**
+   * Site tagline.
+   */
+  description: string | null;
+}
+
 export interface page {
   /**
    * An object of the page Type. 
    */
   page: page_page | null;
+  /**
+   * Fields of the &#039;GeneralSettings&#039; settings group
+   */
+  generalSettings: page_generalSettings | null;
 }
 
 export interface pageVariables {
