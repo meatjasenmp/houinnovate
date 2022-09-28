@@ -31,14 +31,16 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
           {type === "video" && (
             <div className={styles.hero__banner_video__block_container}>
               <div className={styles.hero__banner_video__image_block}>
-                <ImageBlock image={videoCover} />
+                <ImageBlock width="1920" height="1080" image={videoCover} />
               </div>
               <div className={styles.hero__banner_video__block}>
                 <VideoBlock video={video} />
               </div>
             </div>
           )}
-          {type === "image" && <ImageBlock image={image} />}
+          {type === "image" && (
+            <ImageBlock width="1920" height="1080" image={image} />
+          )}
         </div>
 
         <article className="relative z-10">

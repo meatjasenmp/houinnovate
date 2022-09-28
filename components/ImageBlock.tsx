@@ -9,17 +9,19 @@ interface ImageBlockProps {
     | page_page_components_componentBlocks_image
     | page_page_components_componentBlocks_videoCover
     | null;
+  height: string;
+  width: string;
 }
 
-const ImageBlock = ({ image }: ImageBlockProps) => {
+const ImageBlock = ({ image, width, height }: ImageBlockProps) => {
   const imageSrc = image?.mediaItemUrl as string;
   const imageAlt = image?.altText as string;
   return (
     <Image
       src={imageSrc}
       alt={imageAlt}
-      width="1920"
-      height="1080"
+      width={width}
+      height={height}
       style={{ objectFit: "cover", height: "100%", width: "100%" }}
     />
   );
