@@ -24,6 +24,7 @@ export const usePage = (id: string) => {
                 image {
                   id
                   mediaItemUrl
+                  altText
                 }
                 header
                 content {

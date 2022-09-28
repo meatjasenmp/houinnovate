@@ -29,6 +29,10 @@ export interface page_page_components_componentBlocks_image {
    * Url of the mediaItem
    */
   mediaItemUrl: string | null;
+  /**
+   * Alternative text to display when resource is not displayed
+   */
+  altText: string | null;
 }
 
 export interface page_page_components_componentBlocks_content_pageLinkButton_link {

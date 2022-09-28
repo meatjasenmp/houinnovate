@@ -2,7 +2,12 @@ import {
   page_page_components_componentBlocks,
   page_page_components_componentBlocks_content,
 } from "../pages/api/__generated__/page";
-import ContentEditor from "../styles/components/ContentEditor";
+import ContentEditor from "./ContentEditor";
+import VideoBlock from "./VideoBlock";
+import ImageBlock from "./ImageBlock";
+import HeaderText from "./HeaderText";
+import Button from "./Button";
+import ButtonLink from "./ButtonLink";
 
 import styles from "../styles/components/HeroBanner.module.css";
 
@@ -18,12 +23,19 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
     content as page_page_components_componentBlocks_content;
 
   return (
-    <section className="flex flex-1 justify-center items-center flex-col">
+    <section className="flex flex-1 items-center flex-col w-screen">
       <div className={styles.hero__banner}>
-        <article>
+        <div className={styles.hero__banner_background}>
+          {type === "video" && <VideoBlock video={video} />}
+          {type === "image" && <ImageBlock image={image} />}
+        </div>
+
+        <article className="relative z-10">
           <>
-            {header && <h1>{header}</h1>}
+            {header && <HeaderText text={header} />}
             {contentEditor && <ContentEditor content={contentEditor} />}
+            {videoCta && <Button label={videoCta} />}
+            {pageLinkSelect && <ButtonLink link={pageLinkButton} />}
           </>
         </article>
       </div>

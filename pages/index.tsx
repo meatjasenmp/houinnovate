@@ -20,14 +20,14 @@ const Home: NextPage = () => {
   const { components } = data?.page as page_page;
 
   return (
-    <div className="px-8">
+    <div>
       <Head>
         <title>{title}</title>
         {description && <meta name="description" content={description} />}
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="min-h-screen py-16 flex flex-1 justify-center items-center flex-col">
+      <main className="min-h-screen flex flex-1 justify-center items-center flex-col">
         <ComponentBlocks componentBlocks={components?.componentBlocks} />
       </main>
 

@@ -1,3 +1,8 @@
 .hero__banner {
+    position: relative;
+    width: 100%;
+}
 
+.hero__banner_background {
+    height: 500px;
 }
