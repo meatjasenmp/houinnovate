@@ -27,11 +27,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
     <section className={styles.hero__banner_section}>
       <div className={styles.hero__banner}>
         <div className={styles.hero__banner_background}>
-          {type === "video" && (
-            <div className={styles.hero__banner_video__block}>
-              <VideoBlock video={video} />
-            </div>
-          )}
+          {type === "video" && <VideoBlock video={video} />}
           {type === "image" && (
             <ImageBlock width="1920" height="1080" image={image} />
           )}
