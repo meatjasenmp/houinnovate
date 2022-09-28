@@ -2,6 +2,7 @@ import {
   page_page_components_componentBlocks,
   page_page_components_componentBlocks_content,
 } from "../pages/api/__generated__/page";
+import { HeaderTextSizes } from "./helpers";
 import ContentEditor from "./ContentEditor";
 import VideoBlock from "./VideoBlock";
 import ImageBlock from "./ImageBlock";
@@ -23,7 +24,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
     content as page_page_components_componentBlocks_content;
 
   return (
-    <section className="flex flex-1 items-center flex-col w-screen">
+    <section className="w-screen">
       <div className={styles.hero__banner}>
         <div className={styles.hero__banner_background}>
           {type === "video" && <VideoBlock video={video} />}
@@ -32,7 +33,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
 
         <article className="relative z-10">
           <>
-            {header && <HeaderText text={header} />}
+            {header && <HeaderText size={HeaderTextSizes.XXL} text={header} />}
             {contentEditor && <ContentEditor content={contentEditor} />}
             {videoCta && <Button label={videoCta} />}
             {pageLinkSelect && <ButtonLink link={pageLinkButton} />}

@@ -1,5 +1,12 @@
-const HeaderText = ({ text }: { text: string }) => {
-  return <h1>{text}</h1>;
+import { HeaderTextSizes } from "./helpers";
+
+interface HeaderTextProps {
+  text: string;
+  size: HeaderTextSizes;
+}
+
+const HeaderText = ({ text, size }: HeaderTextProps) => {
+  return <h1 className={size}>{text}</h1>;
 };
 
 export default HeaderText;

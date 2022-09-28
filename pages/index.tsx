@@ -27,7 +27,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="min-h-screen flex flex-1 justify-center items-center flex-col">
+      <main className="min-h-screen flex flex-1 justify-between flex-col">
         <ComponentBlocks componentBlocks={components?.componentBlocks} />
       </main>
 
