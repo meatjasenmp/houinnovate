@@ -2,7 +2,7 @@ import {
   page_page_components_componentBlocks,
   page_page_components_componentBlocks_content,
 } from "../pages/api/__generated__/page";
-import { Colors, HeaderTextSizes } from "../styles/helpers";
+import { BackgroundColors, HeaderTextSizes } from "../styles/helpers";
 import ContentEditor from "./ContentEditor";
 import VideoBlock from "./VideoBlock";
 import ImageBlock from "./ImageBlock";
@@ -35,7 +35,9 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
           <>
             {header && <HeaderText size={HeaderTextSizes.XXL} text={header} />}
             {contentEditor && <ContentEditor content={contentEditor} />}
-            {videoCta && <Button bgColor={Colors.RED} label={videoCta} />}
+            {videoCta && (
+              <Button bgColor={BackgroundColors.RED} label={videoCta} />
+            )}
             {pageLinkSelect && <ButtonLink link={pageLinkButton} />}
           </>
         </article>

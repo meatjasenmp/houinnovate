@@ -2,6 +2,7 @@
     font-size: 5.625rem;
     line-height: 1;
     margin-bottom: 1.25rem;
+    font-weight: 800;
 }
 
 * > p:not(:last-child) {

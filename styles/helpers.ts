@@ -7,6 +7,7 @@ export enum HeaderTextSizes {
   XS = "header_xs",
 }
 
-export enum Colors {
+export enum BackgroundColors {
   RED = "bg-innovate-red",
+  BLACK = "bg-black",
 }
