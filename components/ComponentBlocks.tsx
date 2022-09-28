@@ -15,14 +15,12 @@ const ComponentBlocks = ({ componentBlocks }: ComponentBlocksProps) => {
   return (
     <>
       {componentBlocks.map((componentBlock, index) => {
-        componentBlocks.map((componentBlock) => {
-          if (componentBlock?.content) {
-            switch (componentBlock.content.__typename) {
-              case Components.HERO_BANNER:
-                return null;
-            }
+        if (componentBlock?.content) {
+          switch (componentBlock.content.__typename) {
+            case Components.HERO_BANNER:
+              return <HeroBanner blockContent={componentBlock} key={index} />;
           }
-        });
+        }
       })}
     </>
   );
