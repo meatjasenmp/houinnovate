@@ -3,3 +3,7 @@
     line-height: 1;
     margin-bottom: 1.25rem;
 }
+
+* > p:not(:last-child) {
+    margin-bottom: .95rem;
+}

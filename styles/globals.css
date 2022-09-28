@@ -3,6 +3,7 @@
 
 @tailwind base;
 @tailwind utilities;
+@tailwind components;
 
 body {
     font-family: "Sohne-Kraftig", sans-serif;

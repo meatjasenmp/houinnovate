@@ -1,4 +1,4 @@
-import { HeaderTextSizes } from "./helpers";
+import { HeaderTextSizes } from "../styles/helpers";
 
 interface HeaderTextProps {
   text: string;

@@ -8,5 +8,5 @@ export enum HeaderTextSizes {
 }
 
 export enum Colors {
-  RED = "#F54932",
+  RED = "bg-innovate-red",
 }
