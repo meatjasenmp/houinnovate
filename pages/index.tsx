@@ -31,7 +31,7 @@ const Home: NextPage = () => {
         <ComponentBlocks componentBlocks={components?.componentBlocks} />
       </main>
 
-      <footer className="flex flex-1 py-8 justify-center items-center"></footer>
+      <footer></footer>
     </div>
   );
 };
