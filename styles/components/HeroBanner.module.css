@@ -1,3 +1,9 @@
+.hero__banner_section {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
 .hero__banner {
     position: relative;
     width: 100%;
@@ -6,7 +12,7 @@
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    padding: 4rem 5rem;
+    padding: 1rem 2.5rem;
 }
 
 .hero__banner_background {
@@ -24,6 +30,15 @@
 }
 
 
-.hero__banner_video__block {
+.hero__banner_video__block_container {
     height: 100vh;
+}
+
+.hero__banner_video__block {
+    display: none;
+}
+
+.hero__banner_video__image_block {
+    position: relative;
+    height: 100%;
 }
