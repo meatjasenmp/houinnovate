@@ -2,6 +2,7 @@ import {
   page_page_components_componentBlocks_content_pageLinkButton,
   page_page_components_componentBlocks_content_pageLinkButton_link,
 } from "../pages/api/__generated__/page";
+import { ReactNode } from "react";
 
 interface ButtonLinkProps {
   link:

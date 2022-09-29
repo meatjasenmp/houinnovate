@@ -9,7 +9,7 @@ interface ButtonProps {
   icon?: ReactNode;
 }
 
-const Button = ({ label, onClick, bgColor }: ButtonProps) => {
+const Button = ({ label, onClick, bgColor, icon }: ButtonProps) => {
   const backgroundColor = bgColor ? bgColor : BackgroundColors.BLACK;
   const buttonStyles = [backgroundColor, styles.button];
 
@@ -20,6 +20,7 @@ const Button = ({ label, onClick, bgColor }: ButtonProps) => {
   return (
     <button className={buttonStyles.join(" ")} onClick={handleClick}>
       <span>{label}</span>
+      {icon && <span className={styles.button__icon}>{icon}</span>}
     </button>
   );
 };

@@ -9,6 +9,7 @@ import ImageBlock from "./ImageBlock";
 import HeaderText from "./HeaderText";
 import Button from "./Button";
 import ButtonLink from "./ButtonLink";
+import { BiPlay } from "@react-icons/all-files/bi/BiPlay";
 
 import styles from "../styles/components/HeroBanner.module.css";
 
@@ -38,7 +39,11 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
             {header && <HeaderText size={HeaderTextSizes.XXL} text={header} />}
             {contentEditor && <ContentEditor content={contentEditor} />}
             {videoCta && (
-              <Button bgColor={BackgroundColors.RED} label={videoCta} />
+              <Button
+                bgColor={BackgroundColors.RED}
+                label={videoCta}
+                icon={<BiPlay />}
+              />
             )}
             {pageLinkSelect && <ButtonLink link={pageLinkButton} />}
           </>
