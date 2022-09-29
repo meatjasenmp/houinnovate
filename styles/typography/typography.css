@@ -7,10 +7,15 @@ h1 {
 }
 
 .header_xxl {
-    font-size: 2rem;
+    font-size: 2.875rem;
     line-height: 1;
     margin-bottom: 1.25rem;
     font-weight: 800;
+}
+
+h4 {
+    font-size: 1.125rem;
+    line-height: 1.5;
 }
 
 * > p:not(:last-child) {

@@ -1,5 +1,7 @@
-@import "styles/typography/fonts.css";
-@import "styles/typography/typography.css";
-
 @tailwind base;
 @tailwind utilities;
+
+@layer base {
+    @import "styles/typography/fonts.css";
+    @import "styles/typography/typography.css";
+}
