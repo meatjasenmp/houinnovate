@@ -1,3 +1,11 @@
+body {
+    font-family: "Sohne-Kraftig-Normal", sans-serif;
+}
+
+h1 {
+    font-family: "Sohne-Kraftig-Bold", sans-serif;
+}
+
 .header_xxl {
     font-size: 2rem;
     line-height: 1;

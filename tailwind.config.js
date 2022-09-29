@@ -4,7 +4,7 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
-  safelist: ["innovate-red"],
+  safelist: ["bg-innovate-red"],
   theme: {
     extend: {
       colors: {
