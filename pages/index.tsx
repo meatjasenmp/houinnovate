@@ -2,18 +2,30 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import ComponentBlocks from "../components/ComponentBlocks";
 import { usePage } from "./api/page";
+import { useNavigation } from "./api/navigation";
 import { page_generalSettings, page_page } from "./api/__generated__/page";
 
 const Home: NextPage = () => {
   const getPage = usePage("9");
+  const getNavigation = useNavigation();
   const { data, error, loading } = getPage;
+  const {
+    data: navigationData,
+    error: navigationError,
+    loading: navigationLoading,
+  } = getNavigation;
 
-  if (loading) {
+  if (loading || navigationLoading) {
     return <div>Loading...</div>;
   }
 
-  if (error) {
-    return <div>Error: {error.message}</div>;
+  if (error || navigationError) {
+    if (error) {
+      return <div>Error: {error.message}</div>;
+    }
+    if (navigationError) {
+      return <div>Error: {navigationError.message}</div>;
+    }
   }
 
   const { title, description } = data?.generalSettings as page_generalSettings;
