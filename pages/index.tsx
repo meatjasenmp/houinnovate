@@ -40,7 +40,11 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navigation pageWrapID="page-wrap" outerContainerID="outer-container" />
+      <Navigation
+        pageWrapID="page-wrap"
+        outerContainerID="outer-container"
+        navigation={navigationData}
+      />
 
       <main
         className="min-h-screen flex flex-1 justify-between flex-col p-4"
