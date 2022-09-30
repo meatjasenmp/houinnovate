@@ -29,6 +29,15 @@ interface BlockLinkProps {
     | null;
 }
 
+const handleStateChange = (state: any) => {
+  if (state.isOpen) {
+    document.body.classList.add("no-scroll");
+  }
+  if (!state.isOpen) {
+    document.body.classList.remove("no-scroll");
+  }
+};
+
 const SectionLinks = ({ sectionLinks }: SectionLinksProps) => {
   return (
     <div className={styles.section_links}>
@@ -103,6 +112,7 @@ const Navigation = ({
       width={"100%"}
       className={styles.site_navigation}
       customBurgerIcon={<HamburgerMenu />}
+      onStateChange={handleStateChange}
     >
       <SectionLinks sectionLinks={sectionLinks} />
       <HouInnovate houInnovate={houinnovate} />

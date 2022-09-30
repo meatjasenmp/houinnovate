@@ -6,3 +6,7 @@
     @import "styles/typography/fonts.css";
     @import "styles/typography/typography.css";
 }
+
+.no-scroll {
+    overflow: hidden;
+}
