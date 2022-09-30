@@ -1,6 +1,7 @@
 import { slide as Menu } from "react-burger-menu";
 import Link from "next/link";
 import ContentEditor from "./ContentEditor";
+import HamburgerMenu from "../styles/components/HamburgerMenu";
 import {
   navigation,
   navigation_siteOptionsPage_siteNavigation_navigation_blockLinks,
@@ -101,6 +102,7 @@ const Navigation = ({
       right
       width={"100%"}
       className={styles.site_navigation}
+      customBurgerIcon={<HamburgerMenu />}
     >
       <SectionLinks sectionLinks={sectionLinks} />
       <HouInnovate houInnovate={houinnovate} />
