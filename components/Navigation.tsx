@@ -6,7 +6,7 @@ import {
   navigation_siteOptionsPage_siteNavigation_navigation_blockLinks,
   navigation_siteOptionsPage_siteNavigation_navigation_sectionLinks,
 } from "../pages/api/__generated__/navigation";
-import styles from "./Navigation.module.css";
+import styles from "../styles/components/Navigation.module.css";
 
 interface NavigationProps {
   pageWrapID: string;
@@ -30,17 +30,20 @@ interface BlockLinkProps {
 
 const SectionLinks = ({ sectionLinks }: SectionLinksProps) => {
   return (
-    <ul>
-      {sectionLinks?.map((link, index) => {
-        return (
-          <li key={index}>
-            <Link href={`#${link?.anchorLabel}`} scroll={false}>
-              <a>{link?.label}</a>
-            </Link>
-          </li>
-        );
-      })}
-    </ul>
+    <div className={styles.section_links}>
+      <ul>
+        {sectionLinks?.map((link, index) => {
+          return (
+            <li key={index} className={styles.section_link_list_item}>
+              <Link href={`#${link?.anchorLabel}`} scroll={false}>
+                <a className={styles.section_link}>{link?.label}</a>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+      <div />
+    </div>
   );
 };
 
@@ -51,7 +54,7 @@ const HouInnovate = ({
 }) => {
   if (!houInnovate) return null;
   return (
-    <div>
+    <div className={styles.hou_innovate}>
       <ContentEditor content={houInnovate} />
     </div>
   );
@@ -59,25 +62,27 @@ const HouInnovate = ({
 
 const BlockLinks = ({ blockLinks }: BlockLinkProps) => {
   return (
-    <ul>
+    <div className={styles.block_links}>
       {blockLinks?.map((link, index) => {
         const { links } = link || {};
         return (
-          <li key={index}>
+          <div key={index}>
             <h4>{link?.label}</h4>
-            {links?.map((link, index) => {
-              return (
-                <div key={index}>
-                  <Link href={link?.pageUrl || ""}>
-                    <a>{link?.label}</a>
-                  </Link>
-                </div>
-              );
-            })}
-          </li>
+            <ul>
+              {links?.map((link, index) => {
+                return (
+                  <li key={index}>
+                    <Link href={link?.pageUrl || ""}>
+                      <a>{link?.label}</a>
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
         );
       })}
-    </ul>
+    </div>
   );
 };
 
@@ -95,6 +100,7 @@ const Navigation = ({
       outerContainerId={outerContainerID}
       right
       width={"100%"}
+      className={styles.site_navigation}
     >
       <SectionLinks sectionLinks={sectionLinks} />
       <HouInnovate houInnovate={houinnovate} />

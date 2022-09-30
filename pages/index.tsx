@@ -33,7 +33,7 @@ const Home: NextPage = () => {
   const { components } = data?.page as page_page;
 
   return (
-    <div id="outer-container">
+    <div className="site" id="outer-container">
       <Head>
         <title>{title}</title>
         {description && <meta name="description" content={description} />}

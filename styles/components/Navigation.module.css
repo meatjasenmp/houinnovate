@@ -1,0 +1,43 @@
+.site_navigation {
+    font-family: "Sohne-Kraftig-Bold", sans-serif;
+}
+
+.section_link {
+    font-size: 2.5rem;
+}
+
+.section_links div {
+    background-color: #FFF;
+    width: 137px;
+    height: 4px;
+}
+
+.hou_innovate {
+    font-size: 1.625rem;
+}
+
+.block_links {
+    font-family: "Sohne-Kraftig-Normal", sans-serif;
+}
+
+.block_links ul li:not(:last-child) {
+    margin-bottom: .5rem;
+}
+
+.section_link_list_item,
+.block_links h4,
+.hou_innovate,
+.section_link_list_item {
+    color: #FFF;
+}
+
+.hou_innovate a,
+.block_links a{
+    color: #868686;
+}
+
+.section_link_list_item,
+.section_links,
+.block_links div {
+    margin-bottom: 2rem;
+}

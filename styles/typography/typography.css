@@ -12,9 +12,10 @@ h1 {
     margin-bottom: 1.25rem;
 }
 
-h4 {
+.site h4 {
     font-size: 1.125rem;
     line-height: 1.5;
+    margin-bottom: .5rem;
 }
 
 * > p:not(:last-child) {
