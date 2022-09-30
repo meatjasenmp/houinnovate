@@ -14,6 +14,10 @@
     padding: 1rem 2.5rem;
 }
 
+.hero__banner h1 {
+    margin-bottom: .5rem;
+}
+
 .hero__banner_background {
     position: absolute;
     width: 100%;
