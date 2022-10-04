@@ -1,6 +1,11 @@
 import { Components } from "./helpers";
 import HeroBanner from "./HeroBanner";
-import { page_page_components_componentBlocks } from "../pages/api/__generated__/page";
+import BoxLinksBlock from "./BoxLinksBlock";
+import ContentBlock from "./ContentBlock";
+import {
+  page_page_components_componentBlocks,
+  page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner,
+} from "../pages/api/__generated__/page";
 
 export interface ComponentBlocksProps {
   componentBlocks:
@@ -15,10 +20,16 @@ const ComponentBlocks = ({ componentBlocks }: ComponentBlocksProps) => {
   return (
     <>
       {componentBlocks.map((componentBlock, index) => {
-        if (componentBlock?.content) {
-          switch (componentBlock.content.__typename) {
+        if (componentBlock) {
+          switch (componentBlock.__typename as string) {
             case Components.HERO_BANNER:
-              return <HeroBanner blockContent={componentBlock} key={index} />;
+              const blocks =
+                componentBlock as page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner;
+              return <HeroBanner blockContent={blocks} key={index} />;
+            case Components.BOX_LINKS:
+              return <BoxLinksBlock key={index} />;
+            case Components.CONTENT_BLOCK:
+              return <ContentBlock key={index} />;
           }
         }
       })}

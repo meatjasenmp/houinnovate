@@ -7,7 +7,7 @@
 // GraphQL query operation: page
 // ====================================================
 
-export interface page_page_components_componentBlocks_video {
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_video {
   __typename: "MediaItem";
   /**
    * The globally unique identifier of the attachment object.
@@ -19,7 +19,7 @@ export interface page_page_components_componentBlocks_video {
   mediaItemUrl: string | null;
 }
 
-export interface page_page_components_componentBlocks_image {
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_image {
   __typename: "MediaItem";
   /**
    * The globally unique identifier of the attachment object.
@@ -35,7 +35,7 @@ export interface page_page_components_componentBlocks_image {
   altText: string | null;
 }
 
-export interface page_page_components_componentBlocks_content_pageLinkButton_link {
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_content_pageLinkButton_link {
   __typename: "AcfLink";
   /**
    * The target of the link (_blank, etc)
@@ -51,28 +51,91 @@ export interface page_page_components_componentBlocks_content_pageLinkButton_lin
   url: string | null;
 }
 
-export interface page_page_components_componentBlocks_content_pageLinkButton {
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_content_pageLinkButton {
   __typename: "Page_Components_ComponentBlocks_HeroBanner_Content_PageLinkButton";
   label: string | null;
-  link: page_page_components_componentBlocks_content_pageLinkButton_link | null;
+  link: page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_content_pageLinkButton_link | null;
 }
 
-export interface page_page_components_componentBlocks_content {
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_content {
   __typename: "Page_Components_ComponentBlocks_HeroBanner_Content";
   contentEditor: string | null;
   pageLinkSelect: boolean | null;
-  pageLinkButton: page_page_components_componentBlocks_content_pageLinkButton | null;
+  pageLinkButton: page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_content_pageLinkButton | null;
 }
 
-export interface page_page_components_componentBlocks {
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner {
   __typename: "Page_Components_ComponentBlocks_HeroBanner";
   type: string | null;
-  video: page_page_components_componentBlocks_video | null;
-  image: page_page_components_componentBlocks_image | null;
+  video: page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_video | null;
+  image: page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_image | null;
   header: string | null;
-  content: page_page_components_componentBlocks_content | null;
+  content: page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_content | null;
   videoCta: string | null;
 }
+
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink_image {
+  __typename: "MediaItem";
+  /**
+   * The globally unique identifier of the attachment object.
+   */
+  id: string;
+  /**
+   * Url of the mediaItem
+   */
+  mediaItemUrl: string | null;
+  /**
+   * Alternative text to display when resource is not displayed
+   */
+  altText: string | null;
+}
+
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink_link_pageLink {
+  __typename: "AcfLink";
+  /**
+   * The url of the link
+   */
+  url: string | null;
+  /**
+   * The title of the link
+   */
+  title: string | null;
+  /**
+   * The target of the link (_blank, etc)
+   */
+  target: string | null;
+}
+
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink_link {
+  __typename: "Page_Components_ComponentBlocks_BoxLinks_boxLink_Link";
+  linkType: string | null;
+  pageLink: page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink_link_pageLink | null;
+  anchorLink: string | null;
+}
+
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink {
+  __typename: "Page_Components_ComponentBlocks_BoxLinks_boxLink";
+  image: page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink_image | null;
+  header: string | null;
+  copy: string | null;
+  link: page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink_link | null;
+  backgroundColor: string | null;
+}
+
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks {
+  __typename: "Page_Components_ComponentBlocks_BoxLinks";
+  boxLink: (page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink | null)[] | null;
+}
+
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlock {
+  __typename: "Page_Components_ComponentBlocks_ContentBlock";
+  header: string | null;
+  contentBlockContent: string | null;
+  backgroundColor: string | null;
+  textColor: string | null;
+}
+
+export type page_page_components_componentBlocks = page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner | page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks | page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlock;
 
 export interface page_page_components {
   __typename: "Page_Components";

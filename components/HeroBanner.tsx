@@ -1,6 +1,6 @@
 import {
-  page_page_components_componentBlocks,
-  page_page_components_componentBlocks_content,
+  page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_content,
+  page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner,
 } from "../pages/api/__generated__/page";
 import { BackgroundColors, HeaderTextSizes } from "../styles/helpers";
 import ContentEditor from "./ContentEditor";
@@ -14,7 +14,7 @@ import { BiPlay } from "@react-icons/all-files/bi/BiPlay";
 import styles from "../styles/components/HeroBanner.module.css";
 
 interface ComponentBlocksProps {
-  blockContent: page_page_components_componentBlocks;
+  blockContent: page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner;
 }
 
 const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
@@ -22,7 +22,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
 
   const { type, video, image, header, content, videoCta } = blockContent;
   const { contentEditor, pageLinkSelect, pageLinkButton } =
-    content as page_page_components_componentBlocks_content;
+    content as page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_content;
 
   return (
     <section className={styles.hero__banner_section}>

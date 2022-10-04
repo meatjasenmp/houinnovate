@@ -37,6 +37,33 @@ export const usePage = (id: string) => {
                 }
                 videoCta
               }
+              ... on Page_Components_ComponentBlocks_BoxLinks {
+                boxLink {
+                  image {
+                    id
+                    mediaItemUrl
+                    altText
+                  }
+                  header
+                  copy
+                  link {
+                    linkType
+                    pageLink {
+                      url
+                      title
+                      target
+                    }
+                    anchorLink
+                  }
+                  backgroundColor
+                }
+              }
+              ... on Page_Components_ComponentBlocks_ContentBlock {
+                header
+                contentBlockContent: content
+                backgroundColor
+                textColor
+              }
             }
           }
         }
