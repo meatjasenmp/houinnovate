@@ -1,0 +1,7 @@
+.box_link {
+    display: grid;
+}
+
+.box_link a {
+    display: block;
+}

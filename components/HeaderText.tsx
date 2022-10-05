@@ -1,7 +1,7 @@
 import { HeaderTextSizes } from "../styles/helpers";
 
 interface HeaderTextProps {
-  text: string;
+  text: string | null;
   size: HeaderTextSizes;
 }
 

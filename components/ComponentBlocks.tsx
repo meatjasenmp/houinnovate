@@ -5,6 +5,7 @@ import ContentBlock from "./ContentBlock";
 import {
   page_page_components_componentBlocks,
   page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner,
+  page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks,
 } from "../pages/api/__generated__/page";
 
 export interface ComponentBlocksProps {
@@ -23,11 +24,20 @@ const ComponentBlocks = ({ componentBlocks }: ComponentBlocksProps) => {
         if (componentBlock) {
           switch (componentBlock.__typename as string) {
             case Components.HERO_BANNER:
-              const blocks =
+              const heroBannerBlockContent =
                 componentBlock as page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner;
-              return <HeroBanner blockContent={blocks} key={index} />;
+              return (
+                <HeroBanner blockContent={heroBannerBlockContent} key={index} />
+              );
             case Components.BOX_LINKS:
-              return <BoxLinksBlock key={index} />;
+              const boxLinksBlockContent =
+                componentBlock as page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks;
+              return (
+                <BoxLinksBlock
+                  blockContent={boxLinksBlockContent}
+                  key={index}
+                />
+              );
             case Components.CONTENT_BLOCK:
               return <ContentBlock key={index} />;
           }

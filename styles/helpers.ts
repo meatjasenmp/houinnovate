@@ -10,4 +10,11 @@ export enum HeaderTextSizes {
 export enum BackgroundColors {
   RED = "bg-innovate-red",
   BLACK = "bg-black",
+  PINK = "bg-innovate-pink",
+  BLUE = "bg-innovate-blue",
+}
+
+export enum LinkType {
+  PAGE = "page",
+  ANCHOR = "anchor",
 }
