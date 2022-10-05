@@ -1,1 +1,7 @@
-.content_block {}
+.content_block {
+    margin-top: 2.25rem;
+}
+
+.content_block article {
+    padding: 8rem 2rem;
+}
