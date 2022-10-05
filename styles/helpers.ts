@@ -15,6 +15,14 @@ export enum BackgroundColors {
   NEON = "bg-innovate-neon",
 }
 
+export enum TextColors {
+  RED = "text-innovate-red",
+  BLACK = "text-innovate-black",
+  PINK = "text-innovate-pink",
+  BLUE = "text-innovate-blue",
+  NEON = "text-innovate-neon",
+}
+
 export enum Colors {
   RED = "red",
   BLACK = "black",
@@ -40,5 +48,20 @@ export const backgroundColorMapping = (backgroundColor: string | null) => {
       return BackgroundColors.NEON;
     default:
       return BackgroundColors.BLACK;
+  }
+};
+
+export const textColorMapping = (textColor: string | null) => {
+  switch (textColor) {
+    case Colors.RED:
+      return TextColors.RED;
+    case Colors.PINK:
+      return TextColors.PINK;
+    case Colors.BLUE:
+      return TextColors.BLUE;
+    case Colors.NEON:
+      return TextColors.NEON;
+    default:
+      return TextColors.BLACK;
   }
 };
