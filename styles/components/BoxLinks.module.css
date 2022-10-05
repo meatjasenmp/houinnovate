@@ -1,10 +1,18 @@
-.box_link {
+.box_links {
     display: grid;
     color: #FFF;
+    grid-gap: .7rem;
 }
 
-.box_link div {}
+.box_links figure {
+    width: 100%;
+    height: 275px;
+}
 
-.box_link a {
+.box_links a {
     display: block;
+}
+
+.box_links article {
+    padding: 1.5rem 1.25rem;
 }

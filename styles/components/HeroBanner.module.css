@@ -1,6 +1,7 @@
 .hero__banner_section {
     height: 100vh;
     overflow: hidden;
+    margin-bottom: 1rem;
 }
 
 .hero__banner {

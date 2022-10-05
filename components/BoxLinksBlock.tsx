@@ -42,12 +42,10 @@ const BoxLinkContent = ({ content }: BoxLinkProps) => {
       <figure>
         <ImageBlock image={image} height="590" width="1212" />
       </figure>
-      <div>
+      <article>
         <HeaderText size={HeaderTextSizes.M} text={header} />
-        <article>
-          <ContentEditor content={copy} />
-        </article>
-      </div>
+        <ContentEditor content={copy} />
+      </article>
     </>
   );
 };
@@ -80,7 +78,7 @@ const BoxPageLinkAnchor = ({
 const BoxLinksBlock = ({ blockContent }: ComponentBlocksProps) => {
   if (!blockContent.boxLink) return null;
   return (
-    <section className={styles.box_link}>
+    <section className={styles.box_links}>
       <>
         {blockContent.boxLink.map((boxLink, index) => {
           const { link, backgroundColor } =

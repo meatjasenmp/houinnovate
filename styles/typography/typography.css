@@ -14,7 +14,7 @@ h1 {
 
 .header_m {
     font-size: 1.875rem;
-    line-height: 1;
+    line-height: 1.25;
     margin-bottom: .5rem;
 }
 
@@ -30,4 +30,9 @@ p {
 
 * > p:not(:last-child) {
     margin-bottom: .95rem;
+}
+
+.bg-innovate-pink,
+.bg-innovate-neon {
+    color: #000;
 }
