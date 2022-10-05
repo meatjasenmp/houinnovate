@@ -6,6 +6,7 @@ import {
   page_page_components_componentBlocks,
   page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner,
   page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks,
+  page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlock,
 } from "../pages/api/__generated__/page";
 
 export interface ComponentBlocksProps {
@@ -39,7 +40,11 @@ const ComponentBlocks = ({ componentBlocks }: ComponentBlocksProps) => {
                 />
               );
             case Components.CONTENT_BLOCK:
-              return <ContentBlock key={index} />;
+              const contentBlockContent =
+                componentBlock as page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlock;
+              return (
+                <ContentBlock blockContent={contentBlockContent} key={index} />
+              );
           }
         }
       })}

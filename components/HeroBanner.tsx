@@ -36,7 +36,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
 
         <article className="relative z-10">
           <>
-            {header && <HeaderText size={HeaderTextSizes.XXL} text={header} />}
+            {header && <HeaderText size={HeaderTextSizes.XL} text={header} />}
             {contentEditor && <ContentEditor content={contentEditor} />}
             {videoCta && (
               <Button

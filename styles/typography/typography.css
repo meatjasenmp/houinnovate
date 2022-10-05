@@ -7,10 +7,17 @@ h1 {
 }
 
 .header_xxl {
+    font-size: 3.5rem;
+    line-height: 1;
+    margin-bottom: 1.25rem;
+}
+
+.header_xl {
     font-size: 2.875rem;
     line-height: 1;
     margin-bottom: 1.25rem;
 }
+
 
 .header_m {
     font-size: 1.875rem;
@@ -20,6 +27,11 @@ h1 {
 
 p {
     font-size: 1rem;
+    line-height: 2;
+}
+
+p > :not(a.button) {
+    text-decoration: underline;
 }
 
 .site h4 {

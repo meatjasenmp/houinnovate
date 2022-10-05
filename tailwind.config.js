@@ -12,12 +12,14 @@ module.exports = {
     "bg-innovate-green",
     "bg-innovate-neon",
     "bg-innovate-black",
+    "bg-innovate-white",
     "text-innovate-red",
     "text-innovate-blue",
     "text-innovate-black",
     "text-innovate-pink",
     "text-innovate-green",
     "text-innovate-neon",
+    "text-innovate-white",
   ],
   theme: {
     extend: {
@@ -28,6 +30,7 @@ module.exports = {
         "innovate-green": "#0B6849",
         "innovate-neon": "#DCE63C",
         "innovate-black": "#000000",
+        "innovate-white": "#FFFFFF",
       },
     },
   },

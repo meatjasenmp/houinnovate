@@ -13,6 +13,7 @@ export enum BackgroundColors {
   PINK = "bg-innovate-pink",
   BLUE = "bg-innovate-blue",
   NEON = "bg-innovate-neon",
+  WHITE = "bg-innovate-white",
 }
 
 export enum TextColors {
@@ -21,6 +22,7 @@ export enum TextColors {
   PINK = "text-innovate-pink",
   BLUE = "text-innovate-blue",
   NEON = "text-innovate-neon",
+  WHITE = "text-innovate-white",
 }
 
 export enum Colors {
@@ -29,6 +31,7 @@ export enum Colors {
   PINK = "pink",
   BLUE = "blue",
   NEON = "neon",
+  WHITE = "white",
 }
 
 export enum LinkType {
@@ -46,6 +49,8 @@ export const backgroundColorMapping = (backgroundColor: string | null) => {
       return BackgroundColors.BLUE;
     case Colors.NEON:
       return BackgroundColors.NEON;
+    case Colors.WHITE:
+      return BackgroundColors.WHITE;
     default:
       return BackgroundColors.BLACK;
   }
@@ -59,6 +64,8 @@ export const textColorMapping = (textColor: string | null) => {
       return TextColors.PINK;
     case Colors.BLUE:
       return TextColors.BLUE;
+    case Colors.WHITE:
+      return TextColors.WHITE;
     case Colors.NEON:
       return TextColors.NEON;
     default:
