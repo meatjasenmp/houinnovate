@@ -46,16 +46,18 @@ const BoxLinkContent = ({ content }: BoxLinkProps) => {
   };
 
   return (
-    <>
-      <figure>
+    <div className={styles.box_link}>
+      <figure className={styles.block_link__image}>
         <ImageBlock image={image} height="590" width="1212" />
       </figure>
       <article>
         <HeaderText size={HeaderTextSizes.M} text={header} />
         <ContentEditor content={copy} />
-        <FiArrowUpRight color={iconColor()} />
       </article>
-    </>
+      <figure className={styles.link_icon}>
+        <FiArrowUpRight color={iconColor()} size="3rem" />
+      </figure>
+    </div>
   );
 };
 
