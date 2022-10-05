@@ -4,11 +4,24 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
-  safelist: ["bg-innovate-red"],
+  safelist: [
+    "bg-innovate-red",
+    "bg-innovate-blue",
+    "bg-innovate-pink",
+    "bg-innovate-pink",
+    "bg-innovate-green",
+    "bg-innovate-neon",
+    "bg-innovate-black",
+  ],
   theme: {
     extend: {
       colors: {
         "innovate-red": "#F54932",
+        "innovate-pink": "#F6A2CB",
+        "innovate-blue": "#1F2CA8",
+        "innovate-green": "#0B6849",
+        "innovate-neon": "#DCE63C",
+        "innovate-black": "#000000",
       },
     },
   },

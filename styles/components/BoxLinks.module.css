@@ -1,6 +1,9 @@
 .box_link {
     display: grid;
+    color: #FFF;
 }
+
+.box_link div {}
 
 .box_link a {
     display: block;

@@ -3,7 +3,11 @@ import {
   page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink,
   page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink_link,
 } from "../pages/api/__generated__/page";
-import { BackgroundColors, HeaderTextSizes, LinkType } from "../styles/helpers";
+import {
+  backgroundColorMapping,
+  HeaderTextSizes,
+  LinkType,
+} from "../styles/helpers";
 import ContentEditor from "./ContentEditor";
 import ImageBlock from "./ImageBlock";
 import HeaderText from "./HeaderText";
@@ -79,13 +83,16 @@ const BoxLinksBlock = ({ blockContent }: ComponentBlocksProps) => {
     <section className={styles.box_link}>
       <>
         {blockContent.boxLink.map((boxLink, index) => {
-          const { link } =
+          const { link, backgroundColor } =
             boxLink as page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink;
           const { linkType, anchorLink, pageLink } =
             link as page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink_link;
 
           return (
-            <div className={styles.box_link__item} key={index}>
+            <div
+              className={backgroundColorMapping(backgroundColor)}
+              key={index}
+            >
               {linkType === LinkType.PAGE ? (
                 <BoxPageLink
                   content={boxLink}

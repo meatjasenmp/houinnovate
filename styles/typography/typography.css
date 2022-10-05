@@ -12,6 +12,16 @@ h1 {
     margin-bottom: 1.25rem;
 }
 
+.header_m {
+    font-size: 1.875rem;
+    line-height: 1;
+    margin-bottom: .5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
 .site h4 {
     font-size: 1.125rem;
     line-height: 1.5;
