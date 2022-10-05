@@ -5,12 +5,14 @@ import {
 } from "../pages/api/__generated__/page";
 import {
   backgroundColorMapping,
+  Colors,
   HeaderTextSizes,
   LinkType,
 } from "../styles/helpers";
 import ContentEditor from "./ContentEditor";
 import ImageBlock from "./ImageBlock";
 import HeaderText from "./HeaderText";
+import { FiArrowUpRight } from "@react-icons/all-files/fi/FiArrowUpRight";
 
 import styles from "../styles/components/BoxLinks.module.css";
 
@@ -33,10 +35,16 @@ interface PageLinkProps {
 
 const BoxLinkContent = ({ content }: BoxLinkProps) => {
   if (!content) return null;
-  const { header, link, image, backgroundColor, copy } =
+  const { header, image, backgroundColor, copy } =
     content as page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink;
-  const { linkType, anchorLink, pageLink } =
-    link as page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink_link;
+
+  const iconColor = () => {
+    if (backgroundColor === Colors.NEON || backgroundColor === Colors.PINK) {
+      return "black";
+    }
+    return "white";
+  };
+
   return (
     <>
       <figure>
@@ -45,6 +53,7 @@ const BoxLinkContent = ({ content }: BoxLinkProps) => {
       <article>
         <HeaderText size={HeaderTextSizes.M} text={header} />
         <ContentEditor content={copy} />
+        <FiArrowUpRight color={iconColor()} />
       </article>
     </>
   );

@@ -15,6 +15,14 @@ export enum BackgroundColors {
   NEON = "bg-innovate-neon",
 }
 
+export enum Colors {
+  RED = "red",
+  BLACK = "black",
+  PINK = "pink",
+  BLUE = "blue",
+  NEON = "neon",
+}
+
 export enum LinkType {
   PAGE = "page",
   ANCHOR = "anchor",
@@ -22,13 +30,13 @@ export enum LinkType {
 
 export const backgroundColorMapping = (backgroundColor: string | null) => {
   switch (backgroundColor) {
-    case "red":
+    case Colors.RED:
       return BackgroundColors.RED;
-    case "pink":
+    case Colors.PINK:
       return BackgroundColors.PINK;
-    case "blue":
+    case Colors.BLUE:
       return BackgroundColors.BLUE;
-    case "neon":
+    case Colors.NEON:
       return BackgroundColors.NEON;
     default:
       return BackgroundColors.BLACK;
