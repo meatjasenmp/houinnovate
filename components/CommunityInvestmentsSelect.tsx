@@ -5,9 +5,17 @@ import styles from "../styles/components/PopUpSelect.module.css";
 
 const CommunityInvestmentsSelect = () => {
   const { data, loading, error } = useCommunityInvestmentsSelect();
-  if (loading || error) return <></>;
-  console.log(data);
-  return <section></section>;
+  if (loading || error || !data) return <></>;
+
+  const { communityInvestments } = data;
+  return (
+    <section>
+      {communityInvestments?.edges &&
+        communityInvestments.edges.map((link, index) => (
+          <PopUpLink link={link} key={index} />
+        ))}
+    </section>
+  );
 };
 
 export default CommunityInvestmentsSelect;

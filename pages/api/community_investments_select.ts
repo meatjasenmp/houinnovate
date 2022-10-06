@@ -22,6 +22,10 @@ export const useCommunityInvestmentsSelect = () => {
               title
               communityAndOpportunityPopUps {
                 alphanumericLabel
+                investmentType {
+                  id
+                  slug
+                }
                 progress {
                   progressLabel
                   committed

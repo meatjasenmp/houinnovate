@@ -39,6 +39,18 @@ export interface communityInvestmentsSelect_communityInvestmentTypes {
   edges: (communityInvestmentsSelect_communityInvestmentTypes_edges | null)[] | null;
 }
 
+export interface communityInvestmentsSelect_communityInvestments_edges_node_communityAndOpportunityPopUps_investmentType {
+  __typename: "CommunityInvestmentType";
+  /**
+   * The unique resource identifier path
+   */
+  id: string;
+  /**
+   * An alphanumeric identifier for the object unique to its type.
+   */
+  slug: string | null;
+}
+
 export interface communityInvestmentsSelect_communityInvestments_edges_node_communityAndOpportunityPopUps_progress {
   __typename: "CommunityInvestment_Communityandopportunitypopups_Progress";
   progressLabel: string | null;
@@ -50,6 +62,7 @@ export interface communityInvestmentsSelect_communityInvestments_edges_node_comm
 export interface communityInvestmentsSelect_communityInvestments_edges_node_communityAndOpportunityPopUps {
   __typename: "CommunityInvestment_Communityandopportunitypopups";
   alphanumericLabel: string | null;
+  investmentType: communityInvestmentsSelect_communityInvestments_edges_node_communityAndOpportunityPopUps_investmentType | null;
   progress: communityInvestmentsSelect_communityInvestments_edges_node_communityAndOpportunityPopUps_progress | null;
 }
 
