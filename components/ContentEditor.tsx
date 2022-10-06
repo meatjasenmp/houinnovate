@@ -1,7 +1,12 @@
 import * as DOMPurify from "dompurify";
 import styles from "../styles/components/ContentEditor.module.css";
 
-const ContentEditor = ({ content }: { content: any }) => {
+interface ContentEditorProps {
+  content: any;
+  textColor?: string;
+}
+
+const ContentEditor = ({ content }: ContentEditorProps) => {
   DOMPurify.addHook("afterSanitizeAttributes", function (node) {
     if ("target" in node) {
       node.setAttribute("target", "_blank");

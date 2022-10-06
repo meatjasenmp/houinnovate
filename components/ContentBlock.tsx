@@ -17,9 +17,10 @@ const ContentBlock = ({ blockContent }: ComponentBlocksProps) => {
   return (
     <section className={sectionClassName}>
       <div className={backgroundColorMapping(backgroundColor)}>
-        <article className={textColorMapping(textColor)}>
-          <ContentEditor content={contentBlockContent} />
-        </article>
+        <ContentEditor
+          content={contentBlockContent}
+          textColor={textColorMapping(textColor)}
+        />
       </div>
     </section>
   );
