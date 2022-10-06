@@ -4,8 +4,31 @@
 @tailwind utilities;
 
 @layer base {
-    @import "styles/typography/fonts.css";
-    @import "styles/typography/typography.css";
+    @font-face {
+        font-family: 'Sohne-Kraftig-Bold';
+        src: url('../assets/soehne/soehne-kraftig.woff2') format('woff2');
+
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Sohne-Kraftig-Normal';
+        src: url('../assets/soehne/soehne-mono-buch.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+    }
+    html {
+        font-family: "Sohne-Kraftig-Normal", sans-serif;
+    }
+    h1 {
+        font-family: "Sohne-Kraftig-Bold", sans-serif;
+    }
+
+    .bg-innovate-pink,
+    .bg-innovate-neon {
+        color: #000;
+    }
 }
 
 .no-scroll {
