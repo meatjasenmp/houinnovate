@@ -3,28 +3,28 @@ import Link from "next/link";
 import ContentEditor from "./ContentEditor";
 import HamburgerMenu from "../styles/components/HamburgerMenu";
 import {
-  navigation,
-  navigation_siteOptionsPage_siteNavigation_navigation_blockLinks,
-  navigation_siteOptionsPage_siteNavigation_navigation_sectionLinks,
-} from "../pages/api/__generated__/navigation";
+  page_siteOptionsPage_siteNavigation,
+  page_siteOptionsPage_siteNavigation_navigation_sectionLinks,
+  page_siteOptionsPage_siteNavigation_navigation_blockLinks,
+} from "../pages/api/__generated__/page";
 import styles from "../styles/components/Navigation.module.css";
 
 interface NavigationProps {
   pageWrapID: string;
   outerContainerID: string;
-  navigation: navigation | undefined;
+  navigation: page_siteOptionsPage_siteNavigation | null | undefined;
 }
 
 interface SectionLinksProps {
   sectionLinks:
-    | (navigation_siteOptionsPage_siteNavigation_navigation_sectionLinks | null)[]
+    | (page_siteOptionsPage_siteNavigation_navigation_sectionLinks | null)[]
     | null
     | undefined;
 }
 
 interface BlockLinkProps {
   blockLinks:
-    | (navigation_siteOptionsPage_siteNavigation_navigation_blockLinks | null)[]
+    | (page_siteOptionsPage_siteNavigation_navigation_blockLinks | null)[]
     | undefined
     | null;
 }
@@ -102,7 +102,7 @@ const Navigation = ({
   navigation,
 }: NavigationProps) => {
   const { sectionLinks, houinnovate, blockLinks } =
-    navigation?.siteOptionsPage?.siteNavigation?.navigation || {};
+    navigation?.navigation || {};
 
   return (
     <Menu

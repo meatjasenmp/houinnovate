@@ -3,29 +3,19 @@ import Head from "next/head";
 import ComponentBlocks from "../components/ComponentBlocks";
 import Navigation from "../components/Navigation";
 import { usePage } from "./api/page";
-import { useNavigation } from "./api/navigation";
 import { page_generalSettings, page_page } from "./api/__generated__/page";
 
 const Home: NextPage = () => {
   const getPage = usePage("9");
-  const getNavigation = useNavigation();
   const { data, error, loading } = getPage;
-  const {
-    data: navigationData,
-    error: navigationError,
-    loading: navigationLoading,
-  } = getNavigation;
 
-  if (loading || navigationLoading) {
+  if (loading) {
     return <div>Loading...</div>;
   }
 
-  if (error || navigationError) {
+  if (error) {
     if (error) {
       return <div>Error: {error.message}</div>;
-    }
-    if (navigationError) {
-      return <div>Error: {navigationError.message}</div>;
     }
   }
 
@@ -43,7 +33,7 @@ const Home: NextPage = () => {
       <Navigation
         pageWrapID="page-wrap"
         outerContainerID="outer-container"
-        navigation={navigationData}
+        navigation={data?.siteOptionsPage?.siteNavigation}
       />
 
       <main
