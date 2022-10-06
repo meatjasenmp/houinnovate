@@ -1,11 +1,55 @@
-import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlockStylizedList } from "../pages/api/__generated__/page";
+import ContentEditor from "./ContentEditor";
+import {
+  page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlockStylizedList,
+  page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlockStylizedList_list_listItem,
+} from "../pages/api/__generated__/page";
 
 interface ComponentBlocksProps {
   blockContent: page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlockStylizedList;
 }
 
+interface ListItemProps {
+  listItem:
+    | page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlockStylizedList_list_listItem
+    | null
+    | undefined;
+}
+
+import styles from "../styles/components/ContentBlockStylizedList.module.css";
+
+const ListItem = ({ listItem }: ListItemProps) => {
+  if (!listItem) return null;
+  const { listContent } = listItem;
+  return (
+    <li>
+      <p>{listContent}</p>
+    </li>
+  );
+};
+
 const ContentBlockStylized = ({ blockContent }: ComponentBlocksProps) => {
-  return <></>;
+  if (!blockContent) return null;
+
+  const { contentBlockStylized, list, showFooterText, footerText } =
+    blockContent;
+
+  return (
+    <section className={styles.content_block_stylized}>
+      <ContentEditor content={contentBlockStylized} textColor="black" />
+      {list && list.length > 0 && (
+        <ul>
+          {list.map((listItem, index) => (
+            <ListItem listItem={listItem?.listItem} key={index} />
+          ))}
+        </ul>
+      )}
+      {showFooterText && (
+        <div className="prose">
+          <ContentEditor content={footerText} textColor="black" />
+        </div>
+      )}
+    </section>
+  );
 };
 
 export default ContentBlockStylized;

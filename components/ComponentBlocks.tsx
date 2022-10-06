@@ -35,6 +35,7 @@ const ComponentBlocks = ({ componentBlocks }: ComponentBlocksProps) => {
         if (componentBlock) {
           switch (componentBlock.__typename as string) {
             case Components.HERO_BANNER:
+              if (!componentBlock) return null;
               const heroBannerBlockContent =
                 componentBlock as page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner;
               return (
