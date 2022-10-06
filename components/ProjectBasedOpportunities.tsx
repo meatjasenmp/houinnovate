@@ -18,6 +18,12 @@ const ProjectBasedOpportunities = ({
 
   return (
     <section className={styles.project_based_opportunities}>
+      <ProgressBar
+        deployed={opportunitiesCreated?.opportunitiesCreated}
+        committed={opportunitiesCreated?.opportunitiesCommitted}
+        deployedLabel={opportunitiesCreated?.committedLabel}
+        committedLabel={opportunitiesCreated?.committedLabel}
+      />
       <ContentEditor content={opportunitiesCreatedContent} textColor="black" />
     </section>
   );
