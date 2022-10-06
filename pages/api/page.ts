@@ -22,7 +22,6 @@ export const usePage = (id: string) => {
                   mediaItemUrl
                   altText
                 }
-                header
                 content {
                   contentEditor
                   pageLinkSelect
@@ -44,8 +43,7 @@ export const usePage = (id: string) => {
                     mediaItemUrl
                     altText
                   }
-                  header
-                  copy
+                  boxLinkContent: content
                   link {
                     linkType
                     pageLink {
@@ -59,16 +57,11 @@ export const usePage = (id: string) => {
                 }
               }
               ... on Page_Components_ComponentBlocks_ContentBlock {
-                showHeader
-                header
                 contentBlockContent: content
                 backgroundColor
                 textColor
-                showSubheader
-                subheader
               }
               ... on Page_Components_ComponentBlocks_ContentBlockStylizedList {
-                header
                 contentBlockStylized: content
                 list {
                   listItem {
@@ -81,7 +74,7 @@ export const usePage = (id: string) => {
               }
               ... on Page_Components_ComponentBlocks_Phases {
                 accentColor
-                phasesHeader: header
+                phasesContent: content
                 phasesList {
                   phase {
                     phaseText
@@ -90,7 +83,6 @@ export const usePage = (id: string) => {
                 }
               }
               ... on Page_Components_ComponentBlocks_WorkWithIon {
-                workWithIonHeader: header
                 workWithIonContent: content
               }
               ... on Page_Components_ComponentBlocks_ProjectBasedOpportunities {
@@ -98,16 +90,14 @@ export const usePage = (id: string) => {
                   opportunitiesCreated: created
                   opportunitiesCommitted: committed
                 }
-                header
-                subHeader
+                opportunitiesCreatedContent: content
               }
               ... on Page_Components_ComponentBlocks_CommunityInvestment {
                 deployment {
                   deployed
                   committed
                 }
-                communityInvestmentSubHeader: subHeader
-                communityInvestmentHeader: header
+                communityInvestmentContent: content
               }
             }
           }

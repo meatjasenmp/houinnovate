@@ -2,11 +2,10 @@ import {
   page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_content,
   page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner,
 } from "../pages/api/__generated__/page";
-import { BackgroundColors, HeaderTextSizes } from "../styles/helpers";
+import { BackgroundColors } from "../styles/helpers";
 import ContentEditor from "./ContentEditor";
 import VideoBlock from "./VideoBlock";
 import ImageBlock from "./ImageBlock";
-import HeaderText from "./HeaderText";
 import Button from "./Button";
 import ButtonLink from "./ButtonLink";
 import { BiPlay } from "@react-icons/all-files/bi/BiPlay";
@@ -20,7 +19,7 @@ interface ComponentBlocksProps {
 const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
   if (!blockContent) return null;
 
-  const { type, video, image, header, content, videoCta } = blockContent;
+  const { type, video, image, content, videoCta } = blockContent;
   const { contentEditor, pageLinkSelect, pageLinkButton } =
     content as page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_content;
 
@@ -36,7 +35,6 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
 
         <article className="relative z-10">
           <>
-            {header && <HeaderText size={HeaderTextSizes.XL} text={header} />}
             {contentEditor && <ContentEditor content={contentEditor} />}
             {videoCta && (
               <Button

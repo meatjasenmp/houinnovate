@@ -6,44 +6,6 @@ h1 {
     font-family: "Sohne-Kraftig-Bold", sans-serif;
 }
 
-.header_xxl {
-    font-size: 3.5rem;
-    line-height: 1;
-    margin-bottom: 1.25rem;
-}
-
-.header_xl {
-    font-size: 2.875rem;
-    line-height: 1;
-    margin-bottom: 1.25rem;
-}
-
-
-.header_m {
-    font-size: 1.875rem;
-    line-height: 1.25;
-    margin-bottom: .5rem;
-}
-
-p {
-    font-size: 1rem;
-    line-height: 2;
-}
-
-p > :not(a.button) {
-    text-decoration: underline;
-}
-
-.site h4 {
-    font-size: 1.125rem;
-    line-height: 1.5;
-    margin-bottom: .5rem;
-}
-
-* > p:not(:last-child) {
-    margin-bottom: .95rem;
-}
-
 .bg-innovate-pink,
 .bg-innovate-neon {
     color: #000;
