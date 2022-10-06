@@ -37,7 +37,7 @@ const Home: NextPage = () => {
       />
 
       <main
-        className="min-h-screen flex flex-1 justify-between flex-col p-4"
+        className="min-h-screen flex flex-1 justify-between flex-col p-4 font-body"
         id="page-wrap"
       >
         <ComponentBlocks componentBlocks={components?.componentBlocks} />

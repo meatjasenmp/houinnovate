@@ -23,8 +23,18 @@ module.exports = {
     "prose",
   ],
   theme: {
+    fontFamily: {
+      body: ["Sohne-Kraftig-Normal", "sans-serif"],
+    },
     extend: {
       typography: ({ theme }) => ({
+        DEFAULT: {
+          css: {
+            "--tw-prose-headings": {
+              fontFamily: "Sohne-Kraftig-Bold",
+            },
+          },
+        },
         white: {
           css: {
             "--tw-prose-body": theme("colors.white"),
