@@ -87,6 +87,8 @@ export const usePage = (id: string) => {
               }
               ... on Page_Components_ComponentBlocks_ProjectBasedOpportunities {
                 opportunitiesCreated {
+                  committedLabel
+                  createdLabel
                   opportunitiesCreated: created
                   opportunitiesCommitted: committed
                 }
@@ -94,6 +96,8 @@ export const usePage = (id: string) => {
               }
               ... on Page_Components_ComponentBlocks_CommunityInvestment {
                 deployment {
+                  deployedLabel
+                  investmentCommittedLabel: committedLabel
                   deployed
                   committed
                 }

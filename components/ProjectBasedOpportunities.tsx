@@ -1,13 +1,26 @@
+import ContentEditor from "./ContentEditor";
+import ProgressBar from "./ProgressBar";
+
 import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_ProjectBasedOpportunities } from "../pages/api/__generated__/page";
 
 interface ProjectBasedOpportunitiesProps {
   blockContent: page_page_components_componentBlocks_Page_Components_ComponentBlocks_ProjectBasedOpportunities;
 }
 
+import styles from "../styles/components/ProjectBasedOpportunities.module.css";
+
 const ProjectBasedOpportunities = ({
   blockContent,
 }: ProjectBasedOpportunitiesProps) => {
-  return <></>;
+  if (!blockContent) return null;
+
+  const { opportunitiesCreated, opportunitiesCreatedContent } = blockContent;
+
+  return (
+    <section className={styles.project_based_opportunities}>
+      <ContentEditor content={opportunitiesCreatedContent} textColor="black" />
+    </section>
+  );
 };
 
 export default ProjectBasedOpportunities;

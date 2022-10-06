@@ -38,7 +38,7 @@ const Phase = ({ phase, phaseNumber }: PhaseProps) => {
 
 const Phases = ({ blockContent }: PhasesProps) => {
   if (!blockContent) return null;
-  const { phasesContent, phasesList } = blockContent;
+  const { phasesContent, phasesList, accentColor } = blockContent;
   return (
     <section className={styles.phases}>
       <ContentEditor content={phasesContent} textColor="black" />

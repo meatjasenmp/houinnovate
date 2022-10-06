@@ -176,6 +176,8 @@ export interface page_page_components_componentBlocks_Page_Components_ComponentB
 
 export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_ProjectBasedOpportunities_opportunitiesCreated {
   __typename: "Page_Components_ComponentBlocks_ProjectBasedOpportunities_OpportunitiesCreated";
+  committedLabel: string | null;
+  createdLabel: string | null;
   opportunitiesCreated: number | null;
   opportunitiesCommitted: number | null;
 }
@@ -188,6 +190,8 @@ export interface page_page_components_componentBlocks_Page_Components_ComponentB
 
 export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_CommunityInvestment_deployment {
   __typename: "Page_Components_ComponentBlocks_CommunityInvestment_Deployment";
+  deployedLabel: string | null;
+  investmentCommittedLabel: string | null;
   deployed: number | null;
   committed: number | null;
 }
