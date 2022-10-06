@@ -59,10 +59,55 @@ export const usePage = (id: string) => {
                 }
               }
               ... on Page_Components_ComponentBlocks_ContentBlock {
+                showHeader
                 header
                 contentBlockContent: content
                 backgroundColor
                 textColor
+                showSubheader
+                subheader
+              }
+              ... on Page_Components_ComponentBlocks_ContentBlockStylizedList {
+                header
+                contentBlockStylized: content
+                list {
+                  listItem {
+                    listContent
+                    listBackgroundColor: backgroundColor
+                  }
+                }
+                showFooterText
+                footerText
+              }
+              ... on Page_Components_ComponentBlocks_Phases {
+                accentColor
+                phasesHeader: header
+                phasesList {
+                  phase {
+                    phaseText
+                    phaseHeader
+                  }
+                }
+              }
+              ... on Page_Components_ComponentBlocks_WorkWithIon {
+                workWithIonHeader: header
+                workWithIonContent: content
+              }
+              ... on Page_Components_ComponentBlocks_ProjectBasedOpportunities {
+                opportunitiesCreated {
+                  opportunitiesCreated: created
+                  opportunitiesCommitted: committed
+                }
+                header
+                subHeader
+              }
+              ... on Page_Components_ComponentBlocks_CommunityInvestment {
+                deployment {
+                  deployed
+                  committed
+                }
+                communityInvestmentSubHeader: subHeader
+                communityInvestmentHeader: header
               }
             }
           }
@@ -70,6 +115,27 @@ export const usePage = (id: string) => {
         generalSettings {
           title
           description
+        }
+        siteOptionsPage {
+          jobOpportunity {
+            jobOpportunityCta
+          }
+          siteNavigation {
+            navigation {
+              sectionLinks {
+                label
+                anchorLabel
+              }
+              blockLinks {
+                label
+                links {
+                  label
+                  pageUrl
+                }
+              }
+              houinnovate
+            }
+          }
         }
       }
     `,

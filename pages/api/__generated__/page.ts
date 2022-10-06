@@ -129,13 +129,86 @@ export interface page_page_components_componentBlocks_Page_Components_ComponentB
 
 export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlock {
   __typename: "Page_Components_ComponentBlocks_ContentBlock";
+  showHeader: boolean | null;
   header: string | null;
   contentBlockContent: string | null;
   backgroundColor: string | null;
   textColor: string | null;
+  showSubheader: boolean | null;
+  subheader: string | null;
 }
 
-export type page_page_components_componentBlocks = page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner | page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks | page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlock;
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlockStylizedList_list_listItem {
+  __typename: "Page_Components_ComponentBlocks_ContentBlockStylizedList_list_ListItem";
+  listContent: string | null;
+  listBackgroundColor: string | null;
+}
+
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlockStylizedList_list {
+  __typename: "Page_Components_ComponentBlocks_ContentBlockStylizedList_list";
+  listItem: page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlockStylizedList_list_listItem | null;
+}
+
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlockStylizedList {
+  __typename: "Page_Components_ComponentBlocks_ContentBlockStylizedList";
+  header: string | null;
+  contentBlockStylized: string | null;
+  list: (page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlockStylizedList_list | null)[] | null;
+  showFooterText: boolean | null;
+  footerText: string | null;
+}
+
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_Phases_phasesList_phase {
+  __typename: "Page_Components_ComponentBlocks_Phases_phasesList_Phase";
+  phaseText: string | null;
+  phaseHeader: string | null;
+}
+
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_Phases_phasesList {
+  __typename: "Page_Components_ComponentBlocks_Phases_phasesList";
+  phase: page_page_components_componentBlocks_Page_Components_ComponentBlocks_Phases_phasesList_phase | null;
+}
+
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_Phases {
+  __typename: "Page_Components_ComponentBlocks_Phases";
+  accentColor: string | null;
+  phasesHeader: string | null;
+  phasesList: (page_page_components_componentBlocks_Page_Components_ComponentBlocks_Phases_phasesList | null)[] | null;
+}
+
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_WorkWithIon {
+  __typename: "Page_Components_ComponentBlocks_WorkWithIon";
+  workWithIonHeader: string | null;
+  workWithIonContent: string | null;
+}
+
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_ProjectBasedOpportunities_opportunitiesCreated {
+  __typename: "Page_Components_ComponentBlocks_ProjectBasedOpportunities_OpportunitiesCreated";
+  opportunitiesCreated: number | null;
+  opportunitiesCommitted: number | null;
+}
+
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_ProjectBasedOpportunities {
+  __typename: "Page_Components_ComponentBlocks_ProjectBasedOpportunities";
+  opportunitiesCreated: page_page_components_componentBlocks_Page_Components_ComponentBlocks_ProjectBasedOpportunities_opportunitiesCreated | null;
+  header: string | null;
+  subHeader: string | null;
+}
+
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_CommunityInvestment_deployment {
+  __typename: "Page_Components_ComponentBlocks_CommunityInvestment_Deployment";
+  deployed: number | null;
+  committed: number | null;
+}
+
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_CommunityInvestment {
+  __typename: "Page_Components_ComponentBlocks_CommunityInvestment";
+  deployment: page_page_components_componentBlocks_Page_Components_ComponentBlocks_CommunityInvestment_deployment | null;
+  communityInvestmentSubHeader: string | null;
+  communityInvestmentHeader: string | null;
+}
+
+export type page_page_components_componentBlocks = page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner | page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks | page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlock | page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlockStylizedList | page_page_components_componentBlocks_Page_Components_ComponentBlocks_Phases | page_page_components_componentBlocks_Page_Components_ComponentBlocks_WorkWithIon | page_page_components_componentBlocks_Page_Components_ComponentBlocks_ProjectBasedOpportunities | page_page_components_componentBlocks_Page_Components_ComponentBlocks_CommunityInvestment;
 
 export interface page_page_components {
   __typename: "Page_Components";
@@ -170,6 +243,53 @@ export interface page_generalSettings {
   description: string | null;
 }
 
+export interface page_siteOptionsPage_jobOpportunity {
+  __typename: "SiteOptionsPage_Jobopportunity";
+  jobOpportunityCta: string | null;
+}
+
+export interface page_siteOptionsPage_siteNavigation_navigation_sectionLinks {
+  __typename: "SiteOptionsPage_Sitenavigation_Navigation_sectionLinks";
+  label: string | null;
+  anchorLabel: string | null;
+}
+
+export interface page_siteOptionsPage_siteNavigation_navigation_blockLinks_links {
+  __typename: "SiteOptionsPage_Sitenavigation_Navigation_blockLinks_links";
+  label: string | null;
+  pageUrl: string | null;
+}
+
+export interface page_siteOptionsPage_siteNavigation_navigation_blockLinks {
+  __typename: "SiteOptionsPage_Sitenavigation_Navigation_blockLinks";
+  label: string | null;
+  links: (page_siteOptionsPage_siteNavigation_navigation_blockLinks_links | null)[] | null;
+}
+
+export interface page_siteOptionsPage_siteNavigation_navigation {
+  __typename: "SiteOptionsPage_Sitenavigation_Navigation";
+  sectionLinks: (page_siteOptionsPage_siteNavigation_navigation_sectionLinks | null)[] | null;
+  blockLinks: (page_siteOptionsPage_siteNavigation_navigation_blockLinks | null)[] | null;
+  houinnovate: string | null;
+}
+
+export interface page_siteOptionsPage_siteNavigation {
+  __typename: "SiteOptionsPage_Sitenavigation";
+  navigation: page_siteOptionsPage_siteNavigation_navigation | null;
+}
+
+export interface page_siteOptionsPage {
+  __typename: "SiteOptionsPage";
+  /**
+   * Added to the GraphQL Schema because the ACF Field Group &quot;Job Opportunity&quot; was set to Show in GraphQL.
+   */
+  jobOpportunity: page_siteOptionsPage_jobOpportunity | null;
+  /**
+   * Added to the GraphQL Schema because the ACF Field Group &quot;Site Navigation&quot; was set to Show in GraphQL.
+   */
+  siteNavigation: page_siteOptionsPage_siteNavigation | null;
+}
+
 export interface page {
   /**
    * An object of the page Type. 
@@ -179,6 +299,10 @@ export interface page {
    * Fields of the &#039;GeneralSettings&#039; settings group
    */
   generalSettings: page_generalSettings | null;
+  /**
+   * Site Options options.
+   */
+  siteOptionsPage: page_siteOptionsPage | null;
 }
 
 export interface pageVariables {
