@@ -8,9 +8,10 @@ const ContentEditor = ({ content }: { content: any }) => {
     }
   });
   const clean = DOMPurify.sanitize(content);
+  const className = [styles.content__editor, "prose prose-white"].join(" ");
   return (
-    <div
-      className={styles.content__editor}
+    <article
+      className={className}
       dangerouslySetInnerHTML={{ __html: clean }}
     />
   );
