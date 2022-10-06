@@ -39,6 +39,20 @@ export interface communityInvestmentsSelect_communityInvestmentTypes {
   edges: (communityInvestmentsSelect_communityInvestmentTypes_edges | null)[] | null;
 }
 
+export interface communityInvestmentsSelect_communityInvestments_edges_node_communityAndOpportunityPopUps_progress {
+  __typename: "CommunityInvestment_Communityandopportunitypopups_Progress";
+  progressLabel: string | null;
+  committed: number | null;
+  deployed: number | null;
+  currentPhase: string | null;
+}
+
+export interface communityInvestmentsSelect_communityInvestments_edges_node_communityAndOpportunityPopUps {
+  __typename: "CommunityInvestment_Communityandopportunitypopups";
+  alphanumericLabel: string | null;
+  progress: communityInvestmentsSelect_communityInvestments_edges_node_communityAndOpportunityPopUps_progress | null;
+}
+
 export interface communityInvestmentsSelect_communityInvestments_edges_node {
   __typename: "CommunityInvestment";
   /**
@@ -53,6 +67,10 @@ export interface communityInvestmentsSelect_communityInvestments_edges_node {
    * The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made.
    */
   title: string | null;
+  /**
+   * Added to the GraphQL Schema because the ACF Field Group &quot;Community and Opportunity Pop Ups&quot; was set to Show in GraphQL.
+   */
+  communityAndOpportunityPopUps: communityInvestmentsSelect_communityInvestments_edges_node_communityAndOpportunityPopUps | null;
 }
 
 export interface communityInvestmentsSelect_communityInvestments_edges {

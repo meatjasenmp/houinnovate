@@ -20,6 +20,26 @@ export const useProjectOpportunitiesSelect = () => {
             databaseId
             title
             slug
+            communityAndOpportunityPopUps {
+              alphanumericLabel
+              header
+              dataFields {
+                dataField {
+                  labelField
+                  contentField
+                }
+              }
+              contentBlocks {
+                content
+              }
+              reportingPhasePercentage
+              progress {
+                progressLabel
+                committed
+                deployed
+                currentPhase
+              }
+            }
           }
         }
       }

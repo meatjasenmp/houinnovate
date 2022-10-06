@@ -39,6 +39,40 @@ export interface projectOpportunitiesSelect_opportunityTypes {
   edges: (projectOpportunitiesSelect_opportunityTypes_edges | null)[] | null;
 }
 
+export interface projectOpportunitiesSelect_projectBasedOpportunities_nodes_communityAndOpportunityPopUps_dataFields_dataField {
+  __typename: "ProjectBasedOpportunity_Communityandopportunitypopups_dataFields_DataField";
+  labelField: string | null;
+  contentField: string | null;
+}
+
+export interface projectOpportunitiesSelect_projectBasedOpportunities_nodes_communityAndOpportunityPopUps_dataFields {
+  __typename: "ProjectBasedOpportunity_Communityandopportunitypopups_dataFields";
+  dataField: projectOpportunitiesSelect_projectBasedOpportunities_nodes_communityAndOpportunityPopUps_dataFields_dataField | null;
+}
+
+export interface projectOpportunitiesSelect_projectBasedOpportunities_nodes_communityAndOpportunityPopUps_contentBlocks {
+  __typename: "ProjectBasedOpportunity_Communityandopportunitypopups_contentBlocks";
+  content: string | null;
+}
+
+export interface projectOpportunitiesSelect_projectBasedOpportunities_nodes_communityAndOpportunityPopUps_progress {
+  __typename: "ProjectBasedOpportunity_Communityandopportunitypopups_Progress";
+  progressLabel: string | null;
+  committed: number | null;
+  deployed: number | null;
+  currentPhase: string | null;
+}
+
+export interface projectOpportunitiesSelect_projectBasedOpportunities_nodes_communityAndOpportunityPopUps {
+  __typename: "ProjectBasedOpportunity_Communityandopportunitypopups";
+  alphanumericLabel: string | null;
+  header: string | null;
+  dataFields: (projectOpportunitiesSelect_projectBasedOpportunities_nodes_communityAndOpportunityPopUps_dataFields | null)[] | null;
+  contentBlocks: (projectOpportunitiesSelect_projectBasedOpportunities_nodes_communityAndOpportunityPopUps_contentBlocks | null)[] | null;
+  reportingPhasePercentage: number | null;
+  progress: projectOpportunitiesSelect_projectBasedOpportunities_nodes_communityAndOpportunityPopUps_progress | null;
+}
+
 export interface projectOpportunitiesSelect_projectBasedOpportunities_nodes {
   __typename: "ProjectBasedOpportunity";
   /**
@@ -53,6 +87,10 @@ export interface projectOpportunitiesSelect_projectBasedOpportunities_nodes {
    * The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table.
    */
   slug: string | null;
+  /**
+   * Added to the GraphQL Schema because the ACF Field Group &quot;Community and Opportunity Pop Ups&quot; was set to Show in GraphQL.
+   */
+  communityAndOpportunityPopUps: projectOpportunitiesSelect_projectBasedOpportunities_nodes_communityAndOpportunityPopUps | null;
 }
 
 export interface projectOpportunitiesSelect_projectBasedOpportunities {

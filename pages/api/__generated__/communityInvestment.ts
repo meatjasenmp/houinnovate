@@ -7,37 +7,38 @@
 // GraphQL query operation: communityInvestment
 // ====================================================
 
-export interface communityInvestment_communityInvestment_investment_dataFields_dataField {
-  __typename: "CommunityInvestment_Investment_dataFields_DataField";
+export interface communityInvestment_communityInvestment_communityAndOpportunityPopUps_dataFields_dataField {
+  __typename: "CommunityInvestment_Communityandopportunitypopups_dataFields_DataField";
   labelField: string | null;
   contentField: string | null;
 }
 
-export interface communityInvestment_communityInvestment_investment_dataFields {
-  __typename: "CommunityInvestment_Investment_dataFields";
-  dataField: communityInvestment_communityInvestment_investment_dataFields_dataField | null;
+export interface communityInvestment_communityInvestment_communityAndOpportunityPopUps_dataFields {
+  __typename: "CommunityInvestment_Communityandopportunitypopups_dataFields";
+  dataField: communityInvestment_communityInvestment_communityAndOpportunityPopUps_dataFields_dataField | null;
 }
 
-export interface communityInvestment_communityInvestment_investment_contentBlocks {
-  __typename: "CommunityInvestment_Investment_contentBlocks";
+export interface communityInvestment_communityInvestment_communityAndOpportunityPopUps_contentBlocks {
+  __typename: "CommunityInvestment_Communityandopportunitypopups_contentBlocks";
   content: string | null;
 }
 
-export interface communityInvestment_communityInvestment_investment_progress {
-  __typename: "CommunityInvestment_Investment_Progress";
+export interface communityInvestment_communityInvestment_communityAndOpportunityPopUps_progress {
+  __typename: "CommunityInvestment_Communityandopportunitypopups_Progress";
   progressLabel: string | null;
   committed: number | null;
   deployed: number | null;
+  currentPhase: string | null;
 }
 
-export interface communityInvestment_communityInvestment_investment {
-  __typename: "CommunityInvestment_Investment";
+export interface communityInvestment_communityInvestment_communityAndOpportunityPopUps {
+  __typename: "CommunityInvestment_Communityandopportunitypopups";
   alphanumericLabel: string | null;
   header: string | null;
-  dataFields: (communityInvestment_communityInvestment_investment_dataFields | null)[] | null;
-  contentBlocks: (communityInvestment_communityInvestment_investment_contentBlocks | null)[] | null;
+  dataFields: (communityInvestment_communityInvestment_communityAndOpportunityPopUps_dataFields | null)[] | null;
+  contentBlocks: (communityInvestment_communityInvestment_communityAndOpportunityPopUps_contentBlocks | null)[] | null;
   reportingPhasePercentage: number | null;
-  progress: communityInvestment_communityInvestment_investment_progress | null;
+  progress: communityInvestment_communityInvestment_communityAndOpportunityPopUps_progress | null;
 }
 
 export interface communityInvestment_communityInvestment {
@@ -55,9 +56,9 @@ export interface communityInvestment_communityInvestment {
    */
   title: string | null;
   /**
-   * Added to the GraphQL Schema because the ACF Field Group &quot;Investment&quot; was set to Show in GraphQL.
+   * Added to the GraphQL Schema because the ACF Field Group &quot;Community and Opportunity Pop Ups&quot; was set to Show in GraphQL.
    */
-  investment: communityInvestment_communityInvestment_investment | null;
+  communityAndOpportunityPopUps: communityInvestment_communityInvestment_communityAndOpportunityPopUps | null;
 }
 
 export interface communityInvestment {

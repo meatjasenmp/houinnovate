@@ -1,5 +1,6 @@
 import ContentEditor from "./ContentEditor";
 import ProgressBar from "./ProgressBar";
+import CommunityInvestmentsSelect from "./CommunityInvestmentsSelect";
 
 import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_CommunityInvestment } from "../pages/api/__generated__/page";
 
@@ -25,6 +26,7 @@ const DirectCommunityInvestment = ({
         committedLabel={deployment?.investmentCommittedLabel}
       />
       <ContentEditor content={communityInvestmentContent} textColor="black" />
+      <CommunityInvestmentsSelect />
     </section>
   );
 };

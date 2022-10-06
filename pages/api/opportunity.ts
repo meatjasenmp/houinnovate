@@ -16,53 +16,13 @@ export const useOpportunity = (id: string) => {
           databaseId
           slug
           title
-          opportunity {
-            title
-            contactInfo {
-              name
-              email
-              phone
-            }
-            dataFields {
-              dataField {
-                labelField
-                contentField
-              }
-            }
-            metaData {
-              status
-              solicitationNumber
-              opportunityOpensOn
-              opportunityClosesOn
-              description
-              category {
-                id
-                slug
-                name
-              }
-              downloads {
-                downloadLabel
-                file {
-                  id
-                  mediaItemUrl
-                }
-              }
-              specifications {
-                specificationDownloadLabel: downloadLabel
-                specificationFile: file {
-                  id
-                  mediaItemUrl
-                }
-              }
-              addenda {
-                addendaDownloadLabel: downloadLabel
-                addendaFile: file {
-                  id
-                  mediaItemUrl
-                }
-              }
-              aaeeo
-              importantNotice
+          communityAndOpportunityPopUps {
+            alphanumericLabel
+            progress {
+              progressLabel
+              committed
+              deployed
+              currentPhase
             }
           }
         }

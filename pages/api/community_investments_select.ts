@@ -20,6 +20,15 @@ export const useCommunityInvestmentsSelect = () => {
               databaseId
               slug
               title
+              communityAndOpportunityPopUps {
+                alphanumericLabel
+                progress {
+                  progressLabel
+                  committed
+                  deployed
+                  currentPhase
+                }
+              }
             }
           }
         }

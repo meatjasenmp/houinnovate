@@ -16,7 +16,7 @@ export const useInvestment = (id: string) => {
           databaseId
           slug
           title
-          investment {
+          communityAndOpportunityPopUps {
             alphanumericLabel
             header
             dataFields {
@@ -33,6 +33,7 @@ export const useInvestment = (id: string) => {
               progressLabel
               committed
               deployed
+              currentPhase
             }
           }
         }
