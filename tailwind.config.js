@@ -1,4 +1,15 @@
 /** @type {import('tailwindcss').Config} */
+
+const headerDefaults = {
+  fontFamily: "Sohne-Kraftig-Bold",
+  marginBottom: "0.5rem",
+  lineHeight: 1,
+};
+
+const bodyDefaults = {
+  lineHeight: 1.2,
+};
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -30,8 +41,20 @@ module.exports = {
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
-            "--tw-prose-headings": {
-              fontFamily: "Sohne-Kraftig-Bold",
+            h1: {
+              fontSize: "3.5rem",
+              ...headerDefaults,
+            },
+            h2: {
+              fontSize: "2.875rem",
+              ...headerDefaults,
+            },
+            h3: {
+              fontSize: "1.875rem",
+              ...headerDefaults,
+            },
+            p: {
+              ...bodyDefaults,
             },
           },
         },
