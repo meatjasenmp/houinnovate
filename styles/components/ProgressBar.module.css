@@ -25,3 +25,12 @@
     line-height: 1.2;
     font-family: "Sohne-Kraftig-Bold", sans-serif;
 }
+
+.progress_bar_simple {
+    height: 20px;
+    background-color: #E0E0E0;
+}
+
+.progress_bar_simple_bar {
+    height: 100%;
+}

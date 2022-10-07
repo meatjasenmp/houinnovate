@@ -9,6 +9,7 @@ interface ProjectBasedOpportunitiesProps {
 }
 
 import styles from "../styles/components/ProjectBasedOpportunities.module.css";
+import { Colors } from "../styles/helpers";
 
 const ProjectBasedOpportunities = ({
   blockContent,
@@ -24,6 +25,7 @@ const ProjectBasedOpportunities = ({
         committed={opportunitiesCreated?.opportunitiesCommitted}
         deployedLabel={opportunitiesCreated?.committedLabel}
         committedLabel={opportunitiesCreated?.committedLabel}
+        accent={Colors.BLUE}
       />
       <ContentEditor content={opportunitiesCreatedContent} textColor="black" />
       <OpportunitySelect />

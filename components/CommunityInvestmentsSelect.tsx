@@ -1,13 +1,15 @@
 import PopUpLink from "./PopUpLink";
 import SelectComponent from "./SelectComponent";
-import { Options, selectOptions } from "./helpers";
+import { Options } from "./helpers";
 import { useCommunityInvestmentsSelect } from "../pages/api/community_investments_select";
 import CommunityInvestmentPopUp from "./CommunityInvestmentPopUp";
+import ProgressBar from "./ProgressBar";
 
-import styles from "../styles/components/PopUpSelect.module.css";
+import styles from "../styles/components/PopUpLink.module.css";
 
 import { communityInvestmentsSelect_communityInvestments_edges } from "../pages/api/__generated__/communityInvestmentsSelect";
 import { useState } from "react";
+import { Colors } from "../styles/helpers";
 
 interface PopUpSelectProps {
   link: communityInvestmentsSelect_communityInvestments_edges | null;
@@ -20,19 +22,19 @@ const PopUpSelect = ({ link }: PopUpSelectProps) => {
     communityAndOpportunityPopUps || {};
 
   const popUpLinkClassNames = [styles.pop_up__link, "pop_up__link"].join(" ");
-  const container = ["prose prose-black", styles.pop_up__link_container].join(
-    " "
-  );
 
   return (
     <div className={popUpLinkClassNames} data-select-id={investmentType?.slug}>
-      <div className={container}>
+      <div className={styles.pop_up__link_container}>
         {alphanumericLabel && <span>{alphanumericLabel}</span>}
         {title && <h2>{title}</h2>}
         {progress?.progressLabel && <h5>{progress.progressLabel}</h5>}
       </div>
       <div className={styles.pop_up__link_progress}>
-        <div className={styles.pop_up__link_progress_bar} />
+        <ProgressBar
+          currentPhase={progress?.currentPhase}
+          accent={Colors.NEON}
+        />
       </div>
     </div>
   );
@@ -69,17 +71,22 @@ const CommunityInvestmentsSelect = () => {
     <section>
       <>
         <SelectComponent options={optionsArray} />
-        {communityInvestments?.edges &&
-          communityInvestments.edges.map((link, index) => (
-            <PopUpLink key={index} handleOpenModal={handleOpenModal}>
-              <PopUpSelect link={link} />
-              <CommunityInvestmentPopUp
-                id={String(link?.node?.databaseId)}
-                isOpen={isOpen}
-                handleCloseModal={handleCloseModal}
-              />
-            </PopUpLink>
-          ))}
+        <div className={styles.pop_up__links_count}>
+          {communityInvestments?.edges?.length} Results
+        </div>
+        <div className={styles.pop_up__links_container}>
+          {communityInvestments?.edges &&
+            communityInvestments.edges.map((link, index) => (
+              <PopUpLink key={index} handleOpenModal={handleOpenModal}>
+                <PopUpSelect link={link} />
+                <CommunityInvestmentPopUp
+                  id={String(link?.node?.databaseId)}
+                  isOpen={isOpen}
+                  handleCloseModal={handleCloseModal}
+                />
+              </PopUpLink>
+            ))}
+        </div>
       </>
     </section>
   );

@@ -2,13 +2,29 @@
     background-color: #F4F4F4;
 }
 
+.pop_up__link .pop_up__link_container {
+    padding: 1.5rem;
+}
+
+.pop_up__link h2 {
+    font-size: 1.875rem;
+    font-family: "Sohne-Kraftig-Bold", sans-serif;
+}
+
 .pop_up__link_hidden {
     display: none;
 }
 
+.pop_up__links_container {
+    margin-top: 2.5rem;
+}
 
-.pop_up__link_container {}
+.pop_up__links_container div:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
 
-.pop_up__link_progress {}
-
-.pop_up__link_progress_bar {}
+.pop_up__links_count {
+    margin-top: .6rem;
+    display: flex;
+    justify-content: flex-end;
+}
