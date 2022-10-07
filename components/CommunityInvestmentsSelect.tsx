@@ -2,10 +2,12 @@ import PopUpLink from "./PopUpLink";
 import SelectComponent from "./SelectComponent";
 import { Options, selectOptions } from "./helpers";
 import { useCommunityInvestmentsSelect } from "../pages/api/community_investments_select";
+import CommunityInvestmentPopUp from "./CommunityInvestmentPopUp";
 
 import styles from "../styles/components/PopUpSelect.module.css";
 
 import { communityInvestmentsSelect_communityInvestments_edges } from "../pages/api/__generated__/communityInvestmentsSelect";
+import { useState } from "react";
 
 interface PopUpSelectProps {
   link: communityInvestmentsSelect_communityInvestments_edges | null;
@@ -35,6 +37,17 @@ const PopUpSelect = ({ link }: PopUpSelectProps) => {
 };
 
 const CommunityInvestmentsSelect = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsOpen(true);
+  };
+
+  const handleCloseModal = (e: { stopPropagation: () => void }) => {
+    setIsOpen(false);
+    e.stopPropagation();
+  };
+
   const { data, loading, error } = useCommunityInvestmentsSelect();
   if (loading || error || !data) return <></>;
 
@@ -56,8 +69,13 @@ const CommunityInvestmentsSelect = () => {
         <SelectComponent options={optionsArray} />
         {communityInvestments?.edges &&
           communityInvestments.edges.map((link, index) => (
-            <PopUpLink key={index} currentID={link?.node?.databaseId}>
+            <PopUpLink key={index} handleOpenModal={handleOpenModal}>
               <PopUpSelect link={link} />
+              <CommunityInvestmentPopUp
+                id={String(link?.node?.databaseId)}
+                isOpen={isOpen}
+                handleCloseModal={handleCloseModal}
+              />
             </PopUpLink>
           ))}
       </>
