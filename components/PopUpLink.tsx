@@ -12,11 +12,12 @@ const PopUpLink = ({ link }: PopUpLinkProps) => {
   const { progress, alphanumericLabel, investmentType } =
     communityAndOpportunityPopUps || {};
 
+  const popUpLinkClassNames = [styles.pop_up__link, "pop_up__link"].join(" ");
   const container = ["prose", styles.pop_up__link_container].join(" ");
 
   return (
     <div
-      className={styles.pop_up__link}
+      className={popUpLinkClassNames}
       data-id={databaseId}
       data-select-id={investmentType?.slug}
     >
