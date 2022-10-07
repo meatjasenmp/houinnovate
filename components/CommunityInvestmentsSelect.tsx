@@ -9,7 +9,8 @@ import styles from "../styles/components/PopUpLink.module.css";
 
 import { communityInvestmentsSelect_communityInvestments_edges } from "../pages/api/__generated__/communityInvestmentsSelect";
 import { useState } from "react";
-import { Colors } from "../styles/helpers";
+import { accentColor, Colors } from "../styles/helpers";
+import { FiArrowUpRight } from "@react-icons/all-files/fi/FiArrowUpRight";
 
 interface PopUpSelectProps {
   link: communityInvestmentsSelect_communityInvestments_edges | null;
@@ -26,9 +27,17 @@ const PopUpSelect = ({ link }: PopUpSelectProps) => {
   return (
     <div className={popUpLinkClassNames} data-select-id={investmentType?.slug}>
       <div className={styles.pop_up__link_container}>
-        {alphanumericLabel && <span>{alphanumericLabel}</span>}
+        {alphanumericLabel && <span>{alphanumericLabel}.</span>}
         {title && <h2>{title}</h2>}
         {progress?.progressLabel && <h5>{progress.progressLabel}</h5>}
+        <div>
+          <figure className={styles.current_phase}>
+            <p className={styles.current_phase_text}>
+              {progress?.currentPhase} Phase
+            </p>
+            <FiArrowUpRight color="black" size="3rem" />
+          </figure>
+        </div>
       </div>
       <div className={styles.pop_up__link_progress}>
         <ProgressBar

@@ -30,7 +30,7 @@ interface PageLinkProps {
 
 const BoxLinkContent = ({ content }: BoxLinkProps) => {
   if (!content) return null;
-  const { image, backgroundColor, boxLinkContent, textColor } =
+  const { image, backgroundColor, boxLinkContent } =
     content as page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink;
 
   return (

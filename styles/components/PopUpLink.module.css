@@ -1,14 +1,20 @@
 .pop_up__link {
     background-color: #F4F4F4;
+    margin-bottom: 1.5rem;
 }
 
 .pop_up__link .pop_up__link_container {
-    padding: 1.5rem;
+    padding: 1.5rem 0 0 1.5rem;
 }
 
 .pop_up__link h2 {
     font-size: 1.875rem;
     font-family: "Sohne-Kraftig-Bold", sans-serif;
+}
+
+.pop_up__link h5 {
+    font-size: 1.25rem;
+    margin-top: .4rem;
 }
 
 .pop_up__link_hidden {
@@ -19,12 +25,22 @@
     margin-top: 2.5rem;
 }
 
-.pop_up__links_container div:not(:last-child) {
-    margin-bottom: 1.5rem;
-}
-
 .pop_up__links_count {
     margin-top: .6rem;
     display: flex;
     justify-content: flex-end;
+}
+
+.pop_up__link .current_phase {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.current_phase_text {
+    text-transform: capitalize;
+    font-family: "Sohne-Kraftig-Bold", sans-serif;
+    font-size: 1.25rem;
 }
