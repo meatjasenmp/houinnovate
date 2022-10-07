@@ -4,3 +4,18 @@
     height: 100%;
     background-color: green;
 }
+
+.hou_modal__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.hou_modal__content {}
+
+.hou_modal_sidebar {}
+
+.hou_modal_data_field {}
+
+.hou_modal__current_phase {}
+
+.hou_modal__content_block {}
