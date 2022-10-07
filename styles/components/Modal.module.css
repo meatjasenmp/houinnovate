@@ -14,7 +14,9 @@
 
 .hou_modal_sidebar {}
 
-.hou_modal_data_field {}
+.hou_modal_data_field {
+    display: flex;
+}
 
 .hou_modal__current_phase {}
 

@@ -41,23 +41,21 @@ const CommunityInvestmentPopUp = ({
         error={error}
       >
         <div className={styles.hou_modal__container}>
-          <div className={styles.hou_modal_data_field}>
+          <div className={styles.hou_modal_sidebar}>
             {alphanumericLabel && <h5>{alphanumericLabel}</h5>}
             {header && <h1>{header}</h1>}
-            <div className={styles.hou_modal_sidebar}>
+            <div className={styles.hou_modal_data_field}>
               {dataFields?.map((dataField, index) => (
                 <div className={styles.hou_modal_data_field} key={index}>
                   <h3>{dataField?.dataField?.labelField}</h3>
                   <p>{dataField?.dataField?.contentField}</p>
                 </div>
               ))}
-
-              {currentPhase && (
-                <div className={styles.hou_modal}>{currentPhase}</div>
-              )}
             </div>
+            {currentPhase && (
+              <div className={styles.hou_modal}>{currentPhase}</div>
+            )}
           </div>
-
           <div className={styles.hou_modal__content}>
             {contentBlocks?.map((contentBlock, index) => (
               <div className={styles.hou_modal__content_block} key={index}>
