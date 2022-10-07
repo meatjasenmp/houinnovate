@@ -1,15 +1,11 @@
-import ReactModal from "react-modal";
+import HouModal from "./HouModal";
 import { useInvestment } from "../pages/api/investment";
 
-interface PopUpProps {
+export interface PopUpProps {
   handleCloseModal: () => void;
   isOpen: boolean;
   id: string;
 }
-
-import styles from "../styles/components/Modal.module.css";
-
-ReactModal.setAppElement("#__next");
 
 const CommunityInvestmentPopUp = ({
   isOpen,
@@ -30,14 +26,9 @@ const CommunityInvestmentPopUp = ({
 
   return (
     <>
-      <ReactModal
-        isOpen={isOpen}
-        contentLabel="test"
-        className={styles.hou_modal}
-      >
-        <p>{id}</p>
-        <button onClick={handleCloseModal}>Close</button>
-      </ReactModal>
+      <HouModal isOpen={isOpen} handleCloseModal={handleCloseModal} id={id}>
+        <p>Test</p>
+      </HouModal>
     </>
   );
 };
