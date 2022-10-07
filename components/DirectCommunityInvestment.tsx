@@ -1,5 +1,5 @@
 import ContentEditor from "./ContentEditor";
-import ProgressBar from "./ProgressBar";
+import CommittedDeployedProgressBar from "./CommittedDeployedProgressBar";
 import CommunityInvestmentsSelect from "./CommunityInvestmentsSelect";
 
 import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_CommunityInvestment } from "../pages/api/__generated__/page";
@@ -19,7 +19,7 @@ const DirectCommunityInvestment = ({
 
   return (
     <section className={styles.community_investment}>
-      <ProgressBar
+      <CommittedDeployedProgressBar
         deployed={deployment?.deployed}
         committed={deployment?.committed}
         deployedLabel={deployment?.deployedLabel}

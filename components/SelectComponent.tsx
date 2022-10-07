@@ -6,6 +6,36 @@ interface SelectComponentProps {
   options: Options[];
 }
 
+const selectStyles = {
+  dropdownIndicator: (provided: any) => ({
+    ...provided,
+    color: "#000",
+  }),
+  indicatorSeparator: (provided: any) => ({
+    ...provided,
+    display: "none",
+  }),
+  control: (provided: any, state: any) => ({
+    ...provided,
+    border: 0,
+    borderRadius: 0,
+    fontFamily: "Sohne-Kraftig-Bold, sans-serif",
+    borderColor: "#000 !important",
+    borderBottom: "2px solid #000",
+  }),
+  menu: (provided: any) => ({
+    ...provided,
+    backgroundColor: "#E0E0E0",
+    borderRadius: 0,
+  }),
+  option: (provided: any, state: any) => ({
+    ...provided,
+    color: "black",
+    backgroundColor: state.isSelected && "#BEBEBE",
+    fontFamily: "Sohne-Kraftig-Bold, sans-serif",
+  }),
+};
+
 const handleSelect = (selected: OnChangeValue<Options, false>) => {
   const { value } = selected || {};
   const links = document.querySelectorAll(".pop_up__link");
@@ -28,7 +58,9 @@ const handleSelect = (selected: OnChangeValue<Options, false>) => {
 };
 
 const SelectComponent = ({ options }: SelectComponentProps) => {
-  return <Select options={options} onChange={handleSelect} />;
+  return (
+    <Select options={options} onChange={handleSelect} styles={selectStyles} />
+  );
 };
 
 export default SelectComponent;

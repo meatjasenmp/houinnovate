@@ -1,5 +1,5 @@
 import ContentEditor from "./ContentEditor";
-import ProgressBar from "./ProgressBar";
+import CommittedDeployedProgressBar from "./CommittedDeployedProgressBar";
 import OpportunitySelect from "./OpportunitySelect";
 
 import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_ProjectBasedOpportunities } from "../pages/api/__generated__/page";
@@ -19,7 +19,7 @@ const ProjectBasedOpportunities = ({
 
   return (
     <section className={styles.project_based_opportunities}>
-      <ProgressBar
+      <CommittedDeployedProgressBar
         deployed={opportunitiesCreated?.opportunitiesCreated}
         committed={opportunitiesCreated?.opportunitiesCommitted}
         deployedLabel={opportunitiesCreated?.committedLabel}
