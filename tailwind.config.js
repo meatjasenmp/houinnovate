@@ -34,10 +34,12 @@ module.exports = {
     "prose",
     "prose-black",
     "prose-white",
+    "text-kraftigBold",
   ],
   theme: {
     fontFamily: {
       body: ["Sohne-Kraftig-Normal", "sans-serif"],
+      kraftigBold: ["Sohne-Kraftig-Bold", "sans-serif"],
     },
     extend: {
       typography: ({ theme }) => ({
