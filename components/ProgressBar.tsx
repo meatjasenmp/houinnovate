@@ -1,8 +1,13 @@
+import { backgroundColorMapping, Colors } from "../styles/helpers";
+
+import styles from "../styles/components/ProgressBar.module.css";
+
 interface ProgressBarProps {
   deployed: number | null | undefined;
   committed: number | null | undefined;
   deployedLabel: string | null | undefined;
   committedLabel: string | null | undefined;
+  accent: Colors;
 }
 
 const ProgressBar = ({
@@ -10,14 +15,17 @@ const ProgressBar = ({
   committed,
   deployedLabel,
   committedLabel,
+  accent,
 }: ProgressBarProps) => {
+  const progressBarDeployedClassNames = [
+    styles.progress_bar__deployed,
+    backgroundColorMapping(accent),
+  ].join(" ");
+
   return (
-    <>
-      {deployedLabel && deployedLabel}
-      {deployed && deployed}
-      {committedLabel && committedLabel}
-      {committed && committed}
-    </>
+    <div className={styles.progress_bar}>
+      <div className={progressBarDeployedClassNames} />
+    </div>
   );
 };
 

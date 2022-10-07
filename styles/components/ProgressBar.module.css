@@ -1,0 +1,8 @@
+.progress_bar {
+    height: 50px;
+    background-color: #E0E0E0;
+}
+
+.progress_bar__deployed {
+    height: 100%;
+}
