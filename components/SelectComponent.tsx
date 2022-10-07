@@ -10,6 +10,13 @@ const handleSelect = (selected: OnChangeValue<Options, false>) => {
   const { value } = selected || {};
   const links = document.querySelectorAll(".pop_up__link");
 
+  if (value === "all") {
+    links.forEach((link) => {
+      link.classList.remove(styles.pop_up__link_hidden);
+    });
+    return;
+  }
+
   links.forEach((link) => {
     const id = link.getAttribute("data-select-id");
     if (id === value) {
