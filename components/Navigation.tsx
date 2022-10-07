@@ -83,7 +83,7 @@ const BlockLinks = ({ blockLinks }: BlockLinkProps) => {
                 return (
                   <li key={index}>
                     <Link href={link?.pageUrl || ""}>
-                      <a>{link?.label}</a>
+                      <a target="_blank">{link?.label}</a>
                     </Link>
                   </li>
                 );
