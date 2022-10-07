@@ -5,15 +5,6 @@ export const useCommunityInvestmentsSelect = () => {
   const { data, loading, error } = useQuery<communityInvestmentsSelect>(
     gql`
       query communityInvestmentsSelect {
-        communityInvestmentTypes {
-          edges {
-            node {
-              databaseId
-              slug
-              name
-            }
-          }
-        }
         communityInvestments {
           edges {
             node {
@@ -25,6 +16,7 @@ export const useCommunityInvestmentsSelect = () => {
                 investmentType {
                   id
                   slug
+                  name
                 }
                 progress {
                   progressLabel

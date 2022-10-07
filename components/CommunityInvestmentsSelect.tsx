@@ -1,4 +1,4 @@
-import PopUpLink from "./PopUpLink";
+import CommunityInvestmentPopUpLink from "./CommunityInvestmentPopUpLink";
 import SelectComponent from "./SelectComponent";
 import { Options } from "./helpers";
 import { useCommunityInvestmentsSelect } from "../pages/api/community_investments_select";
@@ -9,12 +9,14 @@ const CommunityInvestmentsSelect = () => {
   const { data, loading, error } = useCommunityInvestmentsSelect();
   if (loading || error || !data) return <></>;
 
-  const { communityInvestments, communityInvestmentTypes } = data;
+  const { communityInvestments } = data;
+
   const optionsArray: Options[] = [];
 
-  communityInvestmentTypes?.edges?.map((investmentType) => {
-    const { node } = investmentType || {};
-    const { name, slug } = node || {};
+  communityInvestments?.edges?.map((investment) => {
+    const { slug, name } =
+      investment?.node?.communityAndOpportunityPopUps?.investmentType || {};
+
     optionsArray.push({ value: slug, label: name });
   });
 
@@ -24,7 +26,7 @@ const CommunityInvestmentsSelect = () => {
         <SelectComponent options={optionsArray} />
         {communityInvestments?.edges &&
           communityInvestments.edges.map((link, index) => (
-            <PopUpLink link={link} key={index} />
+            <CommunityInvestmentPopUpLink link={link} key={index} />
           ))}
       </>
     </section>

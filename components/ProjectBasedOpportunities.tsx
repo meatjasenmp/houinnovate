@@ -1,5 +1,6 @@
 import ContentEditor from "./ContentEditor";
 import ProgressBar from "./ProgressBar";
+import OpportunitySelect from "./OpportunitySelect";
 
 import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_ProjectBasedOpportunities } from "../pages/api/__generated__/page";
 
@@ -25,6 +26,7 @@ const ProjectBasedOpportunities = ({
         committedLabel={opportunitiesCreated?.committedLabel}
       />
       <ContentEditor content={opportunitiesCreatedContent} textColor="black" />
+      <OpportunitySelect />
     </section>
   );
 };

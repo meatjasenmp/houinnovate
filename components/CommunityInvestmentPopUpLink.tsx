@@ -6,7 +6,7 @@ interface PopUpLinkProps {
 
 import styles from "../styles/components/PopUpLink.module.css";
 
-const PopUpLink = ({ link }: PopUpLinkProps) => {
+const CommunityInvestmentPopUpLink = ({ link }: PopUpLinkProps) => {
   const { node } = link || {};
   const { databaseId, title, communityAndOpportunityPopUps } = node || {};
   const { progress, alphanumericLabel, investmentType } =
@@ -33,4 +33,4 @@ const PopUpLink = ({ link }: PopUpLinkProps) => {
   );
 };
 
-export default PopUpLink;
+export default CommunityInvestmentPopUpLink;

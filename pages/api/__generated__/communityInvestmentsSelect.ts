@@ -7,38 +7,6 @@
 // GraphQL query operation: communityInvestmentsSelect
 // ====================================================
 
-export interface communityInvestmentsSelect_communityInvestmentTypes_edges_node {
-  __typename: "CommunityInvestmentType";
-  /**
-   * The unique resource identifier path
-   */
-  databaseId: number;
-  /**
-   * An alphanumeric identifier for the object unique to its type.
-   */
-  slug: string | null;
-  /**
-   * The human friendly name of the object.
-   */
-  name: string | null;
-}
-
-export interface communityInvestmentsSelect_communityInvestmentTypes_edges {
-  __typename: "RootQueryToCommunityInvestmentTypeConnectionEdge";
-  /**
-   * The item at the end of the edge
-   */
-  node: communityInvestmentsSelect_communityInvestmentTypes_edges_node | null;
-}
-
-export interface communityInvestmentsSelect_communityInvestmentTypes {
-  __typename: "RootQueryToCommunityInvestmentTypeConnection";
-  /**
-   * Edges for the RootQueryToCommunityInvestmentTypeConnection connection
-   */
-  edges: (communityInvestmentsSelect_communityInvestmentTypes_edges | null)[] | null;
-}
-
 export interface communityInvestmentsSelect_communityInvestments_edges_node_communityAndOpportunityPopUps_investmentType {
   __typename: "CommunityInvestmentType";
   /**
@@ -49,6 +17,10 @@ export interface communityInvestmentsSelect_communityInvestments_edges_node_comm
    * An alphanumeric identifier for the object unique to its type.
    */
   slug: string | null;
+  /**
+   * The human friendly name of the object.
+   */
+  name: string | null;
 }
 
 export interface communityInvestmentsSelect_communityInvestments_edges_node_communityAndOpportunityPopUps_progress {
@@ -103,10 +75,6 @@ export interface communityInvestmentsSelect_communityInvestments {
 }
 
 export interface communityInvestmentsSelect {
-  /**
-   * Connection between the RootQuery type and the CommunityInvestmentType type
-   */
-  communityInvestmentTypes: communityInvestmentsSelect_communityInvestmentTypes | null;
   /**
    * Connection between the RootQuery type and the CommunityInvestment type
    */
