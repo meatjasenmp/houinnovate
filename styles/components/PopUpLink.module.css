@@ -2,6 +2,11 @@
     background-color: #F4F4F4;
 }
 
+.pop_up__link_hidden {
+    display: none;
+}
+
+
 .pop_up__link_container {}
 
 .pop_up__link_progress {}

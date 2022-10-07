@@ -1,6 +1,6 @@
 import Select, { OnChangeValue } from "react-select";
 import { Options } from "./helpers";
-import styles from "../styles/components/PopUpSelect.module.css";
+import styles from "../styles/components/PopUpLink.module.css";
 
 interface SelectComponentProps {
   options: Options[];
