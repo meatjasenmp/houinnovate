@@ -1,3 +1,5 @@
+import { Components } from "../components/helpers";
+
 export enum BackgroundColors {
   RED = "bg-innovate-red",
   BLACK = "bg-innovate-black",
@@ -47,24 +49,10 @@ export const backgroundColorMapping = (backgroundColor: string | null) => {
   }
 };
 
-export const textColorMapping = (textColor: string | null) => {
-  switch (textColor) {
-    case Colors.RED:
-      return TextColors.RED;
-    case Colors.PINK:
-      return TextColors.PINK;
-    case Colors.BLUE:
-      return TextColors.BLUE;
-    case Colors.WHITE:
-      return TextColors.WHITE;
-    case Colors.NEON:
-      return TextColors.NEON;
-    default:
-      return TextColors.BLACK;
-  }
-};
-
-export const accentColor = (backgroundColor: string | null) => {
+export const accentColor = (
+  backgroundColor: string | null,
+  component?: Components
+) => {
   if (backgroundColor === Colors.NEON || backgroundColor === Colors.PINK) {
     return "black";
   }

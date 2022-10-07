@@ -59,7 +59,6 @@ export const usePage = (id: string) => {
               ... on Page_Components_ComponentBlocks_ContentBlock {
                 contentBlockContent: content
                 backgroundColor
-                textColor
               }
               ... on Page_Components_ComponentBlocks_ContentBlockStylizedList {
                 contentBlockStylized: content

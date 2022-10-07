@@ -118,7 +118,6 @@ export interface page_page_components_componentBlocks_Page_Components_ComponentB
   boxLinkContent: string | null;
   link: page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink_link | null;
   backgroundColor: string | null;
-  textColor: string | null;
 }
 
 export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks {
@@ -130,7 +129,6 @@ export interface page_page_components_componentBlocks_Page_Components_ComponentB
   __typename: "Page_Components_ComponentBlocks_ContentBlock";
   contentBlockContent: string | null;
   backgroundColor: string | null;
-  textColor: string | null;
 }
 
 export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlockStylizedList_list_listItem {
