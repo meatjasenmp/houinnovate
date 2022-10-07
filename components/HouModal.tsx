@@ -8,19 +8,12 @@ interface HouModalProps {
   children: ReactNode;
   loading: boolean;
   error: ApolloError | undefined;
-  handleCloseModal: () => void;
   isOpen: boolean;
 }
 
 ReactModal.setAppElement("#__next");
 
-const HouModal = ({
-  handleCloseModal,
-  isOpen,
-  children,
-  loading,
-  error,
-}: HouModalProps) => {
+const HouModal = ({ isOpen, children, loading, error }: HouModalProps) => {
   if (error) return <></>;
   if (loading) {
     return <div>Loading...</div>;
@@ -33,7 +26,6 @@ const HouModal = ({
         contentLabel="test"
         className={styles.hou_modal}
       >
-        <button onClick={handleCloseModal}>Close</button>
         {children}
       </ReactModal>
     </>

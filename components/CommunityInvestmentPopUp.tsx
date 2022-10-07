@@ -5,15 +5,15 @@ import { useInvestment } from "../pages/api/investment";
 import styles from "../styles/components/Modal.module.css";
 
 export interface PopUpProps {
-  handleCloseModal: () => void;
   isOpen: boolean;
   id: string;
+  handleCloseModal: (e: { stopPropagation: () => void }) => void;
 }
 
 const CommunityInvestmentPopUp = ({
   isOpen,
-  id,
   handleCloseModal,
+  id,
 }: PopUpProps) => {
   const { data, loading, error } = useInvestment(id);
 
@@ -34,13 +34,9 @@ const CommunityInvestmentPopUp = ({
 
   return (
     <>
-      <HouModal
-        isOpen={isOpen}
-        handleCloseModal={handleCloseModal}
-        loading={loading}
-        error={error}
-      >
+      <HouModal isOpen={isOpen} loading={loading} error={error}>
         <div className={styles.hou_modal__container}>
+          <button onClick={handleCloseModal}>Close</button>
           <div className={styles.hou_modal_sidebar}>
             {alphanumericLabel && <h5>{alphanumericLabel}</h5>}
             {header && <h1>{header}</h1>}

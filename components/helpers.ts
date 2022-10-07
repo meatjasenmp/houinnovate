@@ -13,3 +13,10 @@ export interface Options {
   value?: string | null | undefined;
   label?: string | null | undefined;
 }
+
+const optionsArray: Options[] = [];
+export const selectOptions = (options: Options, allLabel: string) => {
+  optionsArray.push(options);
+  console.log(optionsArray);
+  return optionsArray;
+};
