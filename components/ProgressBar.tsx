@@ -28,15 +28,22 @@ const ProgressBar = ({
   const progressBarDeployedClassNames = [
     styles.progress_bar__deployed,
     backgroundColorMapping(accent),
-    `w-[${calculatePercentage(deployed, committed)}%]`,
   ].join(" ");
 
   return (
     <div className={styles.progress_bar}>
+      <div className={styles.progress_bar__labels}>
+        <span>${deployed} Million</span>
+        <span>{deployedLabel}</span>
+      </div>
       <div
         className={progressBarDeployedClassNames}
         style={{ width: `${calculatePercentage(deployed, committed)}%` }}
       />
+      <div className={styles.progress_bar__labels}>
+        <span>${committed} Million</span>
+        <span>{committedLabel}</span>
+      </div>
     </div>
   );
 };

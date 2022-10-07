@@ -1,8 +1,27 @@
 .progress_bar {
     height: 50px;
     background-color: #E0E0E0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .progress_bar__deployed {
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
+}
+
+.progress_bar__labels {
+    position: relative;
+    z-index: 2;
+    padding: 0 1rem;
+}
+
+.progress_bar__labels span {
+    display: block;
+    line-height: 1.2;
+    font-family: "Sohne-Kraftig-Bold", sans-serif;
 }
