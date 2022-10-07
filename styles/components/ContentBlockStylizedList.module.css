@@ -7,3 +7,9 @@
 .list_item {
     padding: 1rem;
 }
+
+.footer {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 6px solid #000;
+}

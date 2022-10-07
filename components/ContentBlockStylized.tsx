@@ -54,7 +54,7 @@ const ContentBlockStylized = ({ blockContent }: ComponentBlocksProps) => {
         </ul>
       )}
       {showFooterText && (
-        <div className="prose">
+        <div className={styles.footer}>
           <ContentEditor content={footerText} textColor="black" />
         </div>
       )}
