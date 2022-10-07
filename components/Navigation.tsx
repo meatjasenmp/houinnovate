@@ -1,7 +1,7 @@
 import { slide as Menu } from "react-burger-menu";
 import Link from "next/link";
 import ContentEditor from "./ContentEditor";
-import HamburgerMenu from "../styles/components/HamburgerMenu";
+import HamburgerMenu from "./HamburgerMenu";
 import {
   page_siteOptionsPage_siteNavigation,
   page_siteOptionsPage_siteNavigation_navigation_sectionLinks,

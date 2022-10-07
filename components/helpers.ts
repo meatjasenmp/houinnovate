@@ -8,3 +8,8 @@ export enum Components {
   PROJECT_BASED_OPPORTUNITIES = "Page_Components_ComponentBlocks_ProjectBasedOpportunities",
   DIRECT_COMMUNITY_INVESTMENT = "Page_Components_ComponentBlocks_CommunityInvestment",
 }
+
+export interface Options {
+  value?: string | null | undefined;
+  label?: string | null | undefined;
+}
