@@ -1,1 +1,9 @@
 .content_block_stylized {}
+
+.list .list_item:not(:last-child) {
+    margin-bottom: .5rem;
+}
+
+.list_item {
+    padding: 1rem;
+}

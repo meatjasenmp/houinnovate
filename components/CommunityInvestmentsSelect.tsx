@@ -20,7 +20,9 @@ const PopUpSelect = ({ link }: PopUpSelectProps) => {
     communityAndOpportunityPopUps || {};
 
   const popUpLinkClassNames = [styles.pop_up__link, "pop_up__link"].join(" ");
-  const container = ["prose", styles.pop_up__link_container].join(" ");
+  const container = ["prose prose-black", styles.pop_up__link_container].join(
+    " "
+  );
 
   return (
     <div className={popUpLinkClassNames} data-select-id={investmentType?.slug}>
