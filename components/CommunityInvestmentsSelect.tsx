@@ -11,6 +11,7 @@ const CommunityInvestmentsSelect = () => {
 
   const { communityInvestments } = data;
 
+  // TODO: Make this a helper function so it's multi-use (allLabel: string, options: [value: string; label: string; ]) => return [];
   const optionsArray: Options[] = [{ value: "all", label: "All Commitments" }];
 
   communityInvestments?.edges?.map((investment) => {

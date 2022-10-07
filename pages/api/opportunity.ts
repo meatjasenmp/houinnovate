@@ -17,6 +17,7 @@ export const useOpportunity = (id: string) => {
           slug
           title
           communityAndOpportunityPopUps {
+            header
             alphanumericLabel
             progress {
               progressLabel
