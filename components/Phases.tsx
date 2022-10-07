@@ -8,6 +8,7 @@ import styles from "../styles/components/Phases.module.css";
 import {
   accentColor,
   backgroundColorMapping,
+  Colors,
   textColorMapping,
 } from "../styles/helpers";
 import React from "react";
@@ -28,6 +29,11 @@ interface PhaseProps {
 const handlePhaseClick = (e: React.MouseEvent<HTMLElement>) => {
   const currentPhase = e.currentTarget.nextSibling as HTMLElement;
 
+  if (!currentPhase.classList.contains("hidden")) {
+    currentPhase.classList.add("hidden");
+    return;
+  }
+
   const phases = document.querySelectorAll(`.${styles.phase} .phase__content`);
   phases.forEach((phase) => {
     phase.classList.add("hidden");
@@ -42,12 +48,16 @@ const Phase = ({ phase, phaseNumber, backgroundColor }: PhaseProps) => {
   const { phaseHeader, phaseText } = phase;
 
   const phaseClassName = [styles.phase, "flex"].join(" ");
+  const textColor =
+    backgroundColor === Colors.NEON ? "text-black" : "text-white";
 
   return (
     <div className={phaseClassName}>
-      <div>{`0${phaseNumber}.`}</div>
+      <div className={textColor}>{`0${phaseNumber}.`}</div>
       <div>
-        <h5 onClick={handlePhaseClick}>{phaseHeader}</h5>
+        <h5 className={textColor} onClick={handlePhaseClick}>
+          {phaseHeader}
+        </h5>
         <div className="hidden phase__content">
           <ContentEditor
             content={phaseText}
