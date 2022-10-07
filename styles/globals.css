@@ -25,7 +25,8 @@
     }
 }
 
-.no-scroll {
+.no-scroll,
+.ReactModal__Body--open {
     overflow: hidden;
 }
 
