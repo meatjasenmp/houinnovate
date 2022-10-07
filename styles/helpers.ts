@@ -63,3 +63,10 @@ export const textColorMapping = (textColor: string | null) => {
       return TextColors.BLACK;
   }
 };
+
+export const accentColor = (backgroundColor: string | null) => {
+  if (backgroundColor === Colors.NEON || backgroundColor === Colors.PINK) {
+    return "black";
+  }
+  return "white";
+};

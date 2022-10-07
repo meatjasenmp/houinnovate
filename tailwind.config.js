@@ -7,7 +7,7 @@ const headerDefaults = {
 };
 
 const bodyDefaults = {
-  lineHeight: 1.2,
+  lineHeight: 1.5,
 };
 
 module.exports = {
@@ -32,6 +32,8 @@ module.exports = {
     "text-innovate-neon",
     "text-innovate-white",
     "prose",
+    "prose-black",
+    "prose-white",
   ],
   theme: {
     fontFamily: {

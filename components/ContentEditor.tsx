@@ -14,6 +14,7 @@ const ContentEditor = ({ content, textColor }: ContentEditorProps) => {
   });
 
   const selectedTextColor = textColor ? textColor : "white";
+
   const clean = DOMPurify.sanitize(content);
   const className = [
     styles.content__editor,

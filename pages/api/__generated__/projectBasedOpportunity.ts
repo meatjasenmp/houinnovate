@@ -17,6 +17,7 @@ export interface projectBasedOpportunity_projectBasedOpportunity_communityAndOpp
 
 export interface projectBasedOpportunity_projectBasedOpportunity_communityAndOpportunityPopUps {
   __typename: "ProjectBasedOpportunity_Communityandopportunitypopups";
+  header: string | null;
   alphanumericLabel: string | null;
   progress: projectBasedOpportunity_projectBasedOpportunity_communityAndOpportunityPopUps_progress | null;
 }

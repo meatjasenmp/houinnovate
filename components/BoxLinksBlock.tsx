@@ -7,6 +7,7 @@ import { backgroundColorMapping, Colors, LinkType } from "../styles/helpers";
 import ContentEditor from "./ContentEditor";
 import ImageBlock from "./ImageBlock";
 import { FiArrowUpRight } from "@react-icons/all-files/fi/FiArrowUpRight";
+import { accentColor } from "../styles/helpers";
 
 import styles from "../styles/components/BoxLinks.module.css";
 
@@ -29,15 +30,8 @@ interface PageLinkProps {
 
 const BoxLinkContent = ({ content }: BoxLinkProps) => {
   if (!content) return null;
-  const { image, backgroundColor, boxLinkContent } =
+  const { image, backgroundColor, boxLinkContent, textColor } =
     content as page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink;
-
-  const iconColor = () => {
-    if (backgroundColor === Colors.NEON || backgroundColor === Colors.PINK) {
-      return "black";
-    }
-    return "white";
-  };
 
   return (
     <div className={styles.box_link}>
@@ -45,10 +39,13 @@ const BoxLinkContent = ({ content }: BoxLinkProps) => {
         <ImageBlock image={image} height="590" width="1212" />
       </figure>
       <article>
-        <ContentEditor content={boxLinkContent} />
+        <ContentEditor
+          content={boxLinkContent}
+          textColor={accentColor(backgroundColor)}
+        />
       </article>
       <figure className={styles.link_icon}>
-        <FiArrowUpRight color={iconColor()} size="3rem" />
+        <FiArrowUpRight color={accentColor(backgroundColor)} size="3rem" />
       </figure>
     </div>
   );
