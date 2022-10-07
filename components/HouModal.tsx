@@ -11,6 +11,12 @@ interface HouModalProps {
   isOpen: boolean;
 }
 
+const customStyles = {
+  overlay: {
+    zIndex: 1000,
+  },
+};
+
 ReactModal.setAppElement("#__next");
 
 const HouModal = ({ isOpen, children, loading, error }: HouModalProps) => {
@@ -24,6 +30,7 @@ const HouModal = ({ isOpen, children, loading, error }: HouModalProps) => {
       <ReactModal
         isOpen={isOpen}
         contentLabel="test"
+        style={customStyles}
         className={styles.hou_modal}
       >
         {children}
