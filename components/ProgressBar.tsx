@@ -2,7 +2,7 @@ import styles from "../styles/components/ProgressBar.module.css";
 import { backgroundColorMapping, Colors } from "../styles/helpers";
 
 enum Phase {
-  MONITORING = "monitoring",
+  INITIAL = "initial",
   PLANNING = "planning",
   EXECUTION = "execution",
   COMPLETED = "completed",
@@ -10,7 +10,7 @@ enum Phase {
 
 const progressBarPercentage = (currentPhase: string | null | undefined) => {
   switch (currentPhase) {
-    case Phase.MONITORING:
+    case Phase.INITIAL:
       return "25%";
     case Phase.PLANNING:
       return "50%";
@@ -26,9 +26,11 @@ const progressBarPercentage = (currentPhase: string | null | undefined) => {
 const ProgressBar = ({
   currentPhase,
   accent,
+  height,
 }: {
   currentPhase: string | null | undefined;
   accent: Colors;
+  height?: string;
 }) => {
   const progressBarClassName = [
     styles.progress_bar_simple_bar,
@@ -40,6 +42,7 @@ const ProgressBar = ({
         className={progressBarClassName}
         style={{
           width: `${progressBarPercentage(currentPhase)}`,
+          height: height || "20px",
         }}
       ></div>
     </div>

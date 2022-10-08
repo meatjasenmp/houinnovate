@@ -8,6 +8,7 @@ const headerDefaults = {
 
 const bodyDefaults = {
   lineHeight: 1.5,
+  fontFamily: "Sohne-Kraftig-Normal",
 };
 
 module.exports = {
@@ -57,7 +58,14 @@ module.exports = {
               fontSize: "1.875rem",
               ...headerDefaults,
             },
+            h4: {
+              fontSize: "1.563rem",
+              ...headerDefaults,
+            },
             p: {
+              ...bodyDefaults,
+            },
+            li: {
               ...bodyDefaults,
             },
           },

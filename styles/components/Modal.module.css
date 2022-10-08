@@ -1,23 +1,45 @@
 .hou_modal {
-    z-index: 9999;
     width: 100%;
     height: 100%;
-    background-color: green;
+    background-color: #FFF;
+}
+
+.hou_modal_close_button {
+    align-self: flex-end;
 }
 
 .hou_modal__container {
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
+    height: 100%;
+    padding: 1.5rem 1.5rem 0 1.5rem;
 }
-
-.hou_modal__content {}
-
-.hou_modal_sidebar {}
 
 .hou_modal_data_field {
     display: flex;
 }
 
-.hou_modal__current_phase {}
+.hou_modal_data_fields {
+    margin: 1.5rem 0;
+}
 
-.hou_modal__content_block {}
+.content_block_border {
+    height: 4px;
+    background-color: #000;
+    width: 80%;
+    margin-top: 1.25rem;
+}
+
+.hou_modal_data_field p:first-child {
+    margin-right: .65rem;
+}
+
+.hou_modal_progress_container {
+    margin-top: 1.5rem;
+}
+
+.hou_modal_progress_container h4 {
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+}
