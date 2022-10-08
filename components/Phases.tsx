@@ -48,7 +48,7 @@ const Phase = ({ phase, phaseNumber, backgroundColor }: PhaseProps) => {
   const { phaseHeader, phaseText } = phase;
 
   const phaseClassName = [styles.phase, "flex"].join(" ");
-  const textColor = `text-${accentColor(backgroundColor)}`;
+  const textColor = `text-innovate-${accentColor(backgroundColor)}`;
 
   return (
     <div className={phaseClassName}>
