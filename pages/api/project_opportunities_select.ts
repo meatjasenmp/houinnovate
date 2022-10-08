@@ -6,37 +6,26 @@ export const useProjectOpportunitiesSelect = () => {
   const { data, loading, error } = useQuery<projectOpportunitiesSelect>(
     gql`
       query projectOpportunitiesSelect {
-        opportunityTypes {
+        projectBasedOpportunities {
           edges {
             node {
               databaseId
               slug
-              name
-            }
-          }
-        }
-        projectBasedOpportunities {
-          nodes {
-            databaseId
-            title
-            slug
-            communityAndOpportunityPopUps {
-              alphanumericLabel
-              header
-              dataFields {
-                dataField {
-                  labelField
-                  contentField
+              title
+              communityAndOpportunityPopUps {
+                alphanumericLabel
+                opportunityType {
+                  id
+                  slug
+                  name
                 }
-              }
-              contentBlocks {
-                content
-              }
-              progress {
-                progressLabel
-                committed
-                deployed
-                currentPhase
+                progress {
+                  progressLabel
+                  showProgressLabel
+                  committed
+                  deployed
+                  currentPhase
+                }
               }
             }
           }

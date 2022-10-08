@@ -9,18 +9,22 @@ import styles from "../styles/components/PopUpLink.module.css";
 
 import { communityInvestmentsSelect_communityInvestments_edges } from "../pages/api/__generated__/communityInvestmentsSelect";
 import { useState } from "react";
-import { accentColor, Colors } from "../styles/helpers";
+import { Colors } from "../styles/helpers";
 import { FiArrowUpRight } from "@react-icons/all-files/fi/FiArrowUpRight";
 
 interface PopUpSelectProps {
   link: communityInvestmentsSelect_communityInvestments_edges | null;
 }
 
-const PopUpSelect = ({ link }: PopUpSelectProps) => {
+const CommunityPopUpSelect = ({ link }: PopUpSelectProps) => {
   const { node } = link || {};
+
   const { title, communityAndOpportunityPopUps } = node || {};
+
   const { progress, alphanumericLabel, investmentType } =
     communityAndOpportunityPopUps || {};
+
+  const { currentPhase, progressLabel, showProgressLabel } = progress || {};
 
   const popUpLinkClassNames = [styles.pop_up__link, "pop_up__link"].join(" ");
 
@@ -29,21 +33,16 @@ const PopUpSelect = ({ link }: PopUpSelectProps) => {
       <div className={styles.pop_up__link_container}>
         {alphanumericLabel && <span>{alphanumericLabel}.</span>}
         {title && <h2>{title}</h2>}
-        {progress?.progressLabel && <h5>{progress.progressLabel}</h5>}
+        {showProgressLabel && progressLabel && <h5>{progressLabel}</h5>}
         <div>
           <figure className={styles.current_phase}>
-            <p className={styles.current_phase_text}>
-              {progress?.currentPhase} Phase
-            </p>
+            <p className={styles.current_phase_text}>{currentPhase} Phase</p>
             <FiArrowUpRight color="black" size="3rem" />
           </figure>
         </div>
       </div>
       <div className={styles.pop_up__link_progress}>
-        <ProgressBar
-          currentPhase={progress?.currentPhase}
-          accent={Colors.NEON}
-        />
+        <ProgressBar currentPhase={currentPhase} accent={Colors.NEON} />
       </div>
     </div>
   );
@@ -87,7 +86,7 @@ const CommunityInvestmentsSelect = () => {
           {communityInvestments?.edges &&
             communityInvestments.edges.map((link, index) => (
               <PopUpLink key={index} handleOpenModal={handleOpenModal}>
-                <PopUpSelect link={link} />
+                <CommunityPopUpSelect link={link} />
                 <CommunityInvestmentPopUp
                   id={String(link?.node?.databaseId)}
                   isOpen={isOpen}

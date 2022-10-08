@@ -25,6 +25,7 @@ export interface communityInvestment_communityInvestment_communityAndOpportunity
 
 export interface communityInvestment_communityInvestment_communityAndOpportunityPopUps_progress {
   __typename: "CommunityInvestment_Communityandopportunitypopups_Progress";
+  showProgressLabel: boolean | null;
   progressLabel: string | null;
   committed: number | null;
   deployed: number | null;
@@ -34,7 +35,6 @@ export interface communityInvestment_communityInvestment_communityAndOpportunity
 export interface communityInvestment_communityInvestment_communityAndOpportunityPopUps {
   __typename: "CommunityInvestment_Communityandopportunitypopups";
   alphanumericLabel: string | null;
-  header: string | null;
   dataFields: (communityInvestment_communityInvestment_communityAndOpportunityPopUps_dataFields | null)[] | null;
   contentBlocks: (communityInvestment_communityInvestment_communityAndOpportunityPopUps_contentBlocks | null)[] | null;
   progress: communityInvestment_communityInvestment_communityAndOpportunityPopUps_progress | null;

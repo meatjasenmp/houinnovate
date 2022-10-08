@@ -1,26 +1,22 @@
+import { PopUpProps, PopUpTypes } from "./helpers";
 import HouModal from "./HouModal";
+import { useOpportunity } from "../pages/api/opportunity";
 import ContentEditor from "./ContentEditor";
-import { useInvestment } from "../pages/api/investment";
 import { IoClose } from "@react-icons/all-files/io5/IoClose";
 import ProgressBar from "./ProgressBar";
 import { Phase } from "./ProgressBar";
-import { PopUpProps, PopUpTypes } from "./helpers";
-import styles from "../styles/components/Modal.module.css";
-import { Colors } from "../styles/helpers";
 import { completedBackground, phaseCompletedOpacity } from "./helpers";
 
-// TODO: The pop up can probably be a custom hook
+import styles from "../styles/components/Modal.module.css";
+import { Colors } from "../styles/helpers";
 
-const CommunityInvestmentPopUp = ({
-  isOpen,
-  handleCloseModal,
-  id,
-}: PopUpProps) => {
-  const { data, loading, error } = useInvestment(id);
+const OpportunityPopUp = ({ isOpen, handleCloseModal, id }: PopUpProps) => {
+  const { data, loading, error } = useOpportunity(id);
 
-  const { communityInvestment } = data || {};
+  const { projectBasedOpportunity } = data || {};
 
-  const { communityAndOpportunityPopUps, title } = communityInvestment || {};
+  const { communityAndOpportunityPopUps, title } =
+    projectBasedOpportunity || {};
 
   const { progress, alphanumericLabel, contentBlocks, dataFields } =
     communityAndOpportunityPopUps || {};
@@ -29,7 +25,7 @@ const CommunityInvestmentPopUp = ({
 
   const containerClassName = [
     styles.hou_modal__container,
-    completedBackground(currentPhase, PopUpTypes.INVESTMENT),
+    completedBackground(currentPhase, PopUpTypes.OPPORTUNITY),
     "prose prose-black",
   ].join(" ");
 
@@ -84,7 +80,7 @@ const CommunityInvestmentPopUp = ({
               <div className="full-screen">
                 <ProgressBar
                   currentPhase={currentPhase}
-                  accent={Colors.NEON}
+                  accent={Colors.BLUE}
                   height="35px"
                 />
               </div>
@@ -96,4 +92,4 @@ const CommunityInvestmentPopUp = ({
   );
 };
 
-export default CommunityInvestmentPopUp;
+export default OpportunityPopUp;

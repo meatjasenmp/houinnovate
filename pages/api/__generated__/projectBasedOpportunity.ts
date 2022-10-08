@@ -7,8 +7,25 @@
 // GraphQL query operation: projectBasedOpportunity
 // ====================================================
 
+export interface projectBasedOpportunity_projectBasedOpportunity_communityAndOpportunityPopUps_dataFields_dataField {
+  __typename: "ProjectBasedOpportunity_Communityandopportunitypopups_dataFields_DataField";
+  labelField: string | null;
+  contentField: string | null;
+}
+
+export interface projectBasedOpportunity_projectBasedOpportunity_communityAndOpportunityPopUps_dataFields {
+  __typename: "ProjectBasedOpportunity_Communityandopportunitypopups_dataFields";
+  dataField: projectBasedOpportunity_projectBasedOpportunity_communityAndOpportunityPopUps_dataFields_dataField | null;
+}
+
+export interface projectBasedOpportunity_projectBasedOpportunity_communityAndOpportunityPopUps_contentBlocks {
+  __typename: "ProjectBasedOpportunity_Communityandopportunitypopups_contentBlocks";
+  content: string | null;
+}
+
 export interface projectBasedOpportunity_projectBasedOpportunity_communityAndOpportunityPopUps_progress {
   __typename: "ProjectBasedOpportunity_Communityandopportunitypopups_Progress";
+  showProgressLabel: boolean | null;
   progressLabel: string | null;
   committed: number | null;
   deployed: number | null;
@@ -17,8 +34,9 @@ export interface projectBasedOpportunity_projectBasedOpportunity_communityAndOpp
 
 export interface projectBasedOpportunity_projectBasedOpportunity_communityAndOpportunityPopUps {
   __typename: "ProjectBasedOpportunity_Communityandopportunitypopups";
-  header: string | null;
   alphanumericLabel: string | null;
+  dataFields: (projectBasedOpportunity_projectBasedOpportunity_communityAndOpportunityPopUps_dataFields | null)[] | null;
+  contentBlocks: (projectBasedOpportunity_projectBasedOpportunity_communityAndOpportunityPopUps_contentBlocks | null)[] | null;
   progress: projectBasedOpportunity_projectBasedOpportunity_communityAndOpportunityPopUps_progress | null;
 }
 

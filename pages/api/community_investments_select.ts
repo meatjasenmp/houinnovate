@@ -20,6 +20,7 @@ export const useCommunityInvestmentsSelect = () => {
                 }
                 progress {
                   progressLabel
+                  showProgressLabel
                   committed
                   deployed
                   currentPhase

@@ -1,3 +1,6 @@
+import { Phase } from "./ProgressBar";
+import { backgroundColorMapping, Colors } from "../styles/helpers";
+
 export enum Components {
   HERO_BANNER = "Page_Components_ComponentBlocks_HeroBanner",
   BOX_LINKS = "Page_Components_ComponentBlocks_BoxLinks",
@@ -14,9 +17,49 @@ export interface Options {
   label?: string | null | undefined;
 }
 
+export enum PopUpTypes {
+  INVESTMENT = "investment",
+  OPPORTUNITY = "opportunity",
+}
+
 const optionsArray: Options[] = [];
+
 export const selectOptions = (options: Options, allLabel: string) => {
   optionsArray.push(options);
   console.log(optionsArray);
   return optionsArray;
 };
+
+export const completedBackground = (
+  currentPhase: string | null | undefined,
+  popUpType: string | null | undefined
+) => {
+  if (popUpType === PopUpTypes.INVESTMENT) {
+    if (currentPhase === Phase.COMPLETED) {
+      return backgroundColorMapping(Colors.NEON);
+    }
+    return backgroundColorMapping(Colors.WHITE);
+  }
+
+  if (popUpType === PopUpTypes.OPPORTUNITY) {
+    if (currentPhase === Phase.COMPLETED) {
+      return backgroundColorMapping(Colors.BLUE);
+    }
+    return backgroundColorMapping(Colors.WHITE);
+  }
+};
+
+export const phaseCompletedOpacity = (
+  currentPhase: string | null | undefined
+) => {
+  if (currentPhase === Phase.COMPLETED) {
+    return 0.15;
+  }
+  return 1;
+};
+
+export interface PopUpProps {
+  isOpen: boolean;
+  id: string;
+  handleCloseModal: (e: { stopPropagation: () => void }) => void;
+}

@@ -18,7 +18,6 @@ export const useInvestment = (id: string) => {
           title
           communityAndOpportunityPopUps {
             alphanumericLabel
-            header
             dataFields {
               dataField {
                 labelField
@@ -29,6 +28,7 @@ export const useInvestment = (id: string) => {
               content
             }
             progress {
+              showProgressLabel
               progressLabel
               committed
               deployed

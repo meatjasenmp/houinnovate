@@ -26,6 +26,7 @@ export interface communityInvestmentsSelect_communityInvestments_edges_node_comm
 export interface communityInvestmentsSelect_communityInvestments_edges_node_communityAndOpportunityPopUps_progress {
   __typename: "CommunityInvestment_Communityandopportunitypopups_Progress";
   progressLabel: string | null;
+  showProgressLabel: boolean | null;
   committed: number | null;
   deployed: number | null;
   currentPhase: string | null;
