@@ -62,6 +62,11 @@ module.exports = {
               fontSize: "1.563rem",
               ...headerDefaults,
             },
+            h5: {
+              fontSize: "1.125rem",
+              lineHeight: 1.25,
+              marginBottom: "1rem",
+            },
             p: {
               ...bodyDefaults,
             },

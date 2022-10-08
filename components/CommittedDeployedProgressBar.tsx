@@ -1,4 +1,4 @@
-import { backgroundColorMapping, Colors } from "../styles/helpers";
+import { accentColor, backgroundColorMapping, Colors } from "../styles/helpers";
 
 import styles from "../styles/components/ProgressBar.module.css";
 
@@ -30,9 +30,14 @@ const CommittedDeployedProgressBar = ({
     backgroundColorMapping(accent),
   ].join(" ");
 
+  const labelClassNames = [
+    styles.progress_bar__labels,
+    `text-innovate-${accentColor(accent)}`,
+  ].join(" ");
+
   return (
     <div className={styles.progress_bar}>
-      <div className={styles.progress_bar__labels}>
+      <div className={labelClassNames}>
         <span>${deployed} Million</span>
         <span>{deployedLabel}</span>
       </div>

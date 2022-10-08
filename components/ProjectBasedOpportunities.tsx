@@ -17,13 +17,14 @@ const ProjectBasedOpportunities = ({
   if (!blockContent) return null;
 
   const { opportunitiesCreated, opportunitiesCreatedContent } = blockContent;
+  console.log(opportunitiesCreated);
 
   return (
     <section className={styles.project_based_opportunities}>
       <CommittedDeployedProgressBar
         deployed={opportunitiesCreated?.opportunitiesCreated}
         committed={opportunitiesCreated?.opportunitiesCommitted}
-        deployedLabel={opportunitiesCreated?.committedLabel}
+        deployedLabel={opportunitiesCreated?.createdLabel}
         committedLabel={opportunitiesCreated?.committedLabel}
         accent={Colors.BLUE}
       />
