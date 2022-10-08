@@ -39,10 +39,14 @@
 }
 
 .hou_modal_progress_container {
-    margin-top: 1.5rem;
+    margin-top: auto;
 }
 
 .hou_modal_progress_container h4 {
     text-transform: capitalize;
+    margin-bottom: 1.5rem;
+}
+
+.hou_modal__content .hou_modal__content_block:not(:last-child) {
     margin-bottom: 1.5rem;
 }
