@@ -1,7 +1,7 @@
 import styles from "../styles/components/ProgressBar.module.css";
 import { backgroundColorMapping, Colors } from "../styles/helpers";
 
-enum Phase {
+export enum Phase {
   INITIAL = "initial",
   PLANNING = "planning",
   EXECUTION = "execution",

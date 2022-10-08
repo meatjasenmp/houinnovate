@@ -69,7 +69,6 @@ export interface projectOpportunitiesSelect_projectBasedOpportunities_nodes_comm
   header: string | null;
   dataFields: (projectOpportunitiesSelect_projectBasedOpportunities_nodes_communityAndOpportunityPopUps_dataFields | null)[] | null;
   contentBlocks: (projectOpportunitiesSelect_projectBasedOpportunities_nodes_communityAndOpportunityPopUps_contentBlocks | null)[] | null;
-  reportingPhasePercentage: number | null;
   progress: projectOpportunitiesSelect_projectBasedOpportunities_nodes_communityAndOpportunityPopUps_progress | null;
 }
 

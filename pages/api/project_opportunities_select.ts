@@ -32,7 +32,6 @@ export const useProjectOpportunitiesSelect = () => {
               contentBlocks {
                 content
               }
-              reportingPhasePercentage
               progress {
                 progressLabel
                 committed

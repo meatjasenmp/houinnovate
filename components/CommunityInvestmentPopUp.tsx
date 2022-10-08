@@ -3,9 +3,10 @@ import ContentEditor from "./ContentEditor";
 import { useInvestment } from "../pages/api/investment";
 import { IoClose } from "@react-icons/all-files/io5/IoClose";
 import ProgressBar from "./ProgressBar";
+import { Phase } from "./ProgressBar";
 
 import styles from "../styles/components/Modal.module.css";
-import { Colors } from "../styles/helpers";
+import { backgroundColorMapping, Colors } from "../styles/helpers";
 
 export interface PopUpProps {
   isOpen: boolean;
@@ -24,26 +25,38 @@ const CommunityInvestmentPopUp = ({
 
   const { communityAndOpportunityPopUps } = communityInvestment || {};
 
-  const {
-    progress,
-    alphanumericLabel,
-    contentBlocks,
-    dataFields,
-    header,
-    reportingPhasePercentage,
-  } = communityAndOpportunityPopUps || {};
+  const { progress, alphanumericLabel, contentBlocks, dataFields, header } =
+    communityAndOpportunityPopUps || {};
 
   const { currentPhase, progressLabel } = progress || {};
 
+  const completedBackground = () => {
+    if (currentPhase === Phase.COMPLETED) {
+      return backgroundColorMapping(Colors.NEON);
+    }
+    return backgroundColorMapping(Colors.WHITE);
+  };
+
+  const containerPaddingBottom = () => {
+    if (currentPhase === Phase.COMPLETED) {
+      return "2rem";
+    }
+    return "0";
+  };
+
   const containerClassName = [
     styles.hou_modal__container,
+    completedBackground(),
     "prose prose-black",
   ].join(" ");
 
   return (
     <>
       <HouModal isOpen={isOpen} loading={loading} error={error}>
-        <div className={containerClassName}>
+        <div
+          className={containerClassName}
+          style={{ paddingBottom: containerPaddingBottom() }}
+        >
           <button
             className={styles.hou_modal_close_button}
             onClick={handleCloseModal}
@@ -55,13 +68,15 @@ const CommunityInvestmentPopUp = ({
             {header && <h1>{header}</h1>}
             <div className={styles.hou_modal_data_fields}>
               <div className={styles.hou_modal_data_field}>
-                {dataFields?.map((dataField, index) => (
-                  <div className={styles.hou_modal_data_field} key={index}>
-                    <p>{dataField?.dataField?.labelField}:</p>
-                    <p>{dataField?.dataField?.contentField}</p>
-                  </div>
-                ))}
+                <span>Funding:</span>
+                <span>{progressLabel}</span>
               </div>
+              {dataFields?.map((dataField, index) => (
+                <div className={styles.hou_modal_data_field} key={index}>
+                  <span>{dataField?.dataField?.labelField}:</span>
+                  <span>{dataField?.dataField?.contentField}</span>
+                </div>
+              ))}
             </div>
           </div>
           <div className={styles.hou_modal__content}>
@@ -75,16 +90,18 @@ const CommunityInvestmentPopUp = ({
               </div>
             ))}
           </div>
-          <div className={styles.hou_modal_progress_container}>
-            {currentPhase && <h4>{currentPhase} Phase</h4>}
-            <div className="full-screen">
-              <ProgressBar
-                currentPhase={currentPhase}
-                accent={Colors.NEON}
-                height="35px"
-              />
+          {currentPhase !== Phase.COMPLETED && (
+            <div className={styles.hou_modal_progress_container}>
+              {currentPhase && <h4>{currentPhase} Phase</h4>}
+              <div className="full-screen">
+                <ProgressBar
+                  currentPhase={currentPhase}
+                  accent={Colors.NEON}
+                  height="35px"
+                />
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </HouModal>
     </>

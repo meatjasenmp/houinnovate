@@ -37,7 +37,6 @@ export interface communityInvestment_communityInvestment_communityAndOpportunity
   header: string | null;
   dataFields: (communityInvestment_communityInvestment_communityAndOpportunityPopUps_dataFields | null)[] | null;
   contentBlocks: (communityInvestment_communityInvestment_communityAndOpportunityPopUps_contentBlocks | null)[] | null;
-  reportingPhasePercentage: number | null;
   progress: communityInvestment_communityInvestment_communityAndOpportunityPopUps_progress | null;
 }
 

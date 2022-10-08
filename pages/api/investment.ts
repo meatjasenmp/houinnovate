@@ -28,7 +28,6 @@ export const useInvestment = (id: string) => {
             contentBlocks {
               content
             }
-            reportingPhasePercentage
             progress {
               progressLabel
               committed

@@ -68,6 +68,9 @@ module.exports = {
             li: {
               ...bodyDefaults,
             },
+            span: {
+              fontFamily: "Sohne-Kraftig-Normal",
+            },
           },
         },
         white: {
