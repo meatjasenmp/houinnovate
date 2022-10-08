@@ -37,11 +37,11 @@ const CommunityInvestmentPopUp = ({
     return backgroundColorMapping(Colors.WHITE);
   };
 
-  const containerPaddingBottom = () => {
+  const phaseCompletedOpacity = () => {
     if (currentPhase === Phase.COMPLETED) {
-      return "2rem";
+      return 0.15;
     }
-    return "0";
+    return 1;
   };
 
   const containerClassName = [
@@ -53,10 +53,7 @@ const CommunityInvestmentPopUp = ({
   return (
     <>
       <HouModal isOpen={isOpen} loading={loading} error={error}>
-        <div
-          className={containerClassName}
-          style={{ paddingBottom: containerPaddingBottom() }}
-        >
+        <div className={containerClassName}>
           <button
             className={styles.hou_modal_close_button}
             onClick={handleCloseModal}
@@ -90,9 +87,15 @@ const CommunityInvestmentPopUp = ({
               </div>
             ))}
           </div>
-          {currentPhase !== Phase.COMPLETED && (
-            <div className={styles.hou_modal_progress_container}>
-              {currentPhase && <h4>{currentPhase} Phase</h4>}
+          <div className={styles.hou_modal_progress_container}>
+            {currentPhase && (
+              <h4 style={{ opacity: phaseCompletedOpacity() }}>
+                <>
+                  {currentPhase} {currentPhase !== Phase.COMPLETED && "Phase"}
+                </>
+              </h4>
+            )}
+            {currentPhase !== Phase.COMPLETED && (
               <div className="full-screen">
                 <ProgressBar
                   currentPhase={currentPhase}
@@ -100,8 +103,8 @@ const CommunityInvestmentPopUp = ({
                   height="35px"
                 />
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </HouModal>
     </>
