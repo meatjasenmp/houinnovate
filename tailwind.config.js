@@ -64,7 +64,7 @@ module.exports = {
             },
             h5: {
               fontSize: "1.125rem",
-              lineHeight: 1.25,
+              lineHeight: 1.5,
               marginBottom: "1rem",
             },
             p: {
