@@ -23,10 +23,18 @@ const OpportunityPopUp = ({ isOpen, handleCloseModal, id }: PopUpProps) => {
 
   const { currentPhase, progressLabel, showProgressLabel } = progress || {};
 
+  // TODO: Need to clean this up
+  const textColor = () => {
+    if (currentPhase === Phase.COMPLETED) {
+      return "white";
+    }
+    return "black";
+  };
+
   const containerClassName = [
     styles.hou_modal__container,
     completedBackground(currentPhase, PopUpTypes.OPPORTUNITY),
-    "prose prose-black",
+    `prose prose-${textColor()}`,
   ].join(" ");
 
   return (
@@ -62,9 +70,12 @@ const OpportunityPopUp = ({ isOpen, handleCloseModal, id }: PopUpProps) => {
               <div className={styles.hou_modal__content_block} key={index}>
                 <ContentEditor
                   content={contentBlock?.content}
-                  textColor="black"
+                  textColor={textColor()}
                 />
-                <div className={styles.content_block_border}></div>
+                <div
+                  className={styles.content_block_border}
+                  style={{ backgroundColor: textColor() }}
+                ></div>
               </div>
             ))}
           </div>
