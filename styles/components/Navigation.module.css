@@ -13,11 +13,19 @@
 }
 
 .hou_innovate {
-    font-size: 1.625rem;
+    margin-bottom: 2rem;
+}
+
+.hou_innovate a {
+    text-decoration: none;
 }
 
 .block_links {
     font-family: "Sohne-Kraftig-Normal", sans-serif;
+}
+
+.block_links h4 {
+    margin-bottom: .5rem;
 }
 
 .block_links ul li:not(:last-child) {

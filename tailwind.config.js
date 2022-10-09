@@ -3,7 +3,6 @@
 const headerDefaults = {
   fontFamily: "Sohne-Kraftig-Bold",
   marginBottom: "0.5rem",
-  lineHeight: 1,
 };
 
 const bodyDefaults = {
@@ -51,14 +50,17 @@ module.exports = {
             },
             h1: {
               fontSize: "3.5rem",
+              lineHeight: 1,
               ...headerDefaults,
             },
             h2: {
               fontSize: "2.875rem",
+              lineHeight: 1.2,
               ...headerDefaults,
             },
             h3: {
               fontSize: "1.875rem",
+              lineHeight: 1.3,
               ...headerDefaults,
             },
             h4: {
