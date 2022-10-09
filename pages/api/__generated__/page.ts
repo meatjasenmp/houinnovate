@@ -271,6 +271,86 @@ export interface page_siteOptionsPage_siteNavigation {
   navigation: page_siteOptionsPage_siteNavigation_navigation | null;
 }
 
+export interface page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_GetInTouch_contentBlocks {
+  __typename: "SiteOptionsPage_Sitefooter_FooterBlocks_GetInTouch_contentBlocks";
+  content: string | null;
+}
+
+export interface page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_GetInTouch {
+  __typename: "SiteOptionsPage_Sitefooter_FooterBlocks_GetInTouch";
+  header: string | null;
+  contentBlocks: (page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_GetInTouch_contentBlocks | null)[] | null;
+}
+
+export interface page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict_ionLogo {
+  __typename: "MediaItem";
+  /**
+   * The globally unique identifier of the attachment object.
+   */
+  id: string;
+  /**
+   * Url of the mediaItem
+   */
+  mediaItemUrl: string | null;
+}
+
+export interface page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict_socialMedia_socialMediaLink {
+  __typename: "SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict_SocialMedia_socialMediaLink";
+  label: string | null;
+  url: string | null;
+}
+
+export interface page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict_socialMedia {
+  __typename: "SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict_SocialMedia";
+  header: string | null;
+  socialMediaLink: (page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict_socialMedia_socialMediaLink | null)[] | null;
+}
+
+export interface page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict {
+  __typename: "SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict";
+  ionLogo: page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict_ionLogo | null;
+  address: string | null;
+  socialMedia: page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict_socialMedia | null;
+}
+
+export interface page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_RiceUniversity_riceUniversityLogo {
+  __typename: "MediaItem";
+  /**
+   * The globally unique identifier of the attachment object.
+   */
+  id: string;
+  /**
+   * Url of the mediaItem
+   */
+  mediaItemUrl: string | null;
+}
+
+export interface page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_RiceUniversity_riceSocialMedia_riceSocialMediaLink {
+  __typename: "SiteOptionsPage_Sitefooter_FooterBlocks_RiceUniversity_SocialMedia_socialMediaLink";
+  label: string | null;
+  url: string | null;
+}
+
+export interface page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_RiceUniversity_riceSocialMedia {
+  __typename: "SiteOptionsPage_Sitefooter_FooterBlocks_RiceUniversity_SocialMedia";
+  riceSocialHeader: string | null;
+  riceSocialMediaLink: (page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_RiceUniversity_riceSocialMedia_riceSocialMediaLink | null)[] | null;
+}
+
+export interface page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_RiceUniversity {
+  __typename: "SiteOptionsPage_Sitefooter_FooterBlocks_RiceUniversity";
+  riceUniversityLogo: page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_RiceUniversity_riceUniversityLogo | null;
+  riceAddress: string | null;
+  riceSocialMedia: page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_RiceUniversity_riceSocialMedia | null;
+}
+
+export type page_siteOptionsPage_siteFooter_footerBlocks = page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_GetInTouch | page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict | page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_RiceUniversity;
+
+export interface page_siteOptionsPage_siteFooter {
+  __typename: "SiteOptionsPage_Sitefooter";
+  footerBlocks: (page_siteOptionsPage_siteFooter_footerBlocks | null)[] | null;
+}
+
 export interface page_siteOptionsPage {
   __typename: "SiteOptionsPage";
   /**
@@ -281,6 +361,10 @@ export interface page_siteOptionsPage {
    * Added to the GraphQL Schema because the ACF Field Group &quot;Site Navigation&quot; was set to Show in GraphQL.
    */
   siteNavigation: page_siteOptionsPage_siteNavigation | null;
+  /**
+   * Added to the GraphQL Schema because the ACF Field Group &quot;Site Footer&quot; was set to Show in GraphQL.
+   */
+  siteFooter: page_siteOptionsPage_siteFooter | null;
 }
 
 export interface page {

@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import ComponentBlocks from "../components/ComponentBlocks";
 import Navigation from "../components/Navigation";
+import SiteFooter from "../components/SiteFooter";
 import { usePage } from "./api/page";
 import { page_generalSettings, page_page } from "./api/__generated__/page";
 
@@ -43,7 +44,7 @@ const Home: NextPage = () => {
         <ComponentBlocks componentBlocks={components?.componentBlocks} />
       </main>
 
-      <footer></footer>
+      <SiteFooter />
     </div>
   );
 };

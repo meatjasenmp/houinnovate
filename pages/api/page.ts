@@ -129,6 +129,44 @@ export const usePage = (id: string) => {
               houinnovate
             }
           }
+          siteFooter {
+            footerBlocks {
+              ... on SiteOptionsPage_Sitefooter_FooterBlocks_GetInTouch {
+                header
+                contentBlocks {
+                  content
+                }
+              }
+              ... on SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict {
+                ionLogo {
+                  id
+                  mediaItemUrl
+                }
+                address
+                socialMedia {
+                  header
+                  socialMediaLink {
+                    label
+                    url
+                  }
+                }
+              }
+              ... on SiteOptionsPage_Sitefooter_FooterBlocks_RiceUniversity {
+                riceUniversityLogo {
+                  id
+                  mediaItemUrl
+                }
+                riceAddress: address
+                riceSocialMedia: socialMedia {
+                  riceSocialHeader: header
+                  riceSocialMediaLink: socialMediaLink {
+                    label
+                    url
+                  }
+                }
+              }
+            }
+          }
         }
       }
     `,
