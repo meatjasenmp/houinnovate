@@ -141,6 +141,7 @@ export const usePage = (id: string) => {
                 ionLogo {
                   id
                   mediaItemUrl
+                  altText
                 }
                 address
                 socialMedia {
@@ -150,11 +151,15 @@ export const usePage = (id: string) => {
                     url
                   }
                 }
+                ctaLinks {
+                  cta
+                }
               }
               ... on SiteOptionsPage_Sitefooter_FooterBlocks_RiceUniversity {
                 riceUniversityLogo {
                   id
                   mediaItemUrl
+                  altText
                 }
                 riceAddress: address
                 riceSocialMedia: socialMedia {

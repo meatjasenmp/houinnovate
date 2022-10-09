@@ -46,6 +46,9 @@ module.exports = {
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
+            html: {
+              ...bodyDefaults,
+            },
             h1: {
               fontSize: "3.5rem",
               ...headerDefaults,

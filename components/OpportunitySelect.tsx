@@ -74,8 +74,6 @@ const OpportunitySelect = () => {
     optionsArray.push({ value: slug, label: name });
   });
 
-  console.log(projectBasedOpportunities);
-
   return (
     <section>
       <>

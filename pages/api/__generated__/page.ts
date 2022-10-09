@@ -292,6 +292,10 @@ export interface page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Si
    * Url of the mediaItem
    */
   mediaItemUrl: string | null;
+  /**
+   * Alternative text to display when resource is not displayed
+   */
+  altText: string | null;
 }
 
 export interface page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict_socialMedia_socialMediaLink {
@@ -306,11 +310,17 @@ export interface page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Si
   socialMediaLink: (page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict_socialMedia_socialMediaLink | null)[] | null;
 }
 
+export interface page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict_ctaLinks {
+  __typename: "SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict_ctaLinks";
+  cta: string | null;
+}
+
 export interface page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict {
   __typename: "SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict";
   ionLogo: page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict_ionLogo | null;
   address: string | null;
   socialMedia: page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict_socialMedia | null;
+  ctaLinks: (page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict_ctaLinks | null)[] | null;
 }
 
 export interface page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_RiceUniversity_riceUniversityLogo {
@@ -323,6 +333,10 @@ export interface page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Si
    * Url of the mediaItem
    */
   mediaItemUrl: string | null;
+  /**
+   * Alternative text to display when resource is not displayed
+   */
+  altText: string | null;
 }
 
 export interface page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_RiceUniversity_riceSocialMedia_riceSocialMediaLink {

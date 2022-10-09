@@ -1,8 +1,7 @@
 import Image from "next/future/image";
-import { page_page_components_componentBlocks_image } from "../pages/api/__generated__/page";
 
 interface ImageBlockProps {
-  image: page_page_components_componentBlocks_image | null;
+  image: any | null;
   height: string;
   width: string;
 }

@@ -44,7 +44,9 @@ const Home: NextPage = () => {
         <ComponentBlocks componentBlocks={components?.componentBlocks} />
       </main>
 
-      <SiteFooter />
+      <SiteFooter
+        footerBlocks={data?.siteOptionsPage?.siteFooter?.footerBlocks}
+      />
     </div>
   );
 };
