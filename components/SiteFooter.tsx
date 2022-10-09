@@ -136,7 +136,7 @@ const TermsAndConditions = () => {
   ].join(" ");
   return (
     <div className={termsClassName}>
-      <p>© {currentYear} Rice University. All rights reserved.</p>
+      <p>&copy;{currentYear} Rice University. All rights reserved.</p>
     </div>
   );
 };
