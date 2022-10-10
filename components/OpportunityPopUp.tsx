@@ -46,52 +46,56 @@ const OpportunityPopUp = ({ isOpen, handleCloseModal, id }: PopUpProps) => {
           >
             <IoClose size="2rem" />
           </button>
-          <div className={styles.hou_modal_sidebar}>
-            {alphanumericLabel && <h5>{alphanumericLabel}.</h5>}
-            {title && <h1>{title}</h1>}
-            <div className={styles.hou_modal_data_fields}>
-              {showProgressLabel && progressLabel && (
-                <div className={styles.hou_modal_data_field}>
-                  <span>Funding:</span>
-                  <span>{progressLabel}</span>
+          <div className={styles.content_wrapper}>
+            <div className={styles.content_wrapper_flex_wrap}>
+              <div className={styles.hou_modal_sidebar}>
+                {alphanumericLabel && <h5>{alphanumericLabel}.</h5>}
+                {title && <h1>{title}</h1>}
+                <div className={styles.hou_modal_data_fields}>
+                  {showProgressLabel && progressLabel && (
+                    <div className={styles.hou_modal_data_field}>
+                      <span>Funding:</span>
+                      <span>{progressLabel}</span>
+                    </div>
+                  )}
+                  {dataFields?.map((dataField, index) => (
+                    <div className={styles.hou_modal_data_field} key={index}>
+                      <span>{dataField?.dataField?.labelField}:</span>
+                      <span>{dataField?.dataField?.contentField}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className={styles.hou_modal__content}>
+                {contentBlocks?.map((contentBlock, index) => (
+                  <div className={styles.hou_modal__content_block} key={index}>
+                    <ContentEditor content={contentBlock?.content} />
+                    <div
+                      className={styles.content_block_border}
+                      style={{ backgroundColor: textColor() }}
+                    ></div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className={styles.hou_modal_progress_container}>
+              {currentPhase && (
+                <h3 style={{ opacity: phaseCompletedOpacity(currentPhase) }}>
+                  <>
+                    {currentPhase} {currentPhase !== Phase.COMPLETED && "Phase"}
+                  </>
+                </h3>
+              )}
+              {currentPhase !== Phase.COMPLETED && (
+                <div className="full-screen">
+                  <ProgressBar
+                    currentPhase={currentPhase}
+                    accent={Colors.BLUE}
+                    height="35px"
+                  />
                 </div>
               )}
-              {dataFields?.map((dataField, index) => (
-                <div className={styles.hou_modal_data_field} key={index}>
-                  <span>{dataField?.dataField?.labelField}:</span>
-                  <span>{dataField?.dataField?.contentField}</span>
-                </div>
-              ))}
             </div>
-          </div>
-          <div className={styles.hou_modal__content}>
-            {contentBlocks?.map((contentBlock, index) => (
-              <div className={styles.hou_modal__content_block} key={index}>
-                <ContentEditor content={contentBlock?.content} />
-                <div
-                  className={styles.content_block_border}
-                  style={{ backgroundColor: textColor() }}
-                ></div>
-              </div>
-            ))}
-          </div>
-          <div className={styles.hou_modal_progress_container}>
-            {currentPhase && (
-              <h3 style={{ opacity: phaseCompletedOpacity(currentPhase) }}>
-                <>
-                  {currentPhase} {currentPhase !== Phase.COMPLETED && "Phase"}
-                </>
-              </h3>
-            )}
-            {currentPhase !== Phase.COMPLETED && (
-              <div className="full-screen">
-                <ProgressBar
-                  currentPhase={currentPhase}
-                  accent={Colors.BLUE}
-                  height="35px"
-                />
-              </div>
-            )}
           </div>
         </div>
       </HouModal>

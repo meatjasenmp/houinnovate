@@ -1,6 +1,7 @@
 .pop_up__link {
     background-color: #F4F4F4;
     margin-bottom: 1.5rem;
+    cursor: pointer;
 }
 
 .pop_up__link .pop_up__link_container {
