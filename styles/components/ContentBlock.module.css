@@ -7,7 +7,8 @@
 }
 
 @media screen and (min-width: 990px) {
-    .content_block__columns_wrapper {
+    .content_block__columns_wrapper,
+    .content_block_wrapper {
         display: flex;
         max-width: 990px;
         margin: 0 auto;

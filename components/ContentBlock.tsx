@@ -28,7 +28,9 @@ const ContentBlock = ({ blockContent }: ComponentBlocksProps) => {
     <section className={sectionClassName}>
       <div className={backgroundColorMapping(backgroundColor)}>
         {contentType === contentTypes.ContentBlock && contentBlockContent && (
-          <ContentEditor content={contentBlockContent} />
+          <div className={styles.content_block_wrapper}>
+            <ContentEditor content={contentBlockContent} />
+          </div>
         )}
         {contentType === contentTypes.ContentBlockColumn && (
           <div className={styles.content_block__columns}>

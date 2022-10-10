@@ -19,15 +19,17 @@ const DirectCommunityInvestment = ({
 
   return (
     <section className={styles.community_investment}>
-      <CommittedDeployedProgressBar
-        deployed={deployment?.deployed}
-        committed={deployment?.committed}
-        deployedLabel={deployment?.deployedLabel}
-        committedLabel={deployment?.investmentCommittedLabel}
-        accent={Colors.NEON}
-      />
-      <ContentEditor content={communityInvestmentContent} />
-      <CommunityInvestmentsSelect />
+      <div className={styles.community_investment_wrapper}>
+        <CommittedDeployedProgressBar
+          deployed={deployment?.deployed}
+          committed={deployment?.committed}
+          deployedLabel={deployment?.deployedLabel}
+          committedLabel={deployment?.investmentCommittedLabel}
+          accent={Colors.NEON}
+        />
+        <ContentEditor content={communityInvestmentContent} />
+        <CommunityInvestmentsSelect />
+      </div>
     </section>
   );
 };

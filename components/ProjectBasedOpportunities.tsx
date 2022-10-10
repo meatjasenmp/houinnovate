@@ -20,15 +20,17 @@ const ProjectBasedOpportunities = ({
 
   return (
     <section className={styles.project_based_opportunities}>
-      <CommittedDeployedProgressBar
-        deployed={opportunitiesCreated?.opportunitiesCreated}
-        committed={opportunitiesCreated?.opportunitiesCommitted}
-        deployedLabel={opportunitiesCreated?.createdLabel}
-        committedLabel={opportunitiesCreated?.committedLabel}
-        accent={Colors.BLUE}
-      />
-      <ContentEditor content={opportunitiesCreatedContent} />
-      <OpportunitySelect />
+      <div className={styles.project_based_opportunities_wrapper}>
+        <CommittedDeployedProgressBar
+          deployed={opportunitiesCreated?.opportunitiesCreated}
+          committed={opportunitiesCreated?.opportunitiesCommitted}
+          deployedLabel={opportunitiesCreated?.createdLabel}
+          committedLabel={opportunitiesCreated?.committedLabel}
+          accent={Colors.BLUE}
+        />
+        <ContentEditor content={opportunitiesCreatedContent} />
+        <OpportunitySelect />
+      </div>
     </section>
   );
 };

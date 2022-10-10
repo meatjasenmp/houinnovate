@@ -1,3 +1,8 @@
 .community_investment {
     padding-bottom: 2.5rem;
 }
+
+.community_investment_wrapper {
+    max-width: 990px;
+    margin: 0 auto;
+}

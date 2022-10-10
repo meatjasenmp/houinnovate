@@ -8,7 +8,9 @@ interface WorkWithIonProps {
 const WorkWithIon = ({ blockContent }: WorkWithIonProps) => {
   return (
     <div className={styles.work_with_ion}>
-      <ContentEditor content={blockContent.workWithIonContent} />
+      <div className={styles.work_with_ion_wrapper}>
+        <ContentEditor content={blockContent.workWithIonContent} />
+      </div>
     </div>
   );
 };
