@@ -8,16 +8,33 @@ interface ComponentBlocksProps {
   blockContent: page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlock;
 }
 
+enum contentTypes {
+  ContentBlock = "content",
+  ContentBlockColumn = "columnContent",
+}
+
 const ContentBlock = ({ blockContent }: ComponentBlocksProps) => {
   if (!blockContent) return null;
-  const { contentBlockContent, backgroundColor } = blockContent;
+  const {
+    contentBlockContent,
+    backgroundColor,
+    contentBlockColumnContent,
+    contentType,
+  } = blockContent;
 
   const sectionClassName = [styles.content_block, "full-screen"].join(" ");
 
   return (
     <section className={sectionClassName}>
       <div className={backgroundColorMapping(backgroundColor)}>
-        <ContentEditor content={contentBlockContent} />
+        {contentType === contentTypes.ContentBlock && contentBlockContent && (
+          <ContentEditor content={contentBlockContent} />
+        )}
+        {contentBlockColumnContent?.map((column, index) => (
+          <div key={index} className={styles.content_block_column}>
+            <ContentEditor content={column?.content} />
+          </div>
+        ))}
       </div>
     </section>
   );

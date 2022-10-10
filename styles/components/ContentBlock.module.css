@@ -5,3 +5,18 @@
 .content_block > div {
     padding: 6rem 2rem;
 }
+
+@media screen and (min-width: 1280px) {
+    .content_block article {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .content_block article *:first-child {
+        padding-right: 2rem;
+    }
+
+    .content_block article *:last-child {
+        max-width: 40rem;
+    }
+}

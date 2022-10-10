@@ -125,9 +125,16 @@ export interface page_page_components_componentBlocks_Page_Components_ComponentB
   boxLink: (page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink | null)[] | null;
 }
 
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlock_contentBlockColumnContent {
+  __typename: "Page_Components_ComponentBlocks_ContentBlock_contentColumns";
+  content: string | null;
+}
+
 export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlock {
   __typename: "Page_Components_ComponentBlocks_ContentBlock";
   contentBlockContent: string | null;
+  contentBlockColumnContent: (page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlock_contentBlockColumnContent | null)[] | null;
+  contentType: string | null;
   backgroundColor: string | null;
 }
 
