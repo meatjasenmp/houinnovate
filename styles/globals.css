@@ -64,6 +64,18 @@
         text-decoration: underline;
     }
 
+    @media screen and (min-width: 768px) {
+        h1 {
+            font-size: 4rem;
+        }
+
+        p,
+        li {
+            font-size: 1.125rem;
+            line-height: 1.5;
+        }
+    }
+
     /* BG Contrast */
 
     .bg-innovate-pink,

@@ -15,7 +15,7 @@
 }
 
 .phase article {
-    padding-right: 1.5rem;
+    max-width: 35rem;
 }
 
 .phase h5 {
