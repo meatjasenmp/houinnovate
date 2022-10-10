@@ -44,3 +44,10 @@
     font-family: "Sohne-Kraftig-Bold", sans-serif;
     font-size: 1.25rem;
 }
+
+@media screen and (min-width: 990px) {
+    .pop_up__links_container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

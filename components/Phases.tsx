@@ -81,7 +81,9 @@ const Phases = ({ blockContent }: PhasesProps) => {
   return (
     <section className={phaseClassName}>
       <div className={styles.phase_container}>
-        <ContentEditor content={phasesContent} />
+        <div className={styles.phase_content}>
+          <ContentEditor content={phasesContent} />
+        </div>
         <div className={styles.phase_list}>
           {phasesList &&
             phasesList.map((phase, index) => (

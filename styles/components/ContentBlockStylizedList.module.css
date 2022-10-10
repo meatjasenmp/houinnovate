@@ -25,7 +25,7 @@
 }
 
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 990px) {
     .content_block_stylized {
         padding: 8rem 0;
     }

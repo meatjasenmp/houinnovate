@@ -6,7 +6,7 @@
     padding: 6rem 2rem;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 990px) {
     .content_block__columns_wrapper {
         display: flex;
         max-width: 990px;
