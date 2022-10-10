@@ -34,7 +34,6 @@ const OpportunityPopUp = ({ isOpen, handleCloseModal, id }: PopUpProps) => {
   const containerClassName = [
     styles.hou_modal__container,
     completedBackground(currentPhase, PopUpTypes.OPPORTUNITY),
-    `prose prose-${textColor()}`,
   ].join(" ");
 
   return (
@@ -78,11 +77,11 @@ const OpportunityPopUp = ({ isOpen, handleCloseModal, id }: PopUpProps) => {
           </div>
           <div className={styles.hou_modal_progress_container}>
             {currentPhase && (
-              <h4 style={{ opacity: phaseCompletedOpacity(currentPhase) }}>
+              <h3 style={{ opacity: phaseCompletedOpacity(currentPhase) }}>
                 <>
                   {currentPhase} {currentPhase !== Phase.COMPLETED && "Phase"}
                 </>
-              </h4>
+              </h3>
             )}
             {currentPhase !== Phase.COMPLETED && (
               <div className="full-screen">

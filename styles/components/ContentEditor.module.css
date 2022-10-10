@@ -1,1 +1,3 @@
-.content__editor {}
+.content__editor {
+    overflow-wrap: break-word;
+}

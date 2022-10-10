@@ -42,7 +42,7 @@ const GetInTouch = ({ blockContent }: GetInTouchProps) => {
   const className = [styles.get_in_touch, styles.footer_column].join(" ");
   return (
     <div className={className}>
-      <header className="prose prose-white">
+      <header>
         <h1>{header}</h1>
       </header>
       {contentBlocks?.map((block, index) => (
@@ -139,10 +139,7 @@ const FooterBlocks = ({ footerBlocks }: SiteFooterProps) => {
 
 const TermsAndConditions = () => {
   const currentYear = new Date().getFullYear();
-  const termsClassName = [
-    styles.terms_and_conditions,
-    "prose prose-white",
-  ].join(" ");
+  const termsClassName = [styles.terms_and_conditions].join(" ");
   return (
     <div className={termsClassName}>
       <p>&copy;{currentYear} Rice University. All rights reserved.</p>

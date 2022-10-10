@@ -21,13 +21,15 @@
 
     body {
         overflow-x: hidden;
+        @apply font-body;
     }
 
     /* Typography */
 
     h1,
     h2,
-    h3 {
+    h3,
+    h4 {
         @apply font-kraftigBold;
         margin-bottom: 1.5rem;
     }
@@ -48,6 +50,10 @@
     h3 {
         font-size: 1.875rem;
         line-height: 1.2;
+    }
+
+    * > p:not(:last-child) {
+        margin-bottom: 1.5rem;
     }
 
     p, li {

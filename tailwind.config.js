@@ -21,9 +21,6 @@ module.exports = {
     "text-innovate-green",
     "text-innovate-neon",
     "text-innovate-white",
-    "prose",
-    "prose-black",
-    "prose-white",
     "text-kraftigBold",
   ],
   theme: {
