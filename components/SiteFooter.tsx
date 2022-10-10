@@ -155,8 +155,12 @@ const SiteFooter = ({ footerBlocks }: SiteFooterProps) => {
   ].join(" ");
   return (
     <footer className={className}>
-      <FooterBlocks footerBlocks={footerBlocks} />
-      <TermsAndConditions />
+      <div className={styles.site_footer_wrapper}>
+        <FooterBlocks footerBlocks={footerBlocks} />
+      </div>
+      <div className={styles.terms_and_conditions_wrapper}>
+        <TermsAndConditions />
+      </div>
     </footer>
   );
 };

@@ -73,3 +73,17 @@
 .cta_link_icon {
     align-self: flex-end;
 }
+
+.terms_and_conditions_wrapper {
+    display: flex;
+    max-width: 990px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 990px) {
+    .site_footer_wrapper {
+        display: flex;
+        max-width: 990px;
+        margin: 0 auto;
+    }
+}
