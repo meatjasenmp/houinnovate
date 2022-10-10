@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "gql_types": "apollo client:codegen --target typescript --endpoint=http://houinnovate.local/graphql"
+    "gql_types": "apollo client:codegen --target typescript --endpoint=https://innovate.blackgraystudio.com/graphql"
   },
   "dependencies": {
     "@apollo/client": "^3.6.9",
