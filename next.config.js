@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["houinnovate.local"],
+    domains: ["innovate.blackgraystudio.com"],
   },
 };
 
