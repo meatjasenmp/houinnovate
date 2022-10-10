@@ -50,3 +50,15 @@
 .hero__banner_button {
     margin-top: 1.5rem;
 }
+
+@media screen and (min-width: 768px) {
+    .hero__banner_section {
+        height: 600px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .hero__banner_section {
+        height: 980px;
+    }
+}

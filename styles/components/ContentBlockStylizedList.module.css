@@ -23,3 +23,25 @@
     padding-top: 1rem;
     border-top: 6px solid #000;
 }
+
+
+@media screen and (min-width: 1280px) {
+    .content_block_stylized_wrapper {
+        max-width: 990px;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .content_wrapper {
+        max-width: 30rem;
+        margin-right: 2.5rem;
+    }
+
+    .list {
+        margin-top: 0;
+    }
+
+    .list_wrapper {
+        flex-grow: 1;
+    }
+}

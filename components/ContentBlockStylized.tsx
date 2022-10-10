@@ -45,19 +45,25 @@ const ContentBlockStylized = ({ blockContent }: ComponentBlocksProps) => {
 
   return (
     <section className={styles.content_block_stylized}>
-      <ContentEditor content={contentBlockStylized} />
-      {list && list.length > 0 && (
-        <ul className={styles.list}>
-          {list.map((listItem, index) => (
-            <ListItem listItem={listItem?.listItem} key={index} />
-          ))}
-        </ul>
-      )}
-      {showFooterText && (
-        <div className={styles.footer}>
-          <ContentEditor content={footerText} />
+      <div className={styles.content_block_stylized_wrapper}>
+        <div className={styles.content_wrapper}>
+          <ContentEditor content={contentBlockStylized} />
         </div>
-      )}
+        <div className={styles.list_wrapper}>
+          {list && list.length > 0 && (
+            <ul className={styles.list}>
+              {list.map((listItem, index) => (
+                <ListItem listItem={listItem?.listItem} key={index} />
+              ))}
+            </ul>
+          )}
+          {showFooterText && (
+            <div className={styles.footer}>
+              <ContentEditor content={footerText} />
+            </div>
+          )}
+        </div>
+      </div>
     </section>
   );
 };
