@@ -7,7 +7,7 @@ module.exports = {
     service: {
       name: "houinnovate-service",
       localSchemaFile: "./graphql-schema.json",
-      url: "http://houinnovate.blackgraystudio.com/graphql",
+      url: "https://innovate.blackgraystudio.com/graphql",
     },
   },
 };
