@@ -1,6 +1,7 @@
 import ContentEditor from "./ContentEditor";
 import ImageBlock from "./ImageBlock";
 import Link from "next/link";
+import { FiArrowUpRight } from "@react-icons/all-files/fi/FiArrowUpRight";
 import {
   page_siteOptionsPage_siteFooter_footerBlocks,
   page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_GetInTouch,
@@ -9,6 +10,7 @@ import {
 } from "../pages/api/__generated__/page";
 
 import styles from "../styles/components/SiteFooter.module.css";
+import { accentColor } from "../styles/helpers";
 
 enum FooterComponents {
   GET_IN_TOUCH = "SiteOptionsPage_Sitefooter_FooterBlocks_GetInTouch",
@@ -37,10 +39,12 @@ interface RiceUniversityProps {
 
 const GetInTouch = ({ blockContent }: GetInTouchProps) => {
   const { header, contentBlocks } = blockContent;
-
+  const className = [styles.get_in_touch, styles.footer_column].join(" ");
   return (
-    <div className={styles.footer_column}>
-      <ContentEditor content={header} textColor="white" />
+    <div className={className}>
+      <header className="prose prose-white">
+        <h1>{header}</h1>
+      </header>
       {contentBlocks?.map((block, index) => (
         <ContentEditor key={index} content={block?.content} textColor="white" />
       ))}
@@ -52,10 +56,10 @@ const IonDistrict = ({ blockContent }: IonDistrictProps) => {
   const { ionLogo, address, socialMedia, ctaLinks } = blockContent;
   return (
     <div className={styles.footer_column}>
-      <figure>
+      <figure className={styles.logo}>
         <ImageBlock image={ionLogo} width="167" height="89" />
       </figure>
-      <ContentEditor content={address} textColor="white" />
+      <ContentEditor content={address} textColor="innovateGray" />
       <div className={styles.social_media}>
         <h4>{socialMedia?.header}</h4>
         <ul>
@@ -68,11 +72,16 @@ const IonDistrict = ({ blockContent }: IonDistrictProps) => {
           ))}
         </ul>
       </div>
-      <div className={styles.cta_links}>
+      <section className={styles.cta_links}>
         {ctaLinks?.map((ctaLink, index) => (
-          <ContentEditor key={index} content={ctaLink?.cta} textColor="white" />
+          <div className={styles.cta_link_container} key={index}>
+            <ContentEditor content={ctaLink?.cta} textColor="white" />
+            <figure className={styles.cta_link_icon}>
+              <FiArrowUpRight color="white" size="3rem" />
+            </figure>
+          </div>
         ))}
-      </div>
+      </section>
     </div>
   );
 };
@@ -81,10 +90,10 @@ const RiceUniversity = ({ blockContent }: RiceUniversityProps) => {
   const { riceUniversityLogo, riceAddress, riceSocialMedia } = blockContent;
   return (
     <div className={styles.footer_column}>
-      <figure>
+      <figure className={styles.logo}>
         <ImageBlock image={riceUniversityLogo} width="330" height="176" />
       </figure>
-      <ContentEditor content={riceAddress} textColor="white" />
+      <ContentEditor content={riceAddress} textColor="innovateGray" />
       <div className={styles.social_media}>
         <h4>{riceSocialMedia?.riceSocialHeader}</h4>
         <ul>
