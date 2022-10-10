@@ -7,7 +7,6 @@ import ContentEditor from "./ContentEditor";
 import VideoBlock from "./VideoBlock";
 import ImageBlock from "./ImageBlock";
 import Button from "./Button";
-import ButtonLink from "./ButtonLink";
 import { BiPlay } from "@react-icons/all-files/bi/BiPlay";
 
 import styles from "../styles/components/HeroBanner.module.css";
@@ -20,7 +19,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
   if (!blockContent) return null;
 
   const { type, video, image, content, videoCta } = blockContent;
-  const { contentEditor, pageLinkSelect, pageLinkButton } =
+  const { contentEditor } =
     content as page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_content;
 
   return (
@@ -44,7 +43,6 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
                 className={styles.hero__banner_button}
               />
             )}
-            {pageLinkSelect && <ButtonLink link={pageLinkButton} />}
           </>
         </article>
       </div>
