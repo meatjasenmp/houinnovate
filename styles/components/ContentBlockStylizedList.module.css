@@ -26,6 +26,10 @@
 
 
 @media screen and (min-width: 1280px) {
+    .content_block_stylized {
+        padding: 8rem 0;
+    }
+
     .content_block_stylized_wrapper {
         max-width: 990px;
         display: flex;
