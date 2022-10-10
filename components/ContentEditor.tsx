@@ -3,14 +3,14 @@ import styles from "../styles/components/ContentEditor.module.css";
 
 interface ContentEditorProps {
   content: any;
-  textColor?: string;
   contentEditorClass?: string;
+  className?: string;
 }
 
 const ContentEditor = ({
   content,
-  textColor,
   contentEditorClass,
+  className,
 }: ContentEditorProps) => {
   DOMPurify.addHook("afterSanitizeAttributes", function (node) {
     if ("target" in node) {
@@ -18,18 +18,16 @@ const ContentEditor = ({
     }
   });
 
-  const selectedTextColor = textColor ? textColor : "white";
-
   const clean = DOMPurify.sanitize(content);
-  const className = [
+  const contentEditorClassName = [
     styles.content__editor,
     contentEditorClass,
-    `prose prose-${selectedTextColor}`,
+    className,
   ].join(" ");
 
   return (
     <article
-      className={className}
+      className={contentEditorClassName}
       dangerouslySetInnerHTML={{ __html: clean }}
     />
   );

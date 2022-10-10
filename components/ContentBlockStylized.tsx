@@ -45,7 +45,7 @@ const ContentBlockStylized = ({ blockContent }: ComponentBlocksProps) => {
 
   return (
     <section className={styles.content_block_stylized}>
-      <ContentEditor content={contentBlockStylized} textColor="black" />
+      <ContentEditor content={contentBlockStylized} />
       {list && list.length > 0 && (
         <ul className={styles.list}>
           {list.map((listItem, index) => (
@@ -55,7 +55,7 @@ const ContentBlockStylized = ({ blockContent }: ComponentBlocksProps) => {
       )}
       {showFooterText && (
         <div className={styles.footer}>
-          <ContentEditor content={footerText} textColor="black" />
+          <ContentEditor content={footerText} />
         </div>
       )}
     </section>

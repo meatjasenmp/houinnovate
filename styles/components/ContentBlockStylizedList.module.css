@@ -1,5 +1,5 @@
 .content_block_stylized {
-    padding: 4rem 2rem;
+    padding: 4rem 0;
 }
 
 .content_block_stylized ~.content_block_stylized {

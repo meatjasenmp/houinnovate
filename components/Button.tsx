@@ -7,18 +7,19 @@ interface ButtonProps {
   onClick?: () => void;
   bgColor?: BackgroundColors;
   icon?: ReactNode;
+  className?: string;
 }
 
-const Button = ({ label, onClick, bgColor, icon }: ButtonProps) => {
+const Button = ({ label, onClick, bgColor, icon, className }: ButtonProps) => {
   const backgroundColor = bgColor ? bgColor : BackgroundColors.BLACK;
-  const buttonStyles = [backgroundColor, styles.button];
+  const buttonStyles = [backgroundColor, styles.button, className].join(" ");
 
   const handleClick = () => {
     if (onClick) onClick();
   };
 
   return (
-    <button className={buttonStyles.join(" ")} onClick={handleClick}>
+    <button className={buttonStyles} onClick={handleClick}>
       <span>{label}</span>
       {icon && <span className={styles.button__icon}>{icon}</span>}
     </button>

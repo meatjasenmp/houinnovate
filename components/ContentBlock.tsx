@@ -17,10 +17,7 @@ const ContentBlock = ({ blockContent }: ComponentBlocksProps) => {
   return (
     <section className={sectionClassName}>
       <div className={backgroundColorMapping(backgroundColor)}>
-        <ContentEditor
-          content={contentBlockContent}
-          textColor={accentColor(backgroundColor)}
-        />
+        <ContentEditor content={contentBlockContent} />
       </div>
     </section>
   );

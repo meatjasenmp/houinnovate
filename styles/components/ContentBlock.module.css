@@ -2,6 +2,6 @@
     margin-top: 2.25rem;
 }
 
-.content_block article {
-    padding: 8rem 2rem;
+.content_block > div {
+    padding: 6rem 2rem;
 }

@@ -39,10 +39,7 @@ const BoxLinkContent = ({ content }: BoxLinkProps) => {
         <ImageBlock image={image} height="590" width="1212" />
       </figure>
       <article>
-        <ContentEditor
-          content={boxLinkContent}
-          textColor={accentColor(backgroundColor)}
-        />
+        <ContentEditor content={boxLinkContent} />
       </article>
       <figure className={styles.link_icon}>
         <FiArrowUpRight color={accentColor(backgroundColor)} size="3rem" />

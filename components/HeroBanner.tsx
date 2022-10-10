@@ -41,6 +41,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
                 bgColor={BackgroundColors.RED}
                 label={videoCta}
                 icon={<BiPlay />}
+                className={styles.hero__banner_button}
               />
             )}
             {pageLinkSelect && <ButtonLink link={pageLinkButton} />}

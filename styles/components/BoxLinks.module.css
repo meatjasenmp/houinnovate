@@ -1,6 +1,5 @@
 .box_links {
     display: grid;
-    color: #FFF;
     grid-gap: .8rem;
     grid-auto-rows: 1fr;
 }

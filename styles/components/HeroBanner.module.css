@@ -15,10 +15,6 @@
     padding: 1rem 2.5rem;
 }
 
-.hero__banner h1 {
-    margin-bottom: .5rem;
-}
-
 .hero__banner_background {
     position: absolute;
     width: 100%;
@@ -33,6 +29,10 @@
     max-width: 50rem;
 }
 
+.hero__banner p {
+    font-size: 1.125rem;
+}
+
 
 .hero__banner_video__block_container {
     height: 100vh;
@@ -45,4 +45,8 @@
 .hero__banner_video__image_block {
     position: relative;
     height: 100%;
+}
+
+.hero__banner_button {
+    margin-top: 1.5rem;
 }
