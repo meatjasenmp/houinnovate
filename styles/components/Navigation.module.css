@@ -1,9 +1,10 @@
 .site_navigation {
-    font-family: "Sohne-Kraftig-Bold", sans-serif;
+
 }
 
 .section_link {
     font-size: 2.5rem;
+    font-family: "Sohne-Kraftig-Bold", sans-serif;
 }
 
 .section_links div {
@@ -20,15 +21,12 @@
     text-decoration: none;
 }
 
-.block_links {
+.block_links,
+.block_links h4 {
     font-family: "Sohne-Kraftig-Normal", sans-serif;
 }
 
 .block_links h4 {
-    margin-bottom: .5rem;
-}
-
-.block_links ul li:not(:last-child) {
     margin-bottom: .5rem;
 }
 
@@ -40,7 +38,7 @@
 }
 
 .hou_innovate a,
-.block_links a{
+.block_links a {
     color: #868686;
 }
 

@@ -1,6 +1,16 @@
 .site_footer {
     padding: 4rem 2rem;
-    background-color: #000;
+}
+
+.social_media,
+.site_footer h4 {
+    color: #fff;
+    font-family: "Sohne-Kraftig-Normal", sans-serif;
+}
+
+.site_footer h4 {
+    color: #fff;
+    margin-bottom: 0.5rem;
 }
 
 .site_footer a {
@@ -33,17 +43,10 @@
     width: 40%;
 }
 
-.get_in_touch a {
-    color: #868686;
-}
-
+.get_in_touch a,
+.rice_address,
 .social_media {
     color: #868686;
-    font-family: "Sohne-Kraftig-Normal", sans-serif;
-}
-
-.social_media h4 {
-    color: #fff;
 }
 
 .social_media:before, .social_media:after {

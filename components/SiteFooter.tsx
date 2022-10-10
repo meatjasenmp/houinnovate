@@ -93,7 +93,7 @@ const RiceUniversity = ({ blockContent }: RiceUniversityProps) => {
       <figure className={styles.logo}>
         <ImageBlock image={riceUniversityLogo} width="330" height="176" />
       </figure>
-      <ContentEditor content={riceAddress} />
+      <ContentEditor content={riceAddress} className={styles.rice_address} />
       <div className={styles.social_media}>
         <h4>{riceSocialMedia?.riceSocialHeader}</h4>
         <ul>
@@ -148,7 +148,11 @@ const TermsAndConditions = () => {
 };
 
 const SiteFooter = ({ footerBlocks }: SiteFooterProps) => {
-  const className = [styles.site_footer, "full-screen"].join(" ");
+  const className = [
+    styles.site_footer,
+    "full-screen",
+    "bg-innovate-black",
+  ].join(" ");
   return (
     <footer className={className}>
       <FooterBlocks footerBlocks={footerBlocks} />
