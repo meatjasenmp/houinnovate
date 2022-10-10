@@ -109,7 +109,7 @@ const Navigation = ({
       pageWrapId={pageWrapID}
       outerContainerId={outerContainerID}
       right
-      width={"100%"}
+      width={"400px"}
       className={styles.site_navigation}
       customBurgerIcon={<HamburgerMenu />}
       onStateChange={handleStateChange}
