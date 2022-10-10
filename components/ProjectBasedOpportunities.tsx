@@ -27,7 +27,7 @@ const ProjectBasedOpportunities = ({
         committedLabel={opportunitiesCreated?.committedLabel}
         accent={Colors.BLUE}
       />
-      <ContentEditor content={opportunitiesCreatedContent} textColor="black" />
+      <ContentEditor content={opportunitiesCreatedContent} />
       <OpportunitySelect />
     </section>
   );

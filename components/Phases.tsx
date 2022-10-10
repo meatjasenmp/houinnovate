@@ -58,10 +58,7 @@ const Phase = ({ phase, phaseNumber, backgroundColor }: PhaseProps) => {
           {phaseHeader}
         </h5>
         <div className="hidden phase__content">
-          <ContentEditor
-            content={phaseText}
-            textColor={accentColor(backgroundColor)}
-          />
+          <ContentEditor content={phaseText} />
         </div>
       </div>
     </div>
@@ -84,10 +81,7 @@ const Phases = ({ blockContent }: PhasesProps) => {
   return (
     <section className={phaseClassName}>
       <div className={styles.phase_container}>
-        <ContentEditor
-          content={phasesContent}
-          textColor={accentColor(backgroundColor)}
-        />
+        <ContentEditor content={phasesContent} />
         <div className={styles.phase_list}>
           {phasesList &&
             phasesList.map((phase, index) => (

@@ -4,11 +4,12 @@
 }
 
 .pop_up__link .pop_up__link_container {
-    padding: 1.5rem 0 0 1.5rem;
+    padding: 1.5rem 1.5rem 0 1.5rem;
 }
 
 .pop_up__link h2 {
     font-size: 1.875rem;
+    margin-bottom: 1rem;
     font-family: "Sohne-Kraftig-Bold", sans-serif;
 }
 

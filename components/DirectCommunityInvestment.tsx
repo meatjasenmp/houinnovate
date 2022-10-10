@@ -26,7 +26,7 @@ const DirectCommunityInvestment = ({
         committedLabel={deployment?.investmentCommittedLabel}
         accent={Colors.NEON}
       />
-      <ContentEditor content={communityInvestmentContent} textColor="black" />
+      <ContentEditor content={communityInvestmentContent} />
       <CommunityInvestmentsSelect />
     </section>
   );

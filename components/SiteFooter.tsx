@@ -46,7 +46,7 @@ const GetInTouch = ({ blockContent }: GetInTouchProps) => {
         <h1>{header}</h1>
       </header>
       {contentBlocks?.map((block, index) => (
-        <ContentEditor key={index} content={block?.content} textColor="white" />
+        <ContentEditor key={index} content={block?.content} />
       ))}
     </div>
   );
@@ -59,7 +59,7 @@ const IonDistrict = ({ blockContent }: IonDistrictProps) => {
       <figure className={styles.logo}>
         <ImageBlock image={ionLogo} width="167" height="89" />
       </figure>
-      <ContentEditor content={address} textColor="innovateGray" />
+      <ContentEditor content={address} />
       <div className={styles.social_media}>
         <h4>{socialMedia?.header}</h4>
         <ul>
@@ -75,7 +75,7 @@ const IonDistrict = ({ blockContent }: IonDistrictProps) => {
       <section className={styles.cta_links}>
         {ctaLinks?.map((ctaLink, index) => (
           <div className={styles.cta_link_container} key={index}>
-            <ContentEditor content={ctaLink?.cta} textColor="white" />
+            <ContentEditor content={ctaLink?.cta} />
             <figure className={styles.cta_link_icon}>
               <FiArrowUpRight color="white" size="3rem" />
             </figure>
@@ -93,7 +93,7 @@ const RiceUniversity = ({ blockContent }: RiceUniversityProps) => {
       <figure className={styles.logo}>
         <ImageBlock image={riceUniversityLogo} width="330" height="176" />
       </figure>
-      <ContentEditor content={riceAddress} textColor="innovateGray" />
+      <ContentEditor content={riceAddress} />
       <div className={styles.social_media}>
         <h4>{riceSocialMedia?.riceSocialHeader}</h4>
         <ul>

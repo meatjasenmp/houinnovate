@@ -64,10 +64,7 @@ const CommunityInvestmentPopUp = ({
           <div className={styles.hou_modal__content}>
             {contentBlocks?.map((contentBlock, index) => (
               <div className={styles.hou_modal__content_block} key={index}>
-                <ContentEditor
-                  content={contentBlock?.content}
-                  textColor="black"
-                />
+                <ContentEditor content={contentBlock?.content} />
                 <div className={styles.content_block_border}></div>
               </div>
             ))}
