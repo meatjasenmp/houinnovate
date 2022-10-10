@@ -7,16 +7,17 @@
 }
 
 @media screen and (min-width: 1280px) {
-    .content_block article {
+    .content_block__columns_wrapper {
         display: flex;
-        justify-content: space-between;
+        max-width: 990px;
+        margin: 0 auto;
     }
 
-    .content_block article *:first-child {
-        padding-right: 2rem;
+    .content_block__columns_wrapper .content_block_column:first-child {
+        margin-right: 8rem;
     }
 
-    .content_block article *:last-child {
+    .content_block__columns_wrapper .content_block_column:last-child {
         max-width: 40rem;
     }
 }

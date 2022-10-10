@@ -30,11 +30,17 @@ const ContentBlock = ({ blockContent }: ComponentBlocksProps) => {
         {contentType === contentTypes.ContentBlock && contentBlockContent && (
           <ContentEditor content={contentBlockContent} />
         )}
-        {contentBlockColumnContent?.map((column, index) => (
-          <div key={index} className={styles.content_block_column}>
-            <ContentEditor content={column?.content} />
+        {contentType === contentTypes.ContentBlockColumn && (
+          <div className={styles.content_block__columns}>
+            <div className={styles.content_block__columns_wrapper}>
+              {contentBlockColumnContent?.map((column, index) => (
+                <div key={index} className={styles.content_block_column}>
+                  <ContentEditor content={column?.content} />
+                </div>
+              ))}
+            </div>
           </div>
-        ))}
+        )}
       </div>
     </section>
   );
