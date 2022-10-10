@@ -1,4 +1,14 @@
-.content_block_stylized {}
+.content_block_stylized {
+    padding: 4rem 2rem;
+}
+
+.content_block_stylized ~.content_block_stylized {
+    padding-top: 0;
+}
+
+.list {
+    margin-top: 2.5rem;
+}
 
 .list .list_item:not(:last-child) {
     margin-bottom: .5rem;

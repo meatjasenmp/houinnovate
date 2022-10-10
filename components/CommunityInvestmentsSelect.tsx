@@ -80,7 +80,8 @@ const CommunityInvestmentsSelect = () => {
       <>
         <SelectComponent options={optionsArray} />
         <div className={styles.pop_up__links_count}>
-          {communityInvestments?.edges?.length} Results
+          {communityInvestments?.edges?.length}{" "}
+          {communityInvestments?.edges?.length === 1 ? "Result" : "Results"}
         </div>
         <div className={styles.pop_up__links_container}>
           {communityInvestments?.edges &&

@@ -79,7 +79,10 @@ const OpportunitySelect = () => {
       <>
         <SelectComponent options={optionsArray} />
         <div className={styles.pop_up__links_count}>
-          {projectBasedOpportunities?.edges?.length} Results
+          {projectBasedOpportunities?.edges?.length}{" "}
+          {projectBasedOpportunities?.edges?.length === 1
+            ? "Result"
+            : "Results"}
         </div>
         <div className={styles.pop_up__links_container}>
           {projectBasedOpportunities?.edges &&

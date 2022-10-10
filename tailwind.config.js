@@ -49,8 +49,8 @@ module.exports = {
               ...bodyDefaults,
             },
             h1: {
-              fontSize: "3.5rem",
-              lineHeight: 1,
+              fontSize: "3rem",
+              lineHeight: 1.2,
               ...headerDefaults,
             },
             h2: {

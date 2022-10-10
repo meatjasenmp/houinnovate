@@ -59,7 +59,9 @@ const handleSelect = (selected: OnChangeValue<Options, false>) => {
 
 const SelectComponent = ({ options }: SelectComponentProps) => {
   return (
-    <Select options={options} onChange={handleSelect} styles={selectStyles} />
+    <div style={{ marginTop: "2rem" }}>
+      <Select options={options} onChange={handleSelect} styles={selectStyles} />
+    </div>
   );
 };
 

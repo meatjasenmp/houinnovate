@@ -1,7 +1,5 @@
-.phases {}
-
-.phase_container {
-    padding: 4rem 1rem;
+.phases {
+    padding: 4rem 2rem;
 }
 
 .phase_list {
