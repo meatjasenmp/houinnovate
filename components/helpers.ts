@@ -1,5 +1,6 @@
 import { Phase } from "./ProgressBar";
 import { backgroundColorMapping, Colors } from "../styles/helpers";
+import { Dispatch, SetStateAction } from "react";
 
 export enum Components {
   HERO_BANNER = "Page_Components_ComponentBlocks_HeroBanner",
@@ -59,7 +60,7 @@ export const phaseCompletedOpacity = (
 };
 
 export interface PopUpProps {
-  isOpen: boolean;
   id: string;
-  handleCloseModal: (e: { stopPropagation: () => void }) => void;
+  currentID: string;
+  setCurrentInvestmentID: Dispatch<SetStateAction<string | null | undefined>>;
 }

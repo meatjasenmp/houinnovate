@@ -1,4 +1,4 @@
-import HouModal from "./HouModal";
+import ReactModal from "react-modal";
 import ContentEditor from "./ContentEditor";
 import { useInvestment } from "../pages/api/investment";
 import { IoClose } from "@react-icons/all-files/io5/IoClose";
@@ -11,12 +11,22 @@ import { completedBackground, phaseCompletedOpacity } from "./helpers";
 
 // TODO: The pop up can probably be a custom hook
 
+const customStyles = {
+  overlay: {
+    zIndex: 1000,
+  },
+};
+
+ReactModal.setAppElement("#__next");
+
 const CommunityInvestmentPopUp = ({
-  isOpen,
-  handleCloseModal,
   id,
+  currentID,
+  setCurrentInvestmentID,
 }: PopUpProps) => {
   const { data, loading, error } = useInvestment(id);
+
+  if (loading || error) return <></>;
 
   const { communityInvestment } = data || {};
 
@@ -32,9 +42,19 @@ const CommunityInvestmentPopUp = ({
     completedBackground(currentPhase, PopUpTypes.INVESTMENT),
   ].join(" ");
 
+  const handleCloseModal = (e: { stopPropagation: () => void }) => {
+    setCurrentInvestmentID(null);
+    e.stopPropagation();
+  };
+
   return (
     <>
-      <HouModal isOpen={isOpen} loading={loading} error={error}>
+      <ReactModal
+        isOpen={Boolean(currentID === id)}
+        contentLabel="test"
+        style={customStyles}
+        className={styles.hou_modal}
+      >
         <div className={containerClassName}>
           <button
             className={styles.hou_modal_close_button}
@@ -91,7 +111,7 @@ const CommunityInvestmentPopUp = ({
             </div>
           </div>
         </div>
-      </HouModal>
+      </ReactModal>
     </>
   );
 };

@@ -1,5 +1,4 @@
 import { PopUpProps, PopUpTypes } from "./helpers";
-import HouModal from "./HouModal";
 import { useOpportunity } from "../pages/api/opportunity";
 import ContentEditor from "./ContentEditor";
 import { IoClose } from "@react-icons/all-files/io5/IoClose";
@@ -9,9 +8,24 @@ import { completedBackground, phaseCompletedOpacity } from "./helpers";
 
 import styles from "../styles/components/Modal.module.css";
 import { Colors } from "../styles/helpers";
+import ReactModal from "react-modal";
 
-const OpportunityPopUp = ({ isOpen, handleCloseModal, id }: PopUpProps) => {
+const customStyles = {
+  overlay: {
+    zIndex: 1000,
+  },
+};
+
+ReactModal.setAppElement("#__next");
+
+const OpportunityPopUp = ({
+  id,
+  currentID,
+  setCurrentInvestmentID,
+}: PopUpProps) => {
   const { data, loading, error } = useOpportunity(id);
+
+  if (loading || error) return <></>;
 
   const { projectBasedOpportunity } = data || {};
 
@@ -36,9 +50,19 @@ const OpportunityPopUp = ({ isOpen, handleCloseModal, id }: PopUpProps) => {
     completedBackground(currentPhase, PopUpTypes.OPPORTUNITY),
   ].join(" ");
 
+  const handleCloseModal = (e: { stopPropagation: () => void }) => {
+    setCurrentInvestmentID(null);
+    e.stopPropagation();
+  };
+
   return (
     <>
-      <HouModal isOpen={isOpen} loading={loading} error={error}>
+      <ReactModal
+        isOpen={Boolean(currentID === id)}
+        contentLabel="test"
+        style={customStyles}
+        className={styles.hou_modal}
+      >
         <div className={containerClassName}>
           <button
             className={styles.hou_modal_close_button}
@@ -98,7 +122,7 @@ const OpportunityPopUp = ({ isOpen, handleCloseModal, id }: PopUpProps) => {
             </div>
           </div>
         </div>
-      </HouModal>
+      </ReactModal>
     </>
   );
 };

@@ -1,4 +1,3 @@
-import PopUpLink from "./PopUpLink";
 import SelectComponent from "./SelectComponent";
 import { Options } from "./helpers";
 import { useProjectOpportunitiesSelect } from "../pages/api/project_opportunities_select";
@@ -50,17 +49,13 @@ const OpportunityPopUpSelect = ({ link }: PopUpSelectProps) => {
 };
 
 const OpportunitySelect = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [currentInvestmentID, setCurrentInvestmentID] = useState<
+    string | null
+  >();
 
-  const handleOpenModal = () => {
-    setIsOpen(true);
+  const handleOpenModal = (id: string) => {
+    setCurrentInvestmentID(id);
   };
-
-  const handleCloseModal = (e: { stopPropagation: () => void }) => {
-    setIsOpen(false);
-    e.stopPropagation();
-  };
-
   const { data, loading, error } = useProjectOpportunitiesSelect();
   if (loading || error || !data) return <></>;
 
@@ -87,14 +82,17 @@ const OpportunitySelect = () => {
         <div className={styles.pop_up__links_container}>
           {projectBasedOpportunities?.edges &&
             projectBasedOpportunities.edges.map((link, index) => (
-              <PopUpLink key={index} handleOpenModal={handleOpenModal}>
+              <div
+                key={index}
+                onClick={() => handleOpenModal(String(link?.node?.databaseId))}
+              >
                 <OpportunityPopUpSelect link={link} />
                 <OpportunityPopUp
+                  setCurrentInvestmentID={setCurrentInvestmentID}
+                  currentID={String(currentInvestmentID)}
                   id={String(link?.node?.databaseId)}
-                  isOpen={isOpen}
-                  handleCloseModal={handleCloseModal}
                 />
-              </PopUpLink>
+              </div>
             ))}
         </div>
       </>
