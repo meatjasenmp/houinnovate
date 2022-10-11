@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 interface SelectComponentProps {
   options: Options[];
+  container: string;
 }
 
 const selectStyles = {
@@ -37,8 +38,10 @@ const selectStyles = {
   }),
 };
 
-const SelectComponent = ({ options }: SelectComponentProps) => {
+const SelectComponent = ({ options, container }: SelectComponentProps) => {
   const [selectedOption, setSelectedOption] = useState<Options | null>(null);
+
+  const selectContainer = document.querySelector(`.${container}`);
 
   useEffect(() => {
     setSelectedOption(options[0]);
@@ -47,7 +50,7 @@ const SelectComponent = ({ options }: SelectComponentProps) => {
   const handleSelect = (selected: OnChangeValue<Options, false>) => {
     setSelectedOption(selected as Options);
     const { value } = selected || {};
-    const links = document.querySelectorAll(".pop_up__link");
+    const links = selectContainer?.querySelectorAll(".pop_up__link");
     console.log(links);
 
     if (value === "all") {

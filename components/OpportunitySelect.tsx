@@ -73,7 +73,10 @@ const OpportunitySelect = () => {
     <section>
       <>
         <div style={{ marginTop: "2rem", maxWidth: "600px" }}>
-          <SelectComponent options={optionSelectItems(optionsArray)} />
+          <SelectComponent
+            options={optionSelectItems(optionsArray)}
+            container="opportunity_select"
+          />
           <div className={styles.pop_up__links_count}>
             {projectBasedOpportunities?.edges?.length}{" "}
             {projectBasedOpportunities?.edges?.length === 1
@@ -81,7 +84,12 @@ const OpportunitySelect = () => {
               : "Results"}
           </div>
         </div>
-        <div className={styles.pop_up__links_container}>
+        <div
+          className={[
+            styles.pop_up__links_container,
+            "opportunity_select",
+          ].join(" ")}
+        >
           {projectBasedOpportunities?.edges &&
             projectBasedOpportunities.edges.map((link, index) => (
               <div
