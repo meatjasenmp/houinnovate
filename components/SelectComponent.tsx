@@ -51,7 +51,6 @@ const SelectComponent = ({ options, container }: SelectComponentProps) => {
     setSelectedOption(selected as Options);
     const { value } = selected || {};
     const links = selectContainer?.querySelectorAll(".pop_up__link");
-    console.log(links);
 
     if (value === "all") {
       links?.forEach((link) => {
