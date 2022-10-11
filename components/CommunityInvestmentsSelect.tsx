@@ -78,7 +78,6 @@ const CommunityInvestmentsSelect = () => {
         <div style={{ marginTop: "2rem", maxWidth: "600px" }}>
           <SelectComponent
             options={optionSelectItems(optionsArray)}
-            container={styles.pop_up__links_container}
           />
           <div className={styles.pop_up__links_count}>
             {communityInvestments?.edges?.length}{" "}
