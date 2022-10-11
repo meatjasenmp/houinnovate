@@ -7,11 +7,10 @@ import ProgressBar from "./ProgressBar";
 import styles from "../styles/components/PopUpLink.module.css";
 
 import { communityInvestmentsSelect_communityInvestments_edges } from "../pages/api/__generated__/communityInvestmentsSelect";
-import { useEffect, useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Colors } from "../styles/helpers";
 import { optionSelectItems } from "./helpers";
 import { FiArrowUpRight } from "@react-icons/all-files/fi/FiArrowUpRight";
-import { OnChangeValue } from "react-select";
 
 interface PopUpSelectProps {
   link: communityInvestmentsSelect_communityInvestments_edges | null;
@@ -77,7 +76,10 @@ const CommunityInvestmentsSelect = () => {
     <section>
       <>
         <div style={{ marginTop: "2rem", maxWidth: "600px" }}>
-          <SelectComponent options={optionSelectItems(optionsArray)} />
+          <SelectComponent
+            options={optionSelectItems(optionsArray)}
+            container={styles.pop_up__links_container}
+          />
           <div className={styles.pop_up__links_count}>
             {communityInvestments?.edges?.length}{" "}
             {communityInvestments?.edges?.length === 1 ? "Result" : "Results"}

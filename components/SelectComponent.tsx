@@ -48,16 +48,16 @@ const SelectComponent = ({ options }: SelectComponentProps) => {
     setSelectedOption(selected as Options);
     const { value } = selected || {};
     const links = document.querySelectorAll(".pop_up__link");
+    console.log(links);
 
     if (value === "all") {
-      links.forEach((link) => {
-        console.log(link);
+      links?.forEach((link) => {
         link.classList.remove(styles.pop_up__link_hidden);
       });
       return;
     }
 
-    links.forEach((link) => {
+    links?.forEach((link) => {
       const id = link.getAttribute("data-select-id");
       if (id === value) {
         link.classList.remove(styles.pop_up__link_hidden);
