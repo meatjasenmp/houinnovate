@@ -64,3 +64,15 @@ export interface PopUpProps {
   currentID: string;
   setCurrentInvestmentID: Dispatch<SetStateAction<string | null | undefined>>;
 }
+
+export const optionSelectItems = (options: Options[]) => {
+  const selectItems = new Set();
+
+  return options.filter((element) => {
+    const isDuplicate = selectItems.has(element.label);
+
+    selectItems.add(element.label);
+
+    return !isDuplicate;
+  });
+};

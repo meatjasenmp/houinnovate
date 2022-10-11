@@ -1,6 +1,7 @@
 import Select, { OnChangeValue } from "react-select";
 import { Options } from "./helpers";
 import styles from "../styles/components/PopUpLink.module.css";
+import { useEffect, useState } from "react";
 
 interface SelectComponentProps {
   options: Options[];
@@ -36,32 +37,43 @@ const selectStyles = {
   }),
 };
 
-const handleSelect = (selected: OnChangeValue<Options, false>) => {
-  const { value } = selected || {};
-  const links = document.querySelectorAll(".pop_up__link");
-
-  if (value === "all") {
-    links.forEach((link) => {
-      link.classList.remove(styles.pop_up__link_hidden);
-    });
-    return;
-  }
-
-  links.forEach((link) => {
-    const id = link.getAttribute("data-select-id");
-    if (id === value) {
-      link.classList.remove(styles.pop_up__link_hidden);
-    } else {
-      link.classList.add(styles.pop_up__link_hidden);
-    }
-  });
-};
-
 const SelectComponent = ({ options }: SelectComponentProps) => {
+  const [selectedOption, setSelectedOption] = useState<Options | null>(null);
+
+  useEffect(() => {
+    setSelectedOption(options[0]);
+  }, []);
+
+  const handleSelect = (selected: OnChangeValue<Options, false>) => {
+    setSelectedOption(selected as Options);
+    const { value } = selected || {};
+    const links = document.querySelectorAll(".pop_up__link");
+
+    if (value === "all") {
+      links.forEach((link) => {
+        console.log(link);
+        link.classList.remove(styles.pop_up__link_hidden);
+      });
+      return;
+    }
+
+    links.forEach((link) => {
+      const id = link.getAttribute("data-select-id");
+      if (id === value) {
+        link.classList.remove(styles.pop_up__link_hidden);
+      } else {
+        link.classList.add(styles.pop_up__link_hidden);
+      }
+    });
+  };
+
   return (
-    <div style={{ marginTop: "2rem", maxWidth: "600px" }}>
-      <Select options={options} onChange={handleSelect} styles={selectStyles} />
-    </div>
+    <Select
+      options={options}
+      value={selectedOption}
+      onChange={handleSelect}
+      styles={selectStyles}
+    />
   );
 };
 

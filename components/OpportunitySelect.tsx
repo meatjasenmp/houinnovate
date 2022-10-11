@@ -1,5 +1,5 @@
 import SelectComponent from "./SelectComponent";
-import { Options } from "./helpers";
+import { Options, optionSelectItems } from "./helpers";
 import { useProjectOpportunitiesSelect } from "../pages/api/project_opportunities_select";
 import OpportunityPopUp from "./OpportunityPopUp";
 import ProgressBar from "./ProgressBar";
@@ -72,12 +72,14 @@ const OpportunitySelect = () => {
   return (
     <section>
       <>
-        <SelectComponent options={optionsArray} />
-        <div className={styles.pop_up__links_count}>
-          {projectBasedOpportunities?.edges?.length}{" "}
-          {projectBasedOpportunities?.edges?.length === 1
-            ? "Result"
-            : "Results"}
+        <div style={{ marginTop: "2rem", maxWidth: "600px" }}>
+          <SelectComponent options={optionSelectItems(optionsArray)} />
+          <div className={styles.pop_up__links_count}>
+            {projectBasedOpportunities?.edges?.length}{" "}
+            {projectBasedOpportunities?.edges?.length === 1
+              ? "Result"
+              : "Results"}
+          </div>
         </div>
         <div className={styles.pop_up__links_container}>
           {projectBasedOpportunities?.edges &&
