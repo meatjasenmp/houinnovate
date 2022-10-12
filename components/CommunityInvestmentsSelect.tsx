@@ -52,6 +52,9 @@ const CommunityInvestmentsSelect = () => {
   const [currentInvestmentID, setCurrentInvestmentID] = useState<
     string | null
   >();
+  const [selectedOption, setSelectedOption] = useState<
+    string | null | undefined
+  >();
 
   const handleOpenModal = (id: string) => {
     setCurrentInvestmentID(id);
@@ -72,6 +75,8 @@ const CommunityInvestmentsSelect = () => {
     optionsArray.push({ value: slug, label: name });
   });
 
+  console.log(selectedOption);
+
   return (
     <section>
       <>
@@ -79,6 +84,7 @@ const CommunityInvestmentsSelect = () => {
           <SelectComponent
             options={optionSelectItems(optionsArray)}
             container="community_select"
+            setSelectedOption={setSelectedOption}
           />
           <div className={styles.pop_up__links_count}>
             {communityInvestments?.edges?.length}{" "}

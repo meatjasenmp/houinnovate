@@ -1,11 +1,12 @@
 import Select, { OnChangeValue } from "react-select";
 import { Options } from "./helpers";
 import styles from "../styles/components/PopUpLink.module.css";
-import { useEffect, useState } from "react";
+import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 interface SelectComponentProps {
   options: Options[];
   container: string;
+  setSelectedOption: Dispatch<SetStateAction<string | null | undefined>>;
 }
 
 const selectStyles = {
@@ -38,9 +39,13 @@ const selectStyles = {
   }),
 };
 
-const SelectComponent = ({ options, container }: SelectComponentProps) => {
+const SelectComponent = ({
+  options,
+  container,
+  setSelectedOption: select,
+}: SelectComponentProps) => {
   const [selectedOption, setSelectedOption] = useState<Options | null>(null);
-
+  select(selectedOption?.value);
   const selectContainer = document.querySelector(`.${container}`);
 
   useEffect(() => {

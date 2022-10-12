@@ -32,7 +32,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
           )}
         </div>
 
-        <article className="relative z-10">
+        <div className={styles.content__wrap}>
           <>
             {contentEditor && <ContentEditor content={contentEditor} />}
             {videoCta && (
@@ -44,7 +44,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
               />
             )}
           </>
-        </article>
+        </div>
       </div>
     </section>
   );
