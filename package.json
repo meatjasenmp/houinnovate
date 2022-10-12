@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "prettier": "prettier --write ./components/**/*.tsx",
     "gql_types": "apollo client:codegen --target typescript --endpoint=https://innovate.blackgraystudio.com/graphql"
   },
   "dependencies": {

@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import ComponentBlocks from "../components/ComponentBlocks";
 import Navigation from "../components/Navigation";
+import SecondaryNavigation from "../components/SecondaryNavigation";
 import SiteFooter from "../components/SiteFooter";
 import { usePage } from "./api/page";
 import { page_generalSettings, page_page } from "./api/__generated__/page";
@@ -41,6 +42,7 @@ const Home: NextPage = () => {
         className="min-h-screen flex flex-1 justify-between flex-col p-4 font-body"
         id="page-wrap"
       >
+        <SecondaryNavigation nav={data?.siteOptionsPage?.siteNavigation} />
         <ComponentBlocks componentBlocks={components?.componentBlocks} />
       </main>
 

@@ -1,0 +1,36 @@
+.secondary_navigation {
+    display: none;
+    position: absolute;
+    z-index: 10;
+}
+
+.secondary_navigation ul {
+    display: flex;
+}
+
+.secondary_navigation ul li:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.secondary_navigation a {
+    color: #fff;
+    transition: all 0.5s ease-out;
+}
+
+.secondary_navigation a:hover {
+    color: black;
+}
+
+@media screen and (min-width: 768px) {
+    .secondary_navigation {
+        display: block;
+        top: 6rem;
+        right: 4rem;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .secondary_navigation {
+        right: 6rem;
+    }
+}

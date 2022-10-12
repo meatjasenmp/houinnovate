@@ -3,7 +3,7 @@ import {
   page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink,
   page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink_link,
 } from "../pages/api/__generated__/page";
-import { backgroundColorMapping, Colors, LinkType } from "../styles/helpers";
+import { backgroundColorMapping, LinkType } from "../styles/helpers";
 import ContentEditor from "./ContentEditor";
 import ImageBlock from "./ImageBlock";
 import { FiArrowUpRight } from "@react-icons/all-files/fi/FiArrowUpRight";
@@ -86,8 +86,9 @@ const BoxLinksBlock = ({ blockContent }: ComponentBlocksProps) => {
 
           return (
             <div
-              className={backgroundColorMapping(backgroundColor)}
-              key={index}
+                className={backgroundColorMapping(backgroundColor)}
+                key={index}
+                data-id={index}
             >
               {linkType === LinkType.PAGE ? (
                 <BoxPageLink
