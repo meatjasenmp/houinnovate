@@ -26,25 +26,36 @@ const CommunityPopUpSelect = ({ link }: PopUpSelectProps) => {
 
   const { currentPhase, progressLabel, showProgressLabel } = progress || {};
 
-  const popUpLinkClassNames = [styles.pop_up__link, "pop_up__link"].join(" ");
+  const popUpLinkClassNames = [
+    styles.pop_up__link,
+    styles.pop_up__link_container,
+    "pop_up__link",
+  ].join(" ");
 
   return (
-    <div className={popUpLinkClassNames} data-select-id={investmentType?.slug}>
-      <div className={styles.pop_up__link_container}>
-        {alphanumericLabel && <span>{alphanumericLabel}.</span>}
-        {title && <h2>{title}</h2>}
-        {showProgressLabel && progressLabel && <h5>{progressLabel}</h5>}
-        <div>
-          <figure className={styles.current_phase}>
-            <p className={styles.current_phase_text}>{currentPhase} Phase</p>
-            <FiArrowUpRight color="black" size="3rem" />
-          </figure>
+    <>
+      <div
+        className={popUpLinkClassNames}
+        data-select-id={investmentType?.slug}
+      >
+        <div className={styles.content}>
+          {alphanumericLabel && <span>{alphanumericLabel}.</span>}
+          {title && <h2>{title}</h2>}
+          {showProgressLabel && progressLabel && <h5>{progressLabel}</h5>}
+        </div>
+        <div className={styles.progress}>
+          <div className={styles.progress_content}>
+            <figure className={styles.current_phase}>
+              <span className={styles.current_phase_text}>
+                {currentPhase} Phase
+              </span>
+              <FiArrowUpRight color="black" size="3rem" />
+            </figure>
+          </div>
+          <ProgressBar currentPhase={currentPhase} accent={Colors.NEON} />
         </div>
       </div>
-      <div className={styles.pop_up__link_progress}>
-        <ProgressBar currentPhase={currentPhase} accent={Colors.NEON} />
-      </div>
-    </div>
+    </>
   );
 };
 
@@ -75,8 +86,6 @@ const CommunityInvestmentsSelect = () => {
     optionsArray.push({ value: slug, label: name });
   });
 
-  console.log(selectedOption);
-
   return (
     <section>
       <>
@@ -101,6 +110,7 @@ const CommunityInvestmentsSelect = () => {
               <div
                 key={index}
                 onClick={() => handleOpenModal(String(link?.node?.databaseId))}
+                className={styles.pop_up__link_container}
               >
                 <CommunityPopUpSelect link={link} />
                 <CommunityInvestmentPopUp

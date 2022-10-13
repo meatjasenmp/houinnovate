@@ -38,16 +38,21 @@ const CommittedDeployedProgressBar = ({
   return (
     <div className={styles.progress_bar}>
       <div className={labelClassNames}>
-        <span>${deployed} Million</span>
-        <span>{deployedLabel}</span>
+        <span>
+          ${deployed} Million {deployedLabel}
+        </span>
       </div>
       <div
         className={progressBarDeployedClassNames}
         style={{ width: `${calculatePercentage(deployed, committed)}%` }}
       />
-      <div className={styles.progress_bar__labels}>
-        <span>${committed} Million</span>
-        <span>{committedLabel}</span>
+      <div
+        className={styles.progress_bar__labels}
+        style={{ textAlign: "right" }}
+      >
+        <span>
+          ${committed} Million {committedLabel}
+        </span>
       </div>
     </div>
   );
