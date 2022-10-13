@@ -26,8 +26,22 @@
     font-family: "Sohne-Kraftig-Bold", sans-serif;
 }
 
-.phase .hidden {
+.phase h5,
+.phase .phase_number {
+    opacity: .5;
+}
+
+.phase_shown h5,
+.phase_shown .phase_number {
+    opacity: 1;
+}
+
+.phase .phase_content {
     display: none;
+}
+
+.phase_shown .phase_content {
+    display: block;
 }
 
 @media screen and (min-width: 990px) {

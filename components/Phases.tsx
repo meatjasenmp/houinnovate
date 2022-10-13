@@ -27,19 +27,20 @@ interface PhaseProps {
 }
 
 const handlePhaseClick = (e: React.MouseEvent<HTMLElement>) => {
-  const currentPhase = e.currentTarget.nextSibling as HTMLElement;
+  const currentPhase = e.currentTarget as HTMLElement;
+  console.log(currentPhase);
 
-  if (!currentPhase.classList.contains("hidden")) {
-    currentPhase.classList.add("hidden");
+  if (currentPhase.classList.contains(`${styles.phase_shown}`)) {
+    currentPhase.classList.remove(`${styles.phase_shown}`);
     return;
   }
 
-  const phases = document.querySelectorAll(`.${styles.phase} .phase__content`);
+  const phases = document.querySelectorAll(`.${styles.phase}`);
   phases.forEach((phase) => {
-    phase.classList.add("hidden");
+    phase.classList.remove(`${styles.phase_shown}`);
   });
 
-  currentPhase?.classList.remove("hidden");
+  currentPhase?.classList.add(`${styles.phase_shown}`);
 };
 
 const Phase = ({ phase, phaseNumber, backgroundColor }: PhaseProps) => {
@@ -48,16 +49,17 @@ const Phase = ({ phase, phaseNumber, backgroundColor }: PhaseProps) => {
   const { phaseHeader, phaseText } = phase;
 
   const phaseClassName = [styles.phase, "flex"].join(" ");
-  const textColor = `text-innovate-${accentColor(backgroundColor)}`;
+  const textColor = [
+    `text-innovate-${accentColor(backgroundColor)}`,
+    styles.phase_number,
+  ].join(" ");
 
   return (
-    <div className={phaseClassName}>
+    <div className={phaseClassName} onClick={handlePhaseClick}>
       <div className={textColor}>{`0${phaseNumber}.`}</div>
       <div>
-        <h5 className={textColor} onClick={handlePhaseClick}>
-          {phaseHeader}
-        </h5>
-        <div className="hidden phase__content">
+        <h5 className={textColor}>{phaseHeader}</h5>
+        <div className={styles.phase_content}>
           <ContentEditor content={phaseText} />
         </div>
       </div>
