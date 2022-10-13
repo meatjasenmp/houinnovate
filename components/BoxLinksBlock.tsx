@@ -35,12 +35,14 @@ const BoxLinkContent = ({ content }: BoxLinkProps) => {
 
   return (
     <div className={styles.box_link}>
-      <figure className={styles.block_link__image}>
-        <ImageBlock image={image} height="590" width="1212" />
-      </figure>
-      <article>
-        <ContentEditor content={boxLinkContent} />
-      </article>
+      <div className={styles.box_link_content}>
+        <figure className={styles.block_link__image}>
+          <ImageBlock image={image} height="590" width="1212" />
+        </figure>
+        <article>
+          <ContentEditor content={boxLinkContent} />
+        </article>
+      </div>
       <figure className={styles.link_icon}>
         <FiArrowUpRight color={accentColor(backgroundColor)} size="3rem" />
       </figure>
@@ -86,9 +88,9 @@ const BoxLinksBlock = ({ blockContent }: ComponentBlocksProps) => {
 
           return (
             <div
-                className={backgroundColorMapping(backgroundColor)}
-                key={index}
-                data-id={index}
+              className={backgroundColorMapping(backgroundColor)}
+              key={index}
+              data-id={index}
             >
               {linkType === LinkType.PAGE ? (
                 <BoxPageLink
