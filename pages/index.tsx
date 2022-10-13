@@ -48,6 +48,7 @@ const Home: NextPage = () => {
 
       <SiteFooter
         footerBlocks={data?.siteOptionsPage?.siteFooter?.footerBlocks}
+        header={data?.siteOptionsPage?.siteFooter?.footerHeader}
       />
     </div>
   );

@@ -134,9 +134,9 @@ export const usePage = (id: string) => {
             }
           }
           siteFooter {
+            footerHeader
             footerBlocks {
               ... on SiteOptionsPage_Sitefooter_FooterBlocks_GetInTouch {
-                header
                 contentBlocks {
                   content
                 }

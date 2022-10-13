@@ -80,10 +80,41 @@
     margin: 0 auto;
 }
 
+.site_footer_container {
+    max-width: 990px;
+    margin: 0 auto;
+}
+
+.site_footer_container header {
+    margin-bottom: 3.5rem;
+}
+
+.site_footer_container p,
+.site_footer_container li a,
+.terms_and_conditions p {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+}
+
+.site_footer_container h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+}
+
+.terms_and_conditions p {
+    opacity: .75;
+}
+
 @media screen and (min-width: 990px) {
     .site_footer_wrapper {
         display: flex;
-        max-width: 990px;
-        margin: 0 auto;
+    }
+
+    .site_footer_wrapper > div {
+        width: 33.33%;
+    }
+
+    .site_footer_wrapper > div:not(:last-child) {
+        margin-right: 2rem;
     }
 }

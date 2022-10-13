@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Pop up Select style changes per audit.">
+      <change afterPath="$PROJECT_DIR$/styles/components/ImageAsset.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SelectComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SelectComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SiteFooter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SiteFooter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/__generated__/page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/SiteFooter.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/SiteFooter.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -74,7 +79,7 @@
       <updated>1665615749287</updated>
       <workItem from="1665615750755" duration="49000" />
       <workItem from="1665615849096" duration="796000" />
-      <workItem from="1665618153001" duration="5785000" />
+      <workItem from="1665618153001" duration="7454000" />
     </task>
     <task id="LOCAL-00001" summary="Box link grid updates">
       <created>1665618210255</created>
@@ -104,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665623534181</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Pop up Select style changes per audit.">
+      <created>1665624115459</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1665624115459</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

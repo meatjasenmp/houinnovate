@@ -1,5 +1,4 @@
 import ContentEditor from "./ContentEditor";
-import ImageBlock from "./ImageBlock";
 import Link from "next/link";
 import { FiArrowUpRight } from "@react-icons/all-files/fi/FiArrowUpRight";
 import {
@@ -10,7 +9,7 @@ import {
 } from "../pages/api/__generated__/page";
 
 import styles from "../styles/components/SiteFooter.module.css";
-import { accentColor } from "../styles/helpers";
+import ImageAsset from "../styles/components/ImageAsset";
 
 enum FooterComponents {
   GET_IN_TOUCH = "SiteOptionsPage_Sitefooter_FooterBlocks_GetInTouch",
@@ -23,6 +22,7 @@ interface SiteFooterProps {
     | (page_siteOptionsPage_siteFooter_footerBlocks | null)[]
     | null
     | undefined;
+  header?: string | null | undefined;
 }
 
 interface GetInTouchProps {
@@ -38,13 +38,10 @@ interface RiceUniversityProps {
 }
 
 const GetInTouch = ({ blockContent }: GetInTouchProps) => {
-  const { header, contentBlocks } = blockContent;
+  const { contentBlocks } = blockContent;
   const className = [styles.get_in_touch, styles.footer_column].join(" ");
   return (
     <div className={className}>
-      <header>
-        <h1>{header}</h1>
-      </header>
       {contentBlocks?.map((block, index) => (
         <ContentEditor key={index} content={block?.content} />
       ))}
@@ -57,7 +54,7 @@ const IonDistrict = ({ blockContent }: IonDistrictProps) => {
   return (
     <div className={styles.footer_column}>
       <figure className={styles.logo}>
-        <ImageBlock image={ionLogo} width="167" height="89" />
+        <ImageAsset image={ionLogo} width="115" height="61" />
       </figure>
       <ContentEditor content={address} />
       <div className={styles.social_media}>
@@ -77,7 +74,7 @@ const IonDistrict = ({ blockContent }: IonDistrictProps) => {
           <div className={styles.cta_link_container} key={index}>
             <ContentEditor content={ctaLink?.cta} />
             <figure className={styles.cta_link_icon}>
-              <FiArrowUpRight color="white" size="3rem" />
+              <FiArrowUpRight color="white" size="2rem" />
             </figure>
           </div>
         ))}
@@ -91,7 +88,7 @@ const RiceUniversity = ({ blockContent }: RiceUniversityProps) => {
   return (
     <div className={styles.footer_column}>
       <figure className={styles.logo}>
-        <ImageBlock image={riceUniversityLogo} width="330" height="176" />
+        <ImageAsset image={riceUniversityLogo} width="150" height="97" />
       </figure>
       <ContentEditor content={riceAddress} className={styles.rice_address} />
       <div className={styles.social_media}>
@@ -147,7 +144,8 @@ const TermsAndConditions = () => {
   );
 };
 
-const SiteFooter = ({ footerBlocks }: SiteFooterProps) => {
+const SiteFooter = ({ footerBlocks, header }: SiteFooterProps) => {
+  console.log(footerBlocks);
   const className = [
     styles.site_footer,
     "full-screen",
@@ -155,8 +153,13 @@ const SiteFooter = ({ footerBlocks }: SiteFooterProps) => {
   ].join(" ");
   return (
     <footer className={className}>
-      <div className={styles.site_footer_wrapper}>
-        <FooterBlocks footerBlocks={footerBlocks} />
+      <div className={styles.site_footer_container}>
+        <header>
+          <h1>{header}</h1>
+        </header>
+        <div className={styles.site_footer_wrapper}>
+          <FooterBlocks footerBlocks={footerBlocks} />
+        </div>
       </div>
       <div className={styles.terms_and_conditions_wrapper}>
         <TermsAndConditions />

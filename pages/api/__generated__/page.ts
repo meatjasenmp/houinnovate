@@ -285,7 +285,6 @@ export interface page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Si
 
 export interface page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_GetInTouch {
   __typename: "SiteOptionsPage_Sitefooter_FooterBlocks_GetInTouch";
-  header: string | null;
   contentBlocks: (page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_GetInTouch_contentBlocks | null)[] | null;
 }
 
@@ -369,6 +368,7 @@ export type page_siteOptionsPage_siteFooter_footerBlocks = page_siteOptionsPage_
 
 export interface page_siteOptionsPage_siteFooter {
   __typename: "SiteOptionsPage_Sitefooter";
+  footerHeader: string | null;
   footerBlocks: (page_siteOptionsPage_siteFooter_footerBlocks | null)[] | null;
 }
 
