@@ -29,12 +29,13 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
     }
   }, []);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (
       contentWrapRef.current &&
       videoRef.current &&
       !videoRef.current.paused
     ) {
+      console.log(videoRef.current);
       gsap.context(() => {
         const targets = gsap.utils.toArray(".animated_content_block");
         const duration = 0.65;
