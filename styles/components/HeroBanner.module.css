@@ -63,7 +63,6 @@
 }
 
 .content__wrap .content__block {
-    opacity: 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -74,7 +73,6 @@
 
 .content__wrap .content__block:first-child {
     position: relative;
-    opacity: 1;
 }
 
 @media screen and (min-width: 414px) {
