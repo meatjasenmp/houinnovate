@@ -28,7 +28,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
       setIsVideoPlaying(true);
     }
   }, []);
-  console.log("work");
+
   useLayoutEffect(() => {
     if (
       contentWrapRef.current &&
