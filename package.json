@@ -13,7 +13,7 @@
   "dependencies": {
     "@apollo/client": "^3.6.9",
     "@react-icons/all-files": "^4.1.0",
-    "gsap": "npm:@gsap/business",
+    "gsap": "^3.11.3",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-burger-menu": "^3.0.8",
