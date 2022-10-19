@@ -52,6 +52,29 @@
     margin-top: 1.5rem;
 }
 
+.video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.content__wrap {
+    position: relative;
+}
+
+.content__wrap .content__block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.content__wrap .content__block:first-child {
+    position: relative;
+}
+
 @media screen and (min-width: 414px) {
     .content__wrap {
         margin: 0 1rem;

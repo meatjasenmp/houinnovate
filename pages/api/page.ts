@@ -12,27 +12,12 @@ export const usePage = (id: string) => {
             componentBlocks {
               __typename
               ... on Page_Components_ComponentBlocks_HeroBanner {
-                type
                 video {
                   id
                   mediaItemUrl
                 }
-                image {
-                  id
-                  mediaItemUrl
-                  altText
-                }
-                content {
-                  contentEditor
-                  pageLinkSelect
-                  pageLinkButton {
-                    label
-                    link {
-                      target
-                      title
-                      url
-                    }
-                  }
+                contentBlocks {
+                  contentBlock
                 }
                 videoCta
               }

@@ -19,57 +19,15 @@ export interface page_page_components_componentBlocks_Page_Components_ComponentB
   mediaItemUrl: string | null;
 }
 
-export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_image {
-  __typename: "MediaItem";
-  /**
-   * The globally unique identifier of the attachment object.
-   */
-  id: string;
-  /**
-   * Url of the mediaItem
-   */
-  mediaItemUrl: string | null;
-  /**
-   * Alternative text to display when resource is not displayed
-   */
-  altText: string | null;
-}
-
-export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_content_pageLinkButton_link {
-  __typename: "AcfLink";
-  /**
-   * The target of the link (_blank, etc)
-   */
-  target: string | null;
-  /**
-   * The title of the link
-   */
-  title: string | null;
-  /**
-   * The url of the link
-   */
-  url: string | null;
-}
-
-export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_content_pageLinkButton {
-  __typename: "Page_Components_ComponentBlocks_HeroBanner_Content_PageLinkButton";
-  label: string | null;
-  link: page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_content_pageLinkButton_link | null;
-}
-
-export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_content {
-  __typename: "Page_Components_ComponentBlocks_HeroBanner_Content";
-  contentEditor: string | null;
-  pageLinkSelect: boolean | null;
-  pageLinkButton: page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_content_pageLinkButton | null;
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_contentBlocks {
+  __typename: "Page_Components_ComponentBlocks_HeroBanner_contentBlocks";
+  contentBlock: string | null;
 }
 
 export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner {
   __typename: "Page_Components_ComponentBlocks_HeroBanner";
-  type: string | null;
   video: page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_video | null;
-  image: page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_image | null;
-  content: page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_content | null;
+  contentBlocks: (page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_contentBlocks | null)[] | null;
   videoCta: string | null;
 }
 

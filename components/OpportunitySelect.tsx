@@ -82,8 +82,6 @@ const OpportunitySelect = () => {
     optionsArray.push({ value: slug, label: name });
   });
 
-  console.log(selectedOption);
-
   return (
     <section>
       <>

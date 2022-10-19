@@ -145,7 +145,6 @@ const TermsAndConditions = () => {
 };
 
 const SiteFooter = ({ footerBlocks, header }: SiteFooterProps) => {
-  console.log(footerBlocks);
   const className = [
     styles.site_footer,
     "full-screen",
