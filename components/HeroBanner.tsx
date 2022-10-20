@@ -4,15 +4,16 @@ import ContentEditor from "./ContentEditor";
 import Button from "./Button";
 import { BiPlay } from "@react-icons/all-files/bi/BiPlay";
 import { gsap } from "gsap";
+import ReactPlayer from "react-player/vimeo";
 import styles from "../styles/components/HeroBanner.module.css";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface ComponentBlocksProps {
   blockContent: page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner;
 }
 
 const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoRef = useRef<HTMLDivElement>(null);
   const timelineRef = useRef<any>(null);
   const contentWrapRef = useRef<HTMLDivElement>(null);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
@@ -23,19 +24,8 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
   ].join(" ");
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play();
-      setIsVideoPlaying(true);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (
-      contentWrapRef.current &&
-      videoRef.current &&
-      !videoRef.current.paused
-    ) {
-      gsap.context(() => {
+    if (contentWrapRef.current) {
+      const ctx = gsap.context(() => {
         const targets = gsap.utils.toArray(".animated_content_block");
         const duration = 0.65;
         const hold = 4;
@@ -53,16 +43,17 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
           tl.to(target as any, { y: -20, opacity: 0 }, "+=" + hold);
         });
       }, contentWrapRef.current);
+      return () => {
+        ctx.revert();
+      };
     }
   }, []);
 
   const handleButtonClick = () => {
     if (videoRef.current) {
       if (isVideoPlaying) {
-        videoRef.current.pause();
         setIsVideoPlaying(false);
       } else {
-        videoRef.current.play();
         setIsVideoPlaying(true);
       }
     }
@@ -70,15 +61,24 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
 
   if (!blockContent) return null;
 
-  const { video, videoCta, contentBlocks } = blockContent;
-
+  const { video, videoCta, contentBlocks, videoUrl } = blockContent;
   return (
     <section className={styles.hero__banner_section}>
       <div className={styles.hero__banner}>
         <div className={styles.hero__banner_background}>
-          <video className={styles.video} ref={videoRef} muted loop>
-            {video?.mediaItemUrl && <source src={video.mediaItemUrl} />}
-          </video>
+          <div className={styles.video}>
+            {videoUrl && (
+              <ReactPlayer
+                url={String(videoUrl)}
+                volume={0}
+                muted={true}
+                playing={true}
+                loop={true}
+                width="100%"
+                height="100%"
+              />
+            )}
+          </div>
         </div>
 
         <div className={styles.content__wrap} ref={contentWrapRef}>

@@ -17,7 +17,7 @@
 .hero__banner_background {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     top: 0;
     left: 0;
     overflow: hidden;
@@ -53,9 +53,15 @@
 }
 
 .video {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+   position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .content__wrap {

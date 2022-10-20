@@ -20,6 +20,7 @@ export const usePage = (id: string) => {
                   contentBlock
                 }
                 videoCta
+                videoUrl
               }
               ... on Page_Components_ComponentBlocks_BoxLinks {
                 boxLink {

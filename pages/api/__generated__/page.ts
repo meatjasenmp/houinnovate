@@ -29,6 +29,7 @@ export interface page_page_components_componentBlocks_Page_Components_ComponentB
   video: page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_video | null;
   contentBlocks: (page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_contentBlocks | null)[] | null;
   videoCta: string | null;
+  videoUrl: string | null;
 }
 
 export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink_image {

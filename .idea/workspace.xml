@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Sigh. GSAP." />
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Remove console logging. GSAP appears to work now.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__generated__/globalTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__generated__/globalTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/HeroBanner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeroBanner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/__generated__/page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/HeroBanner.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/HeroBanner.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +84,8 @@
       <workItem from="1665615750755" duration="49000" />
       <workItem from="1665615849096" duration="796000" />
       <workItem from="1665618153001" duration="8840000" />
-      <workItem from="1666133841760" duration="10661000" />
+      <workItem from="1666133841760" duration="11340000" />
+      <workItem from="1666260505660" duration="8540000" />
     </task>
     <task id="LOCAL-00001" summary="Box link grid updates">
       <created>1665618210255</created>
@@ -210,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666181935337</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Remove console logging. GSAP appears to work now.">
+      <created>1666182280885</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1666182280885</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,7 +258,8 @@
     <MESSAGE value="Installing gsap from zip" />
     <MESSAGE value="Removing package-lock" />
     <MESSAGE value="Sigh. GSAP." />
-    <option name="LAST_COMMIT_MESSAGE" value="Sigh. GSAP." />
+    <MESSAGE value="Remove console logging. GSAP appears to work now." />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove console logging. GSAP appears to work now." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
