@@ -8,7 +8,8 @@ import styles from "../styles/components/PopUpLink.module.css";
 import { useEffect, useState } from "react";
 
 import { projectOpportunitiesSelect_projectBasedOpportunities_edges } from "../pages/api/__generated__/projectOpportunitiesSelect";
-import PopUpLinks, { PopUpType } from "./PopUpLinks";
+import { PopUpTypes } from "./helpers";
+import PopUpLinks from "./PopUpLinks";
 
 const OpportunitySelect = () => {
   const [currentInvestmentID, setCurrentInvestmentID] = useState<
@@ -106,7 +107,7 @@ const OpportunitySelect = () => {
               >
                 <PopUpLinks
                   link={link?.node}
-                  popUpType={PopUpType.OPPORTUNITY}
+                  popUpType={PopUpTypes.OPPORTUNITY}
                 />
                 <OpportunityPopUp
                   setCurrentInvestmentID={setCurrentInvestmentID}

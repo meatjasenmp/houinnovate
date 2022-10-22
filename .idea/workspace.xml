@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Updating select filters">
-      <change afterPath="$PROJECT_DIR$/components/PopUpSelect.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/components/usePopUpSelect.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/CommunityInvestmentsSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CommunityInvestmentsSelect.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/OpportunitySelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/OpportunitySelect.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Phases.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Phases.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/helpers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/PopUpSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/PopUpSelect.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +83,7 @@
       <workItem from="1665618153001" duration="8840000" />
       <workItem from="1666133841760" duration="11340000" />
       <workItem from="1666260505660" duration="8916000" />
-      <workItem from="1666451291911" duration="13375000" />
+      <workItem from="1666451291911" duration="13990000" />
     </task>
     <task id="LOCAL-00001" summary="Box link grid updates">
       <created>1665618210255</created>
@@ -240,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666459537681</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Updating select filters">
+      <created>1666465493506</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1666465493506</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
