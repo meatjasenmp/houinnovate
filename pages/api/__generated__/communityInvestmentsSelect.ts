@@ -7,7 +7,7 @@
 // GraphQL query operation: communityInvestmentsSelect
 // ====================================================
 
-export interface communityInvestmentsSelect_communityInvestments_edges_node_communityAndOpportunityPopUps_investmentType {
+export interface communityInvestmentsSelect_communityInvestments_edges_node_communityAndOpportunityPopUps_type {
   __typename: "CommunityInvestmentType";
   /**
    * The unique resource identifier path
@@ -35,7 +35,7 @@ export interface communityInvestmentsSelect_communityInvestments_edges_node_comm
 export interface communityInvestmentsSelect_communityInvestments_edges_node_communityAndOpportunityPopUps {
   __typename: "CommunityInvestment_Communityandopportunitypopups";
   alphanumericLabel: string | null;
-  investmentType: communityInvestmentsSelect_communityInvestments_edges_node_communityAndOpportunityPopUps_investmentType | null;
+  type: communityInvestmentsSelect_communityInvestments_edges_node_communityAndOpportunityPopUps_type | null;
   progress: communityInvestmentsSelect_communityInvestments_edges_node_communityAndOpportunityPopUps_progress | null;
 }
 

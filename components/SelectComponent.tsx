@@ -1,12 +1,12 @@
 import Select, { OnChangeValue } from "react-select";
 import { Options } from "./helpers";
-import styles from "../styles/components/PopUpLink.module.css";
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 interface SelectComponentProps {
   options: Options[];
-  container: string;
-  setSelectedOption: Dispatch<SetStateAction<string | null | undefined>>;
+  selectedOption: Options | null | undefined;
+  setSelectedOption: Dispatch<SetStateAction<Options | null | undefined>>;
+  setSelectedOptions: Dispatch<SetStateAction<Options[] | null | undefined>>;
 }
 
 const selectStyles = {
@@ -41,37 +41,18 @@ const selectStyles = {
 
 const SelectComponent = ({
   options,
-  container,
-  setSelectedOption: select,
+  setSelectedOptions,
+  setSelectedOption,
+  selectedOption,
 }: SelectComponentProps) => {
-  const [selectedOption, setSelectedOption] = useState<Options | null>(null);
-  select(selectedOption?.value);
-  const selectContainer = document.querySelector(`.${container}`);
-
   useEffect(() => {
+    setSelectedOptions(options);
     setSelectedOption(options[0]);
   }, []);
 
   const handleSelect = (selected: OnChangeValue<Options, false>) => {
     setSelectedOption(selected as Options);
-    const { value } = selected || {};
-    const links = selectContainer?.querySelectorAll(".pop_up__link");
-
-    if (value === "all") {
-      links?.forEach((link) => {
-        link.classList.remove(styles.pop_up__link_hidden);
-      });
-      return;
-    }
-
-    links?.forEach((link) => {
-      const id = link.getAttribute("data-select-id");
-      if (id === value) {
-        link.classList.remove(styles.pop_up__link_hidden);
-      } else {
-        link.classList.add(styles.pop_up__link_hidden);
-      }
-    });
+    setSelectedOptions(options);
   };
 
   return (

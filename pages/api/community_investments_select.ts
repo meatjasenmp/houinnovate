@@ -13,7 +13,7 @@ export const useCommunityInvestmentsSelect = () => {
               title
               communityAndOpportunityPopUps {
                 alphanumericLabel
-                investmentType {
+                type: investmentType {
                   id
                   slug
                   name

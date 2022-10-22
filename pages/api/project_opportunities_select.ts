@@ -14,7 +14,7 @@ export const useProjectOpportunitiesSelect = () => {
               title
               communityAndOpportunityPopUps {
                 alphanumericLabel
-                opportunityType {
+                type: opportunityType {
                   id
                   slug
                   name

@@ -14,7 +14,6 @@ interface ComponentBlocksProps {
 
 const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
   const videoRef = useRef<HTMLDivElement>(null);
-  const timelineRef = useRef<any>(null);
   const contentWrapRef = useRef<HTMLDivElement>(null);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 

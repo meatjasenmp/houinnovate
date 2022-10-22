@@ -1,74 +1,61 @@
 import SelectComponent from "./SelectComponent";
-import { Options } from "./helpers";
+import { Options, optionSelectItems } from "./helpers";
 import { useCommunityInvestmentsSelect } from "../pages/api/community_investments_select";
 import CommunityInvestmentPopUp from "./CommunityInvestmentPopUp";
-import ProgressBar from "./ProgressBar";
 
 import styles from "../styles/components/PopUpLink.module.css";
 
 import { communityInvestmentsSelect_communityInvestments_edges } from "../pages/api/__generated__/communityInvestmentsSelect";
-import { useState, useRef, useEffect } from "react";
-import { Colors } from "../styles/helpers";
-import { optionSelectItems } from "./helpers";
-import { FiArrowUpRight } from "@react-icons/all-files/fi/FiArrowUpRight";
-
-interface PopUpSelectProps {
-  link: communityInvestmentsSelect_communityInvestments_edges | null;
-}
-
-const CommunityPopUpSelect = ({ link }: PopUpSelectProps) => {
-  const { node } = link || {};
-
-  const { title, communityAndOpportunityPopUps } = node || {};
-
-  const { progress, alphanumericLabel, investmentType } =
-    communityAndOpportunityPopUps || {};
-
-  const { currentPhase, progressLabel, showProgressLabel } = progress || {};
-
-  const popUpLinkClassNames = [
-    styles.pop_up__link,
-    styles.pop_up__link_container,
-    "pop_up__link",
-  ].join(" ");
-
-  return (
-    <>
-      <div
-        className={popUpLinkClassNames}
-        data-select-id={investmentType?.slug}
-      >
-        <div className={styles.content}>
-          {alphanumericLabel && <span>{alphanumericLabel}.</span>}
-          {title && <h2>{title}</h2>}
-          {showProgressLabel && progressLabel && <h5>{progressLabel}</h5>}
-        </div>
-        <div className={styles.progress}>
-          <div className={styles.progress_content}>
-            <figure className={styles.current_phase}>
-              <span className={styles.current_phase_text}>
-                {currentPhase} Phase
-              </span>
-              <FiArrowUpRight color="black" size="3rem" />
-            </figure>
-          </div>
-          <ProgressBar currentPhase={currentPhase} accent={Colors.NEON} />
-        </div>
-      </div>
-    </>
-  );
-};
+import { useEffect, useState } from "react";
+import PopUpLinks, { PopUpType } from "./PopUpLinks";
 
 const CommunityInvestmentsSelect = () => {
   const [currentInvestmentID, setCurrentInvestmentID] = useState<
     string | null
   >();
-  const [selectedOption, setSelectedOption] = useState<
-    string | null | undefined
+  const [selectedOptions, setSelectedOptions] = useState<
+    Options[] | null | undefined
   >();
+  const [selectedOption, setSelectedOption] = useState<Options | null>();
+  const [selectedPopups, setSelectedPopUps] = useState<
+    | (communityInvestmentsSelect_communityInvestments_edges | null)[]
+    | null
+    | undefined
+  >();
+
+  useEffect(() => {
+    setSelectedPopUps(findSelectedOptions(communityInvestments?.edges));
+  }, [selectedOptions]);
 
   const handleOpenModal = (id: string) => {
     setCurrentInvestmentID(id);
+  };
+
+  const findSelectedOptions = (
+    popups:
+      | (communityInvestmentsSelect_communityInvestments_edges | null)[]
+      | null
+      | undefined
+  ) => {
+    if (!popups) return;
+
+    if (selectedOption?.value === "all") {
+      return communityInvestments?.edges;
+    }
+
+    const array: (communityInvestmentsSelect_communityInvestments_edges | null)[] =
+      [];
+
+    popups.find((edge) => {
+      if (
+        edge?.node?.communityAndOpportunityPopUps?.type?.slug ===
+        selectedOption?.value
+      ) {
+        array.push(edge);
+      }
+    });
+
+    return array;
   };
 
   const { data, loading, error } = useCommunityInvestmentsSelect();
@@ -81,7 +68,7 @@ const CommunityInvestmentsSelect = () => {
 
   communityInvestments?.edges?.map((investment) => {
     const { slug, name } =
-      investment?.node?.communityAndOpportunityPopUps?.investmentType || {};
+      investment?.node?.communityAndOpportunityPopUps?.type || {};
 
     optionsArray.push({ value: slug, label: name });
   });
@@ -92,12 +79,13 @@ const CommunityInvestmentsSelect = () => {
         <div style={{ marginTop: "2rem", maxWidth: "600px" }}>
           <SelectComponent
             options={optionSelectItems(optionsArray)}
-            container="community_select"
+            setSelectedOptions={setSelectedOptions}
             setSelectedOption={setSelectedOption}
+            selectedOption={selectedOption}
           />
           <div className={styles.pop_up__links_count}>
-            {communityInvestments?.edges?.length}{" "}
-            {communityInvestments?.edges?.length === 1 ? "Result" : "Results"}
+            {selectedPopups?.length}{" "}
+            {selectedPopups?.length === 1 ? "Result" : "Results"}
           </div>
         </div>
         <div
@@ -105,14 +93,17 @@ const CommunityInvestmentsSelect = () => {
             " "
           )}
         >
-          {communityInvestments?.edges &&
-            communityInvestments.edges.map((link, index) => (
+          {selectedPopups &&
+            selectedPopups.map((link, index) => (
               <div
                 key={index}
                 onClick={() => handleOpenModal(String(link?.node?.databaseId))}
                 className={styles.pop_up__link_container}
               >
-                <CommunityPopUpSelect link={link} />
+                <PopUpLinks
+                  link={link?.node}
+                  popUpType={PopUpType.INVESTMENT}
+                />
                 <CommunityInvestmentPopUp
                   setCurrentInvestmentID={setCurrentInvestmentID}
                   currentID={String(currentInvestmentID)}

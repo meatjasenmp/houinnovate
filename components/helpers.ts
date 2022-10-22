@@ -1,6 +1,7 @@
 import { Phase } from "./ProgressBar";
 import { backgroundColorMapping, Colors } from "../styles/helpers";
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
+import { communityInvestmentsSelect_communityInvestments_edges } from "../pages/api/__generated__/communityInvestmentsSelect";
 
 export enum Components {
   HERO_BANNER = "Page_Components_ComponentBlocks_HeroBanner",
@@ -75,4 +76,14 @@ export const optionSelectItems = (options: Options[]) => {
 
     return !isDuplicate;
   });
+};
+
+export const useSelectedOptions = (options: Options[]) => {
+  const [selectedOptions, setSelectedOptions] = useState<Options[]>([]);
+  const [selectedOption, setSelectedOption] = useState<Options | null>();
+  const [selectedPopups, setSelectedPopUps] = useState<
+    | (communityInvestmentsSelect_communityInvestments_edges | null)[]
+    | null
+    | undefined
+  >();
 };

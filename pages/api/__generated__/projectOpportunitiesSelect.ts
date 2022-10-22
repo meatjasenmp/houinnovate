@@ -7,7 +7,7 @@
 // GraphQL query operation: projectOpportunitiesSelect
 // ====================================================
 
-export interface projectOpportunitiesSelect_projectBasedOpportunities_edges_node_communityAndOpportunityPopUps_opportunityType {
+export interface projectOpportunitiesSelect_projectBasedOpportunities_edges_node_communityAndOpportunityPopUps_type {
   __typename: "OpportunityType";
   /**
    * The unique resource identifier path
@@ -35,7 +35,7 @@ export interface projectOpportunitiesSelect_projectBasedOpportunities_edges_node
 export interface projectOpportunitiesSelect_projectBasedOpportunities_edges_node_communityAndOpportunityPopUps {
   __typename: "ProjectBasedOpportunity_Communityandopportunitypopups";
   alphanumericLabel: string | null;
-  opportunityType: projectOpportunitiesSelect_projectBasedOpportunities_edges_node_communityAndOpportunityPopUps_opportunityType | null;
+  type: projectOpportunitiesSelect_projectBasedOpportunities_edges_node_communityAndOpportunityPopUps_type | null;
   progress: projectOpportunitiesSelect_projectBasedOpportunities_edges_node_communityAndOpportunityPopUps_progress | null;
 }
 
