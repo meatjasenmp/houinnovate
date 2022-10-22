@@ -28,7 +28,6 @@ interface PhaseProps {
 
 const handlePhaseClick = (e: React.MouseEvent<HTMLElement>) => {
   const currentPhase = e.currentTarget as HTMLElement;
-  console.log(currentPhase);
 
   if (currentPhase.classList.contains(`${styles.phase_shown}`)) {
     currentPhase.classList.remove(`${styles.phase_shown}`);

@@ -26,12 +26,6 @@ export enum PopUpTypes {
 
 const optionsArray: Options[] = [];
 
-export const selectOptions = (options: Options, allLabel: string) => {
-  optionsArray.push(options);
-  console.log(optionsArray);
-  return optionsArray;
-};
-
 export const completedBackground = (
   currentPhase: string | null | undefined,
   popUpType: string | null | undefined
@@ -76,14 +70,4 @@ export const optionSelectItems = (options: Options[]) => {
 
     return !isDuplicate;
   });
-};
-
-export const useSelectedOptions = (options: Options[]) => {
-  const [selectedOptions, setSelectedOptions] = useState<Options[]>([]);
-  const [selectedOption, setSelectedOption] = useState<Options | null>();
-  const [selectedPopups, setSelectedPopUps] = useState<
-    | (communityInvestmentsSelect_communityInvestments_edges | null)[]
-    | null
-    | undefined
-  >();
 };

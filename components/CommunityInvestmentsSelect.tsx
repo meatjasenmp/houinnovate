@@ -7,7 +7,8 @@ import styles from "../styles/components/PopUpLink.module.css";
 
 import { communityInvestmentsSelect_communityInvestments_edges } from "../pages/api/__generated__/communityInvestmentsSelect";
 import { useEffect, useState } from "react";
-import PopUpLinks, { PopUpType } from "./PopUpLinks";
+import { PopUpTypes } from "./helpers";
+import PopUpLinks from "./PopUpLinks";
 
 const CommunityInvestmentsSelect = () => {
   const [currentInvestmentID, setCurrentInvestmentID] = useState<
@@ -102,7 +103,7 @@ const CommunityInvestmentsSelect = () => {
               >
                 <PopUpLinks
                   link={link?.node}
-                  popUpType={PopUpType.INVESTMENT}
+                  popUpType={PopUpTypes.INVESTMENT}
                 />
                 <CommunityInvestmentPopUp
                   setCurrentInvestmentID={setCurrentInvestmentID}
