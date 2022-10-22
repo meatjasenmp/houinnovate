@@ -4,11 +4,7 @@ import { FiArrowUpRight } from "@react-icons/all-files/fi/FiArrowUpRight";
 import ProgressBar from "./ProgressBar";
 import { Colors } from "../styles/helpers";
 import { projectOpportunitiesSelect_projectBasedOpportunities_edges_node } from "../pages/api/__generated__/projectOpportunitiesSelect";
-
-export enum PopUpType {
-  OPPORTUNITY = "opportunity",
-  INVESTMENT = "investment",
-}
+import { PopUpTypes } from "./helpers";
 
 interface PopUpSelectProps {
   link:
@@ -16,7 +12,7 @@ interface PopUpSelectProps {
     | projectOpportunitiesSelect_projectBasedOpportunities_edges_node
     | null
     | undefined;
-  popUpType: PopUpType;
+  popUpType: PopUpTypes;
 }
 
 const PopUpLinks = ({ link, popUpType }: PopUpSelectProps) => {
@@ -55,7 +51,7 @@ const PopUpLinks = ({ link, popUpType }: PopUpSelectProps) => {
           <ProgressBar
             currentPhase={currentPhase}
             accent={
-              popUpType === PopUpType.INVESTMENT ? Colors.NEON : Colors.BLUE
+              popUpType === PopUpTypes.INVESTMENT ? Colors.NEON : Colors.BLUE
             }
           />
         </div>
