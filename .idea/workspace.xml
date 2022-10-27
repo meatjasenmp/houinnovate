@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Rolling back.">
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Fixing prop">
+      <change afterPath="$PROJECT_DIR$/components/JobLink.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/JobSelect.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/__generated__/iONJob.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/__generated__/iONJobSelect.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/__generated__/iONJobs.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/job.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/job_select.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/jobs/[id]/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/components/JobLink.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/PopUpLinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/PopUpLinks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__generated__/globalTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__generated__/globalTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/WorkWithIon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/WorkWithIon.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +29,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
+        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -42,31 +53,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/jasenpeterson/Local Sites/houinnovate/app/public/site&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/jasenpeterson/Local Sites/houinnovate/app/public/site/node_modules/prettier&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/jasenpeterson/Local Sites/houinnovate/app/public/site/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "/Users/jasenpeterson/Local Sites/houinnovate/app/public/site",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "/Users/jasenpeterson/Local Sites/houinnovate/app/public/site/node_modules/prettier",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "/Users/jasenpeterson/Local Sites/houinnovate/app/public/site/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages/opportunities/[id]" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -80,7 +97,8 @@
       <workItem from="1665618153001" duration="8840000" />
       <workItem from="1666133841760" duration="11340000" />
       <workItem from="1666260505660" duration="8916000" />
-      <workItem from="1666451291911" duration="15762000" />
+      <workItem from="1666451291911" duration="16368000" />
+      <workItem from="1666824983443" duration="7789000" />
     </task>
     <task id="LOCAL-00001" summary="Box link grid updates">
       <created>1665618210255</created>
@@ -250,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666466247467</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Fixing prop">
+      <created>1666467892584</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1666467892584</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +310,8 @@
     <MESSAGE value="Now using ReactPlayer and getting video directly from vimeo. Updated useEffect with ctx.revert(); so animation runs properly." />
     <MESSAGE value="Updating select filters" />
     <MESSAGE value="Rolling back." />
-    <option name="LAST_COMMIT_MESSAGE" value="Rolling back." />
+    <MESSAGE value="Fixing prop" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing prop" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

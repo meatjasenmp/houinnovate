@@ -1,0 +1,39 @@
+.job_select__links {
+  max-width: 1170px;
+  margin-top: 1.5rem;
+}
+
+.job_link_arrow {
+  color: black;
+}
+
+
+.job_select__links .jobLink:not(:last-child) {
+  margin-bottom: .35rem;
+}
+
+.jobLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #DED6C7;
+  font-family: "Sohne-Kraftig-Bold", sans-serif;
+  font-size: 1.25rem;
+  padding: .85rem;
+}
+
+.jobLink:hover {
+  transition: all .3s ease-out;
+  background: #F54932;
+}
+
+.jobLink:hover,
+.jobLink:hover .job_link_arrow {
+  color: white;
+}
+
+.jobLinks_count {
+  margin-top: .6rem;
+  display: flex;
+  justify-content: flex-end;
+}
