@@ -1,16 +1,23 @@
 import { useQuery, gql } from "@apollo/client";
-import { iONJob, iONJobVariables } from "./__generated__/iONJob";
+import { iONJobs, iONJobsVariables } from "./__generated__/iONJobs";
 
 export const useJob = (id: string) => {
-  const { data, loading, error } = useQuery<iONJob, iONJobVariables>(
+  const { data, loading, error } = useQuery<iONJobs, iONJobsVariables>(
     gql`
       query iONJobs($id: ID!) {
         iONJob(id: $id, idType: DATABASE_ID) {
           id
           title
+          postDate: date
           ... on IONJob {
             jobPosting {
               title
+              contact {
+                name
+                title
+                email
+                phone
+              }
               dataFields {
                 dataField {
                   labelField
@@ -62,6 +69,7 @@ export const useJob = (id: string) => {
         siteOptionsPage {
           opportunityPageOptions {
             opportunityImportantNotice
+            jobOpportunityCta
           }
         }
       }

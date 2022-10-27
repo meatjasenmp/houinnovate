@@ -4,19 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Fixing prop">
-      <change afterPath="$PROJECT_DIR$/components/JobLink.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/JobSelect.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/api/__generated__/iONJob.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/api/__generated__/iONJobSelect.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/api/__generated__/iONJobs.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/api/job.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/api/job_select.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/jobs/[id]/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/components/JobLink.module.css" afterDir="false" />
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="ION jobs select implementation">
+      <change afterPath="$PROJECT_DIR$/components/jobPosting/JobPosting.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/components/JobPosting.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/__generated__/globalTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/__generated__/globalTypes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/WorkWithIon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/WorkWithIon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/JobSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/JobSelect.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/iONJob.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/iONJobs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/__generated__/iONJobs.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/__generated__/page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/job.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/job.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/jobs/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/jobs/[id]/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +97,7 @@
       <workItem from="1666133841760" duration="11340000" />
       <workItem from="1666260505660" duration="8916000" />
       <workItem from="1666451291911" duration="16368000" />
-      <workItem from="1666824983443" duration="7789000" />
+      <workItem from="1666824983443" duration="10383000" />
     </task>
     <task id="LOCAL-00001" summary="Box link grid updates">
       <created>1665618210255</created>
@@ -275,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666467892584</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="ION jobs select implementation">
+      <created>1666841722129</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1666841722129</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +317,8 @@
     <MESSAGE value="Updating select filters" />
     <MESSAGE value="Rolling back." />
     <MESSAGE value="Fixing prop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing prop" />
+    <MESSAGE value="ION jobs select implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="ION jobs select implementation" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

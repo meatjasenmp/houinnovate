@@ -7,6 +7,14 @@
 // GraphQL query operation: iONJobs
 // ====================================================
 
+export interface iONJobs_iONJob_jobPosting_contact {
+  __typename: "IONJob_Jobposting_Contact";
+  name: string | null;
+  title: string | null;
+  email: string | null;
+  phone: string | null;
+}
+
 export interface iONJobs_iONJob_jobPosting_dataFields_dataField {
   __typename: "IONJob_Jobposting_DataFields_dataField";
   labelField: string | null;
@@ -125,6 +133,7 @@ export interface iONJobs_iONJob_jobPosting_metaData {
 export interface iONJobs_iONJob_jobPosting {
   __typename: "IONJob_Jobposting";
   title: string | null;
+  contact: iONJobs_iONJob_jobPosting_contact | null;
   dataFields: iONJobs_iONJob_jobPosting_dataFields | null;
   metaData: iONJobs_iONJob_jobPosting_metaData | null;
 }
@@ -140,6 +149,10 @@ export interface iONJobs_iONJob {
    */
   title: string | null;
   /**
+   * Post publishing date.
+   */
+  postDate: string | null;
+  /**
    * Added to the GraphQL Schema because the ACF Field Group &quot;Job Posting&quot; was set to Show in GraphQL.
    */
   jobPosting: iONJobs_iONJob_jobPosting | null;
@@ -148,6 +161,7 @@ export interface iONJobs_iONJob {
 export interface iONJobs_siteOptionsPage_opportunityPageOptions {
   __typename: "SiteOptionsPage_Opportunitypageoptions";
   opportunityImportantNotice: string | null;
+  jobOpportunityCta: string | null;
 }
 
 export interface iONJobs_siteOptionsPage {

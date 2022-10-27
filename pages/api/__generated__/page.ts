@@ -202,11 +202,6 @@ export interface page_generalSettings {
   description: string | null;
 }
 
-export interface page_siteOptionsPage_jobOpportunity {
-  __typename: "SiteOptionsPage_Jobopportunity";
-  jobOpportunityCta: string | null;
-}
-
 export interface page_siteOptionsPage_siteNavigation_navigation_sectionLinks {
   __typename: "SiteOptionsPage_Sitenavigation_Navigation_sectionLinks";
   label: string | null;
@@ -333,10 +328,6 @@ export interface page_siteOptionsPage_siteFooter {
 
 export interface page_siteOptionsPage {
   __typename: "SiteOptionsPage";
-  /**
-   * Added to the GraphQL Schema because the ACF Field Group &quot;Job Opportunity&quot; was set to Show in GraphQL.
-   */
-  jobOpportunity: page_siteOptionsPage_jobOpportunity | null;
   /**
    * Added to the GraphQL Schema because the ACF Field Group &quot;Site Navigation&quot; was set to Show in GraphQL.
    */

@@ -100,9 +100,6 @@ export const usePage = (id: string) => {
           description
         }
         siteOptionsPage {
-          jobOpportunity {
-            jobOpportunityCta
-          }
           siteNavigation {
             navigation {
               sectionLinks {

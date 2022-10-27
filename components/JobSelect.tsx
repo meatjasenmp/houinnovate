@@ -59,8 +59,6 @@ const JobSelect = () => {
     jobsArray.push({ value: slug, label: name });
   });
 
-  console.log(jobsArray);
-
   return (
     <section>
       <div style={{ marginTop: "2rem", maxWidth: "1170px" }}>
