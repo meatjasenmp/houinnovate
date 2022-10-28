@@ -1,0 +1,28 @@
+.job_posting {
+    padding: 1.5rem;
+}
+
+.jobCTA article > *:last-child {
+    margin-bottom: .35rem;
+}
+
+.jobContact {
+    margin-bottom: 1.25rem;
+}
+
+.jobDataFields {
+    margin-bottom: 1.5rem;
+}
+
+.jobDataFields h5 {
+    font-family: "Sohne-Kraftig-Bold", sans-serif;
+}
+
+.shareButton {
+    display: flex;
+    align-items: center;
+}
+
+.shareButton h4 {
+    margin-bottom: 0;
+}

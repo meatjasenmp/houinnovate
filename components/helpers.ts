@@ -24,8 +24,6 @@ export enum PopUpTypes {
   OPPORTUNITY = "opportunity",
 }
 
-const optionsArray: Options[] = [];
-
 export const completedBackground = (
   currentPhase: string | null | undefined,
   popUpType: string | null | undefined
@@ -69,5 +67,14 @@ export const optionSelectItems = (options: Options[]) => {
     selectItems.add(element.label);
 
     return !isDuplicate;
+  });
+};
+
+export const formatPostDate = (date: string | null | undefined) => {
+  if (!date) return;
+  return new Date(date).toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
   });
 };
