@@ -1,5 +1,7 @@
 .job_posting {
     padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .jobCTA article > *:last-child {
@@ -14,7 +16,8 @@
     margin-bottom: 1.5rem;
 }
 
-.jobDataFields h5 {
+.jobDataFields h5,
+.jobPost h5 {
     font-family: "Sohne-Kraftig-Bold", sans-serif;
 }
 
@@ -25,4 +28,33 @@
 
 .shareButton h4 {
     margin-bottom: 0;
+}
+
+.jobPost {
+    margin-top: 2rem;
+}
+
+.importantNotice {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 4px solid #F54932;
+}
+
+@media screen and (min-width: 990px) {
+    .jobPostContainer {
+        width: 60%;
+        margin-left: 2rem;
+    }
+
+    .sidebar {
+        width: 35%;
+    }
+
+    .job_posting {
+        display: flex;
+    }
+
+    .jobPost {
+        margin-top: 0;
+    }
 }

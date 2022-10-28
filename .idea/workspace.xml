@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Data setup for job posting page">
-      <change afterPath="$PROJECT_DIR$/components/Layout.tsx" afterDir="false" />
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Basic implementation of job posting sidebar. Now passing components into global Layout.tsx">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/helpers.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/jobPosting/JobPosting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/jobPosting/JobPosting.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/iONJobs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/__generated__/iONJobs.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/job.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/job.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/components/JobPosting.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/JobPosting.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +92,7 @@
       <workItem from="1666260505660" duration="8916000" />
       <workItem from="1666451291911" duration="16368000" />
       <workItem from="1666824983443" duration="10718000" />
-      <workItem from="1666918975064" duration="4885000" />
+      <workItem from="1666918975064" duration="7220000" />
     </task>
     <task id="LOCAL-00001" summary="Box link grid updates">
       <created>1665618210255</created>
@@ -285,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666844286855</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Basic implementation of job posting sidebar. Now passing components into global Layout.tsx">
+      <created>1666926248504</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1666926248504</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,7 +328,8 @@
     <MESSAGE value="Fixing prop" />
     <MESSAGE value="ION jobs select implementation" />
     <MESSAGE value="Data setup for job posting page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Data setup for job posting page" />
+    <MESSAGE value="Basic implementation of job posting sidebar. Now passing components into global Layout.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic implementation of job posting sidebar. Now passing components into global Layout.tsx" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

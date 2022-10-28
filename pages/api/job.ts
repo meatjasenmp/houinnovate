@@ -33,6 +33,7 @@ export const useJob = (id: string) => {
                 jobType {
                   id
                   slug
+                  name
                 }
                 description
                 downloads {

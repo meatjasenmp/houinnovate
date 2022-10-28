@@ -13,7 +13,7 @@ import {
 } from "../../pages/api/__generated__/iONJobs";
 
 interface ImportantNoticeProps {
-  siteOptions: string | null | undefined;
+  importantNotice: string | null | undefined;
 }
 
 interface SidebarProps {
@@ -96,12 +96,93 @@ const Sidebar = ({ data }: SidebarProps) => {
 
 const JobContent = ({ data }: JobContentProps) => {
   const { metaData } = data;
-  return <></>;
+  const { downloads, specifications, addenda } = metaData || {};
+  return (
+    <article className={styles.jobPost}>
+      <section className={styles.status}>
+        <h5>Status:</h5>
+        <p>{metaData?.status}</p>
+      </section>
+
+      <section className={styles.solicitation}>
+        <h5>Solicitation Number:</h5>
+        <p>{metaData?.solicitationNumber}</p>
+      </section>
+
+      <section className={styles.opportunityOpen}>
+        <h5>Opportunity Opens On:</h5>
+        <p>{metaData?.opportunityOpensOn}</p>
+      </section>
+
+      <section className={styles.opportunityClosed}>
+        <h5>Opportunity Opens On:</h5>
+        <p>{metaData?.opportunityClosesOn}</p>
+      </section>
+
+      <section className={styles.categories}>
+        <h5>Categories:</h5>
+        <p>{metaData?.jobType?.name}</p>
+      </section>
+
+      <section className={styles.description}>
+        <h5>Description:</h5>
+        <ContentEditor content={metaData?.description} />
+      </section>
+
+      <section className={styles.files}>
+        <h5>Files:</h5>
+        <ul className={styles.downloads}>
+          {downloads &&
+            downloads.map((download, index) => (
+              <li key={index}>
+                <a key={index} href={String(download?.file?.mediaItemUrl)}>
+                  {download?.downloadLabel}
+                </a>
+              </li>
+            ))}
+        </ul>
+      </section>
+
+      <section className={styles.specifications}>
+        <h5>Specifications:</h5>
+        <ul className={styles.downloads}>
+          {specifications &&
+            specifications.map((spec, index) => (
+              <li key={index}>
+                <a
+                  key={index}
+                  href={String(spec?.specificationFile?.mediaItemUrl)}
+                >
+                  {spec?.specificationDownloadLabel}
+                </a>
+              </li>
+            ))}
+        </ul>
+      </section>
+
+      <section className={styles.addenda}>
+        <h5>Addenda:</h5>
+        <ul className={styles.downloads}>
+          {addenda &&
+            addenda.map((add, index) => (
+              <li key={index}>
+                <a key={index} href={String(add?.addendaFile?.mediaItemUrl)}>
+                  {add?.addendaFileLabel}
+                </a>
+              </li>
+            ))}
+        </ul>
+      </section>
+    </article>
+  );
 };
 
-const ImportantNotice = ({ siteOptions }: ImportantNoticeProps) => {
-  if (!siteOptions) return <></>;
-  return <></>;
+const ImportantNotice = ({ importantNotice }: ImportantNoticeProps) => {
+  return (
+    <section className={styles.importantNotice}>
+      <ContentEditor content={importantNotice} />
+    </section>
+  );
 };
 
 const JobPosting = ({ id }: { id: string }) => {
@@ -125,12 +206,14 @@ const JobPosting = ({ id }: { id: string }) => {
           dataFields: jobPosting?.dataFields,
         }}
       />
-      <JobContent
-        data={{
-          metaData: jobPosting?.metaData,
-        }}
-      />
-      <ImportantNotice siteOptions={opportunityImportantNotice} />
+      <div className={styles.jobPostContainer}>
+        <JobContent
+          data={{
+            metaData: jobPosting?.metaData,
+          }}
+        />
+        <ImportantNotice importantNotice={opportunityImportantNotice} />
+      </div>
     </section>
   );
 };

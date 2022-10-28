@@ -36,6 +36,10 @@ export interface iONJobs_iONJob_jobPosting_metaData_jobType {
    * An alphanumeric identifier for the object unique to its type.
    */
   slug: string | null;
+  /**
+   * The human friendly name of the object.
+   */
+  name: string | null;
 }
 
 export interface iONJobs_iONJob_jobPosting_metaData_downloads_file {
