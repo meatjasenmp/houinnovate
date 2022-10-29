@@ -95,8 +95,6 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
     }
   };
 
-  console.log(videoIsFullscreen);
-
   if (!blockContent) return null;
 
   const { videoCta, contentBlocks, videoUrl } = blockContent;

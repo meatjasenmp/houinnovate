@@ -6,8 +6,8 @@ import SiteFooter from "./SiteFooter";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const getPage = usePage("9");
-
   const { data, error, loading } = getPage;
+
   if (loading) {
     return <div>Loading...</div>;
   }

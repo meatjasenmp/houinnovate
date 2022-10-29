@@ -1,6 +1,6 @@
 import { slide as Menu } from "react-burger-menu";
 import Link from "next/link";
-import { Link as ScrollLink, scroller } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 import ContentEditor from "./ContentEditor";
 import HamburgerMenu from "./HamburgerMenu";
 import {
@@ -48,7 +48,7 @@ const SectionLinks = ({ sectionLinks }: SectionLinksProps) => {
           return (
             <li key={index} className={styles.section_link_list_item}>
               <ScrollLink
-                href={`#${link?.anchorLabel}`}
+                href="#"
                 className={styles.section_link}
                 to={String(link?.anchorLabel)}
                 containerId="page-wrap"
