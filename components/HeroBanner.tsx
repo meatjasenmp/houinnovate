@@ -72,15 +72,17 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
   };
 
   useEffect(() => {
-    screenfull.on("change", () => {
-      if (screenfull.isEnabled && !screenfull.isFullscreen) {
-        muteVideoAndExitFullScreen();
-      }
-    });
+    if (screenfull.isEnabled) {
+      screenfull.on("change", () => {
+        if (!screenfull.isFullscreen) {
+          muteVideoAndExitFullScreen();
+        }
+      });
+    }
   }, []);
 
   const handleButtonClick = () => {
-    if (videoWrapRef.current) {
+    if (screenfull.isEnabled && videoWrapRef.current) {
       screenfull.request(videoWrapRef.current).then(() => {
         enableFullScreen();
       });
@@ -88,7 +90,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
   };
 
   const exitFullscreen = () => {
-    if (videoWrapRef.current) {
+    if (screenfull.isEnabled && videoWrapRef.current) {
       screenfull.exit().then(() => {
         muteVideoAndExitFullScreen();
       });
