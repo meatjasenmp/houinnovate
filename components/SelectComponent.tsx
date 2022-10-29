@@ -31,9 +31,14 @@ const selectStyles = {
     backgroundColor: "#E0E0E0",
     borderRadius: 0,
   }),
+  singleValue: (provided: any) => ({
+    ...provided,
+    fontSize: "2.5rem",
+  }),
   option: (provided: any, state: any) => ({
     ...provided,
     color: "black",
+    fontSize: "2rem",
     backgroundColor: state.isSelected && "#BEBEBE",
     fontFamily: "Sohne-Kraftig-Bold, sans-serif",
   }),
