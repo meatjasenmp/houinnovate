@@ -73,7 +73,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
 
   useEffect(() => {
     screenfull.on("change", () => {
-      if (!screenfull.isFullscreen) {
+      if (screenfull.isEnabled && !screenfull.isFullscreen) {
         muteVideoAndExitFullScreen();
       }
     });
