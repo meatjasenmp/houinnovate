@@ -72,6 +72,7 @@ const Phases = ({ blockContent }: PhasesProps) => {
     phasesContent,
     phasesList,
     accentColor: backgroundColor,
+    scrollId,
   } = blockContent;
   const phaseClassName = [
     styles.phases,
@@ -80,7 +81,7 @@ const Phases = ({ blockContent }: PhasesProps) => {
   ].join(" ");
 
   return (
-    <section className={phaseClassName}>
+    <section className={phaseClassName} id={String(scrollId)}>
       <div className={styles.phase_container}>
         <div className={styles.phase_content}>
           <ContentEditor content={phasesContent} />

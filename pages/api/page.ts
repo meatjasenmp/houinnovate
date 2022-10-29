@@ -12,10 +12,6 @@ export const usePage = (id: string) => {
             componentBlocks {
               __typename
               ... on Page_Components_ComponentBlocks_HeroBanner {
-                video {
-                  id
-                  mediaItemUrl
-                }
                 contentBlocks {
                   contentBlock
                 }
@@ -23,6 +19,7 @@ export const usePage = (id: string) => {
                 videoUrl
               }
               ... on Page_Components_ComponentBlocks_BoxLinks {
+                scrollId
                 boxLink {
                   image {
                     id
@@ -47,6 +44,7 @@ export const usePage = (id: string) => {
                 contentBlockColumnContent: contentColumns {
                   content
                 }
+                scrollId
                 contentType
                 backgroundColor
               }
@@ -58,10 +56,12 @@ export const usePage = (id: string) => {
                     listBackgroundColor: backgroundColor
                   }
                 }
+                scrollId
                 showFooterText
                 footerText
               }
               ... on Page_Components_ComponentBlocks_Phases {
+                scrollId
                 accentColor
                 phasesContent: content
                 phasesList {
@@ -72,9 +72,11 @@ export const usePage = (id: string) => {
                 }
               }
               ... on Page_Components_ComponentBlocks_WorkWithIon {
+                scrollId
                 workWithIonContent: content
               }
               ... on Page_Components_ComponentBlocks_ProjectBasedOpportunities {
+                scrollId
                 opportunitiesCreated {
                   committedLabel
                   createdLabel
@@ -84,6 +86,7 @@ export const usePage = (id: string) => {
                 opportunitiesCreatedContent: content
               }
               ... on Page_Components_ComponentBlocks_CommunityInvestment {
+                scrollId
                 deployment {
                   deployedLabel
                   investmentCommittedLabel: committedLabel

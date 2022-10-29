@@ -7,18 +7,6 @@
 // GraphQL query operation: page
 // ====================================================
 
-export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_video {
-  __typename: "MediaItem";
-  /**
-   * The globally unique identifier of the attachment object.
-   */
-  id: string;
-  /**
-   * Url of the mediaItem
-   */
-  mediaItemUrl: string | null;
-}
-
 export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_contentBlocks {
   __typename: "Page_Components_ComponentBlocks_HeroBanner_contentBlocks";
   contentBlock: string | null;
@@ -26,7 +14,6 @@ export interface page_page_components_componentBlocks_Page_Components_ComponentB
 
 export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner {
   __typename: "Page_Components_ComponentBlocks_HeroBanner";
-  video: page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_video | null;
   contentBlocks: (page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_contentBlocks | null)[] | null;
   videoCta: string | null;
   videoUrl: string | null;
@@ -81,6 +68,7 @@ export interface page_page_components_componentBlocks_Page_Components_ComponentB
 
 export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks {
   __typename: "Page_Components_ComponentBlocks_BoxLinks";
+  scrollId: string | null;
   boxLink: (page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink | null)[] | null;
 }
 
@@ -93,6 +81,7 @@ export interface page_page_components_componentBlocks_Page_Components_ComponentB
   __typename: "Page_Components_ComponentBlocks_ContentBlock";
   contentBlockContent: string | null;
   contentBlockColumnContent: (page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlock_contentBlockColumnContent | null)[] | null;
+  scrollId: string | null;
   contentType: string | null;
   backgroundColor: string | null;
 }
@@ -112,6 +101,7 @@ export interface page_page_components_componentBlocks_Page_Components_ComponentB
   __typename: "Page_Components_ComponentBlocks_ContentBlockStylizedList";
   contentBlockStylized: string | null;
   list: (page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlockStylizedList_list | null)[] | null;
+  scrollId: string | null;
   showFooterText: boolean | null;
   footerText: string | null;
 }
@@ -129,6 +119,7 @@ export interface page_page_components_componentBlocks_Page_Components_ComponentB
 
 export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_Phases {
   __typename: "Page_Components_ComponentBlocks_Phases";
+  scrollId: string | null;
   accentColor: string | null;
   phasesContent: string | null;
   phasesList: (page_page_components_componentBlocks_Page_Components_ComponentBlocks_Phases_phasesList | null)[] | null;
@@ -136,6 +127,7 @@ export interface page_page_components_componentBlocks_Page_Components_ComponentB
 
 export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_WorkWithIon {
   __typename: "Page_Components_ComponentBlocks_WorkWithIon";
+  scrollId: string | null;
   workWithIonContent: string | null;
 }
 
@@ -149,6 +141,7 @@ export interface page_page_components_componentBlocks_Page_Components_ComponentB
 
 export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_ProjectBasedOpportunities {
   __typename: "Page_Components_ComponentBlocks_ProjectBasedOpportunities";
+  scrollId: string | null;
   opportunitiesCreated: page_page_components_componentBlocks_Page_Components_ComponentBlocks_ProjectBasedOpportunities_opportunitiesCreated | null;
   opportunitiesCreatedContent: string | null;
 }
@@ -163,6 +156,7 @@ export interface page_page_components_componentBlocks_Page_Components_ComponentB
 
 export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_CommunityInvestment {
   __typename: "Page_Components_ComponentBlocks_CommunityInvestment";
+  scrollId: string | null;
   deployment: page_page_components_componentBlocks_Page_Components_ComponentBlocks_CommunityInvestment_deployment | null;
   communityInvestmentContent: string | null;
 }

@@ -15,10 +15,10 @@ const DirectCommunityInvestment = ({
 }: DirectCommunityInvestmentProps) => {
   if (!blockContent) return null;
 
-  const { communityInvestmentContent, deployment } = blockContent;
+  const { communityInvestmentContent, deployment, scrollId } = blockContent;
 
   return (
-    <section className={styles.community_investment}>
+    <section className={styles.community_investment} id={String(scrollId)}>
       <div className={styles.community_investment_wrapper}>
         <CommittedDeployedProgressBar
           deployed={deployment?.deployed}

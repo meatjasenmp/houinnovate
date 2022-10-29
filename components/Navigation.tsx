@@ -1,5 +1,6 @@
 import { slide as Menu } from "react-burger-menu";
 import Link from "next/link";
+import { Link as ScrollLink, scroller } from "react-scroll";
 import ContentEditor from "./ContentEditor";
 import HamburgerMenu from "./HamburgerMenu";
 import {
@@ -38,6 +39,14 @@ const handleStateChange = (state: any) => {
   }
 };
 
+const handleScroll = (to: string | null | undefined) => {
+  scroller.scrollTo(String(to), {
+    duration: 800,
+    delay: 0,
+    smooth: "easeInOutQuart",
+  });
+};
+
 const SectionLinks = ({ sectionLinks }: SectionLinksProps) => {
   return (
     <div className={styles.section_links}>
@@ -45,9 +54,15 @@ const SectionLinks = ({ sectionLinks }: SectionLinksProps) => {
         {sectionLinks?.map((link, index) => {
           return (
             <li key={index} className={styles.section_link_list_item}>
-              <Link href={`#${link?.anchorLabel}`} scroll={false}>
-                <a className={styles.section_link}>{link?.label}</a>
-              </Link>
+              <ScrollLink
+                href={`#${link?.anchorLabel}`}
+                className={styles.section_link}
+                to={String(link?.anchorLabel)}
+                containerId="page-wrap"
+                onClick={() => handleScroll(link?.anchorLabel)}
+              >
+                {link?.label}
+              </ScrollLink>
             </li>
           );
         })}

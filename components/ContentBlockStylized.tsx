@@ -40,11 +40,11 @@ const ListItem = ({ listItem }: ListItemProps) => {
 const ContentBlockStylized = ({ blockContent }: ComponentBlocksProps) => {
   if (!blockContent) return null;
 
-  const { contentBlockStylized, list, showFooterText, footerText } =
+  const { contentBlockStylized, list, showFooterText, footerText, scrollId } =
     blockContent;
 
   return (
-    <section className={styles.content_block_stylized}>
+    <section className={styles.content_block_stylized} id={String(scrollId)}>
       <div className={styles.content_block_stylized_wrapper}>
         <div className={styles.content_wrapper}>
           <ContentEditor content={contentBlockStylized} />

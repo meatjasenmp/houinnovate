@@ -16,10 +16,14 @@ const ProjectBasedOpportunities = ({
 }: ProjectBasedOpportunitiesProps) => {
   if (!blockContent) return null;
 
-  const { opportunitiesCreated, opportunitiesCreatedContent } = blockContent;
+  const { opportunitiesCreated, opportunitiesCreatedContent, scrollId } =
+    blockContent;
 
   return (
-    <section className={styles.project_based_opportunities}>
+    <section
+      className={styles.project_based_opportunities}
+      id={String(scrollId)}
+    >
       <div className={styles.project_based_opportunities_wrapper}>
         <CommittedDeployedProgressBar
           deployed={opportunitiesCreated?.opportunitiesCreated}

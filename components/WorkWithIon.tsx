@@ -8,7 +8,7 @@ interface WorkWithIonProps {
 }
 const WorkWithIon = ({ blockContent }: WorkWithIonProps) => {
   return (
-    <div className={styles.work_with_ion}>
+    <div className={styles.work_with_ion} id={String(blockContent.scrollId)}>
       <div className={styles.work_with_ion_wrapper}>
         <ContentEditor content={blockContent.workWithIonContent} />
         <JobSelect />

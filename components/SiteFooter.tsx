@@ -151,7 +151,7 @@ const SiteFooter = ({ footerBlocks, header }: SiteFooterProps) => {
     "bg-innovate-black",
   ].join(" ");
   return (
-    <footer className={className}>
+    <footer className={className} id="contacts">
       <div className={styles.site_footer_container}>
         <header>
           <h1>{header}</h1>

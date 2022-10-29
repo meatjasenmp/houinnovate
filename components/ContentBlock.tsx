@@ -1,5 +1,5 @@
 import ContentEditor from "./ContentEditor";
-import { backgroundColorMapping, accentColor } from "../styles/helpers";
+import { backgroundColorMapping } from "../styles/helpers";
 import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlock } from "../pages/api/__generated__/page";
 
 import styles from "../styles/components/ContentBlock.module.css";
@@ -20,12 +20,13 @@ const ContentBlock = ({ blockContent }: ComponentBlocksProps) => {
     backgroundColor,
     contentBlockColumnContent,
     contentType,
+    scrollId,
   } = blockContent;
 
   const sectionClassName = [styles.content_block, "full-screen"].join(" ");
 
   return (
-    <section className={sectionClassName}>
+    <section className={sectionClassName} id={String(scrollId)}>
       <div className={backgroundColorMapping(backgroundColor)}>
         {contentType === contentTypes.ContentBlock && contentBlockContent && (
           <div className={styles.content_block_wrapper}>
