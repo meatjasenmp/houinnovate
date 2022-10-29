@@ -7,15 +7,17 @@ import { gsap } from "gsap";
 import ReactPlayer from "react-player/vimeo";
 import styles from "../styles/components/HeroBanner.module.css";
 import { useEffect, useRef, useState } from "react";
+import { findDOMNode } from "react-dom";
+import screenfull from "screenfull";
 
 interface ComponentBlocksProps {
   blockContent: page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner;
 }
 
 const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
-  const videoRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<ReactPlayer>(null);
+  const videoWrapRef = useRef<HTMLDivElement>(null);
   const contentWrapRef = useRef<HTMLDivElement>(null);
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   const contentBlockClassName = [
     "animated_content_block",
@@ -49,25 +51,22 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
   }, []);
 
   const handleButtonClick = () => {
-    if (videoRef.current) {
-      if (isVideoPlaying) {
-        setIsVideoPlaying(false);
-      } else {
-        setIsVideoPlaying(true);
-      }
+    if (videoWrapRef.current) {
+      return screenfull.request(videoWrapRef.current);
     }
   };
 
   if (!blockContent) return null;
 
-  const { video, videoCta, contentBlocks, videoUrl } = blockContent;
+  const { videoCta, contentBlocks, videoUrl } = blockContent;
   return (
     <section className={styles.hero__banner_section}>
       <div className={styles.hero__banner}>
         <div className={styles.hero__banner_background}>
-          <div className={styles.video}>
+          <div className={styles.video} ref={videoWrapRef}>
             {videoUrl && (
               <ReactPlayer
+                ref={videoRef}
                 url={String(videoUrl)}
                 volume={0}
                 muted={true}
