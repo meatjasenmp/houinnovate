@@ -18,6 +18,10 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
   const videoRef = useRef<ReactPlayer>(null);
   const videoWrapRef = useRef<HTMLDivElement>(null);
   const contentWrapRef = useRef<HTMLDivElement>(null);
+  const [videoParams, setVideoParams] = useState({
+    volume: 0,
+    muted: true,
+  });
 
   const contentBlockClassName = [
     "animated_content_block",
@@ -50,9 +54,25 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
     }
   }, []);
 
+  useEffect(() => {
+    screenfull.on("change", () => {
+      if (!screenfull.isFullscreen) {
+        setVideoParams({
+          volume: 0,
+          muted: true,
+        });
+      }
+    });
+  }, []);
+
   const handleButtonClick = () => {
     if (videoWrapRef.current) {
-      return screenfull.request(videoWrapRef.current);
+      screenfull.request(videoWrapRef.current).then(() => {
+        setVideoParams({
+          volume: 1,
+          muted: false,
+        });
+      });
     }
   };
 
@@ -68,8 +88,8 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
               <ReactPlayer
                 ref={videoRef}
                 url={String(videoUrl)}
-                volume={0}
-                muted={true}
+                volume={videoParams.volume}
+                muted={videoParams.muted}
                 playing={true}
                 loop={true}
                 width="100%"
