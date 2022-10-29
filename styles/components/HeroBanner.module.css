@@ -81,6 +81,23 @@
     position: relative;
 }
 
+.video__overlay {
+    z-index: 999999999999;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: black;
+    padding: 1.25rem;
+}
+
+.exit_screen_button svg {
+    transition: all 0.35s ease;
+}
+
+.exit_screen_button:hover svg {
+    fill: black;
+}
+
 @media screen and (min-width: 414px) {
     .content__wrap {
         margin: 0 1rem;

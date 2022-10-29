@@ -7,7 +7,7 @@ import { gsap } from "gsap";
 import ReactPlayer from "react-player/vimeo";
 import styles from "../styles/components/HeroBanner.module.css";
 import { useEffect, useRef, useState } from "react";
-import { findDOMNode } from "react-dom";
+import { IoClose } from "@react-icons/all-files/io5/IoClose";
 import screenfull from "screenfull";
 
 interface ComponentBlocksProps {
@@ -18,6 +18,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
   const videoRef = useRef<ReactPlayer>(null);
   const videoWrapRef = useRef<HTMLDivElement>(null);
   const contentWrapRef = useRef<HTMLDivElement>(null);
+  const [videoIsFullscreen, setVideoIsFullscreen] = useState(false);
   const [videoParams, setVideoParams] = useState({
     volume: 0,
     muted: true,
@@ -54,13 +55,26 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
     }
   }, []);
 
+  const muteVideoAndExitFullScreen = () => {
+    setVideoIsFullscreen(false);
+    setVideoParams({
+      volume: 0,
+      muted: true,
+    });
+  };
+
+  const enableFullScreen = () => {
+    setVideoIsFullscreen(true);
+    setVideoParams({
+      volume: 1,
+      muted: false,
+    });
+  };
+
   useEffect(() => {
     screenfull.on("change", () => {
       if (!screenfull.isFullscreen) {
-        setVideoParams({
-          volume: 0,
-          muted: true,
-        });
+        muteVideoAndExitFullScreen();
       }
     });
   }, []);
@@ -68,13 +82,20 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
   const handleButtonClick = () => {
     if (videoWrapRef.current) {
       screenfull.request(videoWrapRef.current).then(() => {
-        setVideoParams({
-          volume: 1,
-          muted: false,
-        });
+        enableFullScreen();
       });
     }
   };
+
+  const exitFullscreen = () => {
+    if (videoWrapRef.current) {
+      screenfull.exit().then(() => {
+        muteVideoAndExitFullScreen();
+      });
+    }
+  };
+
+  console.log(videoIsFullscreen);
 
   if (!blockContent) return null;
 
@@ -84,6 +105,18 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
       <div className={styles.hero__banner}>
         <div className={styles.hero__banner_background}>
           <div className={styles.video} ref={videoWrapRef}>
+            <div
+              className={styles.video__overlay}
+              style={{ display: videoIsFullscreen ? "block" : "none" }}
+            >
+              <button
+                className={styles.exit_screen_button}
+                onClick={exitFullscreen}
+              >
+                <IoClose size="2rem" color="#F54932" />
+              </button>
+            </div>
+
             {videoUrl && (
               <ReactPlayer
                 ref={videoRef}
