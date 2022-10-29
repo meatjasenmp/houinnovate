@@ -1,7 +1,7 @@
 import { Phase } from "./ProgressBar";
 import { backgroundColorMapping, Colors } from "../styles/helpers";
 import { Dispatch, SetStateAction, useState } from "react";
-import { communityInvestmentsSelect_communityInvestments_edges } from "../pages/api/__generated__/communityInvestmentsSelect";
+import { scroller } from "react-scroll";
 
 export enum Components {
   HERO_BANNER = "Page_Components_ComponentBlocks_HeroBanner",
@@ -76,5 +76,13 @@ export const formatPostDate = (date: string | null | undefined) => {
     month: "long",
     day: "numeric",
     year: "numeric",
+  });
+};
+
+export const handleScroll = (to: string | null | undefined) => {
+  scroller.scrollTo(String(to), {
+    duration: 800,
+    delay: 0,
+    smooth: "easeInOutQuart",
   });
 };

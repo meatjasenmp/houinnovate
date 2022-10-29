@@ -9,6 +9,7 @@ import {
   page_siteOptionsPage_siteNavigation_navigation_blockLinks,
 } from "../pages/api/__generated__/page";
 import styles from "../styles/components/Navigation.module.css";
+import { handleScroll } from "./helpers";
 
 interface NavigationProps {
   pageWrapID: string;
@@ -37,14 +38,6 @@ const handleStateChange = (state: any) => {
   if (!state.isOpen) {
     document.body.classList.remove("no-scroll");
   }
-};
-
-const handleScroll = (to: string | null | undefined) => {
-  scroller.scrollTo(String(to), {
-    duration: 800,
-    delay: 0,
-    smooth: "easeInOutQuart",
-  });
 };
 
 const SectionLinks = ({ sectionLinks }: SectionLinksProps) => {
