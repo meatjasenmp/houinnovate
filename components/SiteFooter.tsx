@@ -10,6 +10,7 @@ import {
 
 import styles from "../styles/components/SiteFooter.module.css";
 import ImageAsset from "../styles/components/ImageAsset";
+import { useScrollToSection } from "./helpers";
 
 enum FooterComponents {
   GET_IN_TOUCH = "SiteOptionsPage_Sitefooter_FooterBlocks_GetInTouch",
@@ -145,6 +146,8 @@ const TermsAndConditions = () => {
 };
 
 const SiteFooter = ({ footerBlocks, header }: SiteFooterProps) => {
+  useScrollToSection("contacts");
+
   const className = [
     styles.site_footer,
     "full-screen",

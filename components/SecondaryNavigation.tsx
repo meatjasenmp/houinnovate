@@ -34,6 +34,7 @@ const SecondaryNavigation = ({ nav }: SecondaryNavigationProps) => {
                   to={String(link?.anchorLabel)}
                   containerId="page-wrap"
                   onClick={() => handleScroll(link?.anchorLabel)}
+                  hashSpy={true}
                 >
                   {link?.label}
                 </ScrollLink>

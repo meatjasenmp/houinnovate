@@ -4,6 +4,8 @@ import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_Co
 
 import styles from "../styles/components/ContentBlock.module.css";
 
+import { useScrollToSection } from "./helpers";
+
 interface ComponentBlocksProps {
   blockContent: page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlock;
 }
@@ -14,7 +16,6 @@ enum contentTypes {
 }
 
 const ContentBlock = ({ blockContent }: ComponentBlocksProps) => {
-  if (!blockContent) return null;
   const {
     contentBlockContent,
     backgroundColor,
@@ -22,6 +23,8 @@ const ContentBlock = ({ blockContent }: ComponentBlocksProps) => {
     contentType,
     scrollId,
   } = blockContent;
+
+  useScrollToSection(scrollId);
 
   const sectionClassName = [styles.content_block, "full-screen"].join(" ");
 

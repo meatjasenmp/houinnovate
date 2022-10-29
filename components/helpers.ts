@@ -1,7 +1,8 @@
 import { Phase } from "./ProgressBar";
 import { backgroundColorMapping, Colors } from "../styles/helpers";
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { scroller } from "react-scroll";
+import { useRouter } from "next/router";
 
 export enum Components {
   HERO_BANNER = "Page_Components_ComponentBlocks_HeroBanner",
@@ -85,4 +86,19 @@ export const handleScroll = (to: string | null | undefined) => {
     delay: 0,
     smooth: "easeInOutQuart",
   });
+};
+
+export const useScrollToSection = (section: string | null | undefined) => {
+  const router = useRouter();
+  const { scrollTo } = router.query;
+
+  useEffect(() => {
+    if (scrollTo && scrollTo === section) {
+      scroller.scrollTo(String(scrollTo), {
+        duration: 800,
+        delay: 0,
+        smooth: "easeInOutQuart",
+      });
+    }
+  }, []);
 };
