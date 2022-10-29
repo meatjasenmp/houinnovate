@@ -4,7 +4,7 @@ import ContentEditor from "./ContentEditor";
 import { IoClose } from "@react-icons/all-files/io5/IoClose";
 import ProgressBar from "./ProgressBar";
 import { Phase } from "./ProgressBar";
-import { completedBackground, phaseCompletedOpacity } from "./helpers";
+import { completedBackground } from "./helpers";
 
 import styles from "../styles/components/Modal.module.css";
 import { Colors } from "../styles/helpers";
@@ -96,7 +96,10 @@ const OpportunityPopUp = ({
                     <ContentEditor content={contentBlock?.content} />
                     <div
                       className={styles.content_block_border}
-                      style={{ backgroundColor: textColor() }}
+                      style={{
+                        backgroundColor: textColor(),
+                        display: index === 0 ? "block" : "none",
+                      }}
                     ></div>
                   </div>
                 ))}
@@ -104,7 +107,7 @@ const OpportunityPopUp = ({
             </div>
             <div className={styles.hou_modal_progress_container}>
               {currentPhase && (
-                <h3 style={{ opacity: phaseCompletedOpacity(currentPhase) }}>
+                <h3>
                   <>
                     {currentPhase} {currentPhase !== Phase.COMPLETED && "Phase"}
                   </>

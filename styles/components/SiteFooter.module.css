@@ -45,7 +45,8 @@
 
 .get_in_touch a,
 .rice_address,
-.social_media {
+.social_media,
+.cta_links p a {
     color: #868686;
 }
 
@@ -67,11 +68,13 @@
 }
 
 .cta_link_container {
-    display: flex;
+    position: relative;
 }
 
 .cta_link_icon {
-    align-self: flex-end;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 .terms_and_conditions_wrapper {

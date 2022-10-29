@@ -7,7 +7,7 @@ import { Phase } from "./ProgressBar";
 import { PopUpProps, PopUpTypes } from "./helpers";
 import styles from "../styles/components/Modal.module.css";
 import { Colors } from "../styles/helpers";
-import { completedBackground, phaseCompletedOpacity } from "./helpers";
+import { completedBackground } from "./helpers";
 
 // TODO: The pop up can probably be a custom hook
 
@@ -93,7 +93,7 @@ const CommunityInvestmentPopUp = ({
             </div>
             <div className={styles.hou_modal_progress_container}>
               {currentPhase && (
-                <h3 style={{ opacity: phaseCompletedOpacity(currentPhase) }}>
+                <h3>
                   <>
                     {currentPhase} {currentPhase !== Phase.COMPLETED && "Phase"}
                   </>

@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Job post implementation">
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Basic styles for job post.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/JobLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/JobLink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SecondaryNavigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SecondaryNavigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/jobPosting/JobPosting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/jobPosting/JobPosting.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/jobs/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/jobs/[id]/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/JobPosting.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/JobPosting.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/SecondaryNavigation.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/SecondaryNavigation.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/CommunityInvestmentPopUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CommunityInvestmentPopUp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/OpportunityPopUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/OpportunityPopUp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/ContentEditor.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/ContentEditor.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/SiteFooter.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/SiteFooter.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +93,7 @@
       <workItem from="1666451291911" duration="16368000" />
       <workItem from="1666824983443" duration="10718000" />
       <workItem from="1666918975064" duration="8106000" />
-      <workItem from="1667051863497" duration="4008000" />
+      <workItem from="1667051863497" duration="6391000" />
     </task>
     <task id="LOCAL-00001" summary="Box link grid updates">
       <created>1665618210255</created>
@@ -303,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666928472279</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Basic styles for job post.">
+      <created>1667056621060</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1667056621060</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,7 +345,8 @@
     <MESSAGE value="Data setup for job posting page" />
     <MESSAGE value="Basic implementation of job posting sidebar. Now passing components into global Layout.tsx" />
     <MESSAGE value="Job post implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Job post implementation" />
+    <MESSAGE value="Basic styles for job post." />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic styles for job post." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
