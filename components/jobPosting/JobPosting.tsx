@@ -3,7 +3,9 @@ import { useRouter } from "next/router";
 import useJob from "../../pages/api/job";
 import ContentEditor from "../ContentEditor";
 import { BiArrowToTop } from "@react-icons/all-files/bi/BiArrowToTop";
+import { FaArrowLeft } from "@react-icons/all-files/fa/FaArrowLeft";
 import { formatPostDate } from "../helpers";
+import Link from "next/link";
 
 import styles from "../../styles/components/JobPosting.module.css";
 import {
@@ -46,7 +48,7 @@ const ShareButton = () => {
       onClick={() => handleShareButton(path)}
     >
       <h4>Share</h4>
-      <BiArrowToTop size="1.5rem" />
+      <BiArrowToTop />
     </button>
   );
 };
@@ -57,13 +59,13 @@ const Sidebar = ({ data }: SidebarProps) => {
   return (
     <aside className={styles.sidebar}>
       <div className={styles.sidebar__content}>
-        <h2 className={styles.sidebar__title}>{title}</h2>
+        <h1 className={styles.sidebar__title}>{title}</h1>
+        <p className={styles.sidebar__date}>
+          <small>Posted {formatPostDate(postDate)}</small>
+        </p>
         <section className={styles.jobCTA}>
           <ContentEditor content={jobCTA} />
         </section>
-        <p className={styles.sidebar__date}>
-          Posted {formatPostDate(postDate)}
-        </p>
         {contact && (
           <section className={styles.jobContact}>
             <ul>
@@ -78,14 +80,12 @@ const Sidebar = ({ data }: SidebarProps) => {
         )}
         {dataFields && (
           <section className={styles.jobDataFields}>
-            <ul>
-              {dataFields.dataField?.map((field, id) => (
-                <div className={styles.jobDataField} key={id}>
-                  <h5>{field?.labelField}</h5>
-                  <p>{field?.contentField}</p>
-                </div>
-              ))}
-            </ul>
+            {dataFields.dataField?.map((field, id) => (
+              <div className={styles.jobDataField} key={id}>
+                <h5>{field?.labelField}:</h5>
+                <p>{field?.contentField}</p>
+              </div>
+            ))}
           </section>
         )}
         <ShareButton />
@@ -196,25 +196,35 @@ const JobPosting = ({ id }: { id: string }) => {
     siteOptionsPage?.opportunityPageOptions || {};
 
   return (
-    <section className={styles.job_posting}>
-      <Sidebar
-        data={{
-          title: title,
-          postDate: postDate,
-          contact: jobPosting?.contact,
-          jobCTA: jobOpportunityCta,
-          dataFields: jobPosting?.dataFields,
-        }}
-      />
-      <div className={styles.jobPostContainer}>
-        <JobContent
+    <div>
+      <div className={styles.back_button}>
+        <Link href="/">
+          <a>
+            <FaArrowLeft size="1.5rem" color="#F54932" />
+            <span>Back to Opportunities</span>
+          </a>
+        </Link>
+      </div>
+      <section className={styles.job_posting}>
+        <Sidebar
           data={{
-            metaData: jobPosting?.metaData,
+            title: title,
+            postDate: postDate,
+            contact: jobPosting?.contact,
+            jobCTA: jobOpportunityCta,
+            dataFields: jobPosting?.dataFields,
           }}
         />
-        <ImportantNotice importantNotice={opportunityImportantNotice} />
-      </div>
-    </section>
+        <div className={styles.jobPostContainer}>
+          <JobContent
+            data={{
+              metaData: jobPosting?.metaData,
+            }}
+          />
+          <ImportantNotice importantNotice={opportunityImportantNotice} />
+        </div>
+      </section>
+    </div>
   );
 };
 

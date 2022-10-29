@@ -1,18 +1,13 @@
 import React from "react";
-import Head from "next/head";
 import Navigation from "./Navigation";
 import { usePage } from "../pages/api/page";
-import {
-  page_generalSettings,
-  page_page,
-} from "../pages/api/__generated__/page";
 import SecondaryNavigation from "./SecondaryNavigation";
 import SiteFooter from "./SiteFooter";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const getPage = usePage("9");
-  const { data, error, loading } = getPage;
 
+  const { data, error, loading } = getPage;
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -23,16 +18,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     }
   }
 
-  const { title, description } = data?.generalSettings as page_generalSettings;
-
   return (
     <div className="site" id="outer-container">
-      <Head>
-        <title>{title}</title>
-        {description && <meta name="description" content={description} />}
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <Navigation
         pageWrapID="page-wrap"
         outerContainerID="outer-container"

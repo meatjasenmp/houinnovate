@@ -12,7 +12,9 @@ export const JobLink = ({ job }: JobLinkProps) => {
   if (!job) return <></>;
   const { title, databaseId } = job;
   return (
-    <Link href={`/jobs/${databaseId}`}>
+    <Link
+      href={{ pathname: `/jobs/${databaseId}`, query: { pageTitle: title } }}
+    >
       <a className={styles.jobLink}>
         <span className={styles.jobLink_text}>{title}</span>
         <FiArrowUpRight size="3rem" className={styles.job_link_arrow} />

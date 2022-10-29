@@ -21,6 +21,14 @@
     color: black;
 }
 
+.secondary_navigation_page a {
+    color: black;
+}
+
+.secondary_navigation_page a:hover {
+    color: #F54932;
+}
+
 @media screen and (min-width: 768px) {
     .secondary_navigation {
         display: block;

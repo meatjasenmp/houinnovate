@@ -1,7 +1,7 @@
 .job_posting {
     padding: 1.5rem;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 10rem auto 5rem auto;
 }
 
 .jobCTA article > *:last-child {
@@ -21,9 +21,20 @@
     font-family: "Sohne-Kraftig-Bold", sans-serif;
 }
 
+.jobContact p,
+.jobDataFields p,
+.jobContact li {
+    font-size: .95rem;
+}
+
 .shareButton {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+}
+
+.shareButton svg {
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .shareButton h4 {
@@ -34,10 +45,33 @@
     margin-top: 2rem;
 }
 
+.jobPost section:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.jobPost section ul li {
+    margin-bottom: 0;
+}
+
 .importantNotice {
     margin-top: 2.5rem;
     padding-top: 1.5rem;
     border-top: 4px solid #F54932;
+}
+
+.back_button a {
+    display: flex;
+    align-items: center;
+}
+
+.back_button a span {
+    margin-left: .75rem;
+    font-size: .95rem;
+    font-family: "Sohne-Kraftig-Bold", sans-serif;
+}
+
+.sidebar__title {
+    margin-bottom: .5rem;
 }
 
 @media screen and (min-width: 990px) {
@@ -56,5 +90,14 @@
 
     .jobPost {
         margin-top: 0;
+    }
+
+    .shareButton h4 {
+        font-size: 1.2rem;
+    }
+
+    .shareButton svg {
+        width: 2rem;
+        height: 2rem;
     }
 }
