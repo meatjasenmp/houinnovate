@@ -106,6 +106,14 @@ export const usePage = (id: string) => {
           description
         }
         siteOptionsPage {
+          annualReport {
+            annualReportTitle
+            annualReportDownload {
+              id
+              mediaItemUrl
+              altText
+            }
+          }
           siteNavigation {
             navigation {
               sectionLinks {

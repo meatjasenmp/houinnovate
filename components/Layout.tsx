@@ -24,6 +24,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         pageWrapID="page-wrap"
         outerContainerID="outer-container"
         navigation={data?.siteOptionsPage?.siteNavigation}
+        annualReport={data?.siteOptionsPage?.annualReport}
       />
       <main
         className="min-h-screen flex flex-1 justify-between flex-col p-4 font-body"

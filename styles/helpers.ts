@@ -73,3 +73,22 @@ export const accentColor = (
   }
   return "white";
 };
+
+// export const alphabelticalSort = () => {
+//   const arrayForSort = [...(communityInvestments?.edges || [])];
+//
+//   const sort = arrayForSort.sort((a, b) => {
+//     const { communityAndOpportunityPopUps } = a?.node || {};
+//     const { alphanumericLabel } = communityAndOpportunityPopUps || {};
+//     const { communityAndOpportunityPopUps: bCommunityAndOpportunityPopUps } =
+//     b?.node || {};
+//     const { alphanumericLabel: bAlphanumericLabel } =
+//     bCommunityAndOpportunityPopUps || {};
+//
+//     if (alphanumericLabel && bAlphanumericLabel) {
+//       return alphanumericLabel.localeCompare(bAlphanumericLabel);
+//     }
+//   });
+//
+//   console.log(sort);
+// }

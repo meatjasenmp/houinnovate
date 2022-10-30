@@ -1,16 +1,6 @@
-.site_navigation {
-
-}
-
 .section_link {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-family: "Sohne-Kraftig-Bold", sans-serif;
-}
-
-.section_links div {
-    background-color: #FFF;
-    width: 137px;
-    height: 4px;
 }
 
 .hou_innovate {
@@ -42,8 +32,35 @@
     color: #868686;
 }
 
+.annual_report {
+    margin: 2.5rem 0 1.5rem 0;
+    font-family: "Sohne-Kraftig-Bold", sans-serif;
+}
+
+.annual_report a {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.annual_report a span {
+    margin-right: 1rem;
+}
+
+.annual_report div {
+    background-color: #FFF;
+    width: 100px;
+    height: 4px;
+    margin-top: 1.5rem;
+}
+
 .section_link_list_item,
 .section_links,
 .block_links div {
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.block_links {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
 }

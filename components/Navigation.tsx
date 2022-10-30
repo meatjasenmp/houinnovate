@@ -3,10 +3,12 @@ import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
 import ContentEditor from "./ContentEditor";
 import HamburgerMenu from "./HamburgerMenu";
+import { FiDownload } from "@react-icons/all-files/fi/FiDownload";
 import {
   page_siteOptionsPage_siteNavigation,
   page_siteOptionsPage_siteNavigation_navigation_sectionLinks,
   page_siteOptionsPage_siteNavigation_navigation_blockLinks,
+  page_siteOptionsPage_annualReport,
 } from "../pages/api/__generated__/page";
 import styles from "../styles/components/Navigation.module.css";
 import { handleScroll } from "./helpers";
@@ -15,6 +17,7 @@ interface NavigationProps {
   pageWrapID: string;
   outerContainerID: string;
   navigation: page_siteOptionsPage_siteNavigation | null | undefined;
+  annualReport: page_siteOptionsPage_annualReport | null | undefined;
 }
 
 interface SectionLinksProps {
@@ -38,6 +41,27 @@ const handleStateChange = (state: any) => {
   if (!state.isOpen) {
     document.body.classList.remove("no-scroll");
   }
+};
+
+const AnnualReport = ({
+  report,
+}: {
+  report: page_siteOptionsPage_annualReport | null | undefined;
+}) => {
+  const { annualReportDownload } = report || {};
+
+  if (annualReportDownload && annualReportDownload.mediaItemUrl) {
+    return (
+      <div className={styles.annual_report}>
+        <a href={annualReportDownload.mediaItemUrl} download>
+          <span>{report?.annualReportTitle}</span>
+          <FiDownload />
+        </a>
+        <div />
+      </div>
+    );
+  }
+  return <></>;
 };
 
 const SectionLinks = ({ sectionLinks }: SectionLinksProps) => {
@@ -108,6 +132,7 @@ const Navigation = ({
   pageWrapID,
   outerContainerID,
   navigation,
+  annualReport,
 }: NavigationProps) => {
   const { sectionLinks, houinnovate, blockLinks } =
     navigation?.navigation || {};
@@ -117,12 +142,12 @@ const Navigation = ({
       pageWrapId={pageWrapID}
       outerContainerId={outerContainerID}
       right
-      width={"400px"}
       className={styles.site_navigation}
       customBurgerIcon={<HamburgerMenu />}
       onStateChange={handleStateChange}
     >
       <SectionLinks sectionLinks={sectionLinks} />
+      <AnnualReport report={annualReport} />
       <HouInnovate houInnovate={houinnovate} />
       <BlockLinks blockLinks={blockLinks} />
     </Menu>

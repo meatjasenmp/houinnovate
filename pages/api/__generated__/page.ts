@@ -199,6 +199,28 @@ export interface page_generalSettings {
   description: string | null;
 }
 
+export interface page_siteOptionsPage_annualReport_annualReportDownload {
+  __typename: "MediaItem";
+  /**
+   * The globally unique identifier of the attachment object.
+   */
+  id: string;
+  /**
+   * Url of the mediaItem
+   */
+  mediaItemUrl: string | null;
+  /**
+   * Alternative text to display when resource is not displayed
+   */
+  altText: string | null;
+}
+
+export interface page_siteOptionsPage_annualReport {
+  __typename: "SiteOptionsPage_Annualreport";
+  annualReportTitle: string | null;
+  annualReportDownload: page_siteOptionsPage_annualReport_annualReportDownload | null;
+}
+
 export interface page_siteOptionsPage_siteNavigation_navigation_sectionLinks {
   __typename: "SiteOptionsPage_Sitenavigation_Navigation_sectionLinks";
   label: string | null;
@@ -325,6 +347,10 @@ export interface page_siteOptionsPage_siteFooter {
 
 export interface page_siteOptionsPage {
   __typename: "SiteOptionsPage";
+  /**
+   * Added to the GraphQL Schema because the ACF Field Group &quot;Annual Report&quot; was set to Show in GraphQL.
+   */
+  annualReport: page_siteOptionsPage_annualReport | null;
   /**
    * Added to the GraphQL Schema because the ACF Field Group &quot;Site Navigation&quot; was set to Show in GraphQL.
    */
