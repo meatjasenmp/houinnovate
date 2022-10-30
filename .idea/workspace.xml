@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Misc. style updates">
-      <change beforePath="$PROJECT_DIR$/components/jobPosting/JobPosting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/jobPosting/JobPosting.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="target blank for download links" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,14 +87,7 @@
       <workItem from="1666451291911" duration="16368000" />
       <workItem from="1666824983443" duration="10718000" />
       <workItem from="1666918975064" duration="8106000" />
-      <workItem from="1667051863497" duration="36700000" />
-    </task>
-    <task id="LOCAL-00006" summary="misc style updates">
-      <created>1665626058265</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1665626058265</updated>
+      <workItem from="1667051863497" duration="37050000" />
     </task>
     <task id="LOCAL-00007" summary="misc style updates">
       <created>1665626323472</created>
@@ -434,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667156020698</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="target blank for download links">
+      <created>1667156200494</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1667156200494</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +452,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Rolling back." />
     <MESSAGE value="Fixing prop" />
     <MESSAGE value="ION jobs select implementation" />
     <MESSAGE value="Data setup for job posting page" />
@@ -479,7 +476,8 @@
     <MESSAGE value="annual report implementation" />
     <MESSAGE value="Refactoring how progress percentage works" />
     <MESSAGE value="Misc. style updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Misc. style updates" />
+    <MESSAGE value="target blank for download links" />
+    <option name="LAST_COMMIT_MESSAGE" value="target blank for download links" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
