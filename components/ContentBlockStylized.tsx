@@ -17,6 +17,7 @@ interface ListItemProps {
 }
 
 import styles from "../styles/components/ContentBlockStylizedList.module.css";
+import { useEffect, useRef } from "react";
 
 const ListItem = ({ listItem }: ListItemProps) => {
   if (!listItem) return null;
@@ -38,6 +39,30 @@ const ListItem = ({ listItem }: ListItemProps) => {
 };
 
 const ContentBlockStylized = ({ blockContent }: ComponentBlocksProps) => {
+  const contentWrapper = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (contentWrapper.current) {
+      const content = contentWrapper.current;
+      const headers = content.querySelectorAll("h1");
+
+      headers.forEach((item) => {
+        const headerItem = item as HTMLElement;
+        const words = headerItem.innerText.split(" ");
+
+        for (let i = 0; i < words.length; i++) {
+          const word = words[i];
+
+          if (i === 0) {
+            headerItem.innerHTML = `<span class="underline">${word}</span>`;
+          } else {
+            headerItem.innerHTML += ` <span class="underline">${word}</span>`;
+          }
+        }
+      });
+    }
+  }, []);
+
   if (!blockContent) return null;
 
   const { contentBlockStylized, list, showFooterText, footerText, scrollId } =
@@ -46,7 +71,7 @@ const ContentBlockStylized = ({ blockContent }: ComponentBlocksProps) => {
   return (
     <section className={styles.content_block_stylized} id={String(scrollId)}>
       <div className={styles.content_block_stylized_wrapper}>
-        <div className={styles.content_wrapper}>
+        <div className={styles.content_wrapper} ref={contentWrapper}>
           <ContentEditor content={contentBlockStylized} />
         </div>
         <div className={styles.list_wrapper}>
