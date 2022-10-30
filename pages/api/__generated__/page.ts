@@ -138,6 +138,7 @@ export interface page_page_components_componentBlocks_Page_Components_ComponentB
   createdLabel: string | null;
   opportunitiesCreated: number | null;
   opportunitiesCommitted: number | null;
+  annotation: string | null;
 }
 
 export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_ProjectBasedOpportunities {
@@ -153,6 +154,7 @@ export interface page_page_components_componentBlocks_Page_Components_ComponentB
   investmentCommittedLabel: string | null;
   deployed: number | null;
   committed: number | null;
+  annotation: string | null;
 }
 
 export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_CommunityInvestment {

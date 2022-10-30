@@ -83,6 +83,7 @@ export const usePage = (id: string) => {
                   createdLabel
                   opportunitiesCreated: created
                   opportunitiesCommitted: committed
+                  annotation
                 }
                 opportunitiesCreatedContent: content
               }
@@ -93,6 +94,7 @@ export const usePage = (id: string) => {
                   investmentCommittedLabel: committedLabel
                   deployed
                   committed
+                  annotation
                 }
                 communityInvestmentContent: content
               }

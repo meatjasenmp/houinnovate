@@ -14,6 +14,10 @@
     cursor: pointer;
 }
 
+.phase p {
+    font-size: 0.9rem;
+}
+
 .phase div:first-child {
     margin-right: 1rem;
 }

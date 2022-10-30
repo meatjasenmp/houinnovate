@@ -30,6 +30,7 @@ const ProjectBasedOpportunities = ({
           committed={opportunitiesCreated?.opportunitiesCommitted}
           deployedLabel={opportunitiesCreated?.createdLabel}
           committedLabel={opportunitiesCreated?.committedLabel}
+          annotation={opportunitiesCreated?.annotation}
           accent={Colors.BLUE}
         />
         <ContentEditor content={opportunitiesCreatedContent} />

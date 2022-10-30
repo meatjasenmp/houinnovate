@@ -1,3 +1,7 @@
+.progress_bar_container {
+    margin: 2.5rem 0;
+}
+
 .progress_bar {
     height: 50px;
     background-color: #E0E0E0;
@@ -5,7 +9,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 2.5rem 0;
 }
 
 .progress_bar__deployed {
@@ -33,4 +36,8 @@
 
 .progress_bar_simple_bar {
     height: 100%;
+}
+
+.annotation {
+    margin-top: 1rem;
 }

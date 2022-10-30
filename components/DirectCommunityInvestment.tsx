@@ -26,6 +26,7 @@ const DirectCommunityInvestment = ({
           deployedLabel={deployment?.deployedLabel}
           committedLabel={deployment?.investmentCommittedLabel}
           accent={Colors.NEON}
+          annotation={deployment?.annotation}
         />
         <ContentEditor content={communityInvestmentContent} />
         <CommunityInvestmentsSelect />
