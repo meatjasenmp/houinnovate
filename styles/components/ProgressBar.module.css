@@ -41,3 +41,8 @@
 .annotation {
     margin-top: 1rem;
 }
+
+.annotation p {
+    font-size: 0.9rem;
+    color: #868686;
+}
