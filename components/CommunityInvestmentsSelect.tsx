@@ -77,7 +77,7 @@ const CommunityInvestmentsSelect = () => {
   return (
     <section>
       <>
-        <div style={{ marginTop: "2rem", maxWidth: "750px" }}>
+        <div style={{ marginTop: "1.25rem", maxWidth: "750px" }}>
           <SelectComponent
             options={optionSelectItems(optionsArray)}
             setSelectedOptions={setSelectedOptions}

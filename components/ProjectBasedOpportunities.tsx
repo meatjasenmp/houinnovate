@@ -10,10 +10,35 @@ interface ProjectBasedOpportunitiesProps {
 
 import styles from "../styles/components/ProjectBasedOpportunities.module.css";
 import { Colors } from "../styles/helpers";
+import { useEffect, useRef } from "react";
 
 const ProjectBasedOpportunities = ({
   blockContent,
 }: ProjectBasedOpportunitiesProps) => {
+  const contentWrapper = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (contentWrapper.current) {
+      const content = contentWrapper.current;
+      const headers = content.querySelectorAll("h3");
+
+      headers.forEach((item) => {
+        const headerItem = item as HTMLElement;
+        const words = headerItem.innerText.split(" ");
+
+        for (let i = 0; i < words.length; i++) {
+          const word = words[i];
+
+          if (i === 0) {
+            headerItem.innerHTML = `<span class="underline text-underline-${Colors.BLUE}">${word}</span>`;
+          } else {
+            headerItem.innerHTML += ` <span class="underline text-underline-${Colors.BLUE}">${word}</span>`;
+          }
+        }
+      });
+    }
+  }, []);
+
   if (!blockContent) return null;
 
   const { opportunitiesCreated, opportunitiesCreatedContent, scrollId } =
@@ -33,7 +58,12 @@ const ProjectBasedOpportunities = ({
           annotation={opportunitiesCreated?.annotation}
           accent={Colors.BLUE}
         />
-        <ContentEditor content={opportunitiesCreatedContent} />
+        <div
+          className={styles.project_based_opportunities_content}
+          ref={contentWrapper}
+        >
+          <ContentEditor content={opportunitiesCreatedContent} />
+        </div>
         <OpportunitySelect />
       </div>
     </section>
