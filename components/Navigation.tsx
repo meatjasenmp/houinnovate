@@ -53,7 +53,7 @@ const AnnualReport = ({
   if (annualReportDownload && annualReportDownload.mediaItemUrl) {
     return (
       <div className={styles.annual_report}>
-        <a href={annualReportDownload.mediaItemUrl} target="_blank">
+        <a href={annualReportDownload.mediaItemUrl} target="_blank" rel="noreferrer">
           <span>{report?.annualReportTitle}</span>
           <FiDownload />
         </a>
