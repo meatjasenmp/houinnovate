@@ -8,6 +8,8 @@ import ContentEditor from "./ContentEditor";
 import ImageBlock from "./ImageBlock";
 import { FiArrowUpRight } from "@react-icons/all-files/fi/FiArrowUpRight";
 import { accentColor } from "../styles/helpers";
+import { Link as ScrollLink } from "react-scroll";
+import { handleScroll } from "./helpers";
 
 import styles from "../styles/components/BoxLinks.module.css";
 
@@ -57,6 +59,7 @@ const BoxPageLink = ({
 }: BoxLinkProps & PageLinkProps) => {
   const linkTarget = target ? target : "_self";
   const pageLinkUrl = pageLink ? pageLink : "#";
+  console.log(target);
   return (
     <a href={pageLinkUrl} target={linkTarget}>
       <BoxLinkContent content={content} />
@@ -69,9 +72,14 @@ const BoxPageLinkAnchor = ({
   anchorLink,
 }: BoxLinkProps & AnchorLinkProps) => {
   return (
-    <a data-scroll={anchorLink} href="#">
+    <ScrollLink
+      href="#"
+      to={String(anchorLink)}
+      containerId="page-wrap"
+      onClick={() => handleScroll(anchorLink)}
+    >
       <BoxLinkContent content={content} />
-    </a>
+    </ScrollLink>
   );
 };
 
