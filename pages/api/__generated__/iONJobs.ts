@@ -166,6 +166,7 @@ export interface iONJobs_siteOptionsPage_opportunityPageOptions {
   __typename: "SiteOptionsPage_Opportunitypageoptions";
   opportunityImportantNotice: string | null;
   jobOpportunityCta: string | null;
+  aaEeo: string | null;
 }
 
 export interface iONJobs_siteOptionsPage {

@@ -34,7 +34,7 @@ const ProgressBar = ({
     styles.progress_bar_simple_bar,
     backgroundColorMapping(accent),
   ].join(" ");
-  console.log(currentPhase);
+
   return (
     <div className={styles.progress_bar_simple}>
       <div

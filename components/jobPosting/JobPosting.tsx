@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import useJob from "../../pages/api/job";
 import ContentEditor from "../ContentEditor";
@@ -31,6 +31,7 @@ interface SidebarProps {
 interface JobContentProps {
   data: {
     metaData: iONJobs_iONJob_jobPosting_metaData | null | undefined;
+    aaEeo: string | null | undefined;
   };
 }
 
@@ -56,12 +57,36 @@ const ShareButton = () => {
 const Sidebar = ({ data }: SidebarProps) => {
   const { title, postDate, contact, dataFields, jobCTA } = data;
 
+  const contentWrapper = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (contentWrapper.current) {
+      const content = contentWrapper.current;
+      const headers = content.querySelectorAll("h1");
+
+      headers.forEach((item) => {
+        const headerItem = item as HTMLElement;
+        const words = headerItem.innerText.split(" ");
+
+        for (let i = 0; i < words.length; i++) {
+          const word = words[i];
+
+          if (i === 0) {
+            headerItem.innerHTML = `<span class="underline text-underline-red">${word}</span>`;
+          } else {
+            headerItem.innerHTML += ` <span class="underline text-underline-red">${word}</span>`;
+          }
+        }
+      });
+    }
+  }, []);
+
   return (
     <aside className={styles.sidebar}>
-      <div className={styles.sidebar__content}>
+      <div className={styles.sidebar__content} ref={contentWrapper}>
         <h1 className={styles.sidebar__title}>{title}</h1>
         <p className={styles.sidebar__date}>
-          <small>Posted {formatPostDate(postDate)}</small>
+          Posted {formatPostDate(postDate)}
         </p>
         <section className={styles.jobCTA}>
           <ContentEditor content={jobCTA} />
@@ -95,7 +120,7 @@ const Sidebar = ({ data }: SidebarProps) => {
 };
 
 const JobContent = ({ data }: JobContentProps) => {
-  const { metaData } = data;
+  const { metaData, aaEeo } = data;
   const { downloads, specifications, addenda } = metaData || {};
   return (
     <article className={styles.jobPost}>
@@ -130,7 +155,7 @@ const JobContent = ({ data }: JobContentProps) => {
       </section>
 
       <section className={styles.files}>
-        <h5>Files:</h5>
+        <h5>Files</h5>
         <ul className={styles.downloads}>
           {downloads &&
             downloads.map((download, index) => (
@@ -144,7 +169,7 @@ const JobContent = ({ data }: JobContentProps) => {
       </section>
 
       <section className={styles.specifications}>
-        <h5>Specifications:</h5>
+        <h5>Specifications</h5>
         <ul className={styles.downloads}>
           {specifications &&
             specifications.map((spec, index) => (
@@ -161,7 +186,7 @@ const JobContent = ({ data }: JobContentProps) => {
       </section>
 
       <section className={styles.addenda}>
-        <h5>Addenda:</h5>
+        <h5>Addenda</h5>
         <ul className={styles.downloads}>
           {addenda &&
             addenda.map((add, index) => (
@@ -172,6 +197,11 @@ const JobContent = ({ data }: JobContentProps) => {
               </li>
             ))}
         </ul>
+      </section>
+
+      <section className="styles aaEeo">
+        <h5>AA/EEO</h5>
+        <ContentEditor content={aaEeo} />
       </section>
     </article>
   );
@@ -192,7 +222,7 @@ const JobPosting = ({ id }: { id: string }) => {
 
   const { siteOptionsPage, iONJob } = data || {};
   const { title, postDate, jobPosting } = iONJob || {};
-  const { opportunityImportantNotice, jobOpportunityCta } =
+  const { opportunityImportantNotice, jobOpportunityCta, aaEeo } =
     siteOptionsPage?.opportunityPageOptions || {};
 
   return (
@@ -219,6 +249,7 @@ const JobPosting = ({ id }: { id: string }) => {
           <JobContent
             data={{
               metaData: jobPosting?.metaData,
+              aaEeo: aaEeo,
             }}
           />
           <ImportantNotice importantNotice={opportunityImportantNotice} />

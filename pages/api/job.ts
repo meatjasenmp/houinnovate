@@ -71,6 +71,7 @@ export const useJob = (id: string) => {
           opportunityPageOptions {
             opportunityImportantNotice
             jobOpportunityCta
+            aaEeo
           }
         }
       }
