@@ -83,6 +83,18 @@
     }
 }
 
+.text-underline-blue {
+    text-decoration-color: #1F2CA8;
+}
+
+.text-underline-neon {
+    text-decoration-color: #DCE63C;
+}
+.text-underline-red {
+    text-decoration-color: #F54932;
+}
+
+
 .no-scroll,
 .ReactModal__Body--open {
     overflow: hidden;

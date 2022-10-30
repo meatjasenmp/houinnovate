@@ -56,6 +56,7 @@ export const usePage = (id: string) => {
                     listBackgroundColor: backgroundColor
                   }
                 }
+                headerUnderlineAccent
                 scrollId
                 showFooterText
                 footerText

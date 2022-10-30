@@ -54,9 +54,9 @@ const ContentBlockStylized = ({ blockContent }: ComponentBlocksProps) => {
           const word = words[i];
 
           if (i === 0) {
-            headerItem.innerHTML = `<span class="underline">${word}</span>`;
+            headerItem.innerHTML = `<span class="underline text-underline-${headerUnderlineAccent}">${word}</span>`;
           } else {
-            headerItem.innerHTML += ` <span class="underline">${word}</span>`;
+            headerItem.innerHTML += ` <span class="underline text-underline-${headerUnderlineAccent}">${word}</span>`;
           }
         }
       });
@@ -65,8 +65,14 @@ const ContentBlockStylized = ({ blockContent }: ComponentBlocksProps) => {
 
   if (!blockContent) return null;
 
-  const { contentBlockStylized, list, showFooterText, footerText, scrollId } =
-    blockContent;
+  const {
+    contentBlockStylized,
+    list,
+    showFooterText,
+    footerText,
+    scrollId,
+    headerUnderlineAccent,
+  } = blockContent;
 
   return (
     <section className={styles.content_block_stylized} id={String(scrollId)}>

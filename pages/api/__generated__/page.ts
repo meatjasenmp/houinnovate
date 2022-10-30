@@ -101,6 +101,7 @@ export interface page_page_components_componentBlocks_Page_Components_ComponentB
   __typename: "Page_Components_ComponentBlocks_ContentBlockStylizedList";
   contentBlockStylized: string | null;
   list: (page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlockStylizedList_list | null)[] | null;
+  headerUnderlineAccent: string | null;
   scrollId: string | null;
   showFooterText: boolean | null;
   footerText: string | null;

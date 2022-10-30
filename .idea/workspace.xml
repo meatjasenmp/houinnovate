@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Basic box link animations">
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Basic implementation of text underline.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/ContentBlockStylized.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContentBlockStylized.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ContentEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContentEditor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/__generated__/page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/page.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +92,7 @@
       <workItem from="1666451291911" duration="16368000" />
       <workItem from="1666824983443" duration="10718000" />
       <workItem from="1666918975064" duration="8106000" />
-      <workItem from="1667051863497" duration="26583000" />
+      <workItem from="1667051863497" duration="27570000" />
     </task>
     <task id="LOCAL-00001" summary="Box link grid updates">
       <created>1665618210255</created>
@@ -408,7 +409,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667143884840</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Basic implementation of text underline.">
+      <created>1667146105118</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1667146105118</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,7 +436,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Installing gsap from zip" />
     <MESSAGE value="Removing package-lock" />
     <MESSAGE value="Sigh. GSAP." />
     <MESSAGE value="Remove console logging. GSAP appears to work now." />
@@ -453,7 +460,8 @@
     <MESSAGE value="Box link hover update." />
     <MESSAGE value="Scroll to for box links" />
     <MESSAGE value="Basic box link animations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic box link animations" />
+    <MESSAGE value="Basic implementation of text underline." />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic implementation of text underline." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
