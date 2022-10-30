@@ -160,7 +160,12 @@ const JobContent = ({ data }: JobContentProps) => {
           {downloads &&
             downloads.map((download, index) => (
               <li key={index}>
-                <a key={index} href={String(download?.file?.mediaItemUrl)}>
+                <a
+                  key={index}
+                  target="_blank"
+                  rel="noreferrer"
+                  href={String(download?.file?.mediaItemUrl)}
+                >
                   {download?.downloadLabel}
                 </a>
               </li>
@@ -175,6 +180,8 @@ const JobContent = ({ data }: JobContentProps) => {
             specifications.map((spec, index) => (
               <li key={index}>
                 <a
+                  target="_blank"
+                  rel="noreferrer"
                   key={index}
                   href={String(spec?.specificationFile?.mediaItemUrl)}
                 >
@@ -191,7 +198,12 @@ const JobContent = ({ data }: JobContentProps) => {
           {addenda &&
             addenda.map((add, index) => (
               <li key={index}>
-                <a key={index} href={String(add?.addendaFile?.mediaItemUrl)}>
+                <a
+                  key={index}
+                  target="_blank"
+                  rel="noreferrer"
+                  href={String(add?.addendaFile?.mediaItemUrl)}
+                >
                   {add?.addendaFileLabel}
                 </a>
               </li>
