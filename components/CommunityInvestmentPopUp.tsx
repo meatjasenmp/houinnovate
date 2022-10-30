@@ -35,8 +35,8 @@ const CommunityInvestmentPopUp = ({
   const { progress, alphanumericLabel, contentBlocks, dataFields } =
     communityAndOpportunityPopUps || {};
 
-  const { currentPhase, progressLabel, showProgressLabel } = progress || {};
-
+  const { currentPhase, progressLabel, showProgressLabel, progressPercentage } =
+    progress || {};
   const containerClassName = [
     styles.hou_modal__container,
     completedBackground(currentPhase, PopUpTypes.INVESTMENT),
@@ -103,6 +103,7 @@ const CommunityInvestmentPopUp = ({
                 <div className="full-screen">
                   <ProgressBar
                     currentPhase={currentPhase}
+                    progressPercentage={progressPercentage}
                     accent={Colors.NEON}
                     height="35px"
                   />

@@ -33,6 +33,7 @@ export const useInvestment = (id: string) => {
               committed
               deployed
               currentPhase
+              progressPercentage
             }
           }
         }

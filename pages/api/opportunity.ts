@@ -33,6 +33,7 @@ export const useOpportunity = (id: string) => {
               committed
               deployed
               currentPhase
+              progressPercentage
             }
           }
         }

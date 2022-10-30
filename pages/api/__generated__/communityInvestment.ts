@@ -30,6 +30,7 @@ export interface communityInvestment_communityInvestment_communityAndOpportunity
   committed: number | null;
   deployed: number | null;
   currentPhase: string | null;
+  progressPercentage: number | null;
 }
 
 export interface communityInvestment_communityInvestment_communityAndOpportunityPopUps {

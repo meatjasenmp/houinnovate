@@ -35,7 +35,8 @@ const OpportunityPopUp = ({
   const { progress, alphanumericLabel, contentBlocks, dataFields } =
     communityAndOpportunityPopUps || {};
 
-  const { currentPhase, progressLabel, showProgressLabel } = progress || {};
+  const { currentPhase, progressLabel, showProgressLabel, progressPercentage } =
+    progress || {};
 
   // TODO: Need to clean this up
   const textColor = () => {
@@ -117,6 +118,7 @@ const OpportunityPopUp = ({
                 <div className="full-screen">
                   <ProgressBar
                     currentPhase={currentPhase}
+                    progressPercentage={progressPercentage}
                     accent={Colors.BLUE}
                     height="35px"
                   />

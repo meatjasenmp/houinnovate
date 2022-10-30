@@ -23,7 +23,8 @@ const PopUpLinks = ({ link, popUpType }: PopUpSelectProps) => {
   const { progress, alphanumericLabel, type } =
     communityAndOpportunityPopUps || {};
 
-  const { currentPhase, progressLabel, showProgressLabel } = progress || {};
+  const { currentPhase, progressLabel, showProgressLabel, progressPercentage } =
+    progress || {};
 
   const popUpLinkClassNames = [
     styles.pop_up__link,
@@ -50,6 +51,7 @@ const PopUpLinks = ({ link, popUpType }: PopUpSelectProps) => {
           </div>
           <ProgressBar
             currentPhase={currentPhase}
+            progressPercentage={progressPercentage}
             accent={
               popUpType === PopUpTypes.INVESTMENT ? Colors.NEON : Colors.BLUE
             }

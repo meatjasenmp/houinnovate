@@ -24,6 +24,7 @@ export const useCommunityInvestmentsSelect = () => {
                   committed
                   deployed
                   currentPhase
+                  progressPercentage
                 }
               }
             }

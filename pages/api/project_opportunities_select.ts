@@ -25,6 +25,7 @@ export const useProjectOpportunitiesSelect = () => {
                   committed
                   deployed
                   currentPhase
+                  progressPercentage
                 }
               }
             }

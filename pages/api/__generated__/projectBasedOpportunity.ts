@@ -30,6 +30,7 @@ export interface projectBasedOpportunity_projectBasedOpportunity_communityAndOpp
   committed: number | null;
   deployed: number | null;
   currentPhase: string | null;
+  progressPercentage: number | null;
 }
 
 export interface projectBasedOpportunity_projectBasedOpportunity_communityAndOpportunityPopUps {
