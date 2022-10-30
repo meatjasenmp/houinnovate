@@ -14,6 +14,10 @@
     height: 100%;
 }
 
+.box_links a:hover .link_icon {
+    transform: translateY(-20px);
+}
+
 .box_links article {
     padding: 1.5rem .7rem;
     max-width: 35rem;
@@ -33,6 +37,7 @@
     bottom: .7rem;
     align-self: flex-end;
     margin-top: auto;
+    transition: all .3s ease;
 }
 
 @media screen and (min-width: 768px) {
