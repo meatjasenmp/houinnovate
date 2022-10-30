@@ -11,7 +11,11 @@ import { accentColor } from "../styles/helpers";
 import { Link as ScrollLink } from "react-scroll";
 import { handleScroll } from "./helpers";
 
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
 import styles from "../styles/components/BoxLinks.module.css";
+import { useEffect, useRef } from "react";
 
 interface ComponentBlocksProps {
   blockContent: page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks;
@@ -59,7 +63,6 @@ const BoxPageLink = ({
 }: BoxLinkProps & PageLinkProps) => {
   const linkTarget = target ? target : "_self";
   const pageLinkUrl = pageLink ? pageLink : "#";
-  console.log(target);
   return (
     <a href={pageLinkUrl} target={linkTarget}>
       <BoxLinkContent content={content} />
@@ -84,22 +87,49 @@ const BoxPageLinkAnchor = ({
 };
 
 const BoxLinksBlock = ({ blockContent }: ComponentBlocksProps) => {
+  gsap.registerPlugin(ScrollTrigger);
+  const boxLinkRef = useRef<HTMLDivElement>(null);
+  const boxLinkStyles = [styles.box_links, "box_links_container"].join(" ");
+
+  useEffect(() => {
+    if (boxLinkRef.current) {
+      const ctx = gsap.context(() => {
+        const targets = gsap.utils.toArray(".box_link_animated");
+        const duration = 0.25;
+        const hold = 0.05;
+        targets.map((target: any, index) => {
+          const tl = gsap.timeline({
+            delay: duration * index + hold * index,
+            scrollTrigger: {
+              trigger: target,
+            },
+          });
+          tl.from(target, { y: 20, opacity: 0 });
+          tl.to(target, { y: 0, opacity: 1 });
+        });
+      }, boxLinkRef.current);
+      return () => {
+        ctx.revert();
+      };
+    }
+  }, []);
+
   if (!blockContent.boxLink) return null;
   return (
-    <section className={styles.box_links}>
+    <section className={boxLinkStyles} ref={boxLinkRef}>
       <>
         {blockContent.boxLink.map((boxLink, index) => {
           const { link, backgroundColor } =
             boxLink as page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink;
           const { linkType, anchorLink, pageLink } =
             link as page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink_link;
+          const boxLinkStyles = [
+            backgroundColorMapping(backgroundColor),
+            "box_link_animated",
+          ].join(" ");
 
           return (
-            <div
-              className={backgroundColorMapping(backgroundColor)}
-              key={index}
-              data-id={index}
-            >
+            <div className={boxLinkStyles} key={index} data-id={index}>
               {linkType === LinkType.PAGE ? (
                 <BoxPageLink
                   content={boxLink}

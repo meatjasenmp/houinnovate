@@ -35,7 +35,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
         const targets = gsap.utils.toArray(".animated_content_block");
         const duration = 0.65;
         const hold = 4;
-        targets.map((target, index) => {
+        targets.map((target: any, index) => {
           const tl = gsap.timeline({
             delay: duration * index + hold * index,
             repeat: -1,
@@ -45,8 +45,8 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
               duration: duration,
             },
           });
-          tl.from(target as any, { y: 20, opacity: 0 });
-          tl.to(target as any, { y: -20, opacity: 0 }, "+=" + hold);
+          tl.from(target, { y: 20, opacity: 0 });
+          tl.to(target, { y: -20, opacity: 0 }, "+=" + hold);
         });
       }, contentWrapRef.current);
       return () => {
