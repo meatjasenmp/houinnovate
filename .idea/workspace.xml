@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Updating CSS for video banner. FML.">
-      <change afterPath="$PROJECT_DIR$/components/ArrowLinkIcon.tsx" afterDir="false" />
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="misc style updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/BoxLinksBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/BoxLinksBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/BoxLinks.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/BoxLinks.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/HeroBanner.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/HeroBanner.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/DirectCommunityInvestment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/DirectCommunityInvestment.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/PopUpLink.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/PopUpLink.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/components/ProgressBar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/ProgressBar.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,14 +95,7 @@
       <workItem from="1667051863497" duration="37988000" />
       <workItem from="1667225512090" duration="9000" />
       <workItem from="1667948818563" duration="4749000" />
-      <workItem from="1668262533181" duration="5748000" />
-    </task>
-    <task id="LOCAL-00012" summary="Adding token for GSAP">
-      <created>1666180152096</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1666180152096</updated>
+      <workItem from="1668262533181" duration="6461000" />
     </task>
     <task id="LOCAL-00013" summary="Adding token for GSAP">
       <created>1666180465458</created>
@@ -445,7 +433,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668266590510</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="misc style updates">
+      <created>1668268533866</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1668268533866</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,7 +460,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Job post implementation" />
     <MESSAGE value="Basic styles for job post." />
     <MESSAGE value="Footer updates" />
     <MESSAGE value="Updating gitignore" />
@@ -490,7 +484,8 @@
     <MESSAGE value="updating links" />
     <MESSAGE value="misc. updates" />
     <MESSAGE value="Updating CSS for video banner. FML." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating CSS for video banner. FML." />
+    <MESSAGE value="misc style updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="misc style updates" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
