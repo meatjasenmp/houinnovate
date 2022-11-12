@@ -14,13 +14,18 @@
     height: 100%;
 }
 
+.box_links .link_icon {
+    width: 3rem;
+    height: 3rem;
+}
+
 .box_links a:hover .link_icon {
     transform: translateY(-20px);
 }
 
 .box_links article {
     padding: 1.5rem .7rem;
-    max-width: 35rem;
+    max-width: 40rem;
 }
 
 .box_link {

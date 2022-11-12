@@ -10,6 +10,7 @@ import { FiArrowUpRight } from "@react-icons/all-files/fi/FiArrowUpRight";
 import { accentColor } from "../styles/helpers";
 import { Link as ScrollLink } from "react-scroll";
 import { handleScroll } from "./helpers";
+import ArrowLinkIcon from "./ArrowLinkIcon";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -50,7 +51,7 @@ const BoxLinkContent = ({ content }: BoxLinkProps) => {
         </article>
       </div>
       <figure className={styles.link_icon}>
-        <FiArrowUpRight color={accentColor(backgroundColor)} size="3rem" />
+        <ArrowLinkIcon color={accentColor(backgroundColor)} />
       </figure>
     </div>
   );

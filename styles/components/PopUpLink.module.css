@@ -59,6 +59,11 @@
     font-size: 1.25rem;
 }
 
+.link_icon {
+    width: 3rem;
+    height: 3rem;
+}
+
 @media screen and (min-width: 990px) {
     .pop_up__link_container {
         margin-bottom: 0;

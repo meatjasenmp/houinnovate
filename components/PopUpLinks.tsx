@@ -1,6 +1,6 @@
 import { communityInvestmentsSelect_communityInvestments_edges_node } from "../pages/api/__generated__/communityInvestmentsSelect";
 import styles from "../styles/components/PopUpLink.module.css";
-import { FiArrowUpRight } from "@react-icons/all-files/fi/FiArrowUpRight";
+import ArrowLinkIcon from "./ArrowLinkIcon";
 import ProgressBar from "./ProgressBar";
 import { Colors } from "../styles/helpers";
 import { projectOpportunitiesSelect_projectBasedOpportunities_edges_node } from "../pages/api/__generated__/projectOpportunitiesSelect";
@@ -38,7 +38,7 @@ const PopUpLinks = ({ link, popUpType }: PopUpSelectProps) => {
         <div className={styles.content}>
           {alphanumericLabel && <span>{alphanumericLabel}.</span>}
           {title && <h2>{title}</h2>}
-          {showProgressLabel && progressLabel && <h5>{progressLabel}</h5>}
+          {showProgressLabel && progressLabel && <p>{progressLabel}</p>}
         </div>
         <div className={styles.progress}>
           <div className={styles.progress_content}>
@@ -46,7 +46,9 @@ const PopUpLinks = ({ link, popUpType }: PopUpSelectProps) => {
               <span className={styles.current_phase_text}>
                 {currentPhase} Phase
               </span>
-              <FiArrowUpRight color="black" size="3rem" />
+              <figure className={styles.link_icon}>
+                <ArrowLinkIcon color="black" />
+              </figure>
             </figure>
           </div>
           <ProgressBar
