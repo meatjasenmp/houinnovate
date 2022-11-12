@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { iONJobSelect_iONJobs_edges_node } from "../pages/api/__generated__/iONJobSelect";
-import styles from "../styles/components/JobLink.module.css";
+import { Opportunity } from "./JobLinks";
+import styles from "../../styles/components/JobLink.module.css";
 import React from "react";
-import ArrowLinkIcon from "./ArrowLinkIcon";
+import ArrowLinkIcon from "../ArrowLinkIcon";
 
 interface JobLinkProps {
-  job: iONJobSelect_iONJobs_edges_node | null | undefined;
+  job: Opportunity;
 }
 
 export const JobLink = ({ job }: JobLinkProps) => {

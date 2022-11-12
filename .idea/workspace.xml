@@ -4,18 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="misc style updates">
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Basic implementation of jobs load more.">
+      <change afterPath="$PROJECT_DIR$/components/SelectComponentTwo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/workWithIon/JobLinks.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/workWithIon/JobSelect.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/__generated__/allOpportunities.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/__generated__/jobCategories.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/__generated__/opportunitiesByCategory.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/opportunities.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/JobSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/JobSelect.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/PopUpLinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/PopUpLinks.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/iONJobSelect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/__generated__/iONJobSelect.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/community_investments_select.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/community_investments_select.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/job_select.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/job_select.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/project_opportunities_select.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/project_opportunities_select.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/JobLink.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/JobLink.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ComponentBlocks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ComponentBlocks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/JobLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/JobLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/JobSelect.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/WorkWithIon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/WorkWithIon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/iONJobSelect.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/job_select.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/job_categories.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +34,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="CSS File" />
+        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
       </list>
     </option>
@@ -80,6 +86,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components/workWithIon" />
       <recent name="$PROJECT_DIR$/pages/opportunities/[id]" />
     </key>
   </component>
@@ -102,21 +109,7 @@
       <workItem from="1667051863497" duration="37988000" />
       <workItem from="1667225512090" duration="9000" />
       <workItem from="1667948818563" duration="4749000" />
-      <workItem from="1668262533181" duration="21303000" />
-    </task>
-    <task id="LOCAL-00016" summary="Adding regular gsap until I can figure out env variables.">
-      <created>1666181124735</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1666181124735</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Installing gsap from zip">
-      <created>1666181516483</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1666181516483</updated>
+      <workItem from="1668262533181" duration="32861000" />
     </task>
     <task id="LOCAL-00018" summary="Removing package-lock">
       <created>1666181624980</created>
@@ -447,7 +440,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668275367410</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Basic implementation of jobs load more.">
+      <created>1668285782007</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1668285782007</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Basic implementation of jobs load more.">
+      <created>1668285821286</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1668285821286</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -467,7 +474,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Basic styles for job post." />
     <MESSAGE value="Footer updates" />
     <MESSAGE value="Updating gitignore" />
     <MESSAGE value="Full screen video when 'watch film' is clicked" />
@@ -492,7 +498,8 @@
     <MESSAGE value="misc. updates" />
     <MESSAGE value="Updating CSS for video banner. FML." />
     <MESSAGE value="misc style updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="misc style updates" />
+    <MESSAGE value="Basic implementation of jobs load more." />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic implementation of jobs load more." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

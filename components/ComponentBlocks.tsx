@@ -4,7 +4,7 @@ import BoxLinksBlock from "./BoxLinksBlock";
 import ContentBlock from "./ContentBlock";
 import ContentBlockStylized from "./ContentBlockStylized";
 import Phases from "./Phases";
-import WorkWithIon from "./WorkWithIon";
+import WorkWithIon from "./workWithIon/WorkWithIon";
 import ProjectBasedOpportunities from "./ProjectBasedOpportunities";
 import DirectCommunityInvestment from "./DirectCommunityInvestment";
 import {
