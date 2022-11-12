@@ -43,7 +43,7 @@ const BoxLinkContent = ({ content }: BoxLinkProps) => {
     <div className={styles.box_link}>
       <div className={styles.box_link_content}>
         <figure className={styles.block_link__image}>
-          <ImageBlock image={image} height="590" width="1212" />
+          <ImageBlock image={image} priority={true} height="590" width="1212" />
         </figure>
         <article>
           <ContentEditor content={boxLinkContent} />

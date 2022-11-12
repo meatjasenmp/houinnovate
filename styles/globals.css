@@ -109,3 +109,7 @@
     right: 50%;
     width: 100vw;
 }
+
+.loading {
+    @apply fixed top-0 left-0 w-full h-full z-50 text-white bg-black flex justify-center items-center;
+}

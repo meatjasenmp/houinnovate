@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="positioning hamburger button" />
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="updating links">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/BoxLinksBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/BoxLinksBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ImageBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ImageBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,14 +96,9 @@
       <workItem from="1666451291911" duration="16368000" />
       <workItem from="1666824983443" duration="10718000" />
       <workItem from="1666918975064" duration="8106000" />
-      <workItem from="1667051863497" duration="37392000" />
-    </task>
-    <task id="LOCAL-00008" summary="Humble beginnings of hero banner animation.">
-      <created>1666178838140</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1666178838141</updated>
+      <workItem from="1667051863497" duration="37988000" />
+      <workItem from="1667225512090" duration="9000" />
+      <workItem from="1667948818563" duration="4749000" />
     </task>
     <task id="LOCAL-00009" summary="Adding token for GSAP">
       <created>1666179319998</created>
@@ -432,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667156745732</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="updating links">
+      <created>1667157234615</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1667157234615</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,7 +463,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="ION jobs select implementation" />
     <MESSAGE value="Data setup for job posting page" />
     <MESSAGE value="Basic implementation of job posting sidebar. Now passing components into global Layout.tsx" />
     <MESSAGE value="Job post implementation" />
@@ -477,7 +487,8 @@
     <MESSAGE value="Misc. style updates" />
     <MESSAGE value="target blank for download links" />
     <MESSAGE value="positioning hamburger button" />
-    <option name="LAST_COMMIT_MESSAGE" value="positioning hamburger button" />
+    <MESSAGE value="updating links" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating links" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import Layout from "../components/Layout";
+import React from "react";
 
 const client = new ApolloClient({
   uri: "https://innovate.blackgraystudio.com/graphql",

@@ -7,11 +7,7 @@ import React from "react";
 
 const Home: NextPage = () => {
   const getPage = usePage("9");
-  const { data, error, loading } = getPage;
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  const { data, error } = getPage;
 
   if (error) {
     if (error) {

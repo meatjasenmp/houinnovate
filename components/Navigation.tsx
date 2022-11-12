@@ -1,4 +1,4 @@
-import { slide as Menu } from "react-burger-menu";
+import { slide as Menu, State } from "react-burger-menu";
 import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
 import ContentEditor from "./ContentEditor";
@@ -34,7 +34,7 @@ interface BlockLinkProps {
     | null;
 }
 
-const handleStateChange = (state: any) => {
+const handleStateChange = (state: State) => {
   if (state.isOpen) {
     document.body.classList.add("no-scroll");
   }
@@ -53,7 +53,11 @@ const AnnualReport = ({
   if (annualReportDownload && annualReportDownload.mediaItemUrl) {
     return (
       <div className={styles.annual_report}>
-        <a href={annualReportDownload.mediaItemUrl} target="_blank" rel="noreferrer">
+        <a
+          href={annualReportDownload.mediaItemUrl}
+          target="_blank"
+          rel="noreferrer"
+        >
           <span>{report?.annualReportTitle}</span>
           <FiDownload />
         </a>
