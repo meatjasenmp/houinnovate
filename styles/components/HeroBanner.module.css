@@ -1,5 +1,5 @@
 .hero__banner_section {
-    height: 100vh;
+    height: 660px;
     overflow: hidden;
     margin-bottom: 1rem;
 }
@@ -53,20 +53,22 @@
 }
 
 .video {
-   position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
+    height: 660px;
 }
 
 .video iframe {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    object-fit: fill;
+    transform: translate(-50%, -50%);
+    width: 100vw !important;
+    height: 100vh !important;
 }
 
-.content__wrap {
-    position: relative;
-}
+/*.content__wrap {*/
+/*    position: relative;*/
+/*}*/
 
 .content__wrap .content__block {
     position: absolute;
@@ -95,7 +97,7 @@
 }
 
 .exit_screen_button:hover svg {
-    fill: black;
+    fill: white;
 }
 
 @media screen and (min-width: 414px) {
@@ -105,10 +107,6 @@
 }
 
 @media screen and (min-width: 768px) {
-    .hero__banner_section {
-        height: 600px;
-    }
-
     .content__wrap {
         max-width: 35rem;
         margin: 0 5.5rem;

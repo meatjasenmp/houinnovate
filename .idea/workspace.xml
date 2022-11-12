@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="updating links">
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="misc. updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/BoxLinksBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/BoxLinksBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ImageBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ImageBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/HeroBanner.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/HeroBanner.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,13 +93,7 @@
       <workItem from="1667051863497" duration="37988000" />
       <workItem from="1667225512090" duration="9000" />
       <workItem from="1667948818563" duration="4749000" />
-    </task>
-    <task id="LOCAL-00009" summary="Adding token for GSAP">
-      <created>1666179319998</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1666179319998</updated>
+      <workItem from="1668262533181" duration="3944000" />
     </task>
     <task id="LOCAL-00010" summary="Adding token for GSAP">
       <created>1666179605496</created>
@@ -443,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667157234615</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="misc. updates">
+      <created>1668262778327</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1668262778327</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -463,7 +458,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Data setup for job posting page" />
     <MESSAGE value="Basic implementation of job posting sidebar. Now passing components into global Layout.tsx" />
     <MESSAGE value="Job post implementation" />
     <MESSAGE value="Basic styles for job post." />
@@ -488,10 +482,23 @@
     <MESSAGE value="target blank for download links" />
     <MESSAGE value="positioning hamburger button" />
     <MESSAGE value="updating links" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating links" />
+    <MESSAGE value="misc. updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="misc. updates" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/components/HeroBanner.tsx</url>
+          <line>140</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
