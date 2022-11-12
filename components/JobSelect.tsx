@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import styles from "../styles/components/JobLink.module.css";
 
 const JobSelect = () => {
-  const { data, loading, error, fetchMore } = useJobSelect(5);
+  const { data, loading, error, fetchMore } = useJobSelect();
   const [selectedOptions, setSelectedOptions] = useState<
     Options[] | null | undefined
   >();
