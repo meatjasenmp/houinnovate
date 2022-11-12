@@ -3,6 +3,7 @@ import JobSelect from "./JobSelect";
 import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_WorkWithIon } from "../pages/api/__generated__/page";
 import styles from "../styles/components/WorkWithIon.module.css";
 import { useEffect, useRef } from "react";
+import ArrowRightIcon from "./ArrowRightIcon";
 
 interface WorkWithIonProps {
   blockContent: page_page_components_componentBlocks_Page_Components_ComponentBlocks_WorkWithIon;

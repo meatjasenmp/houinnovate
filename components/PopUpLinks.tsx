@@ -26,9 +26,21 @@ const PopUpLinks = ({ link, popUpType }: PopUpSelectProps) => {
   const { currentPhase, progressLabel, showProgressLabel, progressPercentage } =
     progress || {};
 
+  const popUpBackgroundColor = () => {
+    if (popUpType === PopUpTypes.OPPORTUNITY && currentPhase === "completed") {
+      return styles.pop_up__link_opportunity_completed;
+    }
+    if (popUpType === PopUpTypes.INVESTMENT && currentPhase === "completed") {
+      return styles.pop_up__link_opportunity_completed;
+    }
+  };
+
+  console.log(currentPhase);
+
   const popUpLinkClassNames = [
     styles.pop_up__link,
     styles.pop_up__link_container,
+    popUpBackgroundColor(),
     "pop_up__link",
   ].join(" ");
 
@@ -47,7 +59,7 @@ const PopUpLinks = ({ link, popUpType }: PopUpSelectProps) => {
                 {currentPhase} Phase
               </span>
               <figure className={styles.link_icon}>
-                <ArrowLinkIcon color="black" />
+                <ArrowLinkIcon />
               </figure>
             </figure>
           </div>

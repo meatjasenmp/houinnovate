@@ -41,6 +41,22 @@
     grid-auto-rows: 1fr;
 }
 
+.pop_up__link_opportunity_completed {
+    @apply bg-innovate-blue text-white;
+}
+
+.pop_up__link_opportunity_completed svg {
+    fill: white;
+}
+
+.pop_up__link_investment_completed {
+    @apply bg-innovate-neon text-black;
+}
+
+.pop_up__link_investment_completed svg {
+    fill: black;
+}
+
 .pop_up__links_count {
     margin-top: .6rem;
     display: flex;
