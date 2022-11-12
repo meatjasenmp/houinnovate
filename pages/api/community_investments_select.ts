@@ -5,7 +5,7 @@ export const useCommunityInvestmentsSelect = () => {
   const { data, loading, error } = useQuery<communityInvestmentsSelect>(
     gql`
       query communityInvestmentsSelect {
-        communityInvestments {
+        communityInvestments(first: 50) {
           edges {
             node {
               databaseId

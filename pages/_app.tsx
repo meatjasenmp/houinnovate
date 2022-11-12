@@ -3,10 +3,21 @@ import type { AppProps } from "next/app";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import Layout from "../components/Layout";
 import React from "react";
+import { relayStylePagination } from "@apollo/client/utilities";
+
+const cache = new InMemoryCache({
+  typePolicies: {
+    Query: {
+      fields: {
+        iONJobs: relayStylePagination(),
+      },
+    },
+  },
+});
 
 const client = new ApolloClient({
-  uri: "https://innovate.blackgraystudio.com/graphql",
-  cache: new InMemoryCache(),
+  uri: process.env.NEXT_PUBLIC_API_URL,
+  cache: cache,
 });
 
 function MyApp({ Component, pageProps }: AppProps) {

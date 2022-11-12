@@ -41,3 +41,7 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.show_more {
+  margin-top: 1rem;
+}

@@ -35,8 +35,6 @@ const PopUpLinks = ({ link, popUpType }: PopUpSelectProps) => {
     }
   };
 
-  console.log(currentPhase);
-
   const popUpLinkClassNames = [
     styles.pop_up__link,
     styles.pop_up__link_container,

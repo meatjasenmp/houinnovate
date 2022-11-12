@@ -7,13 +7,15 @@ import React from "react";
 
 const Home: NextPage = () => {
   const getPage = usePage("9");
-  const { data, error } = getPage;
+  const { data, error, loading } = getPage;
 
   if (error) {
     if (error) {
       return <div>Error: {error.message}</div>;
     }
   }
+
+  if (loading) return <></>;
 
   const { components } = data?.page as page_page;
   const { title, description } = data?.generalSettings as page_generalSettings;

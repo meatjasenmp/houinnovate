@@ -7,6 +7,18 @@
 // GraphQL query operation: iONJobSelect
 // ====================================================
 
+export interface iONJobSelect_iONJobs_pageInfo {
+  __typename: "WPPageInfo";
+  /**
+   * When paginating forwards, the cursor to continue.
+   */
+  endCursor: string | null;
+  /**
+   * When paginating forwards, are there more items?
+   */
+  hasNextPage: boolean;
+}
+
 export interface iONJobSelect_iONJobs_edges_node_jobPosting_metaData_jobType {
   __typename: "JobCategory";
   /**
@@ -56,6 +68,10 @@ export interface iONJobSelect_iONJobs_edges {
 export interface iONJobSelect_iONJobs {
   __typename: "RootQueryToIONJobConnection";
   /**
+   * Information about pagination in a connection.
+   */
+  pageInfo: iONJobSelect_iONJobs_pageInfo | null;
+  /**
    * Edges for the RootQueryToIONJobConnection connection
    */
   edges: (iONJobSelect_iONJobs_edges | null)[] | null;
@@ -66,4 +82,9 @@ export interface iONJobSelect {
    * Connection between the RootQuery type and the IONJob type
    */
   iONJobs: iONJobSelect_iONJobs | null;
+}
+
+export interface iONJobSelectVariables {
+  first?: number | null;
+  after?: string | null;
 }

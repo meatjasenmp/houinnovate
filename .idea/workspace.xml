@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="misc style updates">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ArrowLinkIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ArrowLinkIcon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ArrowRightIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ArrowRightIcon.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/JobSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/JobSelect.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/WorkWithIon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/WorkWithIon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/__generated__/page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/WorkWithIon.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/WorkWithIon.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/PopUpLinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/PopUpLinks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/iONJobSelect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/__generated__/iONJobSelect.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/community_investments_select.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/community_investments_select.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/job_select.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/job_select.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/project_opportunities_select.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/project_opportunities_select.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/JobLink.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/JobLink.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,14 +102,7 @@
       <workItem from="1667051863497" duration="37988000" />
       <workItem from="1667225512090" duration="9000" />
       <workItem from="1667948818563" duration="4749000" />
-      <workItem from="1668262533181" duration="11154000" />
-    </task>
-    <task id="LOCAL-00015" summary="Adding regular gsap until I can figure out env variables.">
-      <created>1666180785761</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1666180785761</updated>
+      <workItem from="1668262533181" duration="21303000" />
     </task>
     <task id="LOCAL-00016" summary="Adding regular gsap until I can figure out env variables.">
       <created>1666181124735</created>
@@ -444,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668273016948</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="misc style updates">
+      <created>1668275367410</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1668275367410</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

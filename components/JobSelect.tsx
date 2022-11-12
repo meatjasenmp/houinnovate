@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import styles from "../styles/components/JobLink.module.css";
 
 const JobSelect = () => {
-  const { data, loading, error } = useJobSelect();
+  const { data, loading, error, fetchMore } = useJobSelect(5);
   const [selectedOptions, setSelectedOptions] = useState<
     Options[] | null | undefined
   >();
@@ -20,32 +20,10 @@ const JobSelect = () => {
   >();
 
   useEffect(() => {
-    setSelectedJobs(findSelectedJobs(iONJobs?.edges));
-  }, [selectedOptions]);
-
-  const findSelectedJobs = (
-    jobs: (iONJobSelect_iONJobs_edges | null)[] | null | undefined
-  ) => {
-    if (!jobs) return;
-
-    if (selectedOption?.value === "all") {
-      return jobs;
+    if (data?.iONJobs?.edges) {
+      setSelectedJobs(data.iONJobs.edges);
     }
-
-    const array: iONJobSelect_iONJobs_edges[] = [];
-
-    jobs.find((edge) => {
-      if (!edge?.node?.jobPosting?.metaData?.jobType?.slug) return;
-
-      if (
-        edge.node.jobPosting.metaData.jobType.slug === selectedOption?.value
-      ) {
-        array.push(edge);
-      }
-    });
-
-    return array;
-  };
+  }, [data]);
 
   if (loading || error || !data) return <></>;
 
@@ -58,6 +36,34 @@ const JobSelect = () => {
 
     jobsArray.push({ value: slug, label: name });
   });
+
+  const ShowMoreButton = () => {
+    if (data?.iONJobs?.pageInfo?.hasNextPage) {
+      return (
+        <div className={styles.show_more}>
+          <button
+            className={styles.showMoreButton}
+            onClick={() => {
+              fetchMore({
+                variables: {
+                  after: data?.iONJobs?.pageInfo?.endCursor,
+                  last: null,
+                  before: null,
+                },
+              }).then((res) => {
+                if (res?.data?.iONJobs?.edges) {
+                  console.log(res.data.iONJobs.edges);
+                }
+              });
+            }}
+          >
+            Show More
+          </button>
+        </div>
+      );
+    }
+    return <></>;
+  };
 
   return (
     <section>
@@ -79,6 +85,7 @@ const JobSelect = () => {
             <JobLink key={index} job={job?.node} />
           ))}
       </div>
+      <ShowMoreButton />
     </section>
   );
 };

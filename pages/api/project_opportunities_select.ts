@@ -6,7 +6,7 @@ export const useProjectOpportunitiesSelect = () => {
   const { data, loading, error } = useQuery<projectOpportunitiesSelect>(
     gql`
       query projectOpportunitiesSelect {
-        projectBasedOpportunities {
+        projectBasedOpportunities(first: 50) {
           edges {
             node {
               databaseId
