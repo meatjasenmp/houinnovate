@@ -60,7 +60,6 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    object-fit: fill;
     transform: translate(-50%, -50%);
     width: 100vw !important;
     height: 100vh !important;
