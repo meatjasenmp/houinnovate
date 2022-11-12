@@ -75,6 +75,8 @@ export const usePage = (id: string) => {
               ... on Page_Components_ComponentBlocks_WorkWithIon {
                 scrollId
                 workWithIonContent: content
+                selectText
+                cta
               }
               ... on Page_Components_ComponentBlocks_ProjectBasedOpportunities {
                 scrollId

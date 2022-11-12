@@ -11,8 +11,8 @@ const ArrowLinkIcon = ({ color }: { color?: string | null }) => {
       <path
         data-name="Path 70"
         d="M40.497 15.638H16.07l-.001 4.85h21l-23.291 23.29 3.428 3.428 23.29-23.29.001 21 4.847-.003.002-24.426v-4.85Z"
-        fill={color || ""}
-        stroke={color || ""}
+        fill={color ? String(color) : "black"}
+        stroke={color ? String(color) : "black"}
       />
     </svg>
   );

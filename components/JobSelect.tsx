@@ -51,7 +51,7 @@ const JobSelect = () => {
 
   const { iONJobs } = data;
 
-  const jobsArray: Options[] = [{ value: "all", label: "All Jobs" }];
+  const jobsArray: Options[] = [{ value: "all", label: "All Opportunities" }];
 
   iONJobs?.edges?.map((job) => {
     const { slug, name } = job?.node?.jobPosting?.metaData?.jobType || {};
@@ -61,7 +61,7 @@ const JobSelect = () => {
 
   return (
     <section>
-      <div style={{ marginTop: "2rem", maxWidth: "1170px" }}>
+      <div style={{ maxWidth: "1170px" }}>
         <SelectComponent
           options={optionSelectItems(jobsArray)}
           setSelectedOptions={setSelectedOptions}

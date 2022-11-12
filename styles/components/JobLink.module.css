@@ -27,6 +27,10 @@
   background: #F54932;
 }
 
+.job_link_arrow {
+  width: 3rem;
+}
+
 .jobLink:hover,
 .jobLink:hover .job_link_arrow {
   color: white;

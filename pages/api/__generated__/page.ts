@@ -130,6 +130,8 @@ export interface page_page_components_componentBlocks_Page_Components_ComponentB
   __typename: "Page_Components_ComponentBlocks_WorkWithIon";
   scrollId: string | null;
   workWithIonContent: string | null;
+  selectText: string | null;
+  cta: string | null;
 }
 
 export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_ProjectBasedOpportunities_opportunitiesCreated {

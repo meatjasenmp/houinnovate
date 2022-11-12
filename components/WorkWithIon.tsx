@@ -10,6 +10,7 @@ interface WorkWithIonProps {
 }
 const WorkWithIon = ({ blockContent }: WorkWithIonProps) => {
   const contentWrapper = useRef<HTMLDivElement>(null);
+  const { workWithIonContent, cta, scrollId, selectText } = blockContent;
 
   useEffect(() => {
     if (contentWrapper.current) {
@@ -33,11 +34,20 @@ const WorkWithIon = ({ blockContent }: WorkWithIonProps) => {
     }
   }, []);
   return (
-    <div className={styles.work_with_ion} id={String(blockContent.scrollId)}>
+    <div className={styles.work_with_ion} id={String(scrollId)}>
       <div className={styles.work_with_ion_wrapper} ref={contentWrapper}>
         <div className={styles.work_with_ion__content}>
-          <ContentEditor content={blockContent.workWithIonContent} />
+          <div className={styles.ion_header}>
+            <h1>{workWithIonContent}</h1>
+          </div>
+          <div className={styles.cta}>
+            <figure className={styles.cta_icon}>
+              <ArrowRightIcon />
+            </figure>
+            <ContentEditor content={cta} />
+          </div>
         </div>
+        <span className={styles.select_text}>{selectText}</span>
         <JobSelect />
       </div>
     </div>

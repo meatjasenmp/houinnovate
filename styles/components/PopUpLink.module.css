@@ -45,16 +45,18 @@
     @apply bg-innovate-blue text-white;
 }
 
-.pop_up__link_opportunity_completed svg {
+.pop_up__link_opportunity_completed svg path {
     fill: white;
+    stroke: white;
 }
 
 .pop_up__link_investment_completed {
     @apply bg-innovate-neon text-black;
 }
 
-.pop_up__link_investment_completed svg {
+.pop_up__link_investment_completed svg path {
     fill: black;
+    stroke: black;
 }
 
 .pop_up__links_count {
