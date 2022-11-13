@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Style updates">
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="UI updates">
+      <change afterPath="$PROJECT_DIR$/components/NewsLetterSubscribe.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/components/NewsLetter.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SecondaryNavigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SecondaryNavigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ArrowRightIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ArrowRightIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SiteFooter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SiteFooter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/__generated__/page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/SiteFooter.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/SiteFooter.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +28,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -96,14 +105,7 @@
       <workItem from="1667948818563" duration="4749000" />
       <workItem from="1668262533181" duration="41731000" />
       <workItem from="1668346884515" duration="52000" />
-      <workItem from="1668346974048" duration="10889000" />
-    </task>
-    <task id="LOCAL-00033" summary="Full screen video when 'watch film' is clicked">
-      <created>1667061056154</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1667061056154</updated>
+      <workItem from="1668346974048" duration="14920000" />
     </task>
     <task id="LOCAL-00034" summary="Video mutes when full screen is closed">
       <created>1667061941452</created>
@@ -441,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668357832174</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="UI updates">
+      <created>1668358436724</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1668358436725</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,7 +470,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Implementing load page and scroll" />
     <MESSAGE value="Updating logic for screenfull" />
     <MESSAGE value="Box link hover update." />
     <MESSAGE value="Scroll to for box links" />
@@ -486,7 +494,8 @@
     <MESSAGE value="Basic implementation of opening modal on click." />
     <MESSAGE value="Scroll to top arrow." />
     <MESSAGE value="Style updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Style updates" />
+    <MESSAGE value="UI updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI updates" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

@@ -147,6 +147,7 @@ export const usePage = (id: string) => {
                   altText
                 }
                 address
+                newsletterCta
                 socialMedia {
                   header
                   socialMediaLink {

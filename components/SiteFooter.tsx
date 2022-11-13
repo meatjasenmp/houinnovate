@@ -3,6 +3,7 @@ import Link from "next/link";
 import UpArrowIcon from "./UpArrowIcon";
 import ArrowLinkIcon from "./ArrowLinkIcon";
 import { animateScroll } from "react-scroll";
+import NewsLetterSubscribe from "./NewsLetterSubscribe";
 import {
   page_siteOptionsPage_siteFooter_footerBlocks,
   page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_GetInTouch,
@@ -18,6 +19,7 @@ enum FooterComponents {
   GET_IN_TOUCH = "SiteOptionsPage_Sitefooter_FooterBlocks_GetInTouch",
   ION_DISTRICT = "SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict",
   RICE_UNIVERSITY = "SiteOptionsPage_Sitefooter_FooterBlocks_RiceUniversity",
+  NEWSLETTER = "SiteOptionsPage_Newsletter",
 }
 
 interface SiteFooterProps {
@@ -53,7 +55,8 @@ const GetInTouch = ({ blockContent }: GetInTouchProps) => {
 };
 
 const IonDistrict = ({ blockContent }: IonDistrictProps) => {
-  const { ionLogo, address, socialMedia, ctaLinks } = blockContent;
+  const { ionLogo, address, socialMedia, ctaLinks, newsletterCta } =
+    blockContent;
   return (
     <div className={styles.footer_column}>
       <figure className={styles.logo}>
@@ -81,6 +84,12 @@ const IonDistrict = ({ blockContent }: IonDistrictProps) => {
             </figure>
           </div>
         ))}
+      </section>
+      <section className={styles.newsletter_form}>
+        <article className={styles.newsletter_cta}>
+          <ContentEditor content={newsletterCta} />
+        </article>
+        <NewsLetterSubscribe />
       </section>
     </div>
   );

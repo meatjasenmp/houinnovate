@@ -300,6 +300,7 @@ export interface page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Si
   __typename: "SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict";
   ionLogo: page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict_ionLogo | null;
   address: string | null;
+  newsletterCta: string | null;
   socialMedia: page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict_socialMedia | null;
   ctaLinks: (page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict_ctaLinks | null)[] | null;
 }

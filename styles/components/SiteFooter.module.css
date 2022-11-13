@@ -116,6 +116,19 @@
     bottom: 5rem;
 }
 
+.newsletter_form {
+    margin-top: 2rem;
+}
+
+.newsletter_cta {
+    margin-bottom: 1.5rem;
+}
+
+.newsletter_cta h4 {
+    font-size: 1.15rem;
+    font-family: Sohne-Kraftig-Bold, sans-serif;
+}
+
 @media screen and (min-width: 990px) {
     .site_footer_wrapper {
         display: flex;
