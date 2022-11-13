@@ -9,7 +9,6 @@ const OPPORTUNITIES_BY_CATEGORY = gql`
       after: $after
       where: {
         taxQuery: {
-          relation: OR
           taxArray: [
             { terms: $terms, taxonomy: JOBCATEGORY, operator: IN, field: SLUG }
           ]
@@ -51,6 +50,7 @@ export const useJobOpportunitiesByCategory = (category: string) => {
   const [getOpportunities, { loading, error, data, fetchMore }] =
     useLazyQuery<opportunitiesByCategory>(OPPORTUNITIES_BY_CATEGORY, {
       fetchPolicy: "no-cache",
+      nextFetchPolicy: "network-only",
       variables: {
         first: 5,
         terms: category,
@@ -67,21 +67,19 @@ export const useJobOpportunitiesByCategory = (category: string) => {
 };
 
 export const useJobOpportunities = () => {
-  const { data, loading, error, fetchMore } = useQuery<allOpportunities>(
-    OPPORTUNITIES,
-    {
-      fetchPolicy: "no-cache",
+  const { data, loading, error, fetchMore, refetch } =
+    useQuery<allOpportunities>(OPPORTUNITIES, {
       variables: {
         first: 5,
         after: null,
       },
-    }
-  );
+    });
 
   return {
     data,
     loading,
     error,
     fetchMore,
+    refetch,
   };
 };

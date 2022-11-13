@@ -56,9 +56,7 @@ const SelectComponentTwo = ({
 
   const handleSelect = (selected: OnChangeValue<Options, false>) => {
     setSelectedOption(selected as Options);
-    if (selected?.value !== "all") {
-      setCategory(selected?.value);
-    }
+    setCategory(selected?.value);
   };
 
   return (

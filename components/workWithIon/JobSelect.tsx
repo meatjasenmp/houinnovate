@@ -21,20 +21,18 @@ const JobSelect = () => {
     string | null | undefined
   >();
 
-  const { data, loading, error } = useJobCategories();
+  const { data: categoriesData, loading, error } = useJobCategories();
   const {
     data: opportunitiesData,
     loading: opportunitiesLoading,
     error: opportunitiesError,
-    fetchMore,
+    fetchMore: fetchMoreOpportunities,
+    refetch: refetchOpportunities,
   } = useJobOpportunities();
 
-  const {
-    data: opportunitiesByCategoryData,
-    loading: opportunitiesByCategoryLoading,
-    error: opportunitiesByCategoryError,
-    getOpportunities,
-  } = useJobOpportunitiesByCategory(String(currentCategory));
+  const { getOpportunities } = useJobOpportunitiesByCategory(
+    String(currentCategory)
+  );
 
   const opportunityCategories: Options[] = [];
 
@@ -51,11 +49,11 @@ const JobSelect = () => {
   };
 
   useEffect(() => {
-    if (data) {
+    if (categoriesData) {
       opportunityCategories.push({ value: "all", label: "All Opportunities" });
-      setCategories(data);
+      setCategories(categoriesData);
     }
-  }, [data, opportunityCategories]);
+  }, [categoriesData, opportunityCategories]);
 
   useEffect(() => {
     if (opportunitiesData) {
@@ -64,17 +62,11 @@ const JobSelect = () => {
   }, [opportunitiesData]);
 
   useEffect(() => {
-    if (opportunitiesByCategoryData) {
-      setOpportunities(opportunitiesByCategoryData);
-    }
-  }, [opportunitiesByCategoryData]);
-
-  useEffect(() => {
-    if (currentCategory !== "all") {
+    if (currentCategory) {
       getOpportunities().then((data) => {
+        console.log(data.data);
         setOpportunities(data.data);
       });
-      return;
     }
   }, [currentCategory]);
 
@@ -102,7 +94,7 @@ const JobSelect = () => {
               className={styles.showMoreButton}
               onClick={() => {
                 setShowLoader(true);
-                fetchMore({
+                fetchMoreOpportunities({
                   variables: {
                     first: 5,
                     after: opportunitiesData?.iONJobs?.pageInfo?.endCursor,
