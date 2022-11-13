@@ -55,16 +55,24 @@ const JobSelect = () => {
       opportunityCategories.push({ value: "all", label: "All Opportunities" });
       setCategories(data);
     }
-    if (opportunitiesData) {
-      setOpportunities(opportunitiesData);
-    }
   }, [data, opportunityCategories]);
 
   useEffect(() => {
+    if (opportunitiesData) {
+      setOpportunities(opportunitiesData);
+    }
+  }, [opportunitiesData]);
+
+  useEffect(() => {
+    if (opportunitiesByCategoryData) {
+      setOpportunities(opportunitiesByCategoryData);
+    }
+  }, [opportunitiesByCategoryData]);
+
+  useEffect(() => {
     if (currentCategory) {
-      console.log(currentCategory);
       getOpportunities().then((data) => {
-        console.log(data);
+        setOpportunities(data.data);
       });
     }
   }, [currentCategory]);
