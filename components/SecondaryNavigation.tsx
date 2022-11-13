@@ -25,7 +25,7 @@ const SecondaryNavigation = ({ nav }: SecondaryNavigationProps) => {
     <div className={navigationStyles}>
       <ul>
         {nav.navigation?.sectionLinks?.map((link, index) => {
-          if (isHome) {
+          if (isHome && link?.label !== "Home") {
             return (
               <li key={index} className={styles.section_link_list_item}>
                 <ScrollLink
@@ -41,19 +41,21 @@ const SecondaryNavigation = ({ nav }: SecondaryNavigationProps) => {
               </li>
             );
           }
-          return (
-            <li key={index} className={styles.section_link_list_item}>
-              <Link
-                href={{
-                  pathname: "/",
-                  query: { scrollTo: `${link?.anchorLabel}` },
-                }}
-                className={styles.section_link}
-              >
-                {link?.label}
-              </Link>
-            </li>
-          );
+          if (link?.label !== "Home") {
+            return (
+              <li key={index} className={styles.section_link_list_item}>
+                <Link
+                  href={{
+                    pathname: "/",
+                    query: { scrollTo: `${link?.anchorLabel}` },
+                  }}
+                  className={styles.section_link}
+                >
+                  {link?.label}
+                </Link>
+              </li>
+            );
+          }
         })}
       </ul>
       <div />
