@@ -6,6 +6,7 @@ interface SelectComponentProps {
   options: Options[];
   selectedOption: Options | null | undefined;
   setSelectedOption: Dispatch<SetStateAction<Options | undefined>>;
+  setCategory: Dispatch<SetStateAction<string | null | undefined>>;
 }
 
 const selectStyles = {
@@ -47,6 +48,7 @@ const SelectComponentTwo = ({
   options,
   selectedOption,
   setSelectedOption,
+  setCategory,
 }: SelectComponentProps) => {
   useEffect(() => {
     setSelectedOption(options[0]);
@@ -54,6 +56,9 @@ const SelectComponentTwo = ({
 
   const handleSelect = (selected: OnChangeValue<Options, false>) => {
     setSelectedOption(selected as Options);
+    if (selected?.value !== "all") {
+      setCategory(selected?.value);
+    }
   };
 
   return (

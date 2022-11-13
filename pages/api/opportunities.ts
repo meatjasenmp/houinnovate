@@ -51,21 +51,19 @@ const OPPORTUNITIES = gql`
 export const useJobOpportunitiesByCategory = (category: string) => {
   const [getOpportunities, { loading, error, data, fetchMore }] =
     useLazyQuery<opportunitiesByCategory>(OPPORTUNITIES_BY_CATEGORY, {
+      fetchPolicy: "no-cache",
       variables: {
         first: 5,
         terms: category,
       },
     });
 
-  useEffect(() => {
-    getOpportunities();
-  }, []);
-
   return {
     data,
     loading,
     error,
     fetchMore,
+    getOpportunities,
   };
 };
 
@@ -73,6 +71,7 @@ export const useJobOpportunities = () => {
   const { data, loading, error, fetchMore } = useQuery<allOpportunities>(
     OPPORTUNITIES,
     {
+      fetchPolicy: "no-cache",
       variables: {
         first: 5,
         after: null,

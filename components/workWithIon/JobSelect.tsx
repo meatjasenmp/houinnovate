@@ -1,13 +1,26 @@
 import { useJobCategories } from "../../pages/api/job_categories";
-import { useJobOpportunities } from "../../pages/api/opportunities";
+import {
+  useJobOpportunities,
+  useJobOpportunitiesByCategory,
+} from "../../pages/api/opportunities";
 import React, { useEffect, useState } from "react";
 import SelectComponentTwo from "../SelectComponentTwo";
 import { Options } from "../helpers";
 import { jobCategories } from "../../pages/api/__generated__/jobCategories";
 import JobLinks from "./JobLinks";
 import styles from "../../styles/components/JobLink.module.css";
+import { allOpportunities } from "../../pages/api/__generated__/allOpportunities";
 
 const JobSelect = () => {
+  const [selectedOption, setSelectedOption] = useState<Options>();
+  const [showLoadLoader, setShowLoader] = useState<boolean>(false);
+  const [opportunities, setOpportunities] = useState<
+    allOpportunities | undefined
+  >();
+  const [currentCategory, setCurrentCategory] = useState<
+    string | null | undefined
+  >();
+
   const { data, loading, error } = useJobCategories();
   const {
     data: opportunitiesData,
@@ -15,8 +28,13 @@ const JobSelect = () => {
     error: opportunitiesError,
     fetchMore,
   } = useJobOpportunities();
-  const [selectedOption, setSelectedOption] = useState<Options>();
-  const [showLoadLoader, setShowLoader] = useState<boolean>(false);
+
+  const {
+    data: opportunitiesByCategoryData,
+    loading: opportunitiesByCategoryLoading,
+    error: opportunitiesByCategoryError,
+    getOpportunities,
+  } = useJobOpportunitiesByCategory(String(currentCategory));
 
   const opportunityCategories: Options[] = [];
 
@@ -37,7 +55,19 @@ const JobSelect = () => {
       opportunityCategories.push({ value: "all", label: "All Opportunities" });
       setCategories(data);
     }
+    if (opportunitiesData) {
+      setOpportunities(opportunitiesData);
+    }
   }, [data, opportunityCategories]);
+
+  useEffect(() => {
+    if (currentCategory) {
+      console.log(currentCategory);
+      getOpportunities().then((data) => {
+        console.log(data);
+      });
+    }
+  }, [currentCategory]);
 
   if (loading || error) return <></>;
 
@@ -95,12 +125,13 @@ const JobSelect = () => {
         options={opportunityCategories}
         selectedOption={selectedOption}
         setSelectedOption={setSelectedOption}
+        setCategory={setCurrentCategory}
       />
       {opportunitiesLoading || opportunitiesError ? (
         <Loading />
       ) : (
         <>
-          <JobLinks data={opportunitiesData} />
+          <JobLinks data={opportunities} />
           <ShowMoreButton />
         </>
       )}
