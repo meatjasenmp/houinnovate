@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Hooked up API request for opportunity category selection.">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Linked copied notification.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/jobPosting/JobPosting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/jobPosting/JobPosting.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/JobPosting.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/JobPosting.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/OpportunityPopUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/OpportunityPopUp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/OpportunitySelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/OpportunitySelect.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,14 +97,7 @@
       <workItem from="1667948818563" duration="4749000" />
       <workItem from="1668262533181" duration="41731000" />
       <workItem from="1668346884515" duration="52000" />
-      <workItem from="1668346974048" duration="5502000" />
-    </task>
-    <task id="LOCAL-00026" summary="ION jobs select implementation">
-      <created>1666841722129</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1666841722129</updated>
+      <workItem from="1668346974048" duration="8278000" />
     </task>
     <task id="LOCAL-00027" summary="Data setup for job posting page">
       <created>1666844286855</created>
@@ -445,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668350569586</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Linked copied notification.">
+      <created>1668353111983</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1668353111983</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,7 +462,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Video mutes when full screen is closed" />
     <MESSAGE value="Exit full screen button." />
     <MESSAGE value="Select component style updates" />
     <MESSAGE value="Basic implementation of smooth scroll." />
@@ -490,7 +486,8 @@
     <MESSAGE value="Refactoring Work w/ ion Job Select." />
     <MESSAGE value="Hooking up API request for category selection" />
     <MESSAGE value="Hooked up API request for opportunity category selection." />
-    <option name="LAST_COMMIT_MESSAGE" value="Hooked up API request for opportunity category selection." />
+    <MESSAGE value="Linked copied notification." />
+    <option name="LAST_COMMIT_MESSAGE" value="Linked copied notification." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

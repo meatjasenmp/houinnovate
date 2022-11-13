@@ -10,8 +10,13 @@ import { useEffect, useState } from "react";
 import { projectOpportunitiesSelect_projectBasedOpportunities_edges } from "../pages/api/__generated__/projectOpportunitiesSelect";
 import { PopUpTypes } from "./helpers";
 import PopUpLinks from "./PopUpLinks";
+import { useRouter } from "next/router";
 
 const OpportunitySelect = () => {
+  const router = useRouter();
+  const { query } = router;
+  const { popUpType, modalID } = query;
+
   const [currentInvestmentID, setCurrentInvestmentID] = useState<
     string | null
   >();
@@ -29,10 +34,17 @@ const OpportunitySelect = () => {
   >();
 
   useEffect(() => {
+    if (modalID) {
+      setCurrentInvestmentID(modalID as string);
+    }
+  }, [modalID]);
+
+  useEffect(() => {
     setSelectedPopUps(findSelectedOptions(projectBasedOpportunities?.edges));
   }, [selectedOptions]);
 
   const handleOpenModal = (id: string) => {
+    window.history.pushState(null, "", `?modalType=opportunity&modalID=${id}`);
     setCurrentInvestmentID(id);
   };
 
