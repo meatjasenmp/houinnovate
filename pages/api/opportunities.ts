@@ -1,5 +1,7 @@
 import { useQuery, useLazyQuery, gql } from "@apollo/client";
 import { useEffect } from "react";
+import { allOpportunities } from "./__generated__/allOpportunities";
+import { opportunitiesByCategory } from "./__generated__/opportunitiesByCategory";
 
 const OPPORTUNITIES_BY_CATEGORY = gql`
   query opportunitiesByCategory($first: Int, $after: String, $terms: [String]) {
@@ -47,15 +49,13 @@ const OPPORTUNITIES = gql`
 `;
 
 export const useJobOpportunitiesByCategory = (category: string) => {
-  const [getOpportunities, { loading, error, data, fetchMore }] = useLazyQuery(
-    OPPORTUNITIES_BY_CATEGORY,
-    {
+  const [getOpportunities, { loading, error, data, fetchMore }] =
+    useLazyQuery<opportunitiesByCategory>(OPPORTUNITIES_BY_CATEGORY, {
       variables: {
         first: 5,
         terms: category,
       },
-    }
-  );
+    });
 
   useEffect(() => {
     getOpportunities();
@@ -70,12 +70,15 @@ export const useJobOpportunitiesByCategory = (category: string) => {
 };
 
 export const useJobOpportunities = () => {
-  const { data, loading, error, fetchMore } = useQuery(OPPORTUNITIES, {
-    variables: {
-      first: 5,
-      after: null,
-    },
-  });
+  const { data, loading, error, fetchMore } = useQuery<allOpportunities>(
+    OPPORTUNITIES,
+    {
+      variables: {
+        first: 5,
+        after: null,
+      },
+    }
+  );
 
   return {
     data,

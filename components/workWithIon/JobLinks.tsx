@@ -1,8 +1,4 @@
 import React, { useEffect, useState } from "react";
-import {
-  useJobOpportunities,
-  useJobOpportunitiesByCategory,
-} from "../../pages/api/opportunities";
 import { allOpportunities } from "../../pages/api/__generated__/allOpportunities";
 import styles from "../../styles/components/JobLink.module.css";
 import JobLink from "./JobLink";
@@ -12,11 +8,8 @@ export interface Opportunity {
   title: string | null;
 }
 
-const JobLinks = () => {
-  const { data, loading, error, fetchMore } = useJobOpportunities();
-
+const JobLinks = ({ data }: { data: allOpportunities | undefined }) => {
   const [opportunities, setOpportunities] = useState<Opportunity[]>([]);
-  const [showLoadLoader, setShowLoader] = useState<boolean>(false);
 
   const getOpportunities = (data: allOpportunities) => {
     const opportunities: Opportunity[] = [];
@@ -38,53 +31,6 @@ const JobLinks = () => {
     }
   }, [data]);
 
-  if (loading || error) return <></>;
-
-  const { pageInfo } = data?.iONJobs;
-
-  const Loading = () => {
-    if (showLoadLoader) {
-      return (
-        <div className={styles.spinner}>
-          <p>Loading...</p>
-        </div>
-      );
-    }
-    return <></>;
-  };
-
-  const ShowMoreButton = () => {
-    if (pageInfo?.hasNextPage) {
-      return (
-        <div className={styles.show_more}>
-          <button
-            className={styles.showMoreButton}
-            onClick={() => {
-              setShowLoader(true);
-              fetchMore({
-                variables: {
-                  first: 5,
-                  after: data?.iONJobs?.pageInfo?.endCursor,
-                },
-              })
-                .then((res) => {
-                  if (res?.data?.iONJobs?.edges) {
-                    setShowLoader(false);
-                  }
-                })
-                .catch((err) => {
-                  console.error(err);
-                });
-            }}
-          >
-            Show More
-          </button>
-        </div>
-      );
-    }
-    return <></>;
-  };
-
   return (
     <section>
       <div className={styles.jobLinks_count}>
@@ -95,7 +41,6 @@ const JobLinks = () => {
         {opportunities &&
           opportunities.map((job, index) => <JobLink key={index} job={job} />)}
       </div>
-      <ShowMoreButton />
     </section>
   );
 };

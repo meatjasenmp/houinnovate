@@ -1,13 +1,22 @@
 import { useJobCategories } from "../../pages/api/job_categories";
-import { useEffect, useState } from "react";
+import { useJobOpportunities } from "../../pages/api/opportunities";
+import React, { useEffect, useState } from "react";
 import SelectComponentTwo from "../SelectComponentTwo";
 import { Options } from "../helpers";
 import { jobCategories } from "../../pages/api/__generated__/jobCategories";
 import JobLinks from "./JobLinks";
+import styles from "../../styles/components/JobLink.module.css";
 
 const JobSelect = () => {
   const { data, loading, error } = useJobCategories();
+  const {
+    data: opportunitiesData,
+    loading: opportunitiesLoading,
+    error: opportunitiesError,
+    fetchMore,
+  } = useJobOpportunities();
   const [selectedOption, setSelectedOption] = useState<Options>();
+  const [showLoadLoader, setShowLoader] = useState<boolean>(false);
 
   const opportunityCategories: Options[] = [];
 
@@ -32,6 +41,54 @@ const JobSelect = () => {
 
   if (loading || error) return <></>;
 
+  const { pageInfo } = opportunitiesData?.iONJobs || {};
+
+  const Loading = () => {
+    if (showLoadLoader) {
+      return (
+        <div className={styles.spinner}>
+          <p>Loading...</p>
+        </div>
+      );
+    }
+    return <></>;
+  };
+
+  const ShowMoreButton = () => {
+    if (pageInfo?.hasNextPage) {
+      return (
+        <>
+          <div className={styles.show_more}>
+            <button
+              className={styles.showMoreButton}
+              onClick={() => {
+                setShowLoader(true);
+                fetchMore({
+                  variables: {
+                    first: 5,
+                    after: opportunitiesData?.iONJobs?.pageInfo?.endCursor,
+                  },
+                })
+                  .then((res) => {
+                    if (res?.data?.iONJobs?.edges) {
+                      setShowLoader(false);
+                    }
+                  })
+                  .catch((err) => {
+                    console.error(err);
+                  });
+              }}
+            >
+              Show More
+            </button>
+          </div>
+          <Loading />
+        </>
+      );
+    }
+    return <></>;
+  };
+
   return (
     <section>
       <SelectComponentTwo
@@ -39,7 +96,14 @@ const JobSelect = () => {
         selectedOption={selectedOption}
         setSelectedOption={setSelectedOption}
       />
-      <JobLinks />
+      {opportunitiesLoading || opportunitiesError ? (
+        <Loading />
+      ) : (
+        <>
+          <JobLinks data={opportunitiesData} />
+          <ShowMoreButton />
+        </>
+      )}
     </section>
   );
 };
