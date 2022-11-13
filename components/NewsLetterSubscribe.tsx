@@ -3,17 +3,22 @@ import MailchimpSubscribe, { EmailFormFields } from "react-mailchimp-subscribe";
 import styles from "../styles/components/NewsLetter.module.css";
 import ArrowRightIcon from "./ArrowRightIcon";
 
+interface CustomFields extends EmailFormFields {
+  GNAME: string;
+}
+
 interface FormProps {
   status: string | null;
   message: string | Error | null;
-  onValidated: (formData: EmailFormFields) => void;
+  onValidated: (formData: EmailFormFields & CustomFields) => void;
 }
 
-const CustomForm = ({ status, message, onValidated }: FormProps) => {
+const CustomForm = ({ status, onValidated, message }: FormProps) => {
   const [email, setEmail] = useState("");
 
   const handleSubmit = () => {
-    email.indexOf("@") > -1 && onValidated({ EMAIL: email });
+    email.indexOf("@") > -1 &&
+      onValidated({ EMAIL: email, GNAME: "newsletter" });
   };
   const handleChange = (e: {
     target: { value: React.SetStateAction<string> };

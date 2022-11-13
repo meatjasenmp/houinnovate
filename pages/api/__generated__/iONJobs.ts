@@ -167,6 +167,7 @@ export interface iONJobs_siteOptionsPage_opportunityPageOptions {
   opportunityImportantNotice: string | null;
   jobOpportunityCta: string | null;
   aaEeo: string | null;
+  opportunitySignupCta: string | null;
 }
 
 export interface iONJobs_siteOptionsPage {

@@ -6,6 +6,7 @@ import { BiArrowToTop } from "@react-icons/all-files/bi/BiArrowToTop";
 import { FaArrowLeft } from "@react-icons/all-files/fa/FaArrowLeft";
 import { formatPostDate } from "../helpers";
 import toast, { Toaster } from "react-hot-toast";
+import OpportunitySignUpForm from "../OpportnunitySignUpForm";
 import Link from "next/link";
 
 import styles from "../../styles/components/JobPosting.module.css";
@@ -17,6 +18,10 @@ import {
 
 interface ImportantNoticeProps {
   importantNotice: string | null | undefined;
+}
+
+export interface OpportunitySignUpFormProps {
+  cta: string | null | undefined;
 }
 
 interface SidebarProps {
@@ -238,6 +243,14 @@ const ImportantNotice = ({ importantNotice }: ImportantNoticeProps) => {
   );
 };
 
+const SignUpForm = ({ cta }: OpportunitySignUpFormProps) => {
+  return (
+    <section>
+      <OpportunitySignUpForm cta={cta} />
+    </section>
+  );
+};
+
 const JobPosting = ({ id }: { id: string }) => {
   const { data, loading, error } = useJob(id);
 
@@ -245,8 +258,12 @@ const JobPosting = ({ id }: { id: string }) => {
 
   const { siteOptionsPage, iONJob } = data || {};
   const { title, postDate, jobPosting } = iONJob || {};
-  const { opportunityImportantNotice, jobOpportunityCta, aaEeo } =
-    siteOptionsPage?.opportunityPageOptions || {};
+  const {
+    opportunityImportantNotice,
+    jobOpportunityCta,
+    aaEeo,
+    opportunitySignupCta,
+  } = siteOptionsPage?.opportunityPageOptions || {};
 
   return (
     <div>
@@ -276,6 +293,7 @@ const JobPosting = ({ id }: { id: string }) => {
             }}
           />
           <ImportantNotice importantNotice={opportunityImportantNotice} />
+          <SignUpForm cta={opportunitySignupCta} />
         </div>
       </section>
     </div>

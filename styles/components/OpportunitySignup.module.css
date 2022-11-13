@@ -1,0 +1,44 @@
+.container {
+    background: #F54932;
+    padding: 2rem;
+    margin-top: 2rem;
+    color: #fff;
+}
+
+.form_container div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form_container div:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.form_container div input::placeholder {
+    color: #fff;
+}
+
+.form_container div input[type="text"],
+.form_container div input[type="email"] {
+    padding: 0.5rem;
+    background: transparent;
+    border-bottom: 4px solid #fff;
+}
+
+.form_container div input[type="text"] {
+    width: 48%;
+
+}
+
+.form_container div input[type="email"] {
+    width: 75%;
+}
+
+
+.submit_button {
+    background: #fff;
+    color: #F54932;
+    padding: 0.25rem 1.5rem;
+    border-radius: 30px;
+    font-size: .75rem;
+}

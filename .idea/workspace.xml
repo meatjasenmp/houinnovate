@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="UI updates">
-      <change afterPath="$PROJECT_DIR$/components/NewsLetterSubscribe.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/components/NewsLetter.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Newsletter implementation.">
+      <change afterPath="$PROJECT_DIR$/components/OpportnunitySignUpForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/components/OpportunitySignup.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ArrowRightIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ArrowRightIcon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SiteFooter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SiteFooter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/__generated__/page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/SiteFooter.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/SiteFooter.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/NewsLetterSubscribe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NewsLetterSubscribe.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/jobPosting/JobPosting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/jobPosting/JobPosting.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/iONJobs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/__generated__/iONJobs.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/job.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/job.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,14 +102,7 @@
       <workItem from="1667948818563" duration="4749000" />
       <workItem from="1668262533181" duration="41731000" />
       <workItem from="1668346884515" duration="52000" />
-      <workItem from="1668346974048" duration="14920000" />
-    </task>
-    <task id="LOCAL-00034" summary="Video mutes when full screen is closed">
-      <created>1667061941452</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1667061941452</updated>
+      <workItem from="1668346974048" duration="19553000" />
     </task>
     <task id="LOCAL-00035" summary="Exit full screen button.">
       <created>1667063525194</created>
@@ -450,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668358436725</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="Newsletter implementation.">
+      <created>1668364610763</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1668364610763</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +467,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Updating logic for screenfull" />
     <MESSAGE value="Box link hover update." />
     <MESSAGE value="Scroll to for box links" />
     <MESSAGE value="Basic box link animations" />
@@ -495,7 +491,8 @@
     <MESSAGE value="Scroll to top arrow." />
     <MESSAGE value="Style updates" />
     <MESSAGE value="UI updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI updates" />
+    <MESSAGE value="Newsletter implementation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Newsletter implementation." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

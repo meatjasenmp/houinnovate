@@ -72,6 +72,7 @@ export const useJob = (id: string) => {
             opportunityImportantNotice
             jobOpportunityCta
             aaEeo
+            opportunitySignupCta
           }
         }
       }
