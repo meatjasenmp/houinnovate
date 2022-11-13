@@ -54,6 +54,7 @@ const OpportunityPopUp = ({
 
   const handleCloseModal = (e: { stopPropagation: () => void }) => {
     document.body.classList.remove("ReactModal__Body--open");
+    window.history.pushState({}, "", "/");
     setCurrentInvestmentID(null);
     e.stopPropagation();
   };

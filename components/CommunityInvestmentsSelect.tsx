@@ -9,8 +9,13 @@ import { communityInvestmentsSelect_communityInvestments_edges } from "../pages/
 import { useEffect, useState } from "react";
 import { PopUpTypes } from "./helpers";
 import PopUpLinks from "./PopUpLinks";
+import { useRouter } from "next/router";
 
 const CommunityInvestmentsSelect = () => {
+  const router = useRouter();
+  const { query } = router;
+  const { modalID } = query;
+
   const [currentInvestmentID, setCurrentInvestmentID] = useState<
     string | null
   >();
@@ -28,7 +33,14 @@ const CommunityInvestmentsSelect = () => {
     setSelectedPopUps(findSelectedOptions(communityInvestments?.edges));
   }, [selectedOptions]);
 
+  useEffect(() => {
+    if (modalID) {
+      setCurrentInvestmentID(modalID as string);
+    }
+  }, [modalID]);
+
   const handleOpenModal = (id: string) => {
+    window.history.pushState(null, "", `?modalType=investment&modalID=${id}`);
     setCurrentInvestmentID(id);
   };
 

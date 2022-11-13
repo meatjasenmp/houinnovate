@@ -15,7 +15,7 @@ import { useRouter } from "next/router";
 const OpportunitySelect = () => {
   const router = useRouter();
   const { query } = router;
-  const { popUpType, modalID } = query;
+  const { modalID } = query;
 
   const [currentInvestmentID, setCurrentInvestmentID] = useState<
     string | null
