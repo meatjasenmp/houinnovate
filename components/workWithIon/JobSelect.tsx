@@ -62,12 +62,15 @@ const JobSelect = () => {
   }, [opportunitiesData]);
 
   useEffect(() => {
-    if (currentCategory) {
+    if (currentCategory && currentCategory !== "all") {
       getOpportunities().then((data) => {
-        console.log(data.data);
         setOpportunities(data.data);
       });
+      return;
     }
+    refetchOpportunities().then((data) => {
+      setOpportunities(data.data);
+    });
   }, [currentCategory]);
 
   if (loading || error) return <></>;

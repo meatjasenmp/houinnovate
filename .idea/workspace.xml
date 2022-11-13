@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Hooking up API request for category selection">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SelectComponentTwo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SelectComponentTwo.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/workWithIon/JobSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/JobSelect.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/opportunities.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/opportunities.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,14 +94,9 @@
       <workItem from="1667051863497" duration="37988000" />
       <workItem from="1667225512090" duration="9000" />
       <workItem from="1667948818563" duration="4749000" />
-      <workItem from="1668262533181" duration="41618000" />
-    </task>
-    <task id="LOCAL-00023" summary="Updating select filters">
-      <created>1666465493506</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1666465493506</updated>
+      <workItem from="1668262533181" duration="41731000" />
+      <workItem from="1668346884515" duration="52000" />
+      <workItem from="1668346974048" duration="350000" />
     </task>
     <task id="LOCAL-00024" summary="Rolling back.">
       <created>1666466247467</created>
@@ -441,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668303236468</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Hooking up API request for category selection">
+      <created>1668346707839</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1668346707839</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
