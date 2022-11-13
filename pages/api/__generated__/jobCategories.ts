@@ -7,16 +7,20 @@
 // GraphQL query operation: jobCategories
 // ====================================================
 
-export interface jobCategories_jobCategories_pageInfo {
-  __typename: "WPPageInfo";
+export interface jobCategories_jobCategories_edges_node_iONJobs_nodes {
+  __typename: "IONJob";
   /**
-   * When paginating forwards, the cursor to continue.
+   * The globally unique identifier of the ion_jobs object.
    */
-  endCursor: string | null;
+  id: string;
+}
+
+export interface jobCategories_jobCategories_edges_node_iONJobs {
+  __typename: "JobCategoryToIONJobConnection";
   /**
-   * When paginating forwards, are there more items?
+   * The nodes of the connection, without the edges
    */
-  hasNextPage: boolean;
+  nodes: (jobCategories_jobCategories_edges_node_iONJobs_nodes | null)[] | null;
 }
 
 export interface jobCategories_jobCategories_edges_node {
@@ -33,6 +37,10 @@ export interface jobCategories_jobCategories_edges_node {
    * The human friendly name of the object.
    */
   name: string | null;
+  /**
+   * Connection between the JobCategory type and the IONJob type
+   */
+  iONJobs: jobCategories_jobCategories_edges_node_iONJobs | null;
 }
 
 export interface jobCategories_jobCategories_edges {
@@ -45,10 +53,6 @@ export interface jobCategories_jobCategories_edges {
 
 export interface jobCategories_jobCategories {
   __typename: "RootQueryToJobCategoryConnection";
-  /**
-   * Information about pagination in a connection.
-   */
-  pageInfo: jobCategories_jobCategories_pageInfo | null;
   /**
    * Edges for the RootQueryToJobCategoryConnection connection
    */

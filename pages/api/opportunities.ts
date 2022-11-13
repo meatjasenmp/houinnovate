@@ -50,7 +50,7 @@ export const useJobOpportunitiesByCategory = (category: string) => {
   const [getOpportunities, { loading, error, data, fetchMore }] =
     useLazyQuery<opportunitiesByCategory>(OPPORTUNITIES_BY_CATEGORY, {
       fetchPolicy: "no-cache",
-      nextFetchPolicy: "network-only",
+      nextFetchPolicy: "cache-and-network",
       variables: {
         first: 5,
         terms: category,

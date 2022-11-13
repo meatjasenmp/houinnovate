@@ -30,20 +30,25 @@ const JobSelect = () => {
     refetch: refetchOpportunities,
   } = useJobOpportunities();
 
-  const { getOpportunities } = useJobOpportunitiesByCategory(
-    String(currentCategory)
-  );
+  const {
+    getOpportunities,
+    data: opportunitiesByCategoryData,
+    fetchMore: fetchMoreByCategory,
+  } = useJobOpportunitiesByCategory(String(currentCategory));
 
   const opportunityCategories: Options[] = [];
 
   const setCategories = (data: jobCategories) => {
     data?.jobCategories?.edges?.forEach((edge) => {
       if (edge?.node) {
-        const { name, slug } = edge.node;
-        opportunityCategories.push({
-          value: slug,
-          label: name,
-        });
+        const { iONJobs } = edge.node;
+        if (iONJobs?.nodes?.length && iONJobs.nodes.length > 0) {
+          const { name, slug } = edge.node;
+          opportunityCategories.push({
+            value: slug,
+            label: name,
+          });
+        }
       }
     });
   };
@@ -76,6 +81,8 @@ const JobSelect = () => {
   if (loading || error) return <></>;
 
   const { pageInfo } = opportunitiesData?.iONJobs || {};
+  const { pageInfo: categoryPageInfo } =
+    opportunitiesByCategoryData?.iONJobs || {};
 
   const Loading = () => {
     if (showLoadLoader) {
@@ -88,7 +95,60 @@ const JobSelect = () => {
     return <></>;
   };
 
+  const handleLoadMoreOpportunities = () => {
+    setShowLoader(true);
+    fetchMoreOpportunities({
+      variables: {
+        first: 5,
+        after: opportunitiesData?.iONJobs?.pageInfo?.endCursor,
+      },
+    })
+      .then((res) => {
+        if (res?.data?.iONJobs?.edges) {
+          setShowLoader(false);
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  };
+
+  const handleLoadMoreByCategory = () => {
+    setShowLoader(true);
+    fetchMoreByCategory({
+      variables: {
+        first: 5,
+        after: opportunitiesByCategoryData?.iONJobs?.pageInfo?.endCursor,
+      },
+    })
+      .then((res) => {
+        if (res?.data?.iONJobs?.edges) {
+          setShowLoader(false);
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  };
+
   const ShowMoreButton = () => {
+    if (categoryPageInfo?.hasNextPage && currentCategory !== "all") {
+      return (
+        <>
+          <div className={styles.show_more}>
+            <button
+              className={styles.showMoreButton}
+              onClick={() => {
+                handleLoadMoreByCategory();
+              }}
+            >
+              Show More
+            </button>
+          </div>
+          <Loading />
+        </>
+      );
+    }
     if (pageInfo?.hasNextPage) {
       return (
         <>
@@ -96,21 +156,7 @@ const JobSelect = () => {
             <button
               className={styles.showMoreButton}
               onClick={() => {
-                setShowLoader(true);
-                fetchMoreOpportunities({
-                  variables: {
-                    first: 5,
-                    after: opportunitiesData?.iONJobs?.pageInfo?.endCursor,
-                  },
-                })
-                  .then((res) => {
-                    if (res?.data?.iONJobs?.edges) {
-                      setShowLoader(false);
-                    }
-                  })
-                  .catch((err) => {
-                    console.error(err);
-                  });
+                handleLoadMoreOpportunities();
               }}
             >
               Show More

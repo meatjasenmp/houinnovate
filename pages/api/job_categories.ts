@@ -4,15 +4,16 @@ import { jobCategories } from "./__generated__/jobCategories";
 const JOB_CATEGORIES = gql`
   query jobCategories {
     jobCategories {
-      pageInfo {
-        endCursor
-        hasNextPage
-      }
       edges {
         node {
           databaseId
           slug
           name
+          iONJobs {
+            nodes {
+              id
+            }
+          }
         }
       }
     }
