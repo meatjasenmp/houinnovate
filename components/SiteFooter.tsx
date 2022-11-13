@@ -1,6 +1,7 @@
 import ContentEditor from "./ContentEditor";
 import Link from "next/link";
 import { FiArrowUpRight } from "@react-icons/all-files/fi/FiArrowUpRight";
+import ArrowLinkIcon from "./ArrowLinkIcon";
 import {
   page_siteOptionsPage_siteFooter_footerBlocks,
   page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_GetInTouch,
@@ -11,6 +12,7 @@ import {
 import styles from "../styles/components/SiteFooter.module.css";
 import ImageAsset from "../styles/components/ImageAsset";
 import { useScrollToSection } from "./helpers";
+import { accentColor } from "../styles/helpers";
 
 enum FooterComponents {
   GET_IN_TOUCH = "SiteOptionsPage_Sitefooter_FooterBlocks_GetInTouch",
@@ -75,7 +77,7 @@ const IonDistrict = ({ blockContent }: IonDistrictProps) => {
           <div className={styles.cta_link_container} key={index}>
             <ContentEditor content={ctaLink?.cta} />
             <figure className={styles.cta_link_icon}>
-              <FiArrowUpRight color="white" size="2rem" />
+              <ArrowLinkIcon color="white" />
             </figure>
           </div>
         ))}
