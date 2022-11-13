@@ -4,6 +4,10 @@
     margin: 10rem auto 5rem auto;
 }
 
+.jobCTA {
+    margin-bottom: 1.5rem;
+}
+
 .jobCTA article > *:last-child {
     margin-bottom: .35rem;
 }
@@ -26,6 +30,7 @@
 .jobDataFields p,
 .jobContact li {
     font-size: .95rem;
+    line-height: 1.5;
 }
 
 .jobDataFields p {
@@ -35,6 +40,10 @@
 .shareButton {
     display: flex;
     align-items: flex-end;
+}
+
+.shareButton > * {
+    pointer-events: none;
 }
 
 .description p {

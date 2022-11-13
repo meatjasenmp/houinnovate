@@ -5,6 +5,7 @@ import ContentEditor from "../ContentEditor";
 import { BiArrowToTop } from "@react-icons/all-files/bi/BiArrowToTop";
 import { FaArrowLeft } from "@react-icons/all-files/fa/FaArrowLeft";
 import { formatPostDate } from "../helpers";
+import toast, { Toaster } from "react-hot-toast";
 import Link from "next/link";
 
 import styles from "../../styles/components/JobPosting.module.css";
@@ -35,6 +36,8 @@ interface JobContentProps {
   };
 }
 
+const linkSavedNotification = () => toast("Link copied to clipboard!");
+
 const handleShareButton = (url: string | null | undefined) => {
   if (!url) return;
   return navigator.clipboard.writeText(url);
@@ -42,15 +45,23 @@ const handleShareButton = (url: string | null | undefined) => {
 
 const ShareButton = () => {
   const router = useRouter();
-  const path = router.asPath;
+  const path = `${window.location.origin}${router.asPath}`;
   return (
-    <button
-      className={styles.shareButton}
-      onClick={() => handleShareButton(path)}
-    >
-      <h4>Share</h4>
-      <BiArrowToTop />
-    </button>
+    <>
+      <Toaster />
+      <button
+        className={styles.shareButton}
+        onClick={() => {
+          handleShareButton(path);
+          linkSavedNotification();
+        }}
+        data-tip="Link Copied"
+        data-event="click"
+      >
+        <h4>Share</h4>
+        <BiArrowToTop />
+      </button>
+    </>
   );
 };
 
@@ -94,8 +105,8 @@ const Sidebar = ({ data }: SidebarProps) => {
         {contact && (
           <section className={styles.jobContact}>
             <ul>
-              <li>{contact.name}</li>
-              <li>{contact?.title}</li>
+              <li className="text-black">{contact.name}</li>
+              <li className="text-black">{contact?.title}</li>
               <li>
                 <a href={`mailto:${contact.email}`}>{contact.email}</a>
               </li>
@@ -243,7 +254,7 @@ const JobPosting = ({ id }: { id: string }) => {
         <Link href="/">
           <a>
             <FaArrowLeft size="1.5rem" color="#F54932" />
-            <span>Back to Opportunities</span>
+            <span>Back to Job Opportunities</span>
           </a>
         </Link>
       </div>

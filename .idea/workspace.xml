@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Hooking up API request for category selection">
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Hooked up API request for opportunity category selection.">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/workWithIon/JobSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/JobSelect.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/jobCategories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/__generated__/jobCategories.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/job_categories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/job_categories.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/opportunities.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/opportunities.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/jobPosting/JobPosting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/jobPosting/JobPosting.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/JobPosting.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/JobPosting.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,14 +100,7 @@
       <workItem from="1667948818563" duration="4749000" />
       <workItem from="1668262533181" duration="41731000" />
       <workItem from="1668346884515" duration="52000" />
-      <workItem from="1668346974048" duration="2840000" />
-    </task>
-    <task id="LOCAL-00025" summary="Fixing prop">
-      <created>1666467892584</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1666467892584</updated>
+      <workItem from="1668346974048" duration="5502000" />
     </task>
     <task id="LOCAL-00026" summary="ION jobs select implementation">
       <created>1666841722129</created>
@@ -444,7 +438,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668347425952</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Hooked up API request for opportunity category selection.">
+      <created>1668350569586</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1668350569586</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,7 +465,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Full screen video when 'watch film' is clicked" />
     <MESSAGE value="Video mutes when full screen is closed" />
     <MESSAGE value="Exit full screen button." />
     <MESSAGE value="Select component style updates" />
@@ -489,7 +489,8 @@
     <MESSAGE value="Basic implementation of jobs load more." />
     <MESSAGE value="Refactoring Work w/ ion Job Select." />
     <MESSAGE value="Hooking up API request for category selection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hooking up API request for category selection" />
+    <MESSAGE value="Hooked up API request for opportunity category selection." />
+    <option name="LAST_COMMIT_MESSAGE" value="Hooked up API request for opportunity category selection." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
