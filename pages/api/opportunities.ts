@@ -1,5 +1,4 @@
 import { useQuery, useLazyQuery, gql } from "@apollo/client";
-import { useEffect } from "react";
 import { allOpportunities } from "./__generated__/allOpportunities";
 import { opportunitiesByCategory } from "./__generated__/opportunitiesByCategory";
 

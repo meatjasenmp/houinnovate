@@ -70,10 +70,11 @@ const JobSelect = () => {
   }, [opportunitiesByCategoryData]);
 
   useEffect(() => {
-    if (currentCategory) {
+    if (currentCategory !== "all") {
       getOpportunities().then((data) => {
         setOpportunities(data.data);
       });
+      return;
     }
   }, [currentCategory]);
 
