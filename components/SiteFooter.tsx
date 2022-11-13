@@ -1,7 +1,8 @@
 import ContentEditor from "./ContentEditor";
 import Link from "next/link";
-import { FiArrowUpRight } from "@react-icons/all-files/fi/FiArrowUpRight";
+import UpArrowIcon from "./UpArrowIcon";
 import ArrowLinkIcon from "./ArrowLinkIcon";
+import { animateScroll } from "react-scroll";
 import {
   page_siteOptionsPage_siteFooter_footerBlocks,
   page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_GetInTouch,
@@ -12,7 +13,6 @@ import {
 import styles from "../styles/components/SiteFooter.module.css";
 import ImageAsset from "../styles/components/ImageAsset";
 import { useScrollToSection } from "./helpers";
-import { accentColor } from "../styles/helpers";
 
 enum FooterComponents {
   GET_IN_TOUCH = "SiteOptionsPage_Sitefooter_FooterBlocks_GetInTouch",
@@ -137,6 +137,17 @@ const FooterBlocks = ({ footerBlocks }: SiteFooterProps) => {
   );
 };
 
+const BackToTop = () => {
+  return (
+    <button
+      className={styles.back_to_top}
+      onClick={() => animateScroll.scrollToTop()}
+    >
+      <UpArrowIcon color="white" />
+    </button>
+  );
+};
+
 const TermsAndConditions = () => {
   const currentYear = new Date().getFullYear();
   const termsClassName = [styles.terms_and_conditions].join(" ");
@@ -168,6 +179,7 @@ const SiteFooter = ({ footerBlocks, header }: SiteFooterProps) => {
       <div className={styles.terms_and_conditions_wrapper}>
         <TermsAndConditions />
       </div>
+      <BackToTop />
     </footer>
   );
 };

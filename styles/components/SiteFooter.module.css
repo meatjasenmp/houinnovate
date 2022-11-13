@@ -109,6 +109,13 @@
     opacity: .75;
 }
 
+.back_to_top {
+    width: 2rem;
+    position: absolute;
+    right: 5rem;
+    bottom: 5rem;
+}
+
 @media screen and (min-width: 990px) {
     .site_footer_wrapper {
         display: flex;
