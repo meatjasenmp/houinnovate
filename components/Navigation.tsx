@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
 import ContentEditor from "./ContentEditor";
 import HamburgerMenu from "./HamburgerMenu";
-import { FiDownload } from "@react-icons/all-files/fi/FiDownload";
+import DownloadIcon from "./DownloadIcon";
 import {
   page_siteOptionsPage_siteNavigation,
   page_siteOptionsPage_siteNavigation_navigation_sectionLinks,
@@ -59,7 +59,9 @@ const AnnualReport = ({
           rel="noreferrer"
         >
           <span>{report?.annualReportTitle}</span>
-          <FiDownload />
+          <figure className={styles.download_icon}>
+            <DownloadIcon color="white" />
+          </figure>
         </a>
         <div />
       </div>

@@ -16,6 +16,10 @@
     font-family: "Sohne-Kraftig-Normal", sans-serif;
 }
 
+.block_links div:first-child {
+    margin-bottom: 3.125rem;
+}
+
 .block_links h4 {
     margin-bottom: .5rem;
 }
@@ -63,4 +67,8 @@
 .block_links {
     font-size: 0.9rem;
     line-height: 1.2rem;
+}
+
+.download_icon {
+    width: 1rem;
 }
