@@ -66,6 +66,7 @@ const SelectComponent = ({
       value={selectedOption}
       onChange={handleSelect}
       styles={selectStyles}
+      isSearchable={false}
     />
   );
 };

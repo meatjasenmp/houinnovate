@@ -65,6 +65,7 @@ const SelectComponentTwo = ({
       styles={selectStyles}
       value={selectedOption}
       onChange={handleSelect}
+      isSearchable={false}
     />
   );
 };
