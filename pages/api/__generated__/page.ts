@@ -12,11 +12,24 @@ export interface page_page_components_componentBlocks_Page_Components_ComponentB
   contentBlock: string | null;
 }
 
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_videoTest {
+  __typename: "MediaItem";
+  /**
+   * The globally unique identifier of the attachment object.
+   */
+  id: string;
+  /**
+   * Url of the mediaItem
+   */
+  mediaItemUrl: string | null;
+}
+
 export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner {
   __typename: "Page_Components_ComponentBlocks_HeroBanner";
   contentBlocks: (page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_contentBlocks | null)[] | null;
   videoCta: string | null;
   videoUrl: string | null;
+  videoTest: page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_videoTest | null;
 }
 
 export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink_image {

@@ -15,9 +15,10 @@ interface ComponentBlocksProps {
 }
 
 const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
-  const videoRef = useRef<ReactPlayer>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const videoWrapRef = useRef<HTMLDivElement>(null);
   const contentWrapRef = useRef<HTMLDivElement>(null);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [videoIsFullscreen, setVideoIsFullscreen] = useState(false);
   const [videoParams, setVideoParams] = useState({
     volume: 0,
@@ -30,7 +31,19 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
   ].join(" ");
 
   useEffect(() => {
-    if (contentWrapRef.current) {
+    if (videoRef.current) {
+      videoRef.current.play().then(() => {
+        setIsVideoPlaying(true);
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    if (
+      contentWrapRef.current &&
+      videoRef.current &&
+      !videoRef.current.paused
+    ) {
       const ctx = gsap.context(() => {
         const targets = gsap.utils.toArray(".animated_content_block");
         const duration = 0.65;
@@ -54,6 +67,18 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
       };
     }
   }, []);
+
+  const handleButtonClick = () => {
+    if (videoRef.current) {
+      if (isVideoPlaying) {
+        videoRef.current.pause();
+        setIsVideoPlaying(false);
+      } else {
+        videoRef.current.play();
+        setIsVideoPlaying(true);
+      }
+    }
+  };
 
   const muteVideoAndExitFullScreen = () => {
     setVideoIsFullscreen(false);
@@ -81,13 +106,13 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
     }
   }, []);
 
-  const handleButtonClick = () => {
-    if (screenfull.isEnabled && videoWrapRef.current) {
-      screenfull.request(videoWrapRef.current).then(() => {
-        enableFullScreen();
-      });
-    }
-  };
+  // const handleButtonClick = () => {
+  //   if (screenfull.isEnabled && videoWrapRef.current) {
+  //     screenfull.request(videoWrapRef.current).then(() => {
+  //       enableFullScreen();
+  //     });
+  //   }
+  // };
 
   const exitFullscreen = () => {
     if (screenfull.isEnabled && videoWrapRef.current) {
@@ -99,7 +124,8 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
 
   if (!blockContent) return null;
 
-  const { videoCta, contentBlocks, videoUrl } = blockContent;
+  const { videoCta, contentBlocks, videoUrl, videoTest } = blockContent;
+  console.log(videoTest?.mediaItemUrl);
   return (
     <section className={styles.hero__banner_section}>
       <div className={styles.hero__banner}>
@@ -117,17 +143,23 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
               </button>
             </div>
 
-            {videoUrl && (
-              <ReactPlayer
-                ref={videoRef}
-                url={String(videoUrl)}
-                volume={videoParams.volume}
-                muted={videoParams.muted}
-                playing={true}
-                loop={true}
-                width="100%"
-                height="100%"
-              />
+            {videoTest?.mediaItemUrl && (
+              // <ReactPlayer
+              //   ref={videoRef}
+              //   url={String(videoTest?.mediaItemUrl)}
+              //   volume={videoParams.volume}
+              //   muted={videoParams.muted}
+              //   playing={true}
+              //   loop={true}
+              //   width="100%"
+              //   height="100%"
+              // />
+              <video className={styles.video} ref={videoRef} muted loop>
+                <source
+                  src={String(videoTest?.mediaItemUrl)}
+                  type="video/mp4"
+                />
+              </video>
             )}
           </div>
         </div>

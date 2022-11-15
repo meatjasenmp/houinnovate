@@ -17,6 +17,10 @@ export const usePage = (id: string) => {
                 }
                 videoCta
                 videoUrl
+                videoTest {
+                  id
+                  mediaItemUrl
+                }
               }
               ... on Page_Components_ComponentBlocks_BoxLinks {
                 scrollId
