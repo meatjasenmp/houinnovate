@@ -3,7 +3,7 @@ import Select, { OnChangeValue } from "react-select";
 import { Options } from "./helpers";
 
 interface SelectComponentProps {
-  options: Options[];
+  options: Options[] | undefined;
   selectedOption: Options | null | undefined;
   setSelectedOption: Dispatch<SetStateAction<Options | undefined>>;
   setCategory: Dispatch<SetStateAction<string | null | undefined>>;
@@ -51,23 +51,29 @@ const SelectComponentTwo = ({
   setCategory,
 }: SelectComponentProps) => {
   useEffect(() => {
-    setSelectedOption(options[0]);
-  }, []);
+    if (options && options.length > 0) {
+      setSelectedOption(options[0]);
+    }
+  }, [options]);
 
   const handleSelect = (selected: OnChangeValue<Options, false>) => {
     setSelectedOption(selected as Options);
     setCategory(selected?.value);
   };
 
-  return (
-    <Select
-      options={options}
-      styles={selectStyles}
-      value={selectedOption}
-      onChange={handleSelect}
-      isSearchable={false}
-    />
-  );
+  if (options && options.length > 0) {
+    return (
+      <Select
+        options={options}
+        styles={selectStyles}
+        value={selectedOption}
+        onChange={handleSelect}
+        isSearchable={false}
+      />
+    );
+  }
+
+  return <></>;
 };
 
 export default SelectComponentTwo;
