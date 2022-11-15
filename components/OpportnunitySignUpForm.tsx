@@ -3,6 +3,7 @@ import MailchimpSubscribe, { EmailFormFields } from "react-mailchimp-subscribe";
 import styles from "../styles/components/OpportunitySignup.module.css";
 import { OpportunitySignUpFormProps } from "./jobPosting/JobPosting";
 import ContentEditor from "./ContentEditor";
+import toast from "react-hot-toast";
 
 interface CustomFields extends EmailFormFields {
   GNAME: string;
@@ -29,11 +30,10 @@ const CustomForm = ({ status, onValidated, cta }: FormProps) => {
   const [phone, setPhone] = useState("");
 
   const handleSubmit = () => {
-    email.indexOf("@") > -1 &&
-      fname &&
-      lname &&
-      cname &&
-      phone &&
+    const validated =
+      email.indexOf("@") > -1 && fname && lname && cname && phone;
+
+    if (validated) {
       onValidated({
         EMAIL: email,
         GNAME: "opportunities",
@@ -42,6 +42,37 @@ const CustomForm = ({ status, onValidated, cta }: FormProps) => {
         FNAME: fname,
         LNAME: lname,
       });
+
+      setEmail("");
+      setFname("");
+      setLname("");
+      setCname("");
+      setPhone("");
+
+      if (status === "error") {
+        toast.error("There was an error subscribing you. please try again.", {
+          icon: "🚫",
+          id: "opportunity-signup-error",
+          position: "top-center",
+        });
+      }
+
+      if (status === "success") {
+        toast.success("You have been subscribed to our newsletter!", {
+          icon: "👏",
+          id: "opportunity-signup",
+          position: "top-center",
+        });
+      }
+
+      return;
+    }
+
+    toast.error("All fields are required", {
+      icon: "🚫",
+      id: "opportunity-signup-invalid",
+      position: "top-center",
+    });
   };
 
   const handleEmailChange = (e: {
@@ -74,24 +105,6 @@ const CustomForm = ({ status, onValidated, cta }: FormProps) => {
     setPhone(e.target.value);
   };
 
-  if (status === "error") {
-    return (
-      <div className="error">An error occurred subscribing to this email</div>
-    );
-  }
-
-  if (status === "sending") {
-    return <div className="sending">Sending...</div>;
-  }
-
-  if (status === "success") {
-    return (
-      <div className="success">
-        <p>Thank you for subscribing!</p>
-      </div>
-    );
-  }
-
   return (
     <div className={styles.container}>
       <ContentEditor content={cta} />
@@ -102,12 +115,14 @@ const CustomForm = ({ status, onValidated, cta }: FormProps) => {
             className={styles.input}
             type="text"
             onChange={handleFNameChange}
+            value={fname}
           />
           <input
             placeholder="Last Name*"
             className={styles.input}
             type="text"
             onChange={handleLNameChange}
+            value={lname}
           />
         </div>
         <div>
@@ -116,12 +131,14 @@ const CustomForm = ({ status, onValidated, cta }: FormProps) => {
             className={styles.input}
             type="text"
             onChange={handleCNameChange}
+            value={cname}
           />
           <input
             placeholder="Phone Number*"
             className={styles.input}
             type="text"
             onChange={handlePhoneChange}
+            value={phone}
           />
         </div>
         <div>
@@ -130,6 +147,7 @@ const CustomForm = ({ status, onValidated, cta }: FormProps) => {
             className={styles.input}
             type="email"
             onChange={handleEmailChange}
+            value={email}
           />
           <button
             className={styles.submit_button}

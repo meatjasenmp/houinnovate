@@ -18,6 +18,10 @@
     color: #fff;
 }
 
+.form_container input:focus {
+    outline: none;
+}
+
 .form_container div input[type="text"],
 .form_container div input[type="email"] {
     padding: 0.5rem;
@@ -41,4 +45,10 @@
     padding: 0.25rem 1.5rem;
     border-radius: 30px;
     font-size: .75rem;
+    transition: all 0.35s ease;
+}
+
+.submit_button:hover {
+    background: black;
+    color: white;
 }

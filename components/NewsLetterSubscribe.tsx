@@ -25,6 +25,7 @@ const CustomForm = ({ status, onValidated }: FormProps) => {
       if (status === "error") {
         toast.error("There was an error subscribing you. please try again.", {
           icon: "🚫",
+          id: "newsletter-signup-error",
           position: "bottom-center",
         });
       }
@@ -32,7 +33,7 @@ const CustomForm = ({ status, onValidated }: FormProps) => {
       if (status === "success") {
         toast.success("You have been subscribed to our newsletter!", {
           icon: "👏",
-          id: "newsletter",
+          id: "newsletter-signup-success",
           position: "bottom-center",
         });
       }
@@ -41,6 +42,7 @@ const CustomForm = ({ status, onValidated }: FormProps) => {
     }
     toast.error("Please enter a valid email address", {
       icon: "🚫",
+      id: "newsletter-signup-invalid",
       position: "bottom-center",
     });
   };

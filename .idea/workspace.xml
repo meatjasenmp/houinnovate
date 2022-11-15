@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="isSearchableProp">
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Success/error message for newsletter input. CSS updates to video banner.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/NewsLetterSubscribe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NewsLetterSubscribe.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/jobPosting/JobPosting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/jobPosting/JobPosting.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/ContentBlock.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/ContentBlock.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/HeroBanner.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/HeroBanner.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/OpportnunitySignUpForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/OpportnunitySignUpForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/components/NewsLetter.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/NewsLetter.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/WorkWithIon.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/WorkWithIon.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/OpportunitySignup.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/OpportunitySignup.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,14 +103,7 @@
       <workItem from="1668427835259" duration="141000" />
       <workItem from="1668427989493" duration="7000" />
       <workItem from="1668430194968" duration="1677000" />
-      <workItem from="1668472155117" duration="2326000" />
-    </task>
-    <task id="LOCAL-00038" summary="Basic implementation of smooth scroll.">
-      <created>1667067232813</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1667067232813</updated>
+      <workItem from="1668472155117" duration="3674000" />
     </task>
     <task id="LOCAL-00039" summary="Implementing load page and scroll">
       <created>1667069240381</created>
@@ -451,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668430786101</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Success/error message for newsletter input. CSS updates to video banner.">
+      <created>1668474791611</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1668474791611</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,7 +468,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Basic implementation of text underline." />
     <MESSAGE value="progress annotation implementation" />
     <MESSAGE value="misc style updates." />
     <MESSAGE value="annual report implementation" />
@@ -496,7 +492,8 @@
     <MESSAGE value="Basic implementation of opportunities sign up form." />
     <MESSAGE value="Responsive update." />
     <MESSAGE value="isSearchableProp" />
-    <option name="LAST_COMMIT_MESSAGE" value="isSearchableProp" />
+    <MESSAGE value="Success/error message for newsletter input. CSS updates to video banner." />
+    <option name="LAST_COMMIT_MESSAGE" value="Success/error message for newsletter input. CSS updates to video banner." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

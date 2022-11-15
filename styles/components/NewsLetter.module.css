@@ -8,6 +8,10 @@
     font-size: .75rem;
 }
 
+.input:focus {
+    outline: none;
+}
+
 .submit_button {
     width: 1.5rem;
     height: 1.5rem;
