@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Success/error message for opportunities input.">
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="video test.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/HeroBanner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeroBanner.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/api/__generated__/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/__generated__/page.ts" afterDir="false" />
@@ -103,14 +103,7 @@
       <workItem from="1668427835259" duration="141000" />
       <workItem from="1668427989493" duration="7000" />
       <workItem from="1668430194968" duration="1677000" />
-      <workItem from="1668472155117" duration="5199000" />
-    </task>
-    <task id="LOCAL-00040" summary="Implementing load page and scroll">
-      <created>1667070373268</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1667070373268</updated>
+      <workItem from="1668472155117" duration="6250000" />
     </task>
     <task id="LOCAL-00041" summary="Updating logic for screenfull">
       <created>1667075731359</created>
@@ -448,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668475974823</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="video test.">
+      <created>1668477544020</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1668477544020</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -468,7 +468,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="misc style updates." />
     <MESSAGE value="annual report implementation" />
     <MESSAGE value="Refactoring how progress percentage works" />
     <MESSAGE value="Misc. style updates" />
@@ -493,7 +492,8 @@
     <MESSAGE value="isSearchableProp" />
     <MESSAGE value="Success/error message for newsletter input. CSS updates to video banner." />
     <MESSAGE value="Success/error message for opportunities input." />
-    <option name="LAST_COMMIT_MESSAGE" value="Success/error message for opportunities input." />
+    <MESSAGE value="video test." />
+    <option name="LAST_COMMIT_MESSAGE" value="video test." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

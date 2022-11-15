@@ -87,11 +87,6 @@
     padding: 1.25rem;
 }
 
-.video {
-    object-fit: fill;
-    height: 800px;
-}
-
 .exit_screen_button svg {
     transition: all 0.35s ease;
 }
