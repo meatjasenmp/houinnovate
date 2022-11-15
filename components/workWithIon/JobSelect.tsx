@@ -14,7 +14,7 @@ import { allOpportunities } from "../../pages/api/__generated__/allOpportunities
 const JobSelect = () => {
   const [selectedOption, setSelectedOption] = useState<Options>();
   const [showLoadLoader, setShowLoader] = useState<boolean>(false);
-  const [testCategories, setTestCategories] = useState<Options[]>();
+  const [selectOptions, setSelectOptions] = useState<Options[]>();
   const [opportunities, setOpportunities] = useState<
     allOpportunities | undefined
   >();
@@ -58,9 +58,9 @@ const JobSelect = () => {
   useEffect(() => {
     if (categoriesData) {
       opportunityCategories.push({ value: "all", label: "All Opportunities" });
-      setTestCategories(setCategories(categoriesData));
+      setSelectOptions(setCategories(categoriesData));
     }
-  }, [categoriesData, opportunityCategories]);
+  }, [categoriesData]);
 
   useEffect(() => {
     if (opportunitiesData) {
@@ -174,7 +174,7 @@ const JobSelect = () => {
   return (
     <section>
       <SelectComponentTwo
-        options={testCategories}
+        options={selectOptions}
         selectedOption={selectedOption}
         setSelectedOption={setSelectedOption}
         setCategory={setCurrentCategory}
