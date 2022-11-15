@@ -53,7 +53,6 @@ const ShareButton = () => {
   const path = `${window.location.origin}${router.asPath}`;
   return (
     <>
-      <Toaster />
       <button
         className={styles.shareButton}
         onClick={() => {

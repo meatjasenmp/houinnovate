@@ -4,6 +4,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import Layout from "../components/Layout";
 import React from "react";
 import { relayStylePagination } from "@apollo/client/utilities";
+import { Toaster } from "react-hot-toast";
 
 const cache = new InMemoryCache({
   typePolicies: {
@@ -24,6 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ApolloProvider client={client}>
       <Layout>
+        <Toaster />
         <Component {...pageProps} />
       </Layout>
     </ApolloProvider>

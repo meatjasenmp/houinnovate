@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import MailchimpSubscribe, { EmailFormFields } from "react-mailchimp-subscribe";
 import styles from "../styles/components/NewsLetter.module.css";
 import ArrowRightIcon from "./ArrowRightIcon";
+import toast from "react-hot-toast";
 
 interface CustomFields extends EmailFormFields {
   GNAME: string;
@@ -13,52 +14,63 @@ interface FormProps {
   onValidated: (formData: EmailFormFields & CustomFields) => void;
 }
 
-const CustomForm = ({ status, onValidated, message }: FormProps) => {
+const CustomForm = ({ status, onValidated }: FormProps) => {
   const [email, setEmail] = useState("");
 
   const handleSubmit = () => {
-    email.indexOf("@") > -1 &&
+    if (email.indexOf("@") > -1) {
       onValidated({ EMAIL: email, GNAME: "newsletter" });
+      setEmail("");
+
+      if (status === "error") {
+        toast.error("There was an error subscribing you. please try again.", {
+          icon: "🚫",
+          position: "bottom-center",
+        });
+      }
+
+      if (status === "success") {
+        toast.success("You have been subscribed to our newsletter!", {
+          icon: "👏",
+          id: "newsletter",
+          position: "bottom-center",
+        });
+      }
+
+      return;
+    }
+    toast.error("Please enter a valid email address", {
+      icon: "🚫",
+      position: "bottom-center",
+    });
   };
+
   const handleChange = (e: {
     target: { value: React.SetStateAction<string> };
   }) => {
     setEmail(e.target.value);
   };
 
-  if (status === "error") {
-    return (
-      <div className="error">An error occurred subscribing to this email</div>
-    );
-  }
-
-  if (status === "sending") {
-    return <div className="sending">Sending...</div>;
-  }
-
-  if (status === "success") {
-    return (
-      <div className="success">
-        <p>Thank you for subscribing!</p>
-      </div>
-    );
-  }
-
   return (
-    <div className={styles.form_container}>
-      <input
-        placeholder="Enter your email for updates"
-        className={styles.input}
-        type="email"
-        onChange={handleChange}
-      />
-      <button
-        className={styles.submit_button}
-        type="submit"
-        onClick={handleSubmit}
-      >
-        <ArrowRightIcon color="white" />
-      </button>
+    <div>
+      <div className={styles.form_container}>
+        <input
+          placeholder="Enter your email for updates"
+          className={styles.input}
+          type="email"
+          onChange={handleChange}
+          value={email}
+          disabled={status === "sending"}
+        />
+        <button
+          className={styles.submit_button}
+          type="submit"
+          onClick={handleSubmit}
+          disabled={status === "sending"}
+        >
+          <ArrowRightIcon color="white" />
+        </button>
+      </div>
     </div>
   );
 };
