@@ -53,6 +53,7 @@ const SelectComponentTwo = ({
   useEffect(() => {
     if (options && options.length > 0) {
       setSelectedOption(options[0]);
+      setCategory(options[0]?.value);
     }
   }, [options]);
 

@@ -151,7 +151,7 @@ const JobSelect = () => {
         </>
       );
     }
-    if (pageInfo?.hasNextPage) {
+    if (pageInfo?.hasNextPage && currentCategory == "all") {
       return (
         <>
           <div className={styles.show_more}>
