@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Adding plays inline prop.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="UI fixes. Responsive tweaks.">
       <change beforePath="$PROJECT_DIR$/components/HeroBanner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeroBanner.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/Button.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/Button.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/components/HeroBanner.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/HeroBanner.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,14 +101,7 @@
       <workItem from="1668427989493" duration="7000" />
       <workItem from="1668430194968" duration="1677000" />
       <workItem from="1668472155117" duration="9522000" />
-      <workItem from="1668560420375" duration="5087000" />
-    </task>
-    <task id="LOCAL-00046" summary="Basic implementation of text underline.">
-      <created>1667146105118</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1667146105118</updated>
+      <workItem from="1668560420375" duration="5455000" />
     </task>
     <task id="LOCAL-00047" summary="Basic implementation of text underline.">
       <created>1667147143438</created>
@@ -449,7 +439,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668560699732</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="UI fixes. Responsive tweaks.">
+      <created>1668566328420</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1668566328420</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,7 +466,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="updating links" />
     <MESSAGE value="misc. updates" />
     <MESSAGE value="Updating CSS for video banner. FML." />
     <MESSAGE value="misc style updates" />
@@ -494,7 +490,8 @@
     <MESSAGE value="Fixing bug in select UI where state wasn't properly updating when categories/options were loaded." />
     <MESSAGE value="Fixing UI bug w/ 'show more' being displayed when there were no more results to be fetched." />
     <MESSAGE value="Adding plays inline prop." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding plays inline prop." />
+    <MESSAGE value="UI fixes. Responsive tweaks." />
+    <option name="LAST_COMMIT_MESSAGE" value="UI fixes. Responsive tweaks." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

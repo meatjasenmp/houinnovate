@@ -8,6 +8,10 @@
     display: grid;
 }
 
+.hero__banner_background {
+    position: relative;
+}
+
 .hero__banner_background,
 .content__wrap,
 .hero__banner_button {
@@ -45,10 +49,22 @@
     right: 0;
     bottom: 0;
     margin: auto;
+    z-index: 2;
 }
 
 .content__wrap .content__block:first-child {
     position: relative;
+}
+
+.tint {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .video__overlay {
@@ -73,6 +89,7 @@
     color: #FFFFFF;
     max-width: 200px;
     align-self: center;
+    position: relative;
 }
 
 .content__wrap h1 {

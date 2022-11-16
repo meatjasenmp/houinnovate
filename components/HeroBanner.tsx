@@ -105,6 +105,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
     <section className={styles.hero__banner_section}>
       <div className={styles.hero__banner}>
         <div className={styles.hero__banner_background}>
+          <div className={styles.tint} />
           <div className={styles.video} ref={videoWrapRef}>
             <div
               className={styles.video__overlay}
