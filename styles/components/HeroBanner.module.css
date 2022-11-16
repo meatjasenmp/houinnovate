@@ -1,34 +1,18 @@
 .hero__banner_section {
-    height: 660px;
     overflow: hidden;
-    margin-bottom: 1rem;
+    margin-bottom: .75rem;
+    height: 100%
 }
 
 .hero__banner {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
+    display: grid;
 }
 
-.hero__banner_background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-}
-
-.content__wrap {
-    position: relative;
-    z-index: 10;
-    margin: 0 .5rem;
-    color: #FFFFFF;
-    max-width: 22rem;
+.hero__banner_background,
+.content__wrap,
+.hero__banner_button {
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
 
 .hero__banner p {
@@ -49,20 +33,9 @@
 }
 
 .hero__banner_button {
-    margin-top: 1.5rem;
-}
-
-.video {
-    /*height: 660px;*/
-}
-
-.video iframe {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100vw !important;
-    height: 100vh !important;
+    margin-top: .75rem;
+    position: relative;
+    z-index: 10;
 }
 
 .content__wrap .content__block {
@@ -94,6 +67,23 @@
 .exit_screen_button:hover svg {
     fill: white;
 }
+
+.content__wrap {
+    margin: 0 1rem;
+    color: #FFFFFF;
+    max-width: 200px;
+    align-self: center;
+}
+
+.content__wrap h1 {
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+}
+
+.content__wrap h5 {
+    font-size: .75rem;
+}
+
 
 @media screen and (min-width: 414px) {
     .content__wrap {

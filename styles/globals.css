@@ -109,3 +109,10 @@
 .loading {
     @apply fixed top-0 left-0 w-full h-full z-50 text-white bg-black flex justify-center items-center;
 }
+
+/* React Player in Hero Banner */
+
+.player-wrapper {
+    height: auto !important;
+    aspect-ratio: 16/9;
+}

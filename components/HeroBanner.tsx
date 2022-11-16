@@ -100,6 +100,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
   if (!blockContent) return null;
 
   const { videoCta, contentBlocks, videoUrl } = blockContent;
+
   return (
     <section className={styles.hero__banner_section}>
       <div className={styles.hero__banner}>
@@ -118,17 +119,20 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
             </div>
 
             {videoUrl && (
-              <ReactPlayer
-                ref={videoRef}
-                url={String(videoUrl)}
-                volume={videoParams.volume}
-                muted={videoParams.muted}
-                playing={true}
-                loop={true}
-                width="100%"
-                height="660px"
-                playsinline={true}
-              />
+              <div className="player-wrapper">
+                <ReactPlayer
+                  className="react-player"
+                  ref={videoRef}
+                  url={String(videoUrl)}
+                  volume={videoParams.volume}
+                  muted={videoParams.muted}
+                  playing={true}
+                  loop={true}
+                  width="100%"
+                  height="100%"
+                  playsinline={true}
+                />
+              </div>
             )}
           </div>
         </div>
@@ -141,16 +145,16 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
                   <ContentEditor content={block?.contentBlock} />
                 </section>
               ))}
+            {videoCta && (
+              <Button
+                bgColor={BackgroundColors.RED}
+                label={videoCta}
+                icon={<BiPlay />}
+                className={styles.hero__banner_button}
+                onClick={handleButtonClick}
+              />
+            )}
           </div>
-          {videoCta && (
-            <Button
-              bgColor={BackgroundColors.RED}
-              label={videoCta}
-              icon={<BiPlay />}
-              className={styles.hero__banner_button}
-              onClick={handleButtonClick}
-            />
-          )}
         </div>
       </div>
     </section>

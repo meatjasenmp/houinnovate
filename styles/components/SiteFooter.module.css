@@ -112,8 +112,8 @@
 .back_to_top {
     width: 2rem;
     position: absolute;
-    right: 5rem;
-    bottom: 5rem;
+    right: 1rem;
+    bottom: 2rem;
 }
 
 .newsletter_form {

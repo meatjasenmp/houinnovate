@@ -1,8 +1,8 @@
 .button {
-    padding: .75rem 1.75rem;
+    padding: .15rem 1rem;
     border-radius: 3rem;
     color: white;
-    font-size: .90rem;
+    font-size: .60rem;
     display: flex;
     align-items: center;
     transition: background-color .3s ease;
