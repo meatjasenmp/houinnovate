@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Video poster implemnetation.">
-      <change afterPath="$PROJECT_DIR$/components/VideoComponent.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/components/VideoModal.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Setting up modal as fallback for devices that don't support going full screen">
+      <change beforePath="$PROJECT_DIR$/components/BoxLinksBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/BoxLinksBlock.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/HeroBanner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeroBanner.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/OpportunityPopUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/OpportunityPopUp.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,14 +102,7 @@
       <workItem from="1668427989493" duration="7000" />
       <workItem from="1668430194968" duration="1677000" />
       <workItem from="1668472155117" duration="9522000" />
-      <workItem from="1668560420375" duration="9640000" />
-    </task>
-    <task id="LOCAL-00051" summary="annual report implementation">
-      <created>1667153226837</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1667153226837</updated>
+      <workItem from="1668560420375" duration="10207000" />
     </task>
     <task id="LOCAL-00052" summary="Refactoring how progress percentage works">
       <created>1667154823334</created>
@@ -451,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668569515965</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="Setting up modal as fallback for devices that don't support going full screen">
+      <created>1668570831555</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1668570831555</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,7 +467,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Refactoring Work w/ ion Job Select." />
     <MESSAGE value="Hooking up API request for category selection" />
     <MESSAGE value="Hooked up API request for opportunity category selection." />
     <MESSAGE value="Linked copied notification." />
@@ -496,7 +491,8 @@
     <MESSAGE value="Responsive fixes for video banner." />
     <MESSAGE value="style updates" />
     <MESSAGE value="Video poster implemnetation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Video poster implemnetation." />
+    <MESSAGE value="Setting up modal as fallback for devices that don't support going full screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setting up modal as fallback for devices that don't support going full screen" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

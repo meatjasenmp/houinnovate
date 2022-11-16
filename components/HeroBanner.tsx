@@ -9,6 +9,7 @@ import styles from "../styles/components/HeroBanner.module.css";
 import React, { useEffect, useRef, useState } from "react";
 import { IoClose } from "@react-icons/all-files/io5/IoClose";
 import screenfull from "screenfull";
+import ImageBlock from "./ImageBlock";
 import VideoComponent from "./VideoComponent";
 
 interface ComponentBlocksProps {
@@ -116,9 +117,11 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
               className={styles.poster}
               style={{ display: videoPlaying ? "none" : "block" }}
             >
-              <img
-                src={String(videoPoster?.mediaItemUrl)}
-                alt={String(videoPoster?.altText)}
+              <ImageBlock
+                image={videoPoster}
+                priority={true}
+                height="590"
+                width="1212"
               />
             </div>
             <div className={styles.video} ref={videoWrapRef}>

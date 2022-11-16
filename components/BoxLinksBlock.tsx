@@ -6,7 +6,6 @@ import {
 import { backgroundColorMapping, LinkType } from "../styles/helpers";
 import ContentEditor from "./ContentEditor";
 import ImageBlock from "./ImageBlock";
-import { FiArrowUpRight } from "@react-icons/all-files/fi/FiArrowUpRight";
 import { accentColor } from "../styles/helpers";
 import { Link as ScrollLink } from "react-scroll";
 import { handleScroll } from "./helpers";
