@@ -127,6 +127,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
                 loop={true}
                 width="100%"
                 height="660px"
+                playsinline={true}
               />
             )}
           </div>
