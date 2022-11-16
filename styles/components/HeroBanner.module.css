@@ -13,8 +13,7 @@
 }
 
 .hero__banner_background,
-.content__wrap,
-.hero__banner_button {
+.content__wrap {
     grid-column: 1/2;
     grid-row: 1/2;
 }
@@ -101,17 +100,62 @@
     font-size: .75rem;
 }
 
-
 @media screen and (min-width: 414px) {
     .content__wrap {
         margin: 0 1rem;
     }
 }
 
+@media screen and (min-width: 600px) {
+    .content__wrap {
+        max-width: 400px;
+    }
+    .content__wrap h1 {
+        font-size: 2rem;
+    }
+
+    .content__wrap h5 {
+        font-size: .95rem;
+    }
+
+    .hero__banner_button {
+        margin-top: 1rem;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .content__wrap {
-        max-width: 35rem;
         margin: 0 5.5rem;
     }
 }
 
+@media screen and (min-width: 990px) {
+
+    .content__wrap {
+        max-width: 767px;
+    }
+    .content__wrap h1 {
+        font-size: 2.5rem;
+    }
+
+    .content__wrap h5 {
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    .content__wrap {
+        max-width: 767px;
+    }
+    .content__wrap h1 {
+        font-size: 3.5rem;
+        line-height: 1;
+    }
+
+    .content__wrap h5 {
+        font-size: 1.25rem;
+    }
+
+}

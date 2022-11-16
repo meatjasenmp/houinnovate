@@ -146,16 +146,16 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
                   <ContentEditor content={block?.contentBlock} />
                 </section>
               ))}
-            {videoCta && (
-              <Button
-                bgColor={BackgroundColors.RED}
-                label={videoCta}
-                icon={<BiPlay />}
-                className={styles.hero__banner_button}
-                onClick={handleButtonClick}
-              />
-            )}
           </div>
+          {videoCta && (
+            <Button
+              bgColor={BackgroundColors.RED}
+              label={videoCta}
+              icon={<BiPlay />}
+              className={styles.hero__banner_button}
+              onClick={handleButtonClick}
+            />
+          )}
         </div>
       </div>
     </section>

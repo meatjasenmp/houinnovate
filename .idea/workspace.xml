@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="UI fixes. Responsive tweaks.">
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Adding tint for more contrast.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/HeroBanner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeroBanner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/Button.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/Button.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/components/HeroBanner.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/HeroBanner.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/Modal.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/Modal.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/ReactHamburger.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/ReactHamburger.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,14 +105,7 @@
       <workItem from="1668427989493" duration="7000" />
       <workItem from="1668430194968" duration="1677000" />
       <workItem from="1668472155117" duration="9522000" />
-      <workItem from="1668560420375" duration="5455000" />
-    </task>
-    <task id="LOCAL-00047" summary="Basic implementation of text underline.">
-      <created>1667147143438</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1667147143438</updated>
+      <workItem from="1668560420375" duration="7191000" />
     </task>
     <task id="LOCAL-00048" summary="progress annotation implementation">
       <created>1667148151011</created>
@@ -446,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668566328420</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="Adding tint for more contrast.">
+      <created>1668566507572</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1668566507572</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,7 +470,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="misc. updates" />
     <MESSAGE value="Updating CSS for video banner. FML." />
     <MESSAGE value="misc style updates" />
     <MESSAGE value="Basic implementation of jobs load more." />
@@ -491,7 +494,8 @@
     <MESSAGE value="Fixing UI bug w/ 'show more' being displayed when there were no more results to be fetched." />
     <MESSAGE value="Adding plays inline prop." />
     <MESSAGE value="UI fixes. Responsive tweaks." />
-    <option name="LAST_COMMIT_MESSAGE" value="UI fixes. Responsive tweaks." />
+    <MESSAGE value="Adding tint for more contrast." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding tint for more contrast." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
