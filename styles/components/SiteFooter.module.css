@@ -129,9 +129,14 @@
     font-family: Sohne-Kraftig-Bold, sans-serif;
 }
 
+.site_footer_wrapper {
+    max-width: 450px;
+}
+
 @media screen and (min-width: 990px) {
     .site_footer_wrapper {
         display: flex;
+        max-width: none;
     }
 
     .site_footer_wrapper > div {
