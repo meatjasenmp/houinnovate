@@ -6,9 +6,10 @@ import { BiPlay } from "@react-icons/all-files/bi/BiPlay";
 import { gsap } from "gsap";
 import ReactPlayer from "react-player/vimeo";
 import styles from "../styles/components/HeroBanner.module.css";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { IoClose } from "@react-icons/all-files/io5/IoClose";
 import screenfull from "screenfull";
+import VideoComponent from "./VideoComponent";
 
 interface ComponentBlocksProps {
   blockContent: page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner;
@@ -16,6 +17,7 @@ interface ComponentBlocksProps {
 
 const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
   const videoRef = useRef<ReactPlayer>(null);
+  const [isOpen, setIsOpen] = React.useState(false);
   const videoWrapRef = useRef<HTMLDivElement>(null);
   const contentWrapRef = useRef<HTMLDivElement>(null);
   const [videoIsFullscreen, setVideoIsFullscreen] = useState(false);
@@ -87,7 +89,9 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
       screenfull.request(videoWrapRef.current).then(() => {
         enableFullScreen();
       });
+      return;
     }
+    // setIsOpen(true);
   };
 
   const exitFullscreen = () => {
@@ -103,73 +107,76 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
   const { videoCta, contentBlocks, videoUrl, videoPoster } = blockContent;
 
   return (
-    <section className={styles.hero__banner_section}>
-      <div className={styles.hero__banner}>
-        <div className={styles.hero__banner_background}>
-          <div className={styles.tint} />
-          <div
-            className={styles.poster}
-            style={{ display: videoPlaying ? "none" : "block" }}
-          >
-            <img
-              src={String(videoPoster?.mediaItemUrl)}
-              alt={String(videoPoster?.altText)}
-            />
-          </div>
-          <div className={styles.video} ref={videoWrapRef}>
+    <>
+      <section className={styles.hero__banner_section}>
+        <div className={styles.hero__banner}>
+          <div className={styles.hero__banner_background}>
+            <div className={styles.tint} />
             <div
-              className={styles.video__overlay}
-              style={{ display: videoIsFullscreen ? "block" : "none" }}
+              className={styles.poster}
+              style={{ display: videoPlaying ? "none" : "block" }}
             >
-              <button
-                className={styles.exit_screen_button}
-                onClick={exitFullscreen}
-              >
-                <IoClose size="2rem" color="#F54932" />
-              </button>
+              <img
+                src={String(videoPoster?.mediaItemUrl)}
+                alt={String(videoPoster?.altText)}
+              />
             </div>
-
-            {videoUrl && (
-              <div className="player-wrapper">
-                <ReactPlayer
-                  className="react-player"
-                  ref={videoRef}
-                  url={String(videoUrl)}
-                  volume={videoParams.volume}
-                  muted={videoParams.muted}
-                  playing={true}
-                  loop={true}
-                  width="100%"
-                  height="100%"
-                  playsinline={true}
-                  onStart={() => setVideoPlaying(true)}
-                />
+            <div className={styles.video} ref={videoWrapRef}>
+              <div
+                className={styles.video__overlay}
+                style={{ display: videoIsFullscreen ? "block" : "none" }}
+              >
+                <button
+                  className={styles.exit_screen_button}
+                  onClick={exitFullscreen}
+                >
+                  <IoClose size="2rem" color="#F54932" />
+                </button>
               </div>
+
+              {videoUrl && (
+                <div className="player-wrapper">
+                  <ReactPlayer
+                    className="react-player"
+                    ref={videoRef}
+                    url={String(videoUrl)}
+                    volume={videoParams.volume}
+                    muted={videoParams.muted}
+                    playing={true}
+                    loop={true}
+                    width="100%"
+                    height="100%"
+                    playsinline={true}
+                    onStart={() => setVideoPlaying(true)}
+                  />
+                </div>
+              )}
+            </div>
+          </div>
+
+          <div className={styles.content__wrap} ref={contentWrapRef}>
+            <div className="relative">
+              {contentBlocks &&
+                contentBlocks.map((block, index) => (
+                  <section className={contentBlockClassName} key={index}>
+                    <ContentEditor content={block?.contentBlock} />
+                  </section>
+                ))}
+            </div>
+            {videoCta && (
+              <Button
+                bgColor={BackgroundColors.RED}
+                label={videoCta}
+                icon={<BiPlay />}
+                className={styles.hero__banner_button}
+                onClick={handleButtonClick}
+              />
             )}
           </div>
         </div>
-
-        <div className={styles.content__wrap} ref={contentWrapRef}>
-          <div className="relative">
-            {contentBlocks &&
-              contentBlocks.map((block, index) => (
-                <section className={contentBlockClassName} key={index}>
-                  <ContentEditor content={block?.contentBlock} />
-                </section>
-              ))}
-          </div>
-          {videoCta && (
-            <Button
-              bgColor={BackgroundColors.RED}
-              label={videoCta}
-              icon={<BiPlay />}
-              className={styles.hero__banner_button}
-              onClick={handleButtonClick}
-            />
-          )}
-        </div>
-      </div>
-    </section>
+      </section>
+      <VideoComponent isOpen={isOpen} url={String(videoUrl)} />
+    </>
   );
 };
 

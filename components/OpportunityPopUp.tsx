@@ -5,7 +5,6 @@ import { IoClose } from "@react-icons/all-files/io5/IoClose";
 import ProgressBar from "./ProgressBar";
 import { Phase } from "./ProgressBar";
 import { completedBackground } from "./helpers";
-import { useRouter } from "next/router";
 
 import styles from "../styles/components/Modal.module.css";
 import { Colors } from "../styles/helpers";
