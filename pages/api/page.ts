@@ -15,6 +15,10 @@ export const usePage = (id: string) => {
                 contentBlocks {
                   contentBlock
                 }
+                videoPoster {
+                  mediaItemUrl
+                  altText
+                }
                 videoCta
                 videoUrl
               }

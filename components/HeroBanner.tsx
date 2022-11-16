@@ -19,6 +19,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
   const videoWrapRef = useRef<HTMLDivElement>(null);
   const contentWrapRef = useRef<HTMLDivElement>(null);
   const [videoIsFullscreen, setVideoIsFullscreen] = useState(false);
+  const [videoPlaying, setVideoPlaying] = useState(false);
   const [videoParams, setVideoParams] = useState({
     volume: 0,
     muted: true,
@@ -99,13 +100,22 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
 
   if (!blockContent) return null;
 
-  const { videoCta, contentBlocks, videoUrl } = blockContent;
+  const { videoCta, contentBlocks, videoUrl, videoPoster } = blockContent;
 
   return (
     <section className={styles.hero__banner_section}>
       <div className={styles.hero__banner}>
         <div className={styles.hero__banner_background}>
           <div className={styles.tint} />
+          <div
+            className={styles.poster}
+            style={{ display: videoPlaying ? "none" : "block" }}
+          >
+            <img
+              src={String(videoPoster?.mediaItemUrl)}
+              alt={String(videoPoster?.altText)}
+            />
+          </div>
           <div className={styles.video} ref={videoWrapRef}>
             <div
               className={styles.video__overlay}
@@ -132,6 +142,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
                   width="100%"
                   height="100%"
                   playsinline={true}
+                  onStart={() => setVideoPlaying(true)}
                 />
               </div>
             )}

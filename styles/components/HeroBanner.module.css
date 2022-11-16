@@ -48,7 +48,7 @@
     right: 0;
     bottom: 0;
     margin: auto;
-    z-index: 2;
+    z-index: 3;
 }
 
 .content__wrap .content__block:first-child {
@@ -64,6 +64,7 @@
     bottom: 0;
     width: 100%;
     height: 100%;
+    z-index: 2;
 }
 
 .video__overlay {
@@ -94,6 +95,15 @@
 .content__wrap h1 {
     font-size: 1.25rem;
     margin-bottom: .5rem;
+}
+
+.poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .content__wrap h5 {

@@ -12,9 +12,22 @@ export interface page_page_components_componentBlocks_Page_Components_ComponentB
   contentBlock: string | null;
 }
 
+export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_videoPoster {
+  __typename: "MediaItem";
+  /**
+   * Url of the mediaItem
+   */
+  mediaItemUrl: string | null;
+  /**
+   * Alternative text to display when resource is not displayed
+   */
+  altText: string | null;
+}
+
 export interface page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner {
   __typename: "Page_Components_ComponentBlocks_HeroBanner";
   contentBlocks: (page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_contentBlocks | null)[] | null;
+  videoPoster: page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner_videoPoster | null;
   videoCta: string | null;
   videoUrl: string | null;
 }
