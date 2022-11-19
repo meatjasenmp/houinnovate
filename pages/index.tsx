@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import ComponentBlocks from "../components/ComponentBlocks";
-import { usePage } from "./api/page";
-import { page_generalSettings, page_page } from "./api/__generated__/page";
+import { usePage } from "../api/page";
+import { page_generalSettings, page_page } from "../api/__generated__/page";
 import Head from "next/head";
 import React from "react";
 

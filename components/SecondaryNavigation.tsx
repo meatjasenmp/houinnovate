@@ -1,4 +1,4 @@
-import { page_siteOptionsPage_siteNavigation } from "../pages/api/__generated__/page";
+import { page_siteOptionsPage_siteNavigation } from "../api/__generated__/page";
 import styles from "../styles/components/SecondaryNavigation.module.css";
 import { Link as ScrollLink } from "react-scroll";
 import Link from "next/link";

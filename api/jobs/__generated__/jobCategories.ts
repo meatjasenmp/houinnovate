@@ -7,7 +7,7 @@
 // GraphQL query operation: jobCategories
 // ====================================================
 
-export interface jobCategories_jobCategories_edges_node_iONJobs_nodes {
+export interface jobCategories_jobCategories_edges_node_pages_nodes {
   __typename: "IONJob";
   /**
    * The globally unique identifier of the ion_jobs object.
@@ -15,12 +15,12 @@ export interface jobCategories_jobCategories_edges_node_iONJobs_nodes {
   id: string;
 }
 
-export interface jobCategories_jobCategories_edges_node_iONJobs {
+export interface jobCategories_jobCategories_edges_node_pages {
   __typename: "JobCategoryToIONJobConnection";
   /**
    * The nodes of the connection, without the edges
    */
-  nodes: (jobCategories_jobCategories_edges_node_iONJobs_nodes | null)[] | null;
+  nodes: (jobCategories_jobCategories_edges_node_pages_nodes | null)[] | null;
 }
 
 export interface jobCategories_jobCategories_edges_node {
@@ -40,7 +40,7 @@ export interface jobCategories_jobCategories_edges_node {
   /**
    * Connection between the JobCategory type and the IONJob type
    */
-  iONJobs: jobCategories_jobCategories_edges_node_iONJobs | null;
+  pages: jobCategories_jobCategories_edges_node_pages | null;
 }
 
 export interface jobCategories_jobCategories_edges {

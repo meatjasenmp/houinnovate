@@ -1,9 +1,9 @@
-import { communityInvestmentsSelect_communityInvestments_edges_node } from "../pages/api/__generated__/communityInvestmentsSelect";
+import { communityInvestmentsSelect_communityInvestments_edges_node } from "../api/__generated__/communityInvestmentsSelect";
 import styles from "../styles/components/PopUpLink.module.css";
 import ArrowLinkIcon from "./ArrowLinkIcon";
 import ProgressBar from "./ProgressBar";
 import { Colors } from "../styles/helpers";
-import { projectOpportunitiesSelect_projectBasedOpportunities_edges_node } from "../pages/api/__generated__/projectOpportunitiesSelect";
+import { projectOpportunitiesSelect_projectBasedOpportunities_edges_node } from "../api/__generated__/projectOpportunitiesSelect";
 import { PopUpTypes } from "./helpers";
 
 interface PopUpSelectProps {

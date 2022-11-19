@@ -2,7 +2,7 @@ import ContentEditor from "./ContentEditor";
 import {
   page_page_components_componentBlocks_Page_Components_ComponentBlocks_Phases,
   page_page_components_componentBlocks_Page_Components_ComponentBlocks_Phases_phasesList_phase,
-} from "../pages/api/__generated__/page";
+} from "../api/__generated__/page";
 
 import styles from "../styles/components/Phases.module.css";
 import {

@@ -1,20 +1,17 @@
-import { useJobCategories } from "../../pages/api/job_categories";
 import {
   useJobOpportunities,
   useJobOpportunitiesByCategory,
-} from "../../pages/api/opportunities";
+} from "../../api/jobs/opportunities";
 import React, { useEffect, useState } from "react";
-import SelectComponentTwo from "../SelectComponentTwo";
+import JobCategorySelect from "./JobCategorySelect";
 import { Options } from "../helpers";
-import { jobCategories } from "../../pages/api/__generated__/jobCategories";
 import JobLinks from "./JobLinks";
 import styles from "../../styles/components/JobLink.module.css";
-import { allOpportunities } from "../../pages/api/__generated__/allOpportunities";
+import { allOpportunities } from "../../api/opportunities/__generated__/allOpportunities";
 
 const JobSelect = () => {
   const [selectedOption, setSelectedOption] = useState<Options>();
   const [showLoadLoader, setShowLoader] = useState<boolean>(false);
-  const [selectOptions, setSelectOptions] = useState<Options[]>();
   const [opportunities, setOpportunities] = useState<
     allOpportunities | undefined
   >();
@@ -22,7 +19,6 @@ const JobSelect = () => {
     string | null | undefined
   >();
 
-  const { data: categoriesData, loading, error } = useJobCategories();
   const {
     data: opportunitiesData,
     loading: opportunitiesLoading,
@@ -36,31 +32,6 @@ const JobSelect = () => {
     data: opportunitiesByCategoryData,
     fetchMore: fetchMoreByCategory,
   } = useJobOpportunitiesByCategory(String(currentCategory));
-
-  const opportunityCategories: Options[] = [];
-
-  const setCategories = (data: jobCategories) => {
-    data?.jobCategories?.edges?.forEach((edge) => {
-      if (edge?.node) {
-        const { iONJobs } = edge.node;
-        if (iONJobs?.nodes?.length && iONJobs.nodes.length > 0) {
-          const { name, slug } = edge.node;
-          opportunityCategories.push({
-            value: slug,
-            label: name,
-          });
-        }
-      }
-    });
-    return opportunityCategories;
-  };
-
-  useEffect(() => {
-    if (categoriesData) {
-      opportunityCategories.push({ value: "all", label: "All Opportunities" });
-      setSelectOptions(setCategories(categoriesData));
-    }
-  }, [categoriesData]);
 
   useEffect(() => {
     if (opportunitiesData) {
@@ -79,8 +50,6 @@ const JobSelect = () => {
       setOpportunities(data.data);
     });
   }, [currentCategory]);
-
-  if (loading || error) return <></>;
 
   const { pageInfo } = opportunitiesData?.iONJobs || {};
   const { pageInfo: categoryPageInfo } =
@@ -171,10 +140,11 @@ const JobSelect = () => {
     return <></>;
   };
 
+  // TODO: Loading State & Error State
+
   return (
     <section>
-      <SelectComponentTwo
-        options={selectOptions}
+      <JobCategorySelect
         selectedOption={selectedOption}
         setSelectedOption={setSelectedOption}
         setCategory={setCurrentCategory}

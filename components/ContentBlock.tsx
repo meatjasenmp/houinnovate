@@ -1,6 +1,6 @@
 import ContentEditor from "./ContentEditor";
 import { backgroundColorMapping } from "../styles/helpers";
-import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlock } from "../pages/api/__generated__/page";
+import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlock } from "../api/__generated__/page";
 
 import styles from "../styles/components/ContentBlock.module.css";
 

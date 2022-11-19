@@ -1,4 +1,4 @@
-import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner } from "../pages/api/__generated__/page";
+import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner } from "../api/__generated__/page";
 import { BackgroundColors } from "../styles/helpers";
 import ContentEditor from "./ContentEditor";
 import Button from "./Button";

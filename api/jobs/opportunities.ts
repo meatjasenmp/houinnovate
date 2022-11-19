@@ -1,5 +1,5 @@
 import { useQuery, useLazyQuery, gql } from "@apollo/client";
-import { allOpportunities } from "./__generated__/allOpportunities";
+import { allOpportunities } from "../opportunities/__generated__/allOpportunities";
 import { opportunitiesByCategory } from "./__generated__/opportunitiesByCategory";
 
 const OPPORTUNITIES_BY_CATEGORY = gql`

@@ -9,7 +9,7 @@ const JOB_CATEGORIES = gql`
           databaseId
           slug
           name
-          iONJobs {
+          pages: iONJobs {
             nodes {
               id
             }
@@ -21,19 +21,11 @@ const JOB_CATEGORIES = gql`
 `;
 
 export const useJobCategories = () => {
-  const { data, loading, error, fetchMore } = useQuery<jobCategories>(
-    JOB_CATEGORIES,
-    {
-      variables: {
-        slug: null,
-      },
-    }
-  );
+  const { data, loading, error } = useQuery<jobCategories>(JOB_CATEGORIES);
 
   return {
     data,
     loading,
     error,
-    fetchMore,
   };
 };

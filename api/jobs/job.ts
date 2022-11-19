@@ -1,5 +1,5 @@
 import { useQuery, gql } from "@apollo/client";
-import { iONJobs, iONJobsVariables } from "./__generated__/iONJobs";
+import { iONJobs, iONJobsVariables } from "../__generated__/iONJobs";
 
 export const useJob = (id: string) => {
   const { data, loading, error } = useQuery<iONJobs, iONJobsVariables>(

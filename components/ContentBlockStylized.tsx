@@ -3,7 +3,7 @@ import { backgroundColorMapping, accentColor } from "../styles/helpers";
 import {
   page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlockStylizedList,
   page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlockStylizedList_list_listItem,
-} from "../pages/api/__generated__/page";
+} from "../api/__generated__/page";
 
 interface ComponentBlocksProps {
   blockContent: page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlockStylizedList;

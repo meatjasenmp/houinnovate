@@ -1,6 +1,6 @@
 import React from "react";
 import Navigation from "./Navigation";
-import { usePage } from "../pages/api/page";
+import { usePage } from "../api/page";
 import SecondaryNavigation from "./SecondaryNavigation";
 import SiteFooter from "./SiteFooter";
 

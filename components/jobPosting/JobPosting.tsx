@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useRouter } from "next/router";
-import useJob from "../../pages/api/job";
+import useJob from "../../api/jobs/job";
 import ContentEditor from "../ContentEditor";
 import { BiArrowToTop } from "@react-icons/all-files/bi/BiArrowToTop";
 import { FaArrowLeft } from "@react-icons/all-files/fa/FaArrowLeft";
@@ -14,7 +14,7 @@ import {
   iONJobs_iONJob_jobPosting_contact,
   iONJobs_iONJob_jobPosting_dataFields,
   iONJobs_iONJob_jobPosting_metaData,
-} from "../../pages/api/__generated__/iONJobs";
+} from "../../api/__generated__/iONJobs";
 
 interface ImportantNoticeProps {
   importantNotice: string | null | undefined;

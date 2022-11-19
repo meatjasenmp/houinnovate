@@ -1,13 +1,13 @@
 import SelectComponent from "./SelectComponent";
 import { Options, optionSelectItems } from "./helpers";
-import { useProjectOpportunitiesSelect } from "../pages/api/project_opportunities_select";
+import { useProjectOpportunitiesSelect } from "../api/opportunities/project_opportunities_select";
 import OpportunityPopUp from "./OpportunityPopUp";
 
 import styles from "../styles/components/PopUpLink.module.css";
 
 import { useEffect, useState } from "react";
 
-import { projectOpportunitiesSelect_projectBasedOpportunities_edges } from "../pages/api/__generated__/projectOpportunitiesSelect";
+import { projectOpportunitiesSelect_projectBasedOpportunities_edges } from "../api/__generated__/projectOpportunitiesSelect";
 import { PopUpTypes } from "./helpers";
 import PopUpLinks from "./PopUpLinks";
 import { useRouter } from "next/router";

@@ -10,7 +10,6 @@ const customStyles = {
 };
 
 const VideoComponent = ({ isOpen, url }: { isOpen: boolean; url: string }) => {
-  console.log(isOpen);
   return (
     <ReactModal isOpen={isOpen} style={customStyles}>
       <ReactPlayer

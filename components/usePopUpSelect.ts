@@ -3,7 +3,7 @@ import { Options } from "./helpers";
 import {
   projectOpportunitiesSelect_projectBasedOpportunities,
   projectOpportunitiesSelect_projectBasedOpportunities_edges,
-} from "../pages/api/__generated__/projectOpportunitiesSelect";
+} from "../api/__generated__/projectOpportunitiesSelect";
 
 const usePopUpSelect = (
   projects:

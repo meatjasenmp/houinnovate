@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { allOpportunities } from "../../pages/api/__generated__/allOpportunities";
+import { allOpportunities } from "../../api/opportunities/__generated__/allOpportunities";
 import styles from "../../styles/components/JobLink.module.css";
 import JobLink from "./JobLink";
 

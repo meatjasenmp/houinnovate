@@ -3,7 +3,7 @@ import { useQuery, gql } from "@apollo/client";
 import {
   projectBasedOpportunity,
   projectBasedOpportunityVariables,
-} from "./__generated__/projectBasedOpportunity";
+} from "../__generated__/projectBasedOpportunity";
 
 export const useOpportunity = (id: string) => {
   const { data, loading, error } = useQuery<

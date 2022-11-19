@@ -1,13 +1,13 @@
 import ReactModal from "react-modal";
-import ContentEditor from "./ContentEditor";
-import { useInvestment } from "../pages/api/investment";
+import ContentEditor from "../ContentEditor";
+import { useInvestment } from "../../api/investments/investment";
 import { IoClose } from "@react-icons/all-files/io5/IoClose";
-import ProgressBar from "./ProgressBar";
-import { Phase } from "./ProgressBar";
-import { PopUpProps, PopUpTypes } from "./helpers";
-import styles from "../styles/components/Modal.module.css";
-import { Colors } from "../styles/helpers";
-import { completedBackground } from "./helpers";
+import ProgressBar from "../ProgressBar";
+import { Phase } from "../ProgressBar";
+import { PopUpProps, PopUpTypes } from "../helpers";
+import styles from "../../styles/components/Modal.module.css";
+import { Colors } from "../../styles/helpers";
+import { completedBackground } from "../helpers";
 
 // TODO: The pop up can probably be a custom hook
 

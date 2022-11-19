@@ -1,10 +1,10 @@
-import ContentEditor from "./ContentEditor";
-import CommittedDeployedProgressBar from "./CommittedDeployedProgressBar";
+import ContentEditor from "../ContentEditor";
+import CommittedDeployedProgressBar from "../CommittedDeployedProgressBar";
 import CommunityInvestmentsSelect from "./CommunityInvestmentsSelect";
 
-import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_CommunityInvestment } from "../pages/api/__generated__/page";
-import styles from "../styles/components/DirectCommunityInvestment.module.css";
-import { Colors } from "../styles/helpers";
+import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_CommunityInvestment } from "../../api/__generated__/page";
+import styles from "../../styles/components/DirectCommunityInvestment.module.css";
+import { Colors } from "../../styles/helpers";
 import { useEffect, useRef } from "react";
 
 interface DirectCommunityInvestmentProps {

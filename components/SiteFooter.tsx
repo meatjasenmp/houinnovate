@@ -9,7 +9,7 @@ import {
   page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_GetInTouch,
   page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict,
   page_siteOptionsPage_siteFooter_footerBlocks_SiteOptionsPage_Sitefooter_FooterBlocks_RiceUniversity,
-} from "../pages/api/__generated__/page";
+} from "../api/__generated__/page";
 
 import styles from "../styles/components/SiteFooter.module.css";
 import ImageAsset from "../styles/components/ImageAsset";

@@ -6,7 +6,7 @@ import ContentBlockStylized from "./ContentBlockStylized";
 import Phases from "./Phases";
 import WorkWithIon from "./workWithIon/WorkWithIon";
 import ProjectBasedOpportunities from "./ProjectBasedOpportunities";
-import DirectCommunityInvestment from "./DirectCommunityInvestment";
+import DirectCommunityInvestment from "./investments/DirectCommunityInvestment";
 import {
   page_page_components_componentBlocks,
   page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner,
@@ -17,7 +17,7 @@ import {
   page_page_components_componentBlocks_Page_Components_ComponentBlocks_Phases,
   page_page_components_componentBlocks_Page_Components_ComponentBlocks_WorkWithIon,
   page_page_components_componentBlocks_Page_Components_ComponentBlocks_CommunityInvestment,
-} from "../pages/api/__generated__/page";
+} from "../api/__generated__/page";
 
 export interface ComponentBlocksProps {
   componentBlocks:

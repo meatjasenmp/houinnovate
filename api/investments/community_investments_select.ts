@@ -1,12 +1,11 @@
 import { useQuery, gql } from "@apollo/client";
+import { communityInvestmentsSelect } from "../__generated__/communityInvestmentsSelect";
 
-import { projectOpportunitiesSelect } from "./__generated__/projectOpportunitiesSelect";
-
-export const useProjectOpportunitiesSelect = () => {
-  const { data, loading, error } = useQuery<projectOpportunitiesSelect>(
+export const useCommunityInvestmentsSelect = () => {
+  const { data, loading, error } = useQuery<communityInvestmentsSelect>(
     gql`
-      query projectOpportunitiesSelect {
-        projectBasedOpportunities(first: 50) {
+      query communityInvestmentsSelect {
+        communityInvestments {
           edges {
             node {
               databaseId
@@ -14,7 +13,7 @@ export const useProjectOpportunitiesSelect = () => {
               title
               communityAndOpportunityPopUps {
                 alphanumericLabel
-                type: opportunityType {
+                type: investmentType {
                   id
                   slug
                   name

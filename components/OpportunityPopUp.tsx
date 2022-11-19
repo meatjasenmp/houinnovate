@@ -1,5 +1,5 @@
 import { PopUpProps, PopUpTypes } from "./helpers";
-import { useOpportunity } from "../pages/api/opportunity";
+import { useOpportunity } from "../api/opportunities/opportunity";
 import ContentEditor from "./ContentEditor";
 import { IoClose } from "@react-icons/all-files/io5/IoClose";
 import ProgressBar from "./ProgressBar";

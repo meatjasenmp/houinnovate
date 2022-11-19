@@ -9,7 +9,7 @@ import {
   page_siteOptionsPage_siteNavigation_navigation_sectionLinks,
   page_siteOptionsPage_siteNavigation_navigation_blockLinks,
   page_siteOptionsPage_annualReport,
-} from "../pages/api/__generated__/page";
+} from "../api/__generated__/page";
 import styles from "../styles/components/Navigation.module.css";
 import { handleScroll } from "./helpers";
 
