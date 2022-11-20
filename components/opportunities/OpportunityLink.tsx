@@ -1,22 +1,22 @@
 import React from "react";
-import { allInvestments_communityInvestments_edges } from "../../api/investments/__generated__/allInvestments";
+import { allProjectOpportunities_projectBasedOpportunities_edges } from "../../api/opportunities/__generated__/allProjectOpportunities";
 import ArrowLinkIcon from "../ArrowLinkIcon";
 import ProgressBar, { Phase } from "../ProgressBar";
 import { Colors } from "../../styles/helpers";
 
-interface InvestmentLinkProps {
-  investment: allInvestments_communityInvestments_edges | null;
+interface OpportunityLinkProps {
+  opportunity: allProjectOpportunities_projectBasedOpportunities_edges | null;
   setCurrentID: React.Dispatch<React.SetStateAction<number | undefined>>;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const InvestmentLink = ({
-  investment,
+const OpportunityLink = ({
+  opportunity,
   setIsOpen,
   setCurrentID,
-}: InvestmentLinkProps) => {
+}: OpportunityLinkProps) => {
   const { title, databaseId, communityAndOpportunityPopUps } =
-    investment?.node || {};
+    opportunity?.node || {};
 
   const { progress, alphanumericLabel } = communityAndOpportunityPopUps || {};
 
@@ -33,7 +33,7 @@ const InvestmentLink = ({
       onClick={handleClick}
       className={`block text-left flex flex-col justify-between ${
         progress?.currentPhase === Phase.COMPLETED
-          ? "bg-innovate-neon"
+          ? "bg-innovate-blue"
           : "bg-innovate-gray"
       }`}
     >
@@ -60,11 +60,11 @@ const InvestmentLink = ({
         <ProgressBar
           currentPhase={currentPhase}
           progressPercentage={progressPercentage}
-          accent={Colors.NEON}
+          accent={Colors.BLUE}
         />
       </div>
     </button>
   );
 };
 
-export default InvestmentLink;
+export default OpportunityLink;

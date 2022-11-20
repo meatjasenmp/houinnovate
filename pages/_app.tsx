@@ -13,6 +13,7 @@ const cache = new InMemoryCache({
       fields: {
         iONJobs: relayStylePagination(),
         communityInvestments: relayStylePagination(),
+        projectBasedOpportunities: relayStylePagination(),
       },
     },
   },

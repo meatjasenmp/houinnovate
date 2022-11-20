@@ -1,15 +1,14 @@
-import ReactModal from "react-modal";
+import { PopUpProps, PopUpTypes } from "../helpers";
+import { useOpportunity } from "../../api/opportunities/opportunity";
 import ContentEditor from "../ContentEditor";
-import { useInvestment } from "../../api/investments/investment";
 import { IoClose } from "@react-icons/all-files/io5/IoClose";
 import ProgressBar from "../ProgressBar";
 import { Phase } from "../ProgressBar";
-import { PopUpProps, PopUpTypes } from "../helpers";
-import styles from "../../styles/components/Modal.module.css";
-import { Colors } from "../../styles/helpers";
 import { completedBackground } from "../helpers";
 
-// TODO: The pop up can probably be a custom hook
+import styles from "../../styles/components/Modal.module.css";
+import { Colors } from "../../styles/helpers";
+import ReactModal from "react-modal";
 
 const customStyles = {
   overlay: {
@@ -19,27 +18,37 @@ const customStyles = {
 
 ReactModal.setAppElement("#__next");
 
-const CommunityInvestmentPopUp = ({
+const OpportunityPopUp = ({
   id,
   currentID,
   setCurrentInvestmentID,
 }: PopUpProps) => {
-  const { data, loading, error } = useInvestment(id);
+  const { data, loading, error } = useOpportunity(id);
 
   if (loading || error) return <></>;
 
-  const { communityInvestment } = data || {};
+  const { projectBasedOpportunity } = data || {};
 
-  const { communityAndOpportunityPopUps, title } = communityInvestment || {};
+  const { communityAndOpportunityPopUps, title } =
+    projectBasedOpportunity || {};
 
   const { progress, alphanumericLabel, contentBlocks, dataFields } =
     communityAndOpportunityPopUps || {};
 
   const { currentPhase, progressLabel, showProgressLabel, progressPercentage } =
     progress || {};
+
+  // TODO: Need to clean this up
+  const textColor = () => {
+    if (currentPhase === Phase.COMPLETED) {
+      return "white";
+    }
+    return "black";
+  };
+
   const containerClassName = [
     styles.hou_modal__container,
-    completedBackground(currentPhase, PopUpTypes.INVESTMENT),
+    completedBackground(currentPhase, PopUpTypes.OPPORTUNITY),
   ].join(" ");
 
   const handleCloseModal = (e: { stopPropagation: () => void }) => {
@@ -88,7 +97,13 @@ const CommunityInvestmentPopUp = ({
                 {contentBlocks?.map((contentBlock, index) => (
                   <div className={styles.hou_modal__content_block} key={index}>
                     <ContentEditor content={contentBlock?.content} />
-                    <div className={styles.content_block_border}></div>
+                    <div
+                      className={styles.content_block_border}
+                      style={{
+                        backgroundColor: textColor(),
+                        display: index === 0 ? "block" : "none",
+                      }}
+                    ></div>
                   </div>
                 ))}
               </div>
@@ -106,7 +121,7 @@ const CommunityInvestmentPopUp = ({
                   <ProgressBar
                     currentPhase={currentPhase}
                     progressPercentage={progressPercentage}
-                    accent={Colors.NEON}
+                    accent={Colors.BLUE}
                     height="35px"
                   />
                 </div>
@@ -119,4 +134,4 @@ const CommunityInvestmentPopUp = ({
   );
 };
 
-export default CommunityInvestmentPopUp;
+export default OpportunityPopUp;

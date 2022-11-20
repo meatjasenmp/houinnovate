@@ -3,7 +3,7 @@ import ReactModal from "react-modal";
 import ProgressBar, { Phase } from "../ProgressBar";
 import LoadingSpinner from "../LoadingSpinner";
 import { IoClose } from "@react-icons/all-files/io5/IoClose";
-import { useInvestment } from "../../api/investments/investment";
+import { useOpportunity } from "../../api/opportunities/opportunity";
 import ContentEditor from "../ContentEditor";
 import { Colors } from "../../styles/helpers";
 
@@ -15,15 +15,15 @@ interface ModalProps {
 
 const LoadingContainer = () => (
   <div className="flex flex-col h-full items-center justify-center">
-    <LoadingSpinner fill="#DCE63C" />
+    <LoadingSpinner fill="#1F2CA8" />
   </div>
 );
 
 const Modal = ({ id, isOpen, setIsOpen }: ModalProps) => {
-  const { data, loading } = useInvestment(String(id));
-  const { communityInvestment } = data || {};
+  const { data, loading } = useOpportunity(String(id));
+  const { projectBasedOpportunity } = data || {};
   const { progress, alphanumericLabel, contentBlocks, dataFields } =
-    communityInvestment?.communityAndOpportunityPopUps || {};
+    projectBasedOpportunity?.communityAndOpportunityPopUps || {};
 
   const handleClose = () => {
     setIsOpen(false);
@@ -34,7 +34,7 @@ const Modal = ({ id, isOpen, setIsOpen }: ModalProps) => {
       <div
         className={`flex flex-col overflow-y-scroll overflow-x-hidden h-full px-6 pt-6 ${
           progress?.currentPhase === Phase.COMPLETED
-            ? "bg-innovate-neon"
+            ? "bg-innovate-blue"
             : "bg-white"
         }`}
       >
@@ -49,8 +49,8 @@ const Modal = ({ id, isOpen, setIsOpen }: ModalProps) => {
             <div className="innovate-lg:flex">
               <aside className="innovate-lg:mr-16 innovate-lg:w-2/5">
                 {alphanumericLabel && <h5>{alphanumericLabel}.</h5>}
-                {communityInvestment?.title && (
-                  <h1>{communityInvestment?.title}</h1>
+                {projectBasedOpportunity?.title && (
+                  <h1>{projectBasedOpportunity?.title}</h1>
                 )}
                 {progress?.showProgressLabel && progress?.progressLabel && (
                   <div className="my-6">
@@ -97,7 +97,7 @@ const Modal = ({ id, isOpen, setIsOpen }: ModalProps) => {
                   <ProgressBar
                     currentPhase={progress?.currentPhase}
                     progressPercentage={progress?.progressPercentage}
-                    accent={Colors.NEON}
+                    accent={Colors.BLUE}
                     height="35px"
                   />
                 </div>

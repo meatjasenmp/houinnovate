@@ -5,6 +5,7 @@ import { scroller } from "react-scroll";
 import { useRouter } from "next/router";
 import { jobCategories_jobCategories_edges } from "../api/jobs/__generated__/jobCategories";
 import { communityInvestmentTypes_communityInvestmentTypes_edges } from "../api/investments/__generated__/communityInvestmentTypes";
+import { opportunityTypes_opportunityTypes_edges } from "../api/opportunities/__generated__/opportunityTypes";
 
 export enum Components {
   HERO_BANNER = "Page_Components_ComponentBlocks_HeroBanner",
@@ -148,6 +149,7 @@ export const selectStyles = {
 
 export const setCategories = (
   data:
+    | ((opportunityTypes_opportunityTypes_edges | null)[] | null | undefined)
     | ((jobCategories_jobCategories_edges | null)[] | null | undefined)
     | (communityInvestmentTypes_communityInvestmentTypes_edges | null)[]
     | null

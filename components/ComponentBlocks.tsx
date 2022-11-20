@@ -5,7 +5,7 @@ import ContentBlock from "./ContentBlock";
 import ContentBlockStylized from "./ContentBlockStylized";
 import Phases from "./Phases";
 import WorkWithIon from "./workWithIon/WorkWithIon";
-import ProjectBasedOpportunities from "./ProjectBasedOpportunities";
+import ProjectBasedOpportunities from "./opportunities/ProjectBasedOpportunities";
 import DirectCommunityInvestment from "./investments/DirectCommunityInvestment";
 import {
   page_page_components_componentBlocks,
