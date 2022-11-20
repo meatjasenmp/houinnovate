@@ -19,7 +19,6 @@ enum FooterComponents {
   GET_IN_TOUCH = "SiteOptionsPage_Sitefooter_FooterBlocks_GetInTouch",
   ION_DISTRICT = "SiteOptionsPage_Sitefooter_FooterBlocks_IonDistrict",
   RICE_UNIVERSITY = "SiteOptionsPage_Sitefooter_FooterBlocks_RiceUniversity",
-  NEWSLETTER = "SiteOptionsPage_Newsletter",
 }
 
 interface SiteFooterProps {

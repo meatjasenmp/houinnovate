@@ -4,26 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="A lot of cleaning up. Refactor of Direct Community Investments so it's response is paginated. Load more functionality.">
-      <change afterPath="$PROJECT_DIR$/api/opportunities/__generated__/allProjectOpportunities.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/opportunities/__generated__/opportunityTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/opportunities/__generated__/projectOpportunitiesByCategory.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/opportunities/opportunities.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/opportunities/opportunity_categories.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ShowMoreButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/opportunities/Modal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/opportunities/OpportunityCategorySelect.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/opportunities/OpportunityLink.tsx" afterDir="false" />
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Refactoring project based opportunities">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ComponentBlocks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ComponentBlocks.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/OpportunityPopUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/OpportunityPopUp.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/OpportunitySelect.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProjectBasedOpportunities.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/ProjectBasedOpportunities.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/helpers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/investments/CommunityInvestmentPopUp.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/NewsLetterSubscribe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NewsLetterSubscribe.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/OpportnunitySignUpForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/OpportnunitySignUpForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SiteFooter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SiteFooter.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/investments/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/Modal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/opportunities/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/Modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/opportunities/OpportunityPopUp.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,14 +112,7 @@
       <workItem from="1668430194968" duration="1677000" />
       <workItem from="1668472155117" duration="9522000" />
       <workItem from="1668560420375" duration="10880000" />
-      <workItem from="1668878590110" duration="19860000" />
-    </task>
-    <task id="LOCAL-00056" summary="positioning hamburger button">
-      <created>1667156745732</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1667156745732</updated>
+      <workItem from="1668878590110" duration="21951000" />
     </task>
     <task id="LOCAL-00057" summary="updating links">
       <created>1667157234615</created>
@@ -467,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668957173569</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="Refactoring project based opportunities">
+      <created>1668960305431</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1668960305431</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,7 +477,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Basic implementation of opening modal on click." />
     <MESSAGE value="Scroll to top arrow." />
     <MESSAGE value="Style updates" />
     <MESSAGE value="UI updates" />
@@ -512,7 +501,8 @@
     <MESSAGE value="Updating poster image" />
     <MESSAGE value="Refactoring Jobs Select, misc changes." />
     <MESSAGE value="A lot of cleaning up. Refactor of Direct Community Investments so it's response is paginated. Load more functionality." />
-    <option name="LAST_COMMIT_MESSAGE" value="A lot of cleaning up. Refactor of Direct Community Investments so it's response is paginated. Load more functionality." />
+    <MESSAGE value="Refactoring project based opportunities" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring project based opportunities" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

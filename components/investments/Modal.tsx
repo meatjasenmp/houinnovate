@@ -60,7 +60,7 @@ const Modal = ({ id, isOpen, setIsOpen }: ModalProps) => {
                 {dataFields?.map((dataField, index) => (
                   <div className="my-6" key={index}>
                     <span>
-                      {dataField?.dataField?.labelField}:
+                      {dataField?.dataField?.labelField}:{" "}
                       {dataField?.dataField?.contentField}
                     </span>
                   </div>
