@@ -3,8 +3,8 @@ import { useHubspotForm } from "next-hubspot";
 
 const NewsLetterSubscribe = () => {
   const { loaded, error, formCreated } = useHubspotForm({
-    portalId: String(process.env.NEXT_PUBLIC_HUBSPOT_PORTAL_ID),
-    formId: String(process.env.HUBSPOT_NEWS_LETTER_ID),
+    portalId: "7127130",
+    formId: "ceccdd00-e9af-48de-a459-bc2f47a65c88",
     target: "#hubspot-form-wrapper",
   });
   console.log(formCreated);

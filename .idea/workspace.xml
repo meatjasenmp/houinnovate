@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Basic hubspot integration for newsletter subscribe.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="env variables for hubspot newsletter form">
       <change beforePath="$PROJECT_DIR$/components/NewsLetterSubscribe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NewsLetterSubscribe.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,14 +104,7 @@
       <workItem from="1668430194968" duration="1677000" />
       <workItem from="1668472155117" duration="9522000" />
       <workItem from="1668560420375" duration="10880000" />
-      <workItem from="1668878590110" duration="23019000" />
-    </task>
-    <task id="LOCAL-00060" summary="Updating CSS for video banner. FML.">
-      <created>1668266590510</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1668266590510</updated>
+      <workItem from="1668878590110" duration="23404000" />
     </task>
     <task id="LOCAL-00061" summary="misc style updates">
       <created>1668268533866</created>
@@ -451,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668963264154</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="env variables for hubspot newsletter form">
+      <created>1668963472296</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1668963472296</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,7 +469,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Newsletter implementation." />
     <MESSAGE value="Basic implementation of opportunities sign up form." />
     <MESSAGE value="Responsive update." />
     <MESSAGE value="isSearchableProp" />
@@ -496,7 +493,8 @@
     <MESSAGE value="hubspot test WIP." />
     <MESSAGE value="Removing unused files" />
     <MESSAGE value="Basic hubspot integration for newsletter subscribe." />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic hubspot integration for newsletter subscribe." />
+    <MESSAGE value="env variables for hubspot newsletter form" />
+    <option name="LAST_COMMIT_MESSAGE" value="env variables for hubspot newsletter form" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
