@@ -7,7 +7,12 @@ const NewsLetterSubscribe = () => {
     formId: "ceccdd00-e9af-48de-a459-bc2f47a65c88",
     target: "#hubspot-form-wrapper",
   });
-  return <div id="hubspot-form-wrapper" />;
+  return (
+    <>
+      <p>hello world</p>
+      <div id="hubspot-form-wrapper" />
+    </>
+  );
 };
 
 export default NewsLetterSubscribe;
