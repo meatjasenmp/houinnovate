@@ -4,59 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Updating poster image">
-      <change afterPath="$PROJECT_DIR$/api/investments/__generated__/communityInvestment.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/investments/__generated__/communityInvestmentTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/investments/__generated__/communityInvestmentsSelect.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/investments/investment_categories.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/investments/InvestmentCategorySelect.tsx" afterDir="false" />
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Refactoring Jobs Select, misc changes.">
+      <change afterPath="$PROJECT_DIR$/api/investments/__generated__/allInvestments.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/investments/__generated__/investmentsByCategory.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/investments/investments.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/LoadingSpinner.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/investments/InvestmentLink.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/investments/Modal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apollo.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/apollo.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/BoxLinksBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/BoxLinksBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CommunityInvestmentPopUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/CommunityInvestmentPopUp.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CommunityInvestmentsSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/CommunityInvestmentsSelect.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ComponentBlocks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ComponentBlocks.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ContentBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContentBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ContentBlockStylized.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContentBlockStylized.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/DirectCommunityInvestment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/HeroBanner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeroBanner.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/OpportunityPopUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/OpportunityPopUp.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/OpportunitySelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/OpportunitySelect.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Phases.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Phases.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/PopUpLinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/PopUpLinks.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProjectBasedOpportunities.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProjectBasedOpportunities.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SecondaryNavigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SecondaryNavigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SelectComponentTwo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/JobCategorySelect.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SiteFooter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SiteFooter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/VideoComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/VideoComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/investments/community_investments_select.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/jobs/opportunities.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/jobs/opportunities.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/helpers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/jobPosting/JobPosting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/jobPosting/JobPosting.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/usePopUpSelect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/usePopUpSelect.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/workWithIon/JobLinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/JobLinks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/investments/CommunityInvestmentsSelect.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/workWithIon/JobSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/JobSelect.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/workWithIon/WorkWithIon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/WorkWithIon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/allOpportunities.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/__generated__/allOpportunities.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/communityInvestment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/__generated__/communityInvestment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/communityInvestments.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/__generated__/communityInvestments.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/communityInvestmentsSelect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/__generated__/communityInvestmentsSelect.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/iONJobs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/__generated__/iONJobs.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/jobCategories.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/opportunities.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/opportunitiesByCategory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/__generated__/opportunitiesByCategory.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/__generated__/page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/projectBasedOpportunity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/__generated__/projectBasedOpportunity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/__generated__/projectOpportunitiesSelect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/__generated__/projectOpportunitiesSelect.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/community_investments_select.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/investments/community_investments_select.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/investment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/investments/investment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/job.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/jobs/job.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/job_categories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/jobs/job_categories.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/opportunities.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/jobs/opportunities.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/opportunity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/opportunities/opportunity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/project_opportunities_select.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/opportunities/project_opportunities_select.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,8 +34,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -121,11 +85,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api/opportunities/__generated__" />
       <recent name="$PROJECT_DIR$/api/jobs" />
       <recent name="$PROJECT_DIR$/api/opportunities" />
       <recent name="$PROJECT_DIR$/api/investments" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/components/investments" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -155,21 +119,7 @@
       <workItem from="1668430194968" duration="1677000" />
       <workItem from="1668472155117" duration="9522000" />
       <workItem from="1668560420375" duration="10880000" />
-      <workItem from="1668878590110" duration="4478000" />
-    </task>
-    <task id="LOCAL-00053" summary="Misc. style updates">
-      <created>1667155849949</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1667155849949</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Misc. style updates">
-      <created>1667156020698</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1667156020698</updated>
+      <workItem from="1668878590110" duration="16832000" />
     </task>
     <task id="LOCAL-00055" summary="target blank for download links">
       <created>1667156200494</created>
@@ -500,7 +450,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668571234017</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="Refactoring Jobs Select, misc changes.">
+      <created>1668883279240</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1668883279240</updated>
+    </task>
+    <task id="LOCAL-00103" summary="Refactoring Jobs Select, misc changes.">
+      <created>1668883286905</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1668883286905</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -520,7 +484,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Hooked up API request for opportunity category selection." />
     <MESSAGE value="Linked copied notification." />
     <MESSAGE value="Basic implementation of opening modal on click." />
     <MESSAGE value="Scroll to top arrow." />
@@ -545,7 +508,8 @@
     <MESSAGE value="Video poster implemnetation." />
     <MESSAGE value="Setting up modal as fallback for devices that don't support going full screen" />
     <MESSAGE value="Updating poster image" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating poster image" />
+    <MESSAGE value="Refactoring Jobs Select, misc changes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring Jobs Select, misc changes." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

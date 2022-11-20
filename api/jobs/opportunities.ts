@@ -1,6 +1,12 @@
 import { useQuery, useLazyQuery, gql } from "@apollo/client";
-import { allOpportunities } from "../opportunities/__generated__/allOpportunities";
-import { opportunitiesByCategory } from "./__generated__/opportunitiesByCategory";
+import {
+  allOpportunities,
+  allOpportunitiesVariables,
+} from "../opportunities/__generated__/allOpportunities";
+import {
+  opportunitiesByCategory,
+  opportunitiesByCategoryVariables,
+} from "./__generated__/opportunitiesByCategory";
 
 const OPPORTUNITIES_BY_CATEGORY = gql`
   query opportunitiesByCategory($first: Int, $after: String, $terms: [String]) {
@@ -46,16 +52,20 @@ const OPPORTUNITIES = gql`
   }
 `;
 
-export const useJobOpportunitiesByCategory = (category: string) => {
-  const [getOpportunities, { loading, error, data, fetchMore }] =
-    useLazyQuery<opportunitiesByCategory>(OPPORTUNITIES_BY_CATEGORY, {
-      fetchPolicy: "no-cache",
-      nextFetchPolicy: "cache-and-network",
-      variables: {
-        first: 5,
-        terms: category,
-      },
-    });
+export const useJobOpportunitiesByCategory = (
+  category: (string | null)[] | null | undefined
+) => {
+  const [getOpportunities, { loading, error, data, fetchMore }] = useLazyQuery<
+    opportunitiesByCategory,
+    opportunitiesByCategoryVariables
+  >(OPPORTUNITIES_BY_CATEGORY, {
+    fetchPolicy: "no-cache",
+    nextFetchPolicy: "cache-and-network",
+    variables: {
+      first: 5,
+      terms: category,
+    },
+  });
 
   return {
     data,
@@ -67,13 +77,15 @@ export const useJobOpportunitiesByCategory = (category: string) => {
 };
 
 export const useJobOpportunities = () => {
-  const { data, loading, error, fetchMore, refetch } =
-    useQuery<allOpportunities>(OPPORTUNITIES, {
-      variables: {
-        first: 5,
-        after: null,
-      },
-    });
+  const { data, loading, error, fetchMore, refetch } = useQuery<
+    allOpportunities,
+    allOpportunitiesVariables
+  >(OPPORTUNITIES, {
+    variables: {
+      first: 5,
+      after: null,
+    },
+  });
 
   return {
     data,

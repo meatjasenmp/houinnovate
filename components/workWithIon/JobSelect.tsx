@@ -16,7 +16,7 @@ const JobSelect = () => {
     allOpportunities | undefined
   >();
   const [currentCategory, setCurrentCategory] = useState<
-    string | null | undefined
+    (string | null)[] | null | undefined
   >();
 
   const {
@@ -31,7 +31,7 @@ const JobSelect = () => {
     getOpportunities,
     data: opportunitiesByCategoryData,
     fetchMore: fetchMoreByCategory,
-  } = useJobOpportunitiesByCategory(String(currentCategory));
+  } = useJobOpportunitiesByCategory(currentCategory);
 
   useEffect(() => {
     if (opportunitiesData) {
@@ -40,7 +40,7 @@ const JobSelect = () => {
   }, [opportunitiesData]);
 
   useEffect(() => {
-    if (currentCategory && currentCategory !== "all") {
+    if (currentCategory && String(currentCategory) !== "all") {
       getOpportunities().then((data) => {
         setOpportunities(data.data);
       });
@@ -103,7 +103,7 @@ const JobSelect = () => {
   };
 
   const ShowMoreButton = () => {
-    if (categoryPageInfo?.hasNextPage && currentCategory !== "all") {
+    if (categoryPageInfo?.hasNextPage && String(currentCategory) !== "all") {
       return (
         <>
           <div className={styles.show_more}>
@@ -120,7 +120,7 @@ const JobSelect = () => {
         </>
       );
     }
-    if (pageInfo?.hasNextPage && currentCategory == "all") {
+    if (pageInfo?.hasNextPage && String(currentCategory) == "all") {
       return (
         <>
           <div className={styles.show_more}>

@@ -37,6 +37,10 @@ module.exports = {
         "innovate-neon": "#DCE63C",
         "innovate-black": "#000000",
         "innovate-white": "#FFFFFF",
+        "innovate-gray": "#F4F4F4",
+      },
+      screens: {
+        "innovate-lg": "990px",
       },
     },
   },

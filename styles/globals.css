@@ -119,11 +119,4 @@
 
 .ReactModal__Overlay {
     z-index: 1000;
-    top: 0;
-    left: 0;
-    background: black !important;
-}
-
-.ReactModal__Content {
-    border: 0 !important;
 }

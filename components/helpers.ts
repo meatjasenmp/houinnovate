@@ -17,11 +17,6 @@ export enum Components {
   DIRECT_COMMUNITY_INVESTMENT = "Page_Components_ComponentBlocks_CommunityInvestment",
 }
 
-export interface Options {
-  value?: string | null | undefined;
-  label?: string | null | undefined;
-}
-
 export enum PopUpTypes {
   INVESTMENT = "investment",
   OPPORTUNITY = "opportunity",
@@ -105,10 +100,15 @@ export const useScrollToSection = (section: string | null | undefined) => {
   }, []);
 };
 
+export interface Options {
+  value?: (string | null)[] | null | undefined;
+  label?: string | null | undefined;
+}
+
 export interface SelectComponentProps {
   selectedOption: Options | null | undefined;
   setSelectedOption: Dispatch<SetStateAction<Options | undefined>>;
-  setCategory: Dispatch<SetStateAction<string | null | undefined>>;
+  setCategory: Dispatch<SetStateAction<(string | null)[] | null | undefined>>;
 }
 
 export const selectStyles = {
@@ -153,18 +153,18 @@ export const setCategories = (
     | null
     | undefined,
   setSelectedOption: Dispatch<SetStateAction<Options | undefined>>,
-  setCategory: Dispatch<SetStateAction<string | null | undefined>>,
+  setCategory: Dispatch<SetStateAction<(string | null)[] | null | undefined>>,
   defaultOptionLabel: string
 ) => {
   const categories: Options[] = [];
-  categories.push({ value: "all", label: defaultOptionLabel });
+  categories.push({ value: ["all"], label: defaultOptionLabel });
   data?.forEach((item) => {
     if (item?.node) {
       const { pages } = item.node;
       if (pages?.nodes?.length && pages.nodes.length > 0) {
         const { name, slug } = item.node;
         categories.push({
-          value: slug,
+          value: [slug],
           label: name,
         });
       }

@@ -5,12 +5,14 @@ import Layout from "../components/Layout";
 import React from "react";
 import { relayStylePagination } from "@apollo/client/utilities";
 import { Toaster } from "react-hot-toast";
+import ReactModal from "react-modal";
 
 const cache = new InMemoryCache({
   typePolicies: {
     Query: {
       fields: {
         iONJobs: relayStylePagination(),
+        communityInvestments: relayStylePagination(),
       },
     },
   },
@@ -20,6 +22,8 @@ const client = new ApolloClient({
   uri: process.env.NEXT_PUBLIC_API_URL,
   cache: cache,
 });
+
+ReactModal.setAppElement("#__next");
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
