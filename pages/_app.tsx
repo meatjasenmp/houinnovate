@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import { HubspotProvider } from "next-hubspot";
 import Layout from "../components/Layout";
 import React from "react";
 import { relayStylePagination } from "@apollo/client/utilities";
@@ -29,10 +30,12 @@ ReactModal.setAppElement("#__next");
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ApolloProvider client={client}>
-      <Layout>
-        <Toaster />
-        <Component {...pageProps} />
-      </Layout>
+      <HubspotProvider>
+        <Layout>
+          <Toaster />
+          <Component {...pageProps} />
+        </Layout>
+      </HubspotProvider>
     </ApolloProvider>
   );
 }

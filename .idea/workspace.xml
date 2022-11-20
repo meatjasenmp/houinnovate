@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="hubspot test WIP.">
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Removing unused files">
       <change beforePath="$PROJECT_DIR$/components/NewsLetterSubscribe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NewsLetterSubscribe.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,14 +104,7 @@
       <workItem from="1668430194968" duration="1677000" />
       <workItem from="1668472155117" duration="9522000" />
       <workItem from="1668560420375" duration="10880000" />
-      <workItem from="1668878590110" duration="22279000" />
-    </task>
-    <task id="LOCAL-00058" summary="misc. updates">
-      <created>1668262778327</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1668262778327</updated>
+      <workItem from="1668878590110" duration="22702000" />
     </task>
     <task id="LOCAL-00059" summary="Updating CSS for video banner. FML.">
       <created>1668266560581</created>
@@ -449,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668962395001</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="Removing unused files">
+      <created>1668962611415</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1668962611415</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,7 +469,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Style updates" />
     <MESSAGE value="UI updates" />
     <MESSAGE value="Newsletter implementation." />
     <MESSAGE value="Basic implementation of opportunities sign up form." />
@@ -494,7 +493,8 @@
     <MESSAGE value="A lot of cleaning up. Refactor of Direct Community Investments so it's response is paginated. Load more functionality." />
     <MESSAGE value="Refactoring project based opportunities" />
     <MESSAGE value="hubspot test WIP." />
-    <option name="LAST_COMMIT_MESSAGE" value="hubspot test WIP." />
+    <MESSAGE value="Removing unused files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removing unused files" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
