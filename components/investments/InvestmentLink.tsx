@@ -32,7 +32,7 @@ const InvestmentLink = ({
     <button
       onClick={handleClick}
       className={`block text-left flex flex-col justify-between ${
-        progress?.currentPhase === Phase.COMPLETED
+        progress?.currentPhase === Phase.COMPLETION
           ? "bg-innovate-neon"
           : "bg-innovate-gray"
       }`}
@@ -51,7 +51,7 @@ const InvestmentLink = ({
             <figure className="w-12 h-12">
               <ArrowLinkIcon
                 color={
-                  progress?.currentPhase === Phase.COMPLETED ? "white" : "black"
+                  progress?.currentPhase === Phase.COMPLETION ? "white" : "black"
                 }
               />
             </figure>

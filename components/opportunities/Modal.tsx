@@ -33,7 +33,7 @@ const Modal = ({ id, isOpen, setIsOpen }: ModalProps) => {
     <ReactModal className="w-full h-full z-[1000] bg-white" isOpen={isOpen}>
       <div
         className={`flex flex-col overflow-y-scroll overflow-x-hidden h-full px-6 pt-6 ${
-          progress?.currentPhase === Phase.COMPLETED
+          progress?.currentPhase === Phase.COMPLETION
             ? "bg-innovate-blue"
             : "bg-white"
         }`}
@@ -76,7 +76,7 @@ const Modal = ({ id, isOpen, setIsOpen }: ModalProps) => {
                           ? "block"
                           : "hidden"
                       } ${
-                        progress?.currentPhase === Phase.COMPLETED
+                        progress?.currentPhase === Phase.COMPLETION
                           ? "bg-white"
                           : "bg-black"
                       }`}
@@ -89,10 +89,10 @@ const Modal = ({ id, isOpen, setIsOpen }: ModalProps) => {
               {progress?.currentPhase && (
                 <h3 className="capitalize">
                   {progress?.currentPhase}{" "}
-                  {progress?.currentPhase !== Phase.COMPLETED && "Phase"}
+                  {progress?.currentPhase !== Phase.COMPLETION && "Phase"}
                 </h3>
               )}
-              {progress?.currentPhase !== Phase.COMPLETED && (
+              {progress?.currentPhase !== Phase.COMPLETION && (
                 <div className="full-screen">
                   <ProgressBar
                     currentPhase={progress?.currentPhase}
