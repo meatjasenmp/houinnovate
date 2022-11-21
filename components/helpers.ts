@@ -28,45 +28,18 @@ export const completedBackground = (
   popUpType: string | null | undefined
 ) => {
   if (popUpType === PopUpTypes.INVESTMENT) {
-    if (currentPhase === Phase.COMPLETED) {
+    if (currentPhase === Phase.COMPLETION) {
       return backgroundColorMapping(Colors.NEON);
     }
     return backgroundColorMapping(Colors.WHITE);
   }
 
   if (popUpType === PopUpTypes.OPPORTUNITY) {
-    if (currentPhase === Phase.COMPLETED) {
+    if (currentPhase === Phase.COMPLETION) {
       return backgroundColorMapping(Colors.BLUE);
     }
     return backgroundColorMapping(Colors.WHITE);
   }
-};
-
-export const phaseCompletedOpacity = (
-  currentPhase: string | null | undefined
-) => {
-  if (currentPhase === Phase.COMPLETED) {
-    return 0.15;
-  }
-  return 1;
-};
-
-export interface PopUpProps {
-  id: string;
-  currentID: string;
-  setCurrentInvestmentID: Dispatch<SetStateAction<string | null | undefined>>;
-}
-
-export const optionSelectItems = (options: Options[]) => {
-  const selectItems = new Set();
-
-  return options.filter((element) => {
-    const isDuplicate = selectItems.has(element.label);
-
-    selectItems.add(element.label);
-
-    return !isDuplicate;
-  });
 };
 
 export const formatPostDate = (date: string | null | undefined) => {

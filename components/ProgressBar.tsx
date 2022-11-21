@@ -2,18 +2,18 @@ import styles from "../styles/components/ProgressBar.module.css";
 import { backgroundColorMapping, Colors } from "../styles/helpers";
 
 export enum Phase {
-  INITIAL = "initial",
   PLANNING = "planning",
   EXECUTION = "execution",
-  COMPLETED = "completed",
-  REPORTING = "reporting",
+  MONITORING = "monitoring",
+  COMPLETION = "completion",
+  ONGOING = "ongoing",
 }
 
 const progressBarPercentage = (
   currentPhase: string | null | undefined,
   percentage: number | null | undefined
 ) => {
-  if (currentPhase !== Phase.COMPLETED) {
+  if (currentPhase !== Phase.COMPLETION) {
     return `${percentage}%`;
   }
   return "100%";
