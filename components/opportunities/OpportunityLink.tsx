@@ -51,7 +51,9 @@ const OpportunityLink = ({
             <figure className="w-12 h-12">
               <ArrowLinkIcon
                 color={
-                  progress?.currentPhase === Phase.COMPLETION ? "white" : "black"
+                  progress?.currentPhase === Phase.COMPLETION
+                    ? "white"
+                    : "black"
                 }
               />
             </figure>
