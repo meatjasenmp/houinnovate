@@ -4,8 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="env variables for hubspot newsletter form">
-      <change beforePath="$PROJECT_DIR$/components/NewsLetterSubscribe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NewsLetterSubscribe.tsx" afterDir="false" />
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Updating phases">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/__generated__/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/__generated__/page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/BoxLinksBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/BoxLinksBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/CommittedDeployedProgressBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CommittedDeployedProgressBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ContentBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContentBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ContentBlockStylized.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContentBlockStylized.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ContentEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContentEditor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/HeroBanner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeroBanner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Phases.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Phases.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SiteFooter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SiteFooter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/VideoComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/VideoComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/helpers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/investments/InvestmentLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/InvestmentLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/opportunities/OpportunityLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/OpportunityLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/opportunities/ProjectBasedOpportunities.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/ProjectBasedOpportunities.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/workWithIon/JobLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/JobLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/workWithIon/JobLinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/JobLinks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/workWithIon/JobSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/JobSelect.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/workWithIon/WorkWithIon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/WorkWithIon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/BoxLinks.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/BoxLinks.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/ContentBlock.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/ContentBlockStylizedList.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/ContentEditor.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/DirectCommunityInvestment.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/HeroBanner.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/HeroBanner.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/JobLink.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/Navigation.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/Navigation.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/Phases.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/ProgressBar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/ProgressBar.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/SiteFooter.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/SiteFooter.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/WorkWithIon.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/WorkWithIon.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,42 +139,8 @@
       <workItem from="1668430194968" duration="1677000" />
       <workItem from="1668472155117" duration="9522000" />
       <workItem from="1668560420375" duration="10880000" />
-      <workItem from="1668878590110" duration="23404000" />
-    </task>
-    <task id="LOCAL-00061" summary="misc style updates">
-      <created>1668268533866</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1668268533866</updated>
-    </task>
-    <task id="LOCAL-00062" summary="misc style updates">
-      <created>1668269231999</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1668269231999</updated>
-    </task>
-    <task id="LOCAL-00063" summary="misc style updates">
-      <created>1668273016948</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1668273016948</updated>
-    </task>
-    <task id="LOCAL-00064" summary="misc style updates">
-      <created>1668275367410</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1668275367410</updated>
-    </task>
-    <task id="LOCAL-00065" summary="Basic implementation of jobs load more.">
-      <created>1668285782007</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1668285782007</updated>
+      <workItem from="1668878590110" duration="26398000" />
+      <workItem from="1669042405919" duration="15973000" />
     </task>
     <task id="LOCAL-00066" summary="Basic implementation of jobs load more.">
       <created>1668285821286</created>
@@ -449,7 +450,42 @@
       <option name="project" value="LOCAL" />
       <updated>1668963472296</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="Apparently the hubspot library hates environment variables.">
+      <created>1668963777345</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1668963777345</updated>
+    </task>
+    <task id="LOCAL-00111" summary="Never mind. I'm dumb.">
+      <created>1668963889502</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1668963889502</updated>
+    </task>
+    <task id="LOCAL-00112" summary="Updating phases">
+      <created>1669050509228</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1669050509231</updated>
+    </task>
+    <task id="LOCAL-00113" summary="Updating phases">
+      <created>1669050614146</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1669050614147</updated>
+    </task>
+    <task id="LOCAL-00114" summary="Updating phases">
+      <created>1669050634447</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1669050634447</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,9 +505,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Basic implementation of opportunities sign up form." />
-    <MESSAGE value="Responsive update." />
-    <MESSAGE value="isSearchableProp" />
     <MESSAGE value="Success/error message for newsletter input. CSS updates to video banner." />
     <MESSAGE value="Success/error message for opportunities input." />
     <MESSAGE value="video test." />
@@ -494,7 +527,10 @@
     <MESSAGE value="Removing unused files" />
     <MESSAGE value="Basic hubspot integration for newsletter subscribe." />
     <MESSAGE value="env variables for hubspot newsletter form" />
-    <option name="LAST_COMMIT_MESSAGE" value="env variables for hubspot newsletter form" />
+    <MESSAGE value="Apparently the hubspot library hates environment variables." />
+    <MESSAGE value="Never mind. I'm dumb." />
+    <MESSAGE value="Updating phases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating phases" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

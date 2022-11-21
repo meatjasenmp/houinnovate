@@ -52,18 +52,21 @@ const AnnualReport = ({
 
   if (annualReportDownload && annualReportDownload.mediaItemUrl) {
     return (
-      <div className={styles.annual_report}>
+      <div className="mt-10 mb-6">
         <a
           href={annualReportDownload.mediaItemUrl}
           target="_blank"
           rel="noreferrer"
+          className="text-white flex items-center"
         >
-          <span>{report?.annualReportTitle}</span>
-          <figure className={styles.download_icon}>
+          <span className="mr-4 font-kraftigBold">
+            {report?.annualReportTitle}
+          </span>
+          <figure className="w-4">
             <DownloadIcon color="white" />
           </figure>
         </a>
-        <div />
+        <div className="h-1 bg-white mt-6 w-[100px]" />
       </div>
     );
   }
@@ -72,14 +75,16 @@ const AnnualReport = ({
 
 const SectionLinks = ({ sectionLinks }: SectionLinksProps) => {
   return (
-    <div className={styles.section_links}>
+    <div className="mb-2">
       <ul>
         {sectionLinks?.map((link, index) => {
           return (
-            <li key={index} className={styles.section_link_list_item}>
+            <li
+              key={index}
+              className="text-4xl font-kraftigBold text-white mb-10"
+            >
               <ScrollLink
                 href="#"
-                className={styles.section_link}
                 to={String(link?.anchorLabel)}
                 containerId="page-wrap"
                 onClick={() => handleScroll(link?.anchorLabel)}
@@ -90,7 +95,6 @@ const SectionLinks = ({ sectionLinks }: SectionLinksProps) => {
           );
         })}
       </ul>
-      <div />
     </div>
   );
 };
@@ -102,7 +106,7 @@ const HouInnovate = ({
 }) => {
   if (!houInnovate) return null;
   return (
-    <div className={styles.hou_innovate}>
+    <div className={["text-white", styles.hou_innovate].join(" ")}>
       <ContentEditor content={houInnovate} />
     </div>
   );
@@ -110,18 +114,23 @@ const HouInnovate = ({
 
 const BlockLinks = ({ blockLinks }: BlockLinkProps) => {
   return (
-    <div className={styles.block_links}>
+    <div className="font-body">
       {blockLinks?.map((link, index) => {
         const { links } = link || {};
         return (
-          <div key={index}>
-            <h4>{link?.label}</h4>
+          <div className="mb-1 first:mb-12" key={index}>
+            <h4 className="font-body text-white text-sm mb-1">{link?.label}</h4>
             <ul>
               {links?.map((link, index) => {
                 return (
                   <li key={index}>
                     <Link href={link?.pageUrl || ""}>
-                      <a target="_blank">{link?.label}</a>
+                      <a
+                        className="text-innovate-smoke-gray text-sm"
+                        target="_blank"
+                      >
+                        {link?.label}
+                      </a>
                     </Link>
                   </li>
                 );

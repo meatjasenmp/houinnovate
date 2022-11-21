@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import ContentEditor from "../ContentEditor";
-import ShowMoreButton from "../ShowMoreButton";
 import CommittedDeployedProgressBar from "../CommittedDeployedProgressBar";
+import ShowMoreButton from "../ShowMoreButton";
 import InvestmentCategorySelect from "./InvestmentCategorySelect";
 import InvestmentLink from "./InvestmentLink";
 import Modal from "./Modal";
@@ -10,7 +10,6 @@ import {
   useInvestmentsByCategory,
 } from "../../api/investments/investments";
 import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_CommunityInvestment } from "../../api/__generated__/page";
-import styles from "../../styles/components/DirectCommunityInvestment.module.css";
 import { Colors } from "../../styles/helpers";
 import { Options } from "../helpers";
 import { allInvestments } from "../../api/investments/__generated__/allInvestments";
@@ -93,7 +92,7 @@ const DirectCommunityInvestment = ({
   const Loading = () => {
     if (showLoadLoader) {
       return (
-        <div className={styles.spinner}>
+        <div>
           <p>Loading...</p>
         </div>
       );
@@ -158,20 +157,17 @@ const DirectCommunityInvestment = ({
 
   return (
     <>
-      <section className={styles.community_investment} id={String(scrollId)}>
-        <div className={styles.community_investment_wrapper}>
-          <CommittedDeployedProgressBar
-            deployed={deployment?.deployed}
-            committed={deployment?.committed}
-            deployedLabel={deployment?.deployedLabel}
-            committedLabel={deployment?.investmentCommittedLabel}
-            accent={Colors.NEON}
-            annotation={deployment?.annotation}
-          />
-          <div
-            className={styles.community_investment_content}
-            ref={contentWrapper}
-          >
+      <section className="pb-10" id={String(scrollId)}>
+        <CommittedDeployedProgressBar
+          deployed={deployment?.deployed}
+          committed={deployment?.committed}
+          deployedLabel={deployment?.deployedLabel}
+          committedLabel={deployment?.investmentCommittedLabel}
+          accent={Colors.NEON}
+          annotation={deployment?.annotation}
+        />
+        <div className="max-w-[1200px] mx-auto">
+          <div className="mb-6" ref={contentWrapper}>
             <ContentEditor content={communityInvestmentContent} />
           </div>
           <InvestmentCategorySelect

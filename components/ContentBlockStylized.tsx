@@ -1,3 +1,4 @@
+import React, { useEffect, useRef } from "react";
 import ContentEditor from "./ContentEditor";
 import { backgroundColorMapping, accentColor } from "../styles/helpers";
 import {
@@ -16,21 +17,17 @@ interface ListItemProps {
     | undefined;
 }
 
-import styles from "../styles/components/ContentBlockStylizedList.module.css";
-import { useEffect, useRef } from "react";
-
 const ListItem = ({ listItem }: ListItemProps) => {
   if (!listItem) return null;
 
   const { listContent, listBackgroundColor } = listItem;
 
-  const listItemClassName = [
-    backgroundColorMapping(listBackgroundColor),
-    styles.list_item,
-  ].join(" ");
-
   return (
-    <li className={listItemClassName}>
+    <li
+      className={`mb-2 last:mb-0 p-4 ${backgroundColorMapping(
+        listBackgroundColor
+      )}`}
+    >
       <p className={`text-innovate-${accentColor(listBackgroundColor)}`}>
         {listContent}
       </p>
@@ -75,21 +72,21 @@ const ContentBlockStylized = ({ blockContent }: ComponentBlocksProps) => {
   } = blockContent;
 
   return (
-    <section className={styles.content_block_stylized} id={String(scrollId)}>
-      <div className={styles.content_block_stylized_wrapper}>
-        <div className={styles.content_wrapper} ref={contentWrapper}>
+    <section className="pb-4 py-8" id={String(scrollId)}>
+      <div className="max-w-[990px] mx-auto flex flex-col">
+        <div className="max-w-lg" ref={contentWrapper}>
           <ContentEditor content={contentBlockStylized} />
         </div>
-        <div className={styles.list_wrapper}>
+        <div>
           {list && list.length > 0 && (
-            <ul className={styles.list}>
+            <ul className="mt-5">
               {list.map((listItem, index) => (
                 <ListItem listItem={listItem?.listItem} key={index} />
               ))}
             </ul>
           )}
           {showFooterText && (
-            <div className={styles.footer}>
+            <div className="mt-4 pt-4 border-t-[6px] border-black">
               <ContentEditor content={footerText} />
             </div>
           )}

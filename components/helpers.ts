@@ -1,5 +1,3 @@
-import { Phase } from "./ProgressBar";
-import { backgroundColorMapping, Colors } from "../styles/helpers";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { scroller } from "react-scroll";
 import { useRouter } from "next/router";
@@ -22,25 +20,6 @@ export enum PopUpTypes {
   INVESTMENT = "investment",
   OPPORTUNITY = "opportunity",
 }
-
-export const completedBackground = (
-  currentPhase: string | null | undefined,
-  popUpType: string | null | undefined
-) => {
-  if (popUpType === PopUpTypes.INVESTMENT) {
-    if (currentPhase === Phase.COMPLETION) {
-      return backgroundColorMapping(Colors.NEON);
-    }
-    return backgroundColorMapping(Colors.WHITE);
-  }
-
-  if (popUpType === PopUpTypes.OPPORTUNITY) {
-    if (currentPhase === Phase.COMPLETION) {
-      return backgroundColorMapping(Colors.BLUE);
-    }
-    return backgroundColorMapping(Colors.WHITE);
-  }
-};
 
 export const formatPostDate = (date: string | null | undefined) => {
   if (!date) return;
@@ -101,6 +80,7 @@ export const selectStyles = {
     fontFamily: "Sohne-Kraftig-Bold, sans-serif",
     borderColor: "#000 !important",
     borderBottom: "2px solid #000",
+    boxShadow: "none",
   }),
   menu: (provided: any) => ({
     ...provided,
@@ -109,14 +89,20 @@ export const selectStyles = {
   }),
   singleValue: (provided: any) => ({
     ...provided,
-    fontSize: "2.5rem",
+    fontSize: "1.5rem",
+    "@media (min-width: 990px)": {
+      fontSize: "2.5rem",
+    },
   }),
   option: (provided: any, state: any) => ({
     ...provided,
     color: "black",
-    fontSize: "2rem",
+    fontSize: "1rem",
     backgroundColor: state.isSelected && "#BEBEBE",
     fontFamily: "Sohne-Kraftig-Bold, sans-serif",
+    "@media (min-width: 990px)": {
+      fontSize: "2rem",
+    },
   }),
 };
 

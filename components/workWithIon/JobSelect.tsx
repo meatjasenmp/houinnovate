@@ -6,7 +6,6 @@ import React, { useEffect, useState } from "react";
 import JobCategorySelect from "./JobCategorySelect";
 import { Options } from "../helpers";
 import JobLinks from "./JobLinks";
-import styles from "../../styles/components/JobLink.module.css";
 import { allOpportunities } from "../../api/opportunities/__generated__/allOpportunities";
 
 const JobSelect = () => {
@@ -58,7 +57,7 @@ const JobSelect = () => {
   const Loading = () => {
     if (showLoadLoader) {
       return (
-        <div className={styles.spinner}>
+        <div>
           <p>Loading...</p>
         </div>
       );
@@ -106,9 +105,8 @@ const JobSelect = () => {
     if (categoryPageInfo?.hasNextPage && String(currentCategory) !== "all") {
       return (
         <>
-          <div className={styles.show_more}>
+          <div className="mt-4">
             <button
-              className={styles.showMoreButton}
               onClick={() => {
                 handleLoadMoreByCategory();
               }}
@@ -123,9 +121,8 @@ const JobSelect = () => {
     if (pageInfo?.hasNextPage && String(currentCategory) == "all") {
       return (
         <>
-          <div className={styles.show_more}>
+          <div className="mt-4">
             <button
-              className={styles.showMoreButton}
               onClick={() => {
                 handleLoadMoreOpportunities();
               }}

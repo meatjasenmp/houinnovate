@@ -1,149 +1,24 @@
-.site_footer {
-    padding: 4rem 2rem;
+.cta_link_container p a,
+.get_in_touch a {
+    @apply text-innovate-smoke-gray no-underline;
 }
 
-.social_media,
-.site_footer h4 {
-    color: #fff;
-    font-family: "Sohne-Kraftig-Normal", sans-serif;
+.newsletter_cta h4 {
+    @apply text-xl font-kraftigBold;
 }
 
-.site_footer h4 {
-    color: #fff;
-    margin-bottom: 0.5rem;
-}
-
-.site_footer a {
-    text-decoration: none;
-}
-
-.logo {
-    width: 200px;
-    margin-bottom: 2rem;
-}
-
-.site_footer .footer_column:not(:last-child) {
-    margin-bottom: 4rem;
-}
-
-.get_in_touch h1 {
-    margin-bottom: 2rem;
-}
-
+.get_in_touch h1,
 .get_in_touch article:not(:last-child) {
-    margin-bottom: 2rem;
+    @apply mb-8
+}
+
+.get_in_touch h4 {
+    @apply font-body;
 }
 
 .get_in_touch article:last-child:before {
     content: "";
-    display: block;
-    margin-bottom: 2rem;
-    background-color: #FFF;
-    height: 4px;
+    height: 2px;
     width: 40%;
-}
-
-.get_in_touch a,
-.rice_address,
-.social_media,
-.cta_links p a {
-    color: #868686;
-}
-
-.social_media:before, .social_media:after {
-    content: "";
-    display: block;
-    margin: 1.5rem 0;
-    background-color: #FFF;
-    height: 4px;
-    width: 40%;
-}
-
-.cta_links {
-    margin-top: 2.5rem;
-}
-
-.cta_links div:not(:last-child) {
-    margin-bottom: 2rem;
-}
-
-.cta_link_container {
-    position: relative;
-}
-
-.cta_link_icon {
-    position: absolute;
-    right: 2rem;
-    bottom: -0.3rem;
-    width: 2rem;
-}
-
-.terms_and_conditions_wrapper {
-    display: flex;
-    max-width: 990px;
-    margin: 0 auto;
-}
-
-.site_footer_container {
-    max-width: 990px;
-    margin: 0 auto;
-}
-
-.site_footer_container header {
-    margin-bottom: 3.5rem;
-}
-
-.site_footer_container p,
-.site_footer_container li a,
-.terms_and_conditions p {
-    font-size: 0.9rem;
-    line-height: 1.2rem;
-}
-
-.site_footer_container h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0;
-}
-
-.terms_and_conditions p {
-    opacity: .75;
-}
-
-.back_to_top {
-    width: 2rem;
-    position: absolute;
-    right: 1rem;
-    bottom: 2rem;
-}
-
-.newsletter_form {
-    margin-top: 2rem;
-}
-
-.newsletter_cta {
-    margin-bottom: 1.5rem;
-}
-
-.newsletter_cta h4 {
-    font-size: 1.15rem;
-    font-family: Sohne-Kraftig-Bold, sans-serif;
-}
-
-.site_footer_wrapper {
-    max-width: 450px;
-}
-
-@media screen and (min-width: 990px) {
-    .site_footer_wrapper {
-        display: flex;
-        max-width: none;
-    }
-
-    .site_footer_wrapper > div {
-        width: 33.33%;
-    }
-
-    .site_footer_wrapper > div:not(:last-child) {
-        margin-right: 2rem;
-    }
+    @apply block mb-8 bg-white;
 }

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { allOpportunities } from "../../api/opportunities/__generated__/allOpportunities";
-import styles from "../../styles/components/JobLink.module.css";
 import JobLink from "./JobLink";
 
 export interface Opportunity {
@@ -33,11 +32,11 @@ const JobLinks = ({ data }: { data: allOpportunities | undefined }) => {
 
   return (
     <section>
-      <div className={styles.jobLinks_count}>
+      <div className="mt-2.5 flex justify-end">
         {opportunities?.length}{" "}
         {opportunities?.length === 1 ? "Result" : "Results"}
       </div>
-      <div className={[styles.job_select__links, "job_select"].join(" ")}>
+      <div className="max-w-[1170px] mt-6">
         {opportunities &&
           opportunities.map((job, index) => <JobLink key={index} job={job} />)}
       </div>

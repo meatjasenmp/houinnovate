@@ -34,20 +34,22 @@ const WorkWithIon = ({ blockContent }: WorkWithIonProps) => {
     }
   }, []);
   return (
-    <div className={styles.work_with_ion} id={String(scrollId)}>
-      <div className={styles.work_with_ion_wrapper} ref={contentWrapper}>
-        <div className={styles.work_with_ion__content}>
-          <div className={styles.ion_header}>
+    <div className="pt-8 pb-16" id={String(scrollId)}>
+      <div className="max-w-[990px] mx-auto" ref={contentWrapper}>
+        <div className="mb-8">
+          <div className="max-w-[325px] mr-1">
             <h1>{workWithIonContent}</h1>
           </div>
           <div className={styles.cta}>
-            <figure className={styles.cta_icon}>
+            <figure className="w-6 rotate-90">
               <ArrowRightIcon />
             </figure>
             <ContentEditor content={cta} />
           </div>
         </div>
-        <span className={styles.select_text}>{selectText}</span>
+        <div className="mb-6">
+          <p>{selectText}</p>
+        </div>
         <JobSelect />
       </div>
     </div>

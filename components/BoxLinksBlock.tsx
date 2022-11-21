@@ -40,16 +40,16 @@ const BoxLinkContent = ({ content }: BoxLinkProps) => {
     content as page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink;
 
   return (
-    <div className={styles.box_link}>
-      <div className={styles.box_link_content}>
-        <figure className={styles.block_link__image}>
+    <div className="relative flex flex-col flex-1 h-full">
+      <div>
+        <figure className="w-full h-[275px]">
           <ImageBlock image={image} priority={true} height="590" width="1212" />
         </figure>
-        <article>
+        <article className="p-6">
           <ContentEditor content={boxLinkContent} />
         </article>
       </div>
-      <figure className={styles.link_icon}>
+      <figure className="w-12 h-12 relative right-[.7rem] bottom-[.7rem] self-end mt-auto">
         <ArrowLinkIcon color={accentColor(backgroundColor)} />
       </figure>
     </div>
@@ -64,7 +64,7 @@ const BoxPageLink = ({
   const linkTarget = target ? target : "_self";
   const pageLinkUrl = pageLink ? pageLink : "#";
   return (
-    <a href={pageLinkUrl} target={linkTarget}>
+    <a className="block h-full" href={pageLinkUrl} target={linkTarget}>
       <BoxLinkContent content={content} />
     </a>
   );
@@ -79,6 +79,7 @@ const BoxPageLinkAnchor = ({
       href="#"
       to={String(anchorLink)}
       containerId="page-wrap"
+      className="block h-full"
       onClick={() => handleScroll(anchorLink)}
     >
       <BoxLinkContent content={content} />
@@ -89,7 +90,6 @@ const BoxPageLinkAnchor = ({
 const BoxLinksBlock = ({ blockContent }: ComponentBlocksProps) => {
   gsap.registerPlugin(ScrollTrigger);
   const boxLinkRef = useRef<HTMLDivElement>(null);
-  const boxLinkStyles = [styles.box_links, "box_links_container"].join(" ");
 
   useEffect(() => {
     if (boxLinkRef.current) {
@@ -116,20 +116,25 @@ const BoxLinksBlock = ({ blockContent }: ComponentBlocksProps) => {
 
   if (!blockContent.boxLink) return null;
   return (
-    <section className={boxLinkStyles} ref={boxLinkRef}>
+    <section
+      className="grid gap-[.8rem] auto-rows-fr box_links_container"
+      ref={boxLinkRef}
+    >
       <>
         {blockContent.boxLink.map((boxLink, index) => {
           const { link, backgroundColor } =
             boxLink as page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink;
           const { linkType, anchorLink, pageLink } =
             link as page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink_link;
-          const boxLinkStyles = [
-            backgroundColorMapping(backgroundColor),
-            "box_link_animated",
-          ].join(" ");
 
           return (
-            <div className={boxLinkStyles} key={index} data-id={index}>
+            <div
+              className={`${backgroundColorMapping(
+                backgroundColor
+              )} box_link_animated`}
+              key={index}
+              data-id={index}
+            >
               {linkType === LinkType.PAGE ? (
                 <BoxPageLink
                   content={boxLink}

@@ -2,8 +2,6 @@ import ContentEditor from "./ContentEditor";
 import { backgroundColorMapping } from "../styles/helpers";
 import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlock } from "../api/__generated__/page";
 
-import styles from "../styles/components/ContentBlock.module.css";
-
 import { useScrollToSection } from "./helpers";
 
 interface ComponentBlocksProps {
@@ -26,21 +24,19 @@ const ContentBlock = ({ blockContent }: ComponentBlocksProps) => {
 
   useScrollToSection(scrollId);
 
-  const sectionClassName = [styles.content_block, "full-screen"].join(" ");
-
   return (
-    <section className={sectionClassName} id={String(scrollId)}>
-      <div className={backgroundColorMapping(backgroundColor)}>
+    <section className="mt-5 full-screen" id={String(scrollId)}>
+      <div className={`py-10 px-8 ${backgroundColorMapping(backgroundColor)}`}>
         {contentType === contentTypes.ContentBlock && contentBlockContent && (
-          <div className={styles.content_block_wrapper}>
+          <div className="max-w-[990px] mx-auto">
             <ContentEditor content={contentBlockContent} />
           </div>
         )}
         {contentType === contentTypes.ContentBlockColumn && (
-          <div className={styles.content_block__columns}>
-            <div className={styles.content_block__columns_wrapper}>
+          <div>
+            <div className="flex flex-col max-w-[990px] mx-auto">
               {contentBlockColumnContent?.map((column, index) => (
-                <div key={index} className={styles.content_block_column}>
+                <div key={index}>
                   <ContentEditor content={column?.content} />
                 </div>
               ))}

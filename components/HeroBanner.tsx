@@ -1,7 +1,5 @@
 import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_HeroBanner } from "../api/__generated__/page";
-import { BackgroundColors } from "../styles/helpers";
 import ContentEditor from "./ContentEditor";
-import Button from "./Button";
 import { BiPlay } from "@react-icons/all-files/bi/BiPlay";
 import { gsap } from "gsap";
 import ReactPlayer from "react-player/vimeo";
@@ -27,11 +25,6 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
     volume: 0,
     muted: true,
   });
-
-  const contentBlockClassName = [
-    "animated_content_block",
-    styles.content__block,
-  ].join(" ");
 
   useEffect(() => {
     if (contentWrapRef.current) {
@@ -92,7 +85,10 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
       });
       return;
     }
-    // setIsOpen(true);
+  };
+
+  const handleMobileButtonClick = () => {
+    setIsOpen(true);
   };
 
   const exitFullscreen = () => {
@@ -105,29 +101,36 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
 
   if (!blockContent) return null;
 
-  const { videoCta, contentBlocks, videoUrl, videoPoster } = blockContent;
+  const { videoCta, contentBlocks, videoUrl, videoPoster, videoPosterMobile } =
+    blockContent;
 
   return (
     <>
-      <section className={styles.hero__banner_section}>
-        <div className={styles.hero__banner}>
-          <div className={styles.hero__banner_background}>
-            <div className={styles.tint} />
-            <div
-              className={styles.poster}
-              style={{ display: videoPlaying ? "none" : "block" }}
-            >
-              <ImageBlock
-                image={videoPoster}
-                priority={true}
-                height="590"
-                width="1212"
-              />
-            </div>
-            <div className={styles.video} ref={videoWrapRef}>
+      <section className="mb-3 overflow-hidden h-full">
+        <div className="grid">
+          <div
+            className={["relative", styles.hero__banner_background].join(" ")}
+          >
+            <div className="hidden">
+              <div className="bg-black/[.5] absolute top-0 bottom-0 left-0 right-0 z-[2] h-full w-full" />
               <div
-                className={styles.video__overlay}
-                style={{ display: videoIsFullscreen ? "block" : "none" }}
+                className={`absolute top-0 bottom-0 left-0 right-0 w-full h-full object-cover ${
+                  videoPlaying ? "hidden" : "block"
+                }`}
+              >
+                <ImageBlock
+                  image={videoPoster}
+                  priority={true}
+                  height="590"
+                  width="1212"
+                />
+              </div>
+            </div>
+            <div ref={videoWrapRef}>
+              <div
+                className={`z-[999999999999] absolute top-0 left-0 right-0 p-5 ${
+                  videoIsFullscreen ? "block" : "hidden"
+                }`}
               >
                 <button
                   className={styles.exit_screen_button}
@@ -157,28 +160,69 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
             </div>
           </div>
 
-          <div className={styles.content__wrap} ref={contentWrapRef}>
+          <div
+            className={["relative", styles.hero__banner_background].join(" ")}
+          >
+            <ImageBlock
+              image={videoPosterMobile}
+              priority={true}
+              height="590"
+              width="1212"
+            />
+          </div>
+
+          <div
+            className={[
+              styles.content__wrap,
+              "mx-4 text-white max-w-[350px] self-center relative",
+            ].join(" ")}
+            ref={contentWrapRef}
+          >
             <div className="relative">
               {contentBlocks &&
                 contentBlocks.map((block, index) => (
-                  <section className={contentBlockClassName} key={index}>
+                  <section
+                    className="animated_content_block first:relative absolute top-0 left-0 right-0 bottom-0 m-auto z-[3]"
+                    key={index}
+                  >
                     <ContentEditor content={block?.contentBlock} />
                   </section>
                 ))}
             </div>
             {videoCta && (
-              <Button
-                bgColor={BackgroundColors.RED}
-                label={videoCta}
-                icon={<BiPlay />}
-                className={styles.hero__banner_button}
-                onClick={handleButtonClick}
-              />
+              <>
+                <div className={screenfull.isEnabled ? "block" : "hidden"}>
+                  <button
+                    className="rounded-full py-2 px-4 text-xs text-white flex items-center bg-innovate-red mt-3 relative z-[10]"
+                    onClick={handleButtonClick}
+                  >
+                    <span>{videoCta}</span>
+                    <span>
+                      <BiPlay size="1.25rem" />
+                    </span>
+                  </button>
+                </div>
+                <div className={!screenfull.isEnabled ? "block" : "hidden"}>
+                  <button
+                    className="rounded-full py-2 px-4 text-xs text-white flex items-center bg-innovate-red mt-3 relative z-[10]"
+                    onClick={handleMobileButtonClick}
+                  >
+                    <span className="mr-1">{videoCta}</span>
+                    <span>
+                      <BiPlay size="1.25rem" />
+                    </span>
+                  </button>
+                </div>
+              </>
             )}
           </div>
         </div>
       </section>
-      <VideoComponent isOpen={isOpen} url={String(videoUrl)} />
+      <VideoComponent
+        isOpen={isOpen}
+        url={String(videoUrl)}
+        setIsOpen={setIsOpen}
+      />
     </>
   );
 };

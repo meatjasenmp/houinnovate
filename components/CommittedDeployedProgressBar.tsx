@@ -28,33 +28,22 @@ const CommittedDeployedProgressBar = ({
   accent,
   annotation,
 }: ProgressBarProps) => {
-  const progressBarDeployedClassNames = [
-    styles.progress_bar__deployed,
-    backgroundColorMapping(accent),
-  ].join(" ");
-
-  const labelClassNames = [
-    styles.progress_bar__labels,
-    `text-innovate-${accentColor(accent)}`,
-  ].join(" ");
-
   return (
-    <section className={styles.progress_bar_container}>
-      <div className={styles.progress_bar}>
-        <div className={labelClassNames}>
-          <span>
+    <section className="my-10">
+      <div className="h-[50px] bg-innovate-gray-2 relative flex justify-between items-center">
+        <div className={`z-[2] px-4 text-innovate-${accentColor(accent)}`}>
+          <span className="block leading-tight font-kraftigBold">
             ${deployed} Million {deployedLabel}
           </span>
         </div>
         <div
-          className={progressBarDeployedClassNames}
+          className={`absolute top-0 left-0 h-full ${backgroundColorMapping(
+            accent
+          )}`}
           style={{ width: `${calculatePercentage(deployed, committed)}%` }}
         />
-        <div
-          className={styles.progress_bar__labels}
-          style={{ textAlign: "right" }}
-        >
-          <span>
+        <div className="z-[2] px-4" style={{ textAlign: "right" }}>
+          <span className="block leading-tight font-kraftigBold">
             ${committed} Million {committedLabel}
           </span>
         </div>

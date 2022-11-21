@@ -19,6 +19,10 @@ export const usePage = (id: string) => {
                   mediaItemUrl
                   altText
                 }
+                videoPosterMobile {
+                  mediaItemUrl
+                  altText
+                }
                 videoCta
                 videoUrl
               }

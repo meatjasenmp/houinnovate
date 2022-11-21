@@ -43,9 +43,8 @@ interface RiceUniversityProps {
 
 const GetInTouch = ({ blockContent }: GetInTouchProps) => {
   const { contentBlocks } = blockContent;
-  const className = [styles.get_in_touch, styles.footer_column].join(" ");
   return (
-    <div className={className}>
+    <div className={[styles.get_in_touch, "mb-16"].join(" ")}>
       {contentBlocks?.map((block, index) => (
         <ContentEditor key={index} content={block?.content} />
       ))}
@@ -57,35 +56,45 @@ const IonDistrict = ({ blockContent }: IonDistrictProps) => {
   const { ionLogo, address, socialMedia, ctaLinks, newsletterCta } =
     blockContent;
   return (
-    <div className={styles.footer_column}>
-      <figure className={styles.logo}>
+    <div className="pb-16 last:pb-0">
+      <figure className="w-13 mb-8">
         <ImageAsset image={ionLogo} width="115" height="61" />
       </figure>
       <ContentEditor content={address} />
-      <div className={styles.social_media}>
+      <div className="text-white font-kraftigBold">
+        <div className="bg-white my-6 h-[2px] w-[40%]" />
         <h4>{socialMedia?.header}</h4>
         <ul>
           {socialMedia?.socialMediaLink?.map((socialMediaLink, index) => (
-            <li key={index}>
+            <li className="mb-4 last:mb-0" key={index}>
               <Link href={socialMediaLink?.url || ""}>
-                <a target="_blank">{socialMediaLink?.label}</a>
+                <a
+                  className="text-innovate-smoke-gray font-body"
+                  target="_blank"
+                >
+                  {socialMediaLink?.label}
+                </a>
               </Link>
             </li>
           ))}
         </ul>
+        <div className="bg-white my-6 h-[2px] w-[40%]" />
       </div>
-      <section className={styles.cta_links}>
+      <section className="mt-10 mb-8 last:mb-0">
         {ctaLinks?.map((ctaLink, index) => (
-          <div className={styles.cta_link_container} key={index}>
+          <div
+            className={[styles.cta_link_container, "relative"].join(" ")}
+            key={index}
+          >
             <ContentEditor content={ctaLink?.cta} />
-            <figure className={styles.cta_link_icon}>
+            <figure className="absolute right-[2rem] bottom-[-0.3rem] w-8">
               <ArrowLinkIcon color="white" />
             </figure>
           </div>
         ))}
       </section>
-      <section className={styles.newsletter_form}>
-        <article className={styles.newsletter_cta}>
+      <section className="mt-8">
+        <article className={[styles.newsletter_cta, "mb-6"].join(" ")}>
           <ContentEditor content={newsletterCta} />
         </article>
         <NewsLetterSubscribe />
@@ -97,24 +106,28 @@ const IonDistrict = ({ blockContent }: IonDistrictProps) => {
 const RiceUniversity = ({ blockContent }: RiceUniversityProps) => {
   const { riceUniversityLogo, riceAddress, riceSocialMedia } = blockContent;
   return (
-    <div className={styles.footer_column}>
-      <figure className={styles.logo}>
+    <div className="mb-16 last:mb-0">
+      <figure className="w-13 mb-8">
         <ImageAsset image={riceUniversityLogo} width="150" height="97" />
       </figure>
-      <ContentEditor content={riceAddress} className={styles.rice_address} />
-      <div className={styles.social_media}>
-        <h4>{riceSocialMedia?.riceSocialHeader}</h4>
+      <ContentEditor content={riceAddress} />
+      <div>
+        <div className="bg-white my-6 h-[2px] w-[40%]" />
+        <h4 className="font-body">{riceSocialMedia?.riceSocialHeader}</h4>
         <ul>
           {riceSocialMedia?.riceSocialMediaLink?.map(
             (socialMediaLink, index) => (
               <li key={index}>
                 <Link href={socialMediaLink?.url || ""}>
-                  <a target="_blank">{socialMediaLink?.label}</a>
+                  <a className="text-innovate-smoke-gray" target="_blank">
+                    {socialMediaLink?.label}
+                  </a>
                 </Link>
               </li>
             )
           )}
         </ul>
+        <div className="bg-white my-6 h-[2px] w-[40%]" />
       </div>
     </div>
   );
@@ -148,7 +161,7 @@ const FooterBlocks = ({ footerBlocks }: SiteFooterProps) => {
 const BackToTop = () => {
   return (
     <button
-      className={styles.back_to_top}
+      className="w-8 absolute right-[1rem] bottom-[2rem] "
       onClick={() => animateScroll.scrollToTop()}
     >
       <UpArrowIcon color="white" />
@@ -158,10 +171,11 @@ const BackToTop = () => {
 
 const TermsAndConditions = () => {
   const currentYear = new Date().getFullYear();
-  const termsClassName = [styles.terms_and_conditions].join(" ");
   return (
-    <div className={termsClassName}>
-      <p>&copy;{currentYear} Rice University. All rights reserved.</p>
+    <div>
+      <p className="text-xs text-innovate-smoke-gray">
+        &copy;{currentYear} Rice University. All rights reserved.
+      </p>
     </div>
   );
 };
@@ -169,22 +183,17 @@ const TermsAndConditions = () => {
 const SiteFooter = ({ footerBlocks, header }: SiteFooterProps) => {
   useScrollToSection("contacts");
 
-  const className = [
-    styles.site_footer,
-    "full-screen",
-    "bg-innovate-black",
-  ].join(" ");
   return (
-    <footer className={className} id="contacts">
-      <div className={styles.site_footer_container}>
-        <header>
+    <footer className="py-16 px-8 full-screen bg-innovate-black" id="contacts">
+      <div className="max-w=[990px] mx-auto">
+        <header className="mb-14">
           <h1>{header}</h1>
         </header>
-        <div className={styles.site_footer_wrapper}>
+        <div className="flex flex-col">
           <FooterBlocks footerBlocks={footerBlocks} />
         </div>
       </div>
-      <div className={styles.terms_and_conditions_wrapper}>
+      <div>
         <TermsAndConditions />
       </div>
       <BackToTop />

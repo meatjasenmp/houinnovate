@@ -1,17 +1,11 @@
+import React from "react";
 import ContentEditor from "./ContentEditor";
 import {
   page_page_components_componentBlocks_Page_Components_ComponentBlocks_Phases,
   page_page_components_componentBlocks_Page_Components_ComponentBlocks_Phases_phasesList_phase,
 } from "../api/__generated__/page";
 
-import styles from "../styles/components/Phases.module.css";
-import {
-  accentColor,
-  backgroundColorMapping,
-  Colors,
-  textColorMapping,
-} from "../styles/helpers";
-import React from "react";
+import { accentColor, backgroundColorMapping } from "../styles/helpers";
 
 interface PhasesProps {
   blockContent: page_page_components_componentBlocks_Page_Components_ComponentBlocks_Phases;
@@ -26,39 +20,25 @@ interface PhaseProps {
   backgroundColor: string | null;
 }
 
-const handlePhaseClick = (e: React.MouseEvent<HTMLElement>) => {
-  const currentPhase = e.currentTarget as HTMLElement;
-
-  if (currentPhase.classList.contains(`${styles.phase_shown}`)) {
-    currentPhase.classList.remove(`${styles.phase_shown}`);
-    return;
-  }
-
-  const phases = document.querySelectorAll(`.${styles.phase}`);
-  phases.forEach((phase) => {
-    phase.classList.remove(`${styles.phase_shown}`);
-  });
-
-  currentPhase?.classList.add(`${styles.phase_shown}`);
-};
-
 const Phase = ({ phase, phaseNumber, backgroundColor }: PhaseProps) => {
   if (!phase) return null;
 
   const { phaseHeader, phaseText } = phase;
 
-  const phaseClassName = [styles.phase, "flex"].join(" ");
-  const textColor = [
-    `text-innovate-${accentColor(backgroundColor)}`,
-    styles.phase_number,
-  ].join(" ");
-
   return (
-    <div className={phaseClassName} onClick={handlePhaseClick}>
-      <div className={textColor}>{`0${phaseNumber}.`}</div>
+    <div className="cursor-pointer flex mb-4 last:mb-0">
+      <div
+        className={`mr-4 text-innovate-${accentColor(backgroundColor)}`}
+      >{`0${phaseNumber}.`}</div>
       <div>
-        <h5 className={textColor}>{phaseHeader}</h5>
-        <div className={styles.phase_content}>
+        <h5
+          className={`font-kraftigBold text-innovate-${accentColor(
+            backgroundColor
+          )}`}
+        >
+          {phaseHeader}
+        </h5>
+        <div>
           <ContentEditor content={phaseText} />
         </div>
       </div>
@@ -74,19 +54,19 @@ const Phases = ({ blockContent }: PhasesProps) => {
     accentColor: backgroundColor,
     scrollId,
   } = blockContent;
-  const phaseClassName = [
-    styles.phases,
-    backgroundColorMapping(backgroundColor),
-    "full-screen",
-  ].join(" ");
 
   return (
-    <section className={phaseClassName} id={String(scrollId)}>
-      <div className={styles.phase_container}>
-        <div className={styles.phase_content}>
+    <section
+      className={`py-16 px-8 full-screen ${backgroundColorMapping(
+        backgroundColor
+      )}`}
+      id={String(scrollId)}
+    >
+      <div className="max-w-[990px] flex flex-col mx-auto">
+        <div className="max-w-sm">
           <ContentEditor content={phasesContent} />
         </div>
-        <div className={styles.phase_list}>
+        <div className="mt-6">
           {phasesList &&
             phasesList.map((phase, index) => (
               <Phase

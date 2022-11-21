@@ -39,7 +39,7 @@ const OpportunityLink = ({
     >
       <div className="p-6">
         {alphanumericLabel && <span>{alphanumericLabel}.</span>}
-        {title && <h2 className="text-3xl">{title}</h2>}
+        {title && <h2 className="text-2xl mb-0">{title}</h2>}
         {showProgressLabel && progressLabel && <p>{progressLabel}</p>}
       </div>
       <div className="mt-auto w-full">

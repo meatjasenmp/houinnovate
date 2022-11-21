@@ -10,7 +10,6 @@ import {
   useOpportunitiesByCategory,
 } from "../../api/opportunities/opportunities";
 import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_ProjectBasedOpportunities } from "../../api/__generated__/page";
-import styles from "../../styles/components/ProjectBasedOpportunities.module.css";
 import { Colors } from "../../styles/helpers";
 import { Options } from "../helpers";
 import { allProjectOpportunities } from "../../api/opportunities/__generated__/allProjectOpportunities";
@@ -83,7 +82,7 @@ const ProjectBasedOpportunities = ({
   const Loading = () => {
     if (showLoadLoader) {
       return (
-        <div className={styles.spinner}>
+        <div>
           <p>Loading...</p>
         </div>
       );
@@ -159,11 +158,8 @@ const ProjectBasedOpportunities = ({
 
   return (
     <>
-      <section
-        className={styles.project_based_opportunities}
-        id={String(scrollId)}
-      >
-        <div className={styles.project_based_opportunities_wrapper}>
+      <section className="pb-10" id={String(scrollId)}>
+        <div className="max-w-[1200px] mx-auto">
           <CommittedDeployedProgressBar
             deployed={opportunitiesCreated?.opportunitiesCreated}
             committed={opportunitiesCreated?.opportunitiesCommitted}
@@ -172,10 +168,7 @@ const ProjectBasedOpportunities = ({
             annotation={opportunitiesCreated?.annotation}
             accent={Colors.BLUE}
           />
-          <div
-            className={styles.project_based_opportunities_content}
-            ref={contentWrapper}
-          >
+          <div className="mb-6" ref={contentWrapper}>
             <ContentEditor content={opportunitiesCreatedContent} />
           </div>
           <OpportunityCategorySelect

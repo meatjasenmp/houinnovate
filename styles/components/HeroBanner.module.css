@@ -1,171 +1,21 @@
-.hero__banner_section {
-    overflow: hidden;
-    margin-bottom: .75rem;
-    height: 100%
-}
-
-.hero__banner {
-    display: grid;
-}
-
-.hero__banner_background {
-    position: relative;
-}
-
 .hero__banner_background,
 .content__wrap {
     grid-column: 1/2;
     grid-row: 1/2;
 }
 
-.hero__banner p {
-    font-size: 1.125rem;
-}
-
-.hero__banner_video__block_container {
-    height: 100vh;
-}
-
-.hero__banner_video__block {
-    height: 100vh;
-}
-
-.hero__banner_video__image_block {
-    position: relative;
-    height: 100%;
-}
-
-.hero__banner_button {
-    margin-top: .75rem;
-    position: relative;
-    z-index: 10;
-}
-
-.content__wrap .content__block {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    z-index: 3;
-}
-
-.content__wrap .content__block:first-child {
-    position: relative;
-}
-
-.tint {
-    background: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-}
-
-.video__overlay {
-    z-index: 999999999999;
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: black;
-    padding: 1.25rem;
-}
-
-.exit_screen_button svg {
-    transition: all 0.35s ease;
-}
-
-.exit_screen_button:hover svg {
-    fill: white;
-}
-
-.content__wrap {
-    margin: 0 1rem;
-    color: #FFFFFF;
-    max-width: 200px;
-    align-self: center;
-    position: relative;
-}
-
 .content__wrap h1 {
-    font-size: 1.25rem;
-    margin-bottom: .5rem;
-}
-
-.poster {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    @apply mb-2 text-4xl leading-none;
 }
 
 .content__wrap h5 {
-    font-size: .75rem;
+    @apply text-xs;
 }
 
-@media screen and (min-width: 414px) {
-    .content__wrap {
-        margin: 0 1rem;
-    }
+.exit_screen_button svg {
+    @apply ease-linear duration-300;
 }
 
-@media screen and (min-width: 600px) {
-    .content__wrap {
-        max-width: 400px;
-    }
-    .content__wrap h1 {
-        font-size: 2rem;
-    }
-
-    .content__wrap h5 {
-        font-size: .95rem;
-    }
-
-    .hero__banner_button {
-        margin-top: 1rem;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .content__wrap {
-        margin: 0 5.5rem;
-    }
-}
-
-@media screen and (min-width: 990px) {
-
-    .content__wrap {
-        max-width: 767px;
-    }
-    .content__wrap h1 {
-        font-size: 2.5rem;
-    }
-
-    .content__wrap h5 {
-        font-size: 1rem;
-    }
-
-}
-
-@media screen and (min-width: 1200px) {
-
-    .content__wrap {
-        max-width: 767px;
-    }
-    .content__wrap h1 {
-        font-size: 3.5rem;
-        line-height: 1;
-    }
-
-    .content__wrap h5 {
-        font-size: 1.25rem;
-    }
-
+.exit_screen_button:hover svg {
+    @apply fill-white;
 }

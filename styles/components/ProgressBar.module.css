@@ -1,48 +1,7 @@
-.progress_bar_container {
-    margin: 2.5rem 0;
-}
-
-.progress_bar {
-    height: 50px;
-    background-color: #E0E0E0;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.progress_bar__deployed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-}
-
-.progress_bar__labels {
-    position: relative;
-    z-index: 2;
-    padding: 0 1rem;
-}
-
-.progress_bar__labels span {
-    display: block;
-    line-height: 1.2;
-    font-family: "Sohne-Kraftig-Bold", sans-serif;
-}
-
-.progress_bar_simple {
-    background-color: #E0E0E0;
-}
-
-.progress_bar_simple_bar {
-    height: 100%;
-}
-
 .annotation {
-    margin-top: 0.3rem;
+   @apply mt-2;
 }
 
 .annotation p {
-    font-size: 0.9rem;
-    color: #868686;
+    @apply text-xs leading-normal text-innovate-smoke-gray;
 }

@@ -38,6 +38,9 @@ module.exports = {
         "innovate-black": "#000000",
         "innovate-white": "#FFFFFF",
         "innovate-gray": "#F4F4F4",
+        "innovate-gray-2": "#E0E0E0",
+        "innovate-smoke-gray": "#868686",
+        "innovate-tan": "#DED6C7",
       },
       screens: {
         "innovate-lg": "990px",
