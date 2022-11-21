@@ -1,3 +1,15 @@
 .cta ul li {
     @apply font-kraftigBold list-none text-xl first:mt-4 mb-1 last:mb-0;
 }
+
+@media screen and (min-width: 990px) {
+    .cta {
+        @apply flex items-center self-start mt-1;
+    }
+    .cta ul {
+        @apply flex;
+    }
+    .cta ul li {
+        @apply mr-4 mt-0 first:mt-0;
+    }
+}

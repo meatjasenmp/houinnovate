@@ -26,17 +26,20 @@ const ContentBlock = ({ blockContent }: ComponentBlocksProps) => {
 
   return (
     <section className="mt-5 full-screen" id={String(scrollId)}>
-      <div className={`py-10 px-8 ${backgroundColorMapping(backgroundColor)}`}>
+      <div className={`py-16 px-8 ${backgroundColorMapping(backgroundColor)}`}>
         {contentType === contentTypes.ContentBlock && contentBlockContent && (
-          <div className="max-w-[990px] mx-auto">
+          <div className="max-w-lg">
             <ContentEditor content={contentBlockContent} />
           </div>
         )}
         {contentType === contentTypes.ContentBlockColumn && (
           <div>
-            <div className="flex flex-col max-w-[990px] mx-auto">
+            <div className="flex flex-col max-w-[990px] mx-auto innovate-lg:flex-row innovate-lg:justify-between innovate-lg:max-w-2xl">
               {contentBlockColumnContent?.map((column, index) => (
-                <div key={index}>
+                <div
+                  className="max-w-lg innovate-lg:mr-10 last:mr-0"
+                  key={index}
+                >
                   <ContentEditor content={column?.content} />
                 </div>
               ))}

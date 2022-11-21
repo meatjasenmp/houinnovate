@@ -111,7 +111,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
           <div
             className={["relative", styles.hero__banner_background].join(" ")}
           >
-            <div className="hidden">
+            <div className="innovate-lg:block hidden">
               <div className="bg-black/[.5] absolute top-0 bottom-0 left-0 right-0 z-[2] h-full w-full" />
               <div
                 className={`absolute top-0 bottom-0 left-0 right-0 w-full h-full object-cover ${
@@ -141,7 +141,11 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
               </div>
 
               {videoUrl && (
-                <div className="player-wrapper">
+                <div
+                  className={`${
+                    screenfull.isEnabled ? "innovate-lg:block" : "hidden"
+                  }, player-wrapper`}
+                >
                   <ReactPlayer
                     className="react-player"
                     ref={videoRef}
@@ -161,10 +165,14 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
           </div>
 
           <div
-            className={["relative", styles.hero__banner_background].join(" ")}
+            className={[
+              "relative h-[800px] innovate-lg:hidden",
+              styles.hero__banner_background,
+            ].join(" ")}
           >
+            <div className="bg-black/[.5] absolute top-0 bottom-0 left-0 right-0 z-[2] h-full w-full" />
             <ImageBlock
-              image={videoPosterMobile}
+              image={videoPoster}
               priority={true}
               height="590"
               width="1212"
@@ -174,24 +182,25 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
           <div
             className={[
               styles.content__wrap,
-              "mx-4 text-white max-w-[350px] self-center relative",
+              "mx-4 text-white max-w-[350px] self-center relative sm:pl-12 sm:max-w-lg",
             ].join(" ")}
             ref={contentWrapRef}
           >
-            <div className="relative">
+            <div className="relative grid">
               {contentBlocks &&
                 contentBlocks.map((block, index) => (
-                  <section
-                    className="animated_content_block first:relative absolute top-0 left-0 right-0 bottom-0 m-auto z-[3]"
-                    key={index}
-                  >
+                  <section className="animated_content_block z-[3]" key={index}>
                     <ContentEditor content={block?.contentBlock} />
                   </section>
                 ))}
             </div>
             {videoCta && (
               <>
-                <div className={screenfull.isEnabled ? "block" : "hidden"}>
+                <div
+                  className={
+                    screenfull.isEnabled ? "innovate-lg:block" : "hidden"
+                  }
+                >
                   <button
                     className="rounded-full py-2 px-4 text-xs text-white flex items-center bg-innovate-red mt-3 relative z-[10]"
                     onClick={handleButtonClick}
@@ -202,7 +211,13 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
                     </span>
                   </button>
                 </div>
-                <div className={!screenfull.isEnabled ? "block" : "hidden"}>
+                <div
+                  className={
+                    !screenfull.isEnabled
+                      ? "block innovate-lg:hidden"
+                      : "hidden"
+                  }
+                >
                   <button
                     className="rounded-full py-2 px-4 text-xs text-white flex items-center bg-innovate-red mt-3 relative z-[10]"
                     onClick={handleMobileButtonClick}

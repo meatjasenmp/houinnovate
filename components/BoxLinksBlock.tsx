@@ -45,7 +45,7 @@ const BoxLinkContent = ({ content }: BoxLinkProps) => {
         <figure className="w-full h-[275px]">
           <ImageBlock image={image} priority={true} height="590" width="1212" />
         </figure>
-        <article className="p-6">
+        <article className="p-6 max-w-lg">
           <ContentEditor content={boxLinkContent} />
         </article>
       </div>
@@ -117,7 +117,7 @@ const BoxLinksBlock = ({ blockContent }: ComponentBlocksProps) => {
   if (!blockContent.boxLink) return null;
   return (
     <section
-      className="grid gap-[.8rem] auto-rows-fr box_links_container"
+      className="grid gap-[.8rem] md:grid-cols-2 auto-rows-fr box_links_container"
       ref={boxLinkRef}
     >
       <>

@@ -73,13 +73,13 @@ const ContentBlockStylized = ({ blockContent }: ComponentBlocksProps) => {
 
   return (
     <section className="pb-4 py-8" id={String(scrollId)}>
-      <div className="max-w-[990px] mx-auto flex flex-col">
-        <div className="max-w-lg" ref={contentWrapper}>
+      <div className="flex flex-col innovate-lg:flex-row">
+        <div className="max-w-lg innovate-lg:mr-10" ref={contentWrapper}>
           <ContentEditor content={contentBlockStylized} />
         </div>
-        <div>
+        <div className="flex-grow">
           {list && list.length > 0 && (
-            <ul className="mt-5">
+            <ul className="mt-5 innovate-lg:mt-0">
               {list.map((listItem, index) => (
                 <ListItem listItem={listItem?.listItem} key={index} />
               ))}

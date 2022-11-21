@@ -6,41 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Updating phases">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/__generated__/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/__generated__/page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/BoxLinksBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/BoxLinksBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CommittedDeployedProgressBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CommittedDeployedProgressBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/ContentBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContentBlock.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/ContentBlockStylized.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContentBlockStylized.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ContentEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContentEditor.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/HeroBanner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeroBanner.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navigation.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Phases.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Phases.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ProgressBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProgressBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SecondaryNavigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SecondaryNavigation.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/SiteFooter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SiteFooter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/VideoComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/VideoComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/helpers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/investments/InvestmentLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/InvestmentLink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/opportunities/OpportunityLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/OpportunityLink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/opportunities/ProjectBasedOpportunities.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/ProjectBasedOpportunities.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/workWithIon/JobLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/JobLink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/workWithIon/JobLinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/JobLinks.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/workWithIon/JobSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/JobSelect.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/workWithIon/WorkWithIon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/WorkWithIon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/BoxLinks.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/BoxLinks.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/ContentBlock.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/ContentBlockStylizedList.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/ContentEditor.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/DirectCommunityInvestment.module.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/components/HeroBanner.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/HeroBanner.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/JobLink.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/Navigation.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/Navigation.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/Phases.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/ProgressBar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/ProgressBar.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/SiteFooter.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/SiteFooter.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/ImageAsset.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ImageAsset.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/SecondaryNavigation.module.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/components/WorkWithIon.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/WorkWithIon.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +43,29 @@
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="clean-up" />
+                    <option name="lastUsedInstant" value="1669061596" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1669061595" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -105,11 +106,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/components/opportunities" />
       <recent name="$PROJECT_DIR$/api/opportunities/__generated__" />
       <recent name="$PROJECT_DIR$/api/jobs" />
       <recent name="$PROJECT_DIR$/api/opportunities" />
-      <recent name="$PROJECT_DIR$/api/investments" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -140,14 +141,7 @@
       <workItem from="1668472155117" duration="9522000" />
       <workItem from="1668560420375" duration="10880000" />
       <workItem from="1668878590110" duration="26398000" />
-      <workItem from="1669042405919" duration="15973000" />
-    </task>
-    <task id="LOCAL-00066" summary="Basic implementation of jobs load more.">
-      <created>1668285821286</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1668285821286</updated>
+      <workItem from="1669042405919" duration="21224000" />
     </task>
     <task id="LOCAL-00067" summary="Refactoring Work w/ ion Job Select.">
       <created>1668297492660</created>
@@ -485,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669050634447</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="Updating phases">
+      <created>1669061604146</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1669061604148</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

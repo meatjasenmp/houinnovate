@@ -12,6 +12,11 @@
     @apply text-xs;
 }
 
+.content__wrap section {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
 .exit_screen_button svg {
     @apply ease-linear duration-300;
 }

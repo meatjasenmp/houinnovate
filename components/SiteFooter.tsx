@@ -12,7 +12,7 @@ import {
 } from "../api/__generated__/page";
 
 import styles from "../styles/components/SiteFooter.module.css";
-import ImageAsset from "../styles/components/ImageAsset";
+import ImageAsset from "./ImageAsset";
 import { useScrollToSection } from "./helpers";
 
 enum FooterComponents {
@@ -44,7 +44,12 @@ interface RiceUniversityProps {
 const GetInTouch = ({ blockContent }: GetInTouchProps) => {
   const { contentBlocks } = blockContent;
   return (
-    <div className={[styles.get_in_touch, "mb-16"].join(" ")}>
+    <div
+      className={[
+        styles.get_in_touch,
+        "mb-16 innovate-lg:w-2/6 innovate-lg:mr-10",
+      ].join(" ")}
+    >
       {contentBlocks?.map((block, index) => (
         <ContentEditor key={index} content={block?.content} />
       ))}
@@ -56,7 +61,7 @@ const IonDistrict = ({ blockContent }: IonDistrictProps) => {
   const { ionLogo, address, socialMedia, ctaLinks, newsletterCta } =
     blockContent;
   return (
-    <div className="pb-16 last:pb-0">
+    <div className="mb-16 innovate-lg:mb-0 innovate-lg:w-2/6">
       <figure className="w-13 mb-8">
         <ImageAsset image={ionLogo} width="115" height="61" />
       </figure>
@@ -106,7 +111,7 @@ const IonDistrict = ({ blockContent }: IonDistrictProps) => {
 const RiceUniversity = ({ blockContent }: RiceUniversityProps) => {
   const { riceUniversityLogo, riceAddress, riceSocialMedia } = blockContent;
   return (
-    <div className="mb-16 last:mb-0">
+    <div className="mb-16 last:mb-0 innovate-lg:m-b0 innovate-lg:w-2/6">
       <figure className="w-13 mb-8">
         <ImageAsset image={riceUniversityLogo} width="150" height="97" />
       </figure>
@@ -172,7 +177,7 @@ const BackToTop = () => {
 const TermsAndConditions = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <div>
+    <div className="innovate-lg:mt-16">
       <p className="text-xs text-innovate-smoke-gray">
         &copy;{currentYear} Rice University. All rights reserved.
       </p>
@@ -185,11 +190,11 @@ const SiteFooter = ({ footerBlocks, header }: SiteFooterProps) => {
 
   return (
     <footer className="py-16 px-8 full-screen bg-innovate-black" id="contacts">
-      <div className="max-w=[990px] mx-auto">
+      <div className="max-w-lg innovate-lg:max-w-none">
         <header className="mb-14">
           <h1>{header}</h1>
         </header>
-        <div className="flex flex-col">
+        <div className="flex flex-col innovate-lg:flex-row">
           <FooterBlocks footerBlocks={footerBlocks} />
         </div>
       </div>

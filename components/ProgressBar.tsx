@@ -1,4 +1,3 @@
-import styles from "../styles/components/ProgressBar.module.css";
 import { backgroundColorMapping, Colors } from "../styles/helpers";
 
 export enum Phase {
@@ -30,15 +29,10 @@ const ProgressBar = ({
   height?: string;
   progressPercentage: number | null | undefined;
 }) => {
-  const progressBarClassName = [
-    styles.progress_bar_simple_bar,
-    backgroundColorMapping(accent),
-  ].join(" ");
-
   return (
-    <div className={styles.progress_bar_simple}>
+    <div className="bg-innovate-gray-2">
       <div
-        className={progressBarClassName}
+        className={backgroundColorMapping(accent)}
         style={{
           width: `${progressBarPercentage(currentPhase, progressPercentage)}`,
           height: height || "20px",

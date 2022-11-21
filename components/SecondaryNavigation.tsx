@@ -1,5 +1,4 @@
 import { page_siteOptionsPage_siteNavigation } from "../api/__generated__/page";
-import styles from "../styles/components/SecondaryNavigation.module.css";
 import { Link as ScrollLink } from "react-scroll";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -14,23 +13,17 @@ const SecondaryNavigation = ({ nav }: SecondaryNavigationProps) => {
 
   const isHome = router.pathname === "/";
 
-  const navigationStyles = [
-    styles.secondary_navigation,
-    !isHome && styles.secondary_navigation_page,
-  ].join(" ");
-
   if (!nav) return <></>;
 
   return (
-    <div className={navigationStyles}>
-      <ul>
+    <div className="none absolute top-[6rem] right-[4rem] z-10 innovate-lg:block">
+      <ul className="flex">
         {nav.navigation?.sectionLinks?.map((link, index) => {
           if (isHome && link?.label !== "Home") {
             return (
-              <li key={index} className={styles.section_link_list_item}>
+              <li key={index} className={`mr-8 last:mr-0 text-white`}>
                 <ScrollLink
                   href="#"
-                  className={styles.section_link}
                   to={String(link?.anchorLabel)}
                   containerId="page-wrap"
                   onClick={() => handleScroll(link?.anchorLabel)}
@@ -43,13 +36,12 @@ const SecondaryNavigation = ({ nav }: SecondaryNavigationProps) => {
           }
           if (link?.label !== "Home") {
             return (
-              <li key={index} className={styles.section_link_list_item}>
+              <li key={index} className={`mr-8 last:mr-0 text-black`}>
                 <Link
                   href={{
                     pathname: "/",
                     query: { scrollTo: `${link?.anchorLabel}` },
                   }}
-                  className={styles.section_link}
                 >
                   {link?.label}
                 </Link>

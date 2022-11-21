@@ -62,11 +62,11 @@ const Phases = ({ blockContent }: PhasesProps) => {
       )}`}
       id={String(scrollId)}
     >
-      <div className="max-w-[990px] flex flex-col mx-auto">
-        <div className="max-w-sm">
+      <div className="max-w-lg flex flex-col innovate-lg:flex-row innovate-lg:max-w-none">
+        <div className="innovate-lg:mr-10">
           <ContentEditor content={phasesContent} />
         </div>
-        <div className="mt-6">
+        <div className="mt-6 innovate-lg:mt-0 innovate-lg:max-w-lg">
           {phasesList &&
             phasesList.map((phase, index) => (
               <Phase
