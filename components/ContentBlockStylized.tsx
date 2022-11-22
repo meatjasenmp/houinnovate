@@ -72,8 +72,8 @@ const ContentBlockStylized = ({ blockContent }: ComponentBlocksProps) => {
   } = blockContent;
 
   return (
-    <section className="pb-4 py-8" id={String(scrollId)}>
-      <div className="flex flex-col innovate-lg:flex-row">
+    <section className="py-8 innovate-lg:py-24" id={String(scrollId)}>
+      <div className="flex flex-col max-w-screen-innovate-lg mx-auto innovate-lg:flex-row">
         <div className="max-w-lg innovate-lg:mr-10" ref={contentWrapper}>
           <ContentEditor content={contentBlockStylized} />
         </div>

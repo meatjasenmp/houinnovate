@@ -1,9 +1,9 @@
-.cta_link_container p a,
 .get_in_touch a {
     @apply text-innovate-smoke-gray no-underline;
 }
 
-.newsletter_cta h4 {
+.newsletter_cta h4,
+.cta_link_container h4 {
     @apply text-xl font-kraftigBold;
 }
 
@@ -12,8 +12,12 @@
     @apply mb-8
 }
 
+.get_in_touch p {
+    @apply text-sm;
+}
+
 .get_in_touch h4 {
-    @apply font-body;
+    @apply text-xl  mb-1;
 }
 
 .get_in_touch article:last-child:before {
@@ -22,3 +26,4 @@
     width: 40%;
     @apply block mb-8 bg-white;
 }
+

@@ -35,9 +35,9 @@ const WorkWithIon = ({ blockContent }: WorkWithIonProps) => {
   }, []);
   return (
     <div className="pt-8 pb-16" id={String(scrollId)}>
-      <div className="max-w-[990px] mx-auto" ref={contentWrapper}>
+      <div className="max-w-screen-innovate-lg mx-auto" ref={contentWrapper}>
         <div className="mb-8 innovate-lg:flex innovate-lg:mb-2">
-          <div className="max-w-[285px] mr-1">
+          <div className="max-w-[285px] mr-1 xl:max-w-[350px]">
             <h1>{workWithIonContent}</h1>
           </div>
           <div className={styles.cta}>

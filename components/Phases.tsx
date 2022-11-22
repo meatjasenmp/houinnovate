@@ -62,8 +62,8 @@ const Phases = ({ blockContent }: PhasesProps) => {
       )}`}
       id={String(scrollId)}
     >
-      <div className="max-w-lg flex flex-col innovate-lg:flex-row innovate-lg:max-w-none">
-        <div className="innovate-lg:mr-10">
+      <div className="max-w-lg flex flex-col innovate-lg:flex-row innovate-lg:max-w-screen-innovate-lg lg:mx-auto">
+        <div className="innovate-lg:mr-10 innovate-lg:max-w-lg">
           <ContentEditor content={phasesContent} />
         </div>
         <div className="mt-6 innovate-lg:mt-0 innovate-lg:max-w-lg">

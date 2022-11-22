@@ -4,7 +4,7 @@
 
 @media screen and (min-width: 990px) {
     .cta {
-        @apply flex items-center self-start mt-1;
+        @apply flex items-center self-start mt-4;
     }
     .cta ul {
         @apply flex;

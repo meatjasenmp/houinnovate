@@ -73,7 +73,7 @@ export const selectStyles = {
     ...provided,
     display: "none",
   }),
-  control: (provided: any, state: any) => ({
+  control: (provided: any) => ({
     ...provided,
     border: 0,
     borderRadius: 0,

@@ -158,16 +158,8 @@ const ProjectBasedOpportunities = ({
 
   return (
     <>
-      <section className="pb-10" id={String(scrollId)}>
+      <section className="py-10" id={String(scrollId)}>
         <div className="max-w-[1200px] mx-auto">
-          <CommittedDeployedProgressBar
-            deployed={opportunitiesCreated?.opportunitiesCreated}
-            committed={opportunitiesCreated?.opportunitiesCommitted}
-            deployedLabel={opportunitiesCreated?.createdLabel}
-            committedLabel={opportunitiesCreated?.committedLabel}
-            annotation={opportunitiesCreated?.annotation}
-            accent={Colors.BLUE}
-          />
           <div className="mb-6" ref={contentWrapper}>
             <ContentEditor content={opportunitiesCreatedContent} />
           </div>

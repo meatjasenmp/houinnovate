@@ -5,7 +5,7 @@
 }
 
 .content__wrap h1 {
-    @apply mb-2 text-4xl leading-none;
+    @apply mb-2;
 }
 
 .content__wrap h5 {

@@ -16,7 +16,7 @@ const SecondaryNavigation = ({ nav }: SecondaryNavigationProps) => {
   if (!nav) return <></>;
 
   return (
-    <div className="none absolute top-[6rem] right-[4rem] z-10 innovate-lg:block">
+    <div className="hidden absolute top-[6rem] right-[4rem] z-10 innovate-lg:block">
       <ul className="flex">
         {nav.navigation?.sectionLinks?.map((link, index) => {
           if (isHome && link?.label !== "Home") {

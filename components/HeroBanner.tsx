@@ -182,7 +182,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
           <div
             className={[
               styles.content__wrap,
-              "mx-4 text-white max-w-[350px] self-center relative sm:pl-12 sm:max-w-lg",
+              "mx-4 text-white max-w-[350px] self-center relative sm:pl-12 sm:max-w-lg innovate-lg:max-w-2xl",
             ].join(" ")}
             ref={contentWrapRef}
           >
@@ -202,10 +202,10 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
                   }
                 >
                   <button
-                    className="rounded-full py-2 px-4 text-xs text-white flex items-center bg-innovate-red mt-3 relative z-[10]"
+                    className="rounded-full py-2 px-4 text-xs text-white flex items-center bg-innovate-red mt-3 relative z-[10] innovate-lg:px-5 innovate-lg:py-3 innovate-lg:text-sm"
                     onClick={handleButtonClick}
                   >
-                    <span>{videoCta}</span>
+                    <span className="mr-1">{videoCta}</span>
                     <span>
                       <BiPlay size="1.25rem" />
                     </span>
@@ -219,7 +219,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
                   }
                 >
                   <button
-                    className="rounded-full py-2 px-4 text-xs text-white flex items-center bg-innovate-red mt-3 relative z-[10]"
+                    className="rounded-full py-2 px-4 text-xs text-white flex items-center bg-innovate-red mt-3 relative z-[10] innovate-lg:px-5 innovate-lg:py-3 innovate-lg:text-sm"
                     onClick={handleMobileButtonClick}
                   >
                     <span className="mr-1">{videoCta}</span>

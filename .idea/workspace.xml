@@ -4,21 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Updating phases">
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Responsive tweaks.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/BoxLinksBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/BoxLinksBlock.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/ContentBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContentBlock.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/ContentBlockStylized.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContentBlockStylized.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/HeroBanner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeroBanner.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Phases.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Phases.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProgressBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProgressBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/SecondaryNavigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SecondaryNavigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SelectComponent.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/components/SiteFooter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SiteFooter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/helpers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/opportunities/ProjectBasedOpportunities.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/ProjectBasedOpportunities.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/workWithIon/WorkWithIon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/WorkWithIon.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/components/HeroBanner.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/HeroBanner.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/ImageAsset.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ImageAsset.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/SecondaryNavigation.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/Navigation.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/Navigation.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/SiteFooter.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/SiteFooter.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/components/WorkWithIon.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/WorkWithIon.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,14 +144,7 @@
       <workItem from="1668472155117" duration="9522000" />
       <workItem from="1668560420375" duration="10880000" />
       <workItem from="1668878590110" duration="26398000" />
-      <workItem from="1669042405919" duration="21224000" />
-    </task>
-    <task id="LOCAL-00067" summary="Refactoring Work w/ ion Job Select.">
-      <created>1668297492660</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1668297492660</updated>
+      <workItem from="1669042405919" duration="29613000" />
     </task>
     <task id="LOCAL-00068" summary="Refactoring Work w/ ion Job Select.">
       <created>1668298205885</created>
@@ -486,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669061604148</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="Responsive tweaks.">
+      <created>1669066793145</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1669066793146</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +509,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Success/error message for newsletter input. CSS updates to video banner." />
     <MESSAGE value="Success/error message for opportunities input." />
     <MESSAGE value="video test." />
     <MESSAGE value="Reverting." />
@@ -531,7 +533,8 @@
     <MESSAGE value="Apparently the hubspot library hates environment variables." />
     <MESSAGE value="Never mind. I'm dumb." />
     <MESSAGE value="Updating phases" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating phases" />
+    <MESSAGE value="Responsive tweaks." />
+    <option name="LAST_COMMIT_MESSAGE" value="Responsive tweaks." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

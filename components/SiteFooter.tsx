@@ -61,17 +61,17 @@ const IonDistrict = ({ blockContent }: IonDistrictProps) => {
   const { ionLogo, address, socialMedia, ctaLinks, newsletterCta } =
     blockContent;
   return (
-    <div className="mb-16 innovate-lg:mb-0 innovate-lg:w-2/6">
+    <div className="mb-16 innovate-lg:mb-0 innovate-lg:w-2/6 innovate-lg:mr-10">
       <figure className="w-13 mb-8">
         <ImageAsset image={ionLogo} width="115" height="61" />
       </figure>
       <ContentEditor content={address} />
-      <div className="text-white font-kraftigBold">
+      <div className="text-white">
         <div className="bg-white my-6 h-[2px] w-[40%]" />
-        <h4>{socialMedia?.header}</h4>
+        <h6 className="mb-4">{socialMedia?.header}</h6>
         <ul>
           {socialMedia?.socialMediaLink?.map((socialMediaLink, index) => (
-            <li className="mb-4 last:mb-0" key={index}>
+            <li className="mb-4 last:mb-0 text-sm" key={index}>
               <Link href={socialMediaLink?.url || ""}>
                 <a
                   className="text-innovate-smoke-gray font-body"
@@ -92,9 +92,9 @@ const IonDistrict = ({ blockContent }: IonDistrictProps) => {
             key={index}
           >
             <ContentEditor content={ctaLink?.cta} />
-            <figure className="absolute right-[2rem] bottom-[-0.3rem] w-8">
-              <ArrowLinkIcon color="white" />
-            </figure>
+            {/*<figure className="absolute right-[1rem] bottom-[-0.2rem] w-8">*/}
+            {/*  <ArrowLinkIcon color="white" />*/}
+            {/*</figure>*/}
           </div>
         ))}
       </section>
@@ -118,11 +118,11 @@ const RiceUniversity = ({ blockContent }: RiceUniversityProps) => {
       <ContentEditor content={riceAddress} />
       <div>
         <div className="bg-white my-6 h-[2px] w-[40%]" />
-        <h4 className="font-body">{riceSocialMedia?.riceSocialHeader}</h4>
+        <h6 className="mb-4">{riceSocialMedia?.riceSocialHeader}</h6>
         <ul>
           {riceSocialMedia?.riceSocialMediaLink?.map(
             (socialMediaLink, index) => (
-              <li key={index}>
+              <li className="text-sm" key={index}>
                 <Link href={socialMediaLink?.url || ""}>
                   <a className="text-innovate-smoke-gray" target="_blank">
                     {socialMediaLink?.label}
@@ -190,7 +190,7 @@ const SiteFooter = ({ footerBlocks, header }: SiteFooterProps) => {
 
   return (
     <footer className="py-16 px-8 full-screen bg-innovate-black" id="contacts">
-      <div className="max-w-lg innovate-lg:max-w-none">
+      <div className="max-w-lg innovate-lg:max-w-screen-innovate-lg innovate-lg:mx-auto">
         <header className="mb-14">
           <h1>{header}</h1>
         </header>

@@ -1,3 +1,10 @@
+.hou_innovate {
+    @apply mb-10;
+}
+.hou_innovate h4 {
+    @apply text-xl mb-1;
+}
+
 .hou_innovate h4 a {
-    @apply text-innovate-smoke-gray
+    @apply text-innovate-smoke-gray block;
 }

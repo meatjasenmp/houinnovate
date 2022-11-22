@@ -158,15 +158,15 @@ const DirectCommunityInvestment = ({
   return (
     <>
       <section className="pb-10" id={String(scrollId)}>
-        <CommittedDeployedProgressBar
-          deployed={deployment?.deployed}
-          committed={deployment?.committed}
-          deployedLabel={deployment?.deployedLabel}
-          committedLabel={deployment?.investmentCommittedLabel}
-          accent={Colors.NEON}
-          annotation={deployment?.annotation}
-        />
         <div className="max-w-[1200px] mx-auto">
+          <CommittedDeployedProgressBar
+            deployed={deployment?.deployed}
+            committed={deployment?.committed}
+            deployedLabel={deployment?.deployedLabel}
+            committedLabel={deployment?.investmentCommittedLabel}
+            accent={Colors.NEON}
+            annotation={deployment?.annotation}
+          />
           <div className="mb-6" ref={contentWrapper}>
             <ContentEditor content={communityInvestmentContent} />
           </div>
