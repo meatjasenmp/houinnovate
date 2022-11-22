@@ -177,7 +177,7 @@ const BackToTop = () => {
 const TermsAndConditions = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <div className="innovate-lg:mt-16">
+    <div className="innovate-lg:mt-16 max-w-screen-innovate-lg mx-auto">
       <p className="text-xs text-innovate-smoke-gray">
         &copy;{currentYear} Rice University. All rights reserved.
       </p>

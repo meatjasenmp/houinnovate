@@ -20,8 +20,7 @@ const OpportunityLink = ({
 
   const { progress, alphanumericLabel } = communityAndOpportunityPopUps || {};
 
-  const { currentPhase, progressLabel, showProgressLabel, progressPercentage } =
-    progress || {};
+  const { currentPhase, progressLabel, showProgressLabel } = progress || {};
 
   const handleClick = () => {
     setCurrentID(databaseId);
@@ -59,11 +58,7 @@ const OpportunityLink = ({
             </figure>
           </figure>
         </div>
-        <ProgressBar
-          currentPhase={currentPhase}
-          progressPercentage={progressPercentage}
-          accent={Colors.BLUE}
-        />
+        <ProgressBar currentPhase={currentPhase} accent={Colors.BLUE} />
       </div>
     </button>
   );

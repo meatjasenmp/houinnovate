@@ -20,8 +20,7 @@ const InvestmentLink = ({
 
   const { progress, alphanumericLabel } = communityAndOpportunityPopUps || {};
 
-  const { currentPhase, progressLabel, showProgressLabel, progressPercentage } =
-    progress || {};
+  const { currentPhase, progressLabel, showProgressLabel } = progress || {};
 
   const handleClick = () => {
     setCurrentID(databaseId);
@@ -59,11 +58,7 @@ const InvestmentLink = ({
             </figure>
           </figure>
         </div>
-        <ProgressBar
-          currentPhase={currentPhase}
-          progressPercentage={progressPercentage}
-          accent={Colors.NEON}
-        />
+        <ProgressBar currentPhase={currentPhase} accent={Colors.NEON} />
       </div>
     </button>
   );

@@ -8,33 +8,34 @@ export enum Phase {
   ONGOING = "ongoing",
 }
 
-const progressBarPercentage = (
-  currentPhase: string | null | undefined,
-  percentage: number | null | undefined
-) => {
-  if (currentPhase !== Phase.COMPLETION) {
-    return `${percentage}%`;
+const progressBarPercentage = (currentPhase: string | null | undefined) => {
+  switch (currentPhase) {
+    case Phase.PLANNING:
+      return "25%";
+    case Phase.EXECUTION:
+      return "50%";
+    case Phase.MONITORING || Phase.ONGOING:
+      return "75%";
+    default:
+      return "100%";
   }
-  return "100%";
 };
 
 const ProgressBar = ({
   currentPhase,
   accent,
   height,
-  progressPercentage,
 }: {
   currentPhase: string | null | undefined;
   accent: Colors;
   height?: string;
-  progressPercentage: number | null | undefined;
 }) => {
   return (
     <div className="bg-innovate-gray-2">
       <div
         className={backgroundColorMapping(accent)}
         style={{
-          width: `${progressBarPercentage(currentPhase, progressPercentage)}`,
+          width: `${progressBarPercentage(currentPhase)}`,
           height: height || "20px",
         }}
       ></div>

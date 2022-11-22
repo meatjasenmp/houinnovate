@@ -45,21 +45,25 @@ const Modal = ({ id, isOpen, setIsOpen }: ModalProps) => {
         {loading && <LoadingContainer />}
 
         {!loading && (
-          <div className="flex flex-col max-w-screen-xl mt-8 w-full h-full mx-auto">
+          <div className="flex flex-col max-w-screen-2xl mt-8 w-full h-full mx-auto px-4">
             <div className="innovate-lg:flex">
-              <aside className="innovate-lg:mr-16 innovate-lg:w-2/5">
+              <aside className="innovate-lg:mr-16 innovate-lg:w-1/2">
                 {alphanumericLabel && <h5>{alphanumericLabel}.</h5>}
                 {projectBasedOpportunity?.title && (
-                  <h1>{projectBasedOpportunity?.title}</h1>
+                  <h1 className="innovate-lg: text-4xl xl:text-6xl">
+                    {projectBasedOpportunity?.title}
+                  </h1>
                 )}
                 {progress?.showProgressLabel && progress?.progressLabel && (
                   <div className="my-6">
-                    <span>Funding: {progress?.progressLabel}</span>
+                    <span className="text-sm">
+                      Funding: {progress?.progressLabel}
+                    </span>
                   </div>
                 )}
                 {dataFields?.map((dataField, index) => (
                   <div className="my-6" key={index}>
-                    <span>
+                    <span className="text-sm">
                       {dataField?.dataField?.labelField}:{" "}
                       {dataField?.dataField?.contentField}
                     </span>
@@ -96,7 +100,6 @@ const Modal = ({ id, isOpen, setIsOpen }: ModalProps) => {
                 <div className="full-screen">
                   <ProgressBar
                     currentPhase={progress?.currentPhase}
-                    progressPercentage={progress?.progressPercentage}
                     accent={Colors.BLUE}
                     height="35px"
                   />
