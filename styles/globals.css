@@ -109,13 +109,13 @@
         }
 
         p, li, h5 {
-            @apply text-base leading-normal;
+            @apply text-base leading-loose;
         }
     }
 
     @media screen and (min-width: 1280px) {
         h1 {
-            @apply text-6xl;
+            @apply text-innovate-6xl;
         }
 
         h2 {

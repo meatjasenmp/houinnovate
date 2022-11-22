@@ -42,10 +42,12 @@ const BoxLinkContent = ({ content }: BoxLinkProps) => {
   return (
     <div className="relative flex flex-col flex-1 h-full">
       <div>
-        <figure className="w-full h-[275px]">
+        <figure
+          className={["w-full h-[275px]", styles.block_link__image].join(" ")}
+        >
           <ImageBlock image={image} priority={true} height="590" width="1212" />
         </figure>
-        <article className="p-6 max-w-lg">
+        <article className="p-6 max-w-lg xl:max-w-xl">
           <ContentEditor content={boxLinkContent} />
         </article>
       </div>
@@ -117,7 +119,10 @@ const BoxLinksBlock = ({ blockContent }: ComponentBlocksProps) => {
   if (!blockContent.boxLink) return null;
   return (
     <section
-      className="grid gap-[.8rem] md:grid-cols-2 auto-rows-fr box_links_container"
+      className={[
+        "grid gap-[.8rem] md:grid-cols-2 auto-rows-fr box_links_container",
+        styles.box_links,
+      ].join(" ")}
       ref={boxLinkRef}
     >
       <>

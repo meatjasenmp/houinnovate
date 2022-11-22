@@ -45,6 +45,9 @@ module.exports = {
       screens: {
         "innovate-lg": "990px",
       },
+      fontSize: {
+        "innovate-6xl": "3.5rem",
+      },
     },
   },
 };

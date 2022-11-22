@@ -4,7 +4,7 @@ import {
   page_page_components_componentBlocks_Page_Components_ComponentBlocks_Phases,
   page_page_components_componentBlocks_Page_Components_ComponentBlocks_Phases_phasesList_phase,
 } from "../api/__generated__/page";
-
+import styles from "../styles/components/Phases.module.css";
 import { accentColor, backgroundColorMapping } from "../styles/helpers";
 
 interface PhasesProps {
@@ -63,10 +63,15 @@ const Phases = ({ blockContent }: PhasesProps) => {
       id={String(scrollId)}
     >
       <div className="max-w-lg flex flex-col innovate-lg:flex-row innovate-lg:max-w-screen-innovate-lg lg:mx-auto">
-        <div className="innovate-lg:mr-10 innovate-lg:max-w-lg">
+        <div className="innovate-lg:mr-10 innovate-lg:max-w-lg xl:max-w-2xl xl:flex-grow">
           <ContentEditor content={phasesContent} />
         </div>
-        <div className="mt-6 innovate-lg:mt-0 innovate-lg:max-w-lg">
+        <div
+          className={[
+            "mt-6 innovate-lg:mt-0 innovate-lg:max-w-lg xl:flex-1",
+            styles.phases,
+          ].join(" ")}
+        >
           {phasesList &&
             phasesList.map((phase, index) => (
               <Phase
