@@ -88,7 +88,7 @@
 
     .modal_content ul li {
         list-style-type: lower-alpha;
-        @apply list-inside;
+        @apply list-inside mb-4 last:mb-0;
     }
 
     @media screen and (min-width: 990px) {

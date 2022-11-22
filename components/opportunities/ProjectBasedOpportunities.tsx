@@ -134,7 +134,10 @@ const ProjectBasedOpportunities = ({
     if (currentCategory && String(currentCategory) !== "all") {
       if (categoryPageInfo?.hasNextPage) {
         return (
-          <ShowMoreButton onClick={handleLoadMoreByCategory}>
+          <ShowMoreButton
+            classNames="bg-innovate-blue text-white"
+            onClick={handleLoadMoreByCategory}
+          >
             Show More Opportunities
           </ShowMoreButton>
         );
@@ -143,7 +146,10 @@ const ProjectBasedOpportunities = ({
     }
     if (pageInfo?.hasNextPage && String(currentCategory) == "all") {
       return (
-        <ShowMoreButton onClick={handleLoadMoreOpportunities}>
+        <ShowMoreButton
+          classNames="bg-innovate-blue text-white"
+          onClick={handleLoadMoreOpportunities}
+        >
           Show More Opportunities
         </ShowMoreButton>
       );
@@ -153,8 +159,7 @@ const ProjectBasedOpportunities = ({
 
   if (!blockContent) return null;
 
-  const { opportunitiesCreated, opportunitiesCreatedContent, scrollId } =
-    blockContent;
+  const { opportunitiesCreatedContent, scrollId } = blockContent;
 
   return (
     <>
@@ -172,7 +177,7 @@ const ProjectBasedOpportunities = ({
             <Loading />
           ) : (
             <>
-              <section className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <section className="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {opportunities?.projectBasedOpportunities?.edges?.map(
                   (edge, index) => (
                     <OpportunityLink

@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import JobCategorySelect from "./JobCategorySelect";
 import { Options } from "../helpers";
 import JobLinks from "./JobLinks";
+import ShowMoreButton from "../ShowMoreButton";
 import { allOpportunities } from "../../api/opportunities/__generated__/allOpportunities";
 
 const JobSelect = () => {
@@ -101,18 +102,19 @@ const JobSelect = () => {
       });
   };
 
-  const ShowMoreButton = () => {
+  const ShowMore = () => {
     if (categoryPageInfo?.hasNextPage && String(currentCategory) !== "all") {
       return (
         <>
           <div className="mt-4">
-            <button
+            <ShowMoreButton
+              classNames="bg-innovate-red text-white"
               onClick={() => {
                 handleLoadMoreByCategory();
               }}
             >
-              Show More
-            </button>
+              Show More Jobs
+            </ShowMoreButton>
           </div>
           <Loading />
         </>
@@ -122,13 +124,14 @@ const JobSelect = () => {
       return (
         <>
           <div className="mt-4">
-            <button
+            <ShowMoreButton
               onClick={() => {
                 handleLoadMoreOpportunities();
               }}
+              classNames="bg-innovate-red text-white"
             >
-              Show More
-            </button>
+              Show More Jobs
+            </ShowMoreButton>
           </div>
           <Loading />
         </>
@@ -151,7 +154,9 @@ const JobSelect = () => {
       ) : (
         <>
           <JobLinks data={opportunities} />
-          <ShowMoreButton />
+          <div className="mt-6">
+            <ShowMore />
+          </div>
         </>
       )}
     </section>

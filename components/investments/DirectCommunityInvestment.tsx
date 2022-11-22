@@ -132,7 +132,10 @@ const DirectCommunityInvestment = ({
     if (currentCategory && String(currentCategory) !== "all") {
       if (categoryPageInfo?.hasNextPage) {
         return (
-          <ShowMoreButton onClick={handleLoadMoreByCategory}>
+          <ShowMoreButton
+            classNames="bg-innovate-neon text-black"
+            onClick={handleLoadMoreByCategory}
+          >
             Show More Investments
           </ShowMoreButton>
         );
@@ -141,7 +144,10 @@ const DirectCommunityInvestment = ({
     }
     if (pageInfo?.hasNextPage && String(currentCategory) == "all") {
       return (
-        <ShowMoreButton onClick={handleLoadMoreInvestments}>
+        <ShowMoreButton
+          classNames="bg-innovate-neon text-black"
+          onClick={handleLoadMoreInvestments}
+        >
           Show More Investments
         </ShowMoreButton>
       );
@@ -179,7 +185,7 @@ const DirectCommunityInvestment = ({
             <Loading />
           ) : (
             <>
-              <section className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <section className="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {investments?.communityInvestments?.edges?.map(
                   (edge, index) => (
                     <InvestmentLink

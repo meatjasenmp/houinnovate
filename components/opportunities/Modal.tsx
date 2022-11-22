@@ -72,7 +72,7 @@ const Modal = ({ id, isOpen, setIsOpen }: ModalProps) => {
               </aside>
               <div className="innovate-lg:w-4/5">
                 {contentBlocks?.map((contentBlock, index) => (
-                  <div className="last:mb-6" key={index}>
+                  <div className="modal_content last:mb-6" key={index}>
                     <ContentEditor content={contentBlock?.content} />
                     <div
                       className={`h-[4px] my-6 ${
