@@ -63,6 +63,10 @@ export interface allProjectOpportunities_projectBasedOpportunities_edges_node {
    */
   databaseId: number;
   /**
+   * The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table.
+   */
+  slug: string | null;
+  /**
    * Added to the GraphQL Schema because the ACF Field Group &quot;Community and Opportunity Pop Ups&quot; was set to Show in GraphQL.
    */
   communityAndOpportunityPopUps: allProjectOpportunities_projectBasedOpportunities_edges_node_communityAndOpportunityPopUps | null;

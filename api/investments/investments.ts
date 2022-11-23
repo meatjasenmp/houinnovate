@@ -34,6 +34,7 @@ const INVESTMENTS_BY_CATEGORY = gql`
         node {
           title
           databaseId
+          slug
           communityAndOpportunityPopUps {
             alphanumericLabel
             opportunityType {
@@ -67,6 +68,7 @@ const INVESTMENTS = gql`
         node {
           title
           databaseId
+          slug
           communityAndOpportunityPopUps {
             alphanumericLabel
             opportunityType {

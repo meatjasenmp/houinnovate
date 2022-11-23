@@ -38,6 +38,7 @@ const PROJECT_OPPORTUNITIES_BY_CATEGORY = gql`
         node {
           title
           databaseId
+          slug
           communityAndOpportunityPopUps {
             alphanumericLabel
             opportunityType {
@@ -71,6 +72,7 @@ const PROJECT_OPPORTUNITIES = gql`
         node {
           title
           databaseId
+          slug
           communityAndOpportunityPopUps {
             alphanumericLabel
             opportunityType {

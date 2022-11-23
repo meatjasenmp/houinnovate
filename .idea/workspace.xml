@@ -4,14 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Job post updates.">
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Show More buttons">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ShowMoreButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ShowMoreButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/investments/__generated__/allInvestments.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/investments/__generated__/allInvestments.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/investments/__generated__/investmentsByCategory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/investments/__generated__/investmentsByCategory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/investments/investments.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/investments/investments.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/opportunities/__generated__/allProjectOpportunities.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/opportunities/__generated__/allProjectOpportunities.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/opportunities/__generated__/projectOpportunitiesByCategory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/opportunities/__generated__/projectOpportunitiesByCategory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/opportunities/opportunities.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/opportunities/opportunities.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Button.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/HouModal.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/PopUpLinks.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/helpers.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/investments/InvestmentLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/InvestmentLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/investments/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/Modal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/opportunities/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/Modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/opportunities/OpportunityLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/OpportunityLink.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/opportunities/ProjectBasedOpportunities.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/ProjectBasedOpportunities.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/workWithIon/JobSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/JobSelect.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/Button.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/Modal.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/NewsLetter.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/PopUpLink.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/ProjectBasedOpportunities.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/VideoBlock.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/VideoModal.module.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,14 +152,7 @@
       <workItem from="1668560420375" duration="10880000" />
       <workItem from="1668878590110" duration="26398000" />
       <workItem from="1669042405919" duration="38541000" />
-      <workItem from="1669144168999" duration="323000" />
-    </task>
-    <task id="LOCAL-00071" summary="Hooking up API request for category selection">
-      <created>1668303236468</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1668303236468</updated>
+      <workItem from="1669144168999" duration="4846000" />
     </task>
     <task id="LOCAL-00072" summary="Hooking up API request for category selection">
       <created>1668346707839</created>
@@ -480,7 +490,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669143519429</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="Show More buttons">
+      <created>1669144546806</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1669144546807</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -500,7 +517,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Reverting." />
     <MESSAGE value="wip" />
     <MESSAGE value="Fixing bug in select UI where state wasn't properly updating when categories/options were loaded." />
     <MESSAGE value="Fixing UI bug w/ 'show more' being displayed when there were no more results to be fetched." />
@@ -525,7 +541,8 @@
     <MESSAGE value="Responsive tweaks." />
     <MESSAGE value="Desktop tweaks." />
     <MESSAGE value="Job post updates." />
-    <option name="LAST_COMMIT_MESSAGE" value="Job post updates." />
+    <MESSAGE value="Show More buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Show More buttons" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

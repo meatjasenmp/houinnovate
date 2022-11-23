@@ -3,6 +3,7 @@ import { allProjectOpportunities_projectBasedOpportunities_edges } from "../../a
 import ArrowLinkIcon from "../ArrowLinkIcon";
 import ProgressBar, { Phase } from "../ProgressBar";
 import { Colors } from "../../styles/helpers";
+import { ModalType } from "../helpers";
 
 interface OpportunityLinkProps {
   opportunity: allProjectOpportunities_projectBasedOpportunities_edges | null;
@@ -15,7 +16,7 @@ const OpportunityLink = ({
   setIsOpen,
   setCurrentID,
 }: OpportunityLinkProps) => {
-  const { title, databaseId, communityAndOpportunityPopUps } =
+  const { title, databaseId, slug, communityAndOpportunityPopUps } =
     opportunity?.node || {};
 
   const { progress, alphanumericLabel } = communityAndOpportunityPopUps || {};
@@ -25,6 +26,11 @@ const OpportunityLink = ({
   const handleClick = () => {
     setCurrentID(databaseId);
     setIsOpen(true);
+    history.pushState(
+      null,
+      "",
+      `/?investment=${slug}&modalType=${ModalType.OPPORTUNITY}&id=${databaseId}`
+    );
   };
 
   return (

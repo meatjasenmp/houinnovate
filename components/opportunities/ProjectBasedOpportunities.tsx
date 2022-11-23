@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import ContentEditor from "../ContentEditor";
 import ShowMoreButton from "../ShowMoreButton";
-import CommittedDeployedProgressBar from "../CommittedDeployedProgressBar";
 import OpportunityCategorySelect from "./OpportunityCategorySelect";
 import OpportunityLink from "./OpportunityLink";
 import Modal from "./Modal";
@@ -11,8 +10,9 @@ import {
 } from "../../api/opportunities/opportunities";
 import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_ProjectBasedOpportunities } from "../../api/__generated__/page";
 import { Colors } from "../../styles/helpers";
-import { Options } from "../helpers";
+import { ModalType, Options } from "../helpers";
 import { allProjectOpportunities } from "../../api/opportunities/__generated__/allProjectOpportunities";
+import { useRouter } from "next/router";
 
 interface ProjectBasedOpportunitiesProps {
   blockContent: page_page_components_componentBlocks_Page_Components_ComponentBlocks_ProjectBasedOpportunities;
@@ -21,6 +21,8 @@ interface ProjectBasedOpportunitiesProps {
 const ProjectBasedOpportunities = ({
   blockContent,
 }: ProjectBasedOpportunitiesProps) => {
+  const router = useRouter();
+  const { query } = router;
   const contentWrapper = useRef<HTMLDivElement>(null);
   const [selectedOption, setSelectedOption] = useState<Options>();
   const [showLoadLoader, setShowLoader] = useState<boolean>(false);
@@ -32,6 +34,13 @@ const ProjectBasedOpportunities = ({
   >();
   const [currentID, setCurrentID] = useState<number | undefined>();
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (query.id && query.modalType === ModalType.OPPORTUNITY) {
+      setCurrentID(Number(query.id));
+      setIsOpen(true);
+    }
+  }, [query.id]);
 
   const {
     data: opportunitiesData,

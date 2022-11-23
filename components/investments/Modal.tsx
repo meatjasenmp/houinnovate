@@ -27,6 +27,7 @@ const Modal = ({ id, isOpen, setIsOpen }: ModalProps) => {
 
   const handleClose = () => {
     setIsOpen(false);
+    history.pushState(null, "", "/");
   };
 
   return (

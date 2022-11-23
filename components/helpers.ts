@@ -15,10 +15,9 @@ export enum Components {
   PROJECT_BASED_OPPORTUNITIES = "Page_Components_ComponentBlocks_ProjectBasedOpportunities",
   DIRECT_COMMUNITY_INVESTMENT = "Page_Components_ComponentBlocks_CommunityInvestment",
 }
-
-export enum PopUpTypes {
-  INVESTMENT = "investment",
+export enum ModalType {
   OPPORTUNITY = "opportunity",
+  INVESTMENT = "investment",
 }
 
 export const formatPostDate = (date: string | null | undefined) => {

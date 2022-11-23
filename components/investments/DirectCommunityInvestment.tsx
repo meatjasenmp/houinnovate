@@ -4,6 +4,7 @@ import CommittedDeployedProgressBar from "../CommittedDeployedProgressBar";
 import ShowMoreButton from "../ShowMoreButton";
 import InvestmentCategorySelect from "./InvestmentCategorySelect";
 import InvestmentLink from "./InvestmentLink";
+import { useRouter } from "next/router";
 import Modal from "./Modal";
 import {
   useInvestments,
@@ -11,7 +12,7 @@ import {
 } from "../../api/investments/investments";
 import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_CommunityInvestment } from "../../api/__generated__/page";
 import { Colors } from "../../styles/helpers";
-import { Options } from "../helpers";
+import { Options, ModalType } from "../helpers";
 import { allInvestments } from "../../api/investments/__generated__/allInvestments";
 
 interface DirectCommunityInvestmentProps {
@@ -21,6 +22,8 @@ interface DirectCommunityInvestmentProps {
 const DirectCommunityInvestment = ({
   blockContent,
 }: DirectCommunityInvestmentProps) => {
+  const router = useRouter();
+  const { query } = router;
   const contentWrapper = useRef<HTMLDivElement>(null);
   const [selectedOption, setSelectedOption] = useState<Options>();
   const [showLoadLoader, setShowLoader] = useState<boolean>(false);
@@ -30,6 +33,13 @@ const DirectCommunityInvestment = ({
   const [investments, setInvestments] = useState<allInvestments | undefined>();
   const [currentID, setCurrentID] = useState<number | undefined>();
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (query.id && query.modalType === ModalType.INVESTMENT) {
+      setCurrentID(Number(query.id));
+      setIsOpen(true);
+    }
+  }, [query.id]);
 
   const {
     data: investmentsData,

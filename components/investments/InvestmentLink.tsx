@@ -3,6 +3,7 @@ import { allInvestments_communityInvestments_edges } from "../../api/investments
 import ArrowLinkIcon from "../ArrowLinkIcon";
 import ProgressBar, { Phase } from "../ProgressBar";
 import { Colors } from "../../styles/helpers";
+import { ModalType } from "../helpers";
 
 interface InvestmentLinkProps {
   investment: allInvestments_communityInvestments_edges | null;
@@ -15,7 +16,7 @@ const InvestmentLink = ({
   setIsOpen,
   setCurrentID,
 }: InvestmentLinkProps) => {
-  const { title, databaseId, communityAndOpportunityPopUps } =
+  const { title, databaseId, slug, communityAndOpportunityPopUps } =
     investment?.node || {};
 
   const { progress, alphanumericLabel } = communityAndOpportunityPopUps || {};
@@ -25,6 +26,11 @@ const InvestmentLink = ({
   const handleClick = () => {
     setCurrentID(databaseId);
     setIsOpen(true);
+    history.pushState(
+      null,
+      "",
+      `/?investment=${slug}&modalType=${ModalType.INVESTMENT}&id=${databaseId}`
+    );
   };
 
   return (
