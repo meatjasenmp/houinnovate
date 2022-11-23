@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { slide as Menu, State } from "react-burger-menu";
 import Link from "next/link";
 import { Link as ScrollLink } from "react-scroll";
@@ -25,6 +26,7 @@ interface SectionLinksProps {
     | (page_siteOptionsPage_siteNavigation_navigation_sectionLinks | null)[]
     | null
     | undefined;
+  setMenuOpen: React.Dispatch<React.SetStateAction<boolean | undefined>>;
 }
 
 interface BlockLinkProps {
@@ -33,15 +35,6 @@ interface BlockLinkProps {
     | undefined
     | null;
 }
-
-const handleStateChange = (state: State) => {
-  if (state.isOpen) {
-    document.body.classList.add("no-scroll");
-  }
-  if (!state.isOpen) {
-    document.body.classList.remove("no-scroll");
-  }
-};
 
 const AnnualReport = ({
   report,
@@ -73,7 +66,7 @@ const AnnualReport = ({
   return <></>;
 };
 
-const SectionLinks = ({ sectionLinks }: SectionLinksProps) => {
+const SectionLinks = ({ sectionLinks, setMenuOpen }: SectionLinksProps) => {
   return (
     <div className="mb-2">
       <ul>
@@ -87,7 +80,10 @@ const SectionLinks = ({ sectionLinks }: SectionLinksProps) => {
                 href="#"
                 to={String(link?.anchorLabel)}
                 containerId="page-wrap"
-                onClick={() => handleScroll(link?.anchorLabel)}
+                onClick={() => {
+                  handleScroll(link?.anchorLabel);
+                  setMenuOpen(false);
+                }}
               >
                 {link?.label}
               </ScrollLink>
@@ -149,19 +145,30 @@ const Navigation = ({
   navigation,
   annualReport,
 }: NavigationProps) => {
+  const [menuOpen, setMenuOpen] = useState<undefined | boolean>(undefined);
   const { sectionLinks, houinnovate, blockLinks } =
     navigation?.navigation || {};
+
+  const handleStateChange = (state: State) => {
+    if (state.isOpen) {
+      document.body.classList.add("no-scroll");
+    }
+    if (!state.isOpen) {
+      document.body.classList.remove("no-scroll");
+      setMenuOpen(undefined);
+    }
+  };
 
   return (
     <Menu
       pageWrapId={pageWrapID}
       outerContainerId={outerContainerID}
       right
-      className={styles.site_navigation}
       customBurgerIcon={<HamburgerMenu />}
       onStateChange={handleStateChange}
+      isOpen={menuOpen}
     >
-      <SectionLinks sectionLinks={sectionLinks} />
+      <SectionLinks sectionLinks={sectionLinks} setMenuOpen={setMenuOpen} />
       <AnnualReport report={annualReport} />
       <HouInnovate houInnovate={houinnovate} />
       <BlockLinks blockLinks={blockLinks} />

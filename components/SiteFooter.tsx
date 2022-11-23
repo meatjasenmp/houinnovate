@@ -1,7 +1,6 @@
 import ContentEditor from "./ContentEditor";
 import Link from "next/link";
 import UpArrowIcon from "./UpArrowIcon";
-import ArrowLinkIcon from "./ArrowLinkIcon";
 import { animateScroll } from "react-scroll";
 import NewsLetterSubscribe from "./NewsLetterSubscribe";
 import {
@@ -13,7 +12,6 @@ import {
 
 import styles from "../styles/components/SiteFooter.module.css";
 import ImageAsset from "./ImageAsset";
-import { useScrollToSection } from "./helpers";
 
 enum FooterComponents {
   GET_IN_TOUCH = "SiteOptionsPage_Sitefooter_FooterBlocks_GetInTouch",
@@ -186,8 +184,6 @@ const TermsAndConditions = () => {
 };
 
 const SiteFooter = ({ footerBlocks, header }: SiteFooterProps) => {
-  useScrollToSection("contacts");
-
   return (
     <footer className="py-16 px-8 full-screen bg-innovate-black" id="contacts">
       <div className="max-w-lg innovate-lg:max-w-screen-innovate-lg innovate-lg:mx-auto">

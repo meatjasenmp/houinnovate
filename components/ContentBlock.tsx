@@ -2,8 +2,6 @@ import ContentEditor from "./ContentEditor";
 import { backgroundColorMapping } from "../styles/helpers";
 import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlock } from "../api/__generated__/page";
 
-import { useScrollToSection } from "./helpers";
-
 interface ComponentBlocksProps {
   blockContent: page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlock;
 }
@@ -21,8 +19,6 @@ const ContentBlock = ({ blockContent }: ComponentBlocksProps) => {
     contentType,
     scrollId,
   } = blockContent;
-
-  useScrollToSection(scrollId);
 
   return (
     <section className="mt-5 full-screen" id={String(scrollId)}>

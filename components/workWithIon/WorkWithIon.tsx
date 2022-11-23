@@ -4,6 +4,7 @@ import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_Wo
 import styles from "../../styles/components/WorkWithIon.module.css";
 import { useEffect, useRef } from "react";
 import ArrowRightIcon from "../ArrowRightIcon";
+import { useScrollToSection } from "../helpers";
 
 interface WorkWithIonProps {
   blockContent: page_page_components_componentBlocks_Page_Components_ComponentBlocks_WorkWithIon;
@@ -11,6 +12,8 @@ interface WorkWithIonProps {
 const WorkWithIon = ({ blockContent }: WorkWithIonProps) => {
   const contentWrapper = useRef<HTMLDivElement>(null);
   const { workWithIonContent, cta, scrollId, selectText } = blockContent;
+
+  useScrollToSection(scrollId);
 
   useEffect(() => {
     if (contentWrapper.current) {

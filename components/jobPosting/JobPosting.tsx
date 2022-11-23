@@ -298,7 +298,12 @@ const JobPosting = ({ id }: { id: string }) => {
   return (
     <div className="px-4 max-w-screen-xl mx-auto">
       <div className="mb-10">
-        <Link href="/">
+        <Link
+          href={{
+            pathname: "/",
+            query: { scrollTo: "work-with-ion" },
+          }}
+        >
           <a className="flex items-center">
             <FaArrowLeft size="1.5rem" color="#F54932" />
             <span className="ml-[.75rem] text-sm font-kraftigBold">
