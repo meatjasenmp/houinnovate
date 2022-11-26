@@ -7,7 +7,6 @@ import {
 } from "../api/__generated__/page";
 
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 interface ComponentBlocksProps {
   blockContent: page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlockStylizedList;
@@ -39,7 +38,6 @@ const ListItem = ({ listItem }: ListItemProps) => {
 };
 
 const ContentBlockStylized = ({ blockContent }: ComponentBlocksProps) => {
-  gsap.registerPlugin(ScrollTrigger);
   const contentWrapper = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
 

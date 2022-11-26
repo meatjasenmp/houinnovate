@@ -20,7 +20,6 @@ const OpportunityLink = ({
   setCurrentID,
   index,
 }: OpportunityLinkProps) => {
-  gsap.registerPlugin(ScrollTrigger);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -30,12 +29,17 @@ const OpportunityLink = ({
       const ctx = gsap.context(() => {
         const tl = gsap.timeline({
           delay: duration * index + hold * index,
-          scrollTrigger: {
-            trigger: buttonRef.current,
-          },
+          paused: true,
         });
         tl.from(buttonRef.current, { y: 20, opacity: 0 });
         tl.to(buttonRef.current, { y: 0, opacity: 1 });
+
+        ScrollTrigger.create({
+          trigger: buttonRef.current,
+          onEnter: () => {
+            tl.play();
+          },
+        });
       }, buttonRef.current);
       return () => {
         ctx.revert();

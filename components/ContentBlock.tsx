@@ -4,7 +4,6 @@ import { backgroundColorMapping } from "../styles/helpers";
 import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlock } from "../api/__generated__/page";
 
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 interface ComponentBlocksProps {
   blockContent: page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlock;
@@ -16,7 +15,6 @@ enum contentTypes {
 }
 
 const ContentBlock = ({ blockContent }: ComponentBlocksProps) => {
-  gsap.registerPlugin(ScrollTrigger);
   const contentBlockRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

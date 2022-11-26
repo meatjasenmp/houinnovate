@@ -5,7 +5,6 @@ import styles from "../styles/components/ProgressBar.module.css";
 import ContentEditor from "./ContentEditor";
 
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 interface ProgressBarProps {
   deployed: number | null | undefined;
@@ -32,7 +31,6 @@ const CommittedDeployedProgressBar = ({
   accent,
   annotation,
 }: ProgressBarProps) => {
-  gsap.registerPlugin(ScrollTrigger);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

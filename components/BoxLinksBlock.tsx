@@ -13,7 +13,6 @@ import { handleScroll } from "./helpers";
 import ArrowLinkIcon from "./ArrowLinkIcon";
 
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import styles from "../styles/components/BoxLinks.module.css";
 
@@ -100,7 +99,6 @@ const BoxPageLinkAnchor = ({
 };
 
 const BoxLinksBlock = ({ blockContent }: ComponentBlocksProps) => {
-  gsap.registerPlugin(ScrollTrigger);
   const boxLinkRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

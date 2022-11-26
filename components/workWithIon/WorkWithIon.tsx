@@ -36,6 +36,9 @@ const WorkWithIon = ({ blockContent }: WorkWithIonProps) => {
       });
     }
   }, []);
+
+  if (!workWithIonContent) return null;
+
   return (
     <div className="pt-8 pb-16" id={String(scrollId)}>
       <div className="max-w-screen-innovate-lg mx-auto" ref={contentWrapper}>

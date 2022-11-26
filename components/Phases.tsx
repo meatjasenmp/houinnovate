@@ -5,7 +5,6 @@ import styles from "../styles/components/Phases.module.css";
 import { accentColor, backgroundColorMapping } from "../styles/helpers";
 
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 interface PhasesProps {
   blockContent: page_page_components_componentBlocks_Page_Components_ComponentBlocks_Phases;
@@ -26,7 +25,6 @@ const PhaseList = ({
   scrollId: string | null;
 }) => {
   const divRef = useRef<HTMLDivElement>(null);
-  gsap.registerPlugin(ScrollTrigger);
   const [activePhase, setActivePhase] = useState<number | null>(null);
 
   useEffect(() => {
@@ -96,7 +94,6 @@ const PhaseList = ({
 };
 
 const Phases = ({ blockContent }: PhasesProps) => {
-  gsap.registerPlugin(ScrollTrigger);
   const [phases, setPhases] = useState<Phase[]>([]);
   const sectionRef = useRef<HTMLDivElement>(null);
 

@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import ArrowLinkIcon from "../ArrowLinkIcon";
 
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 interface JobLinkProps {
   job: Opportunity;
@@ -20,17 +21,23 @@ export const JobLink = ({ job, index }: JobLinkProps) => {
       const ctx = gsap.context(() => {
         const tl = gsap.timeline({
           delay: duration * index + hold * index,
-          scrollTrigger: {
-            trigger: linkRef.current,
-          },
+          paused: true,
         });
         tl.from(linkRef.current, { y: 20, opacity: 0 });
         tl.to(linkRef.current, { y: 0, opacity: 1 });
+
+        ScrollTrigger.create({
+          trigger: linkRef.current,
+          onEnter: () => {
+            tl.play();
+          },
+        });
       }, linkRef.current);
       return () => {
         ctx.revert();
       };
     }
+    ScrollTrigger.refresh();
   }, [job]);
 
   if (!job) return <></>;

@@ -4,29 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Removing unused css modules. Unused imports. Implementing direct linking to opportunity and investment modals. Slide out menu now closes when a section item is clicked.">
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="First pass at scroll trigger animations.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/BoxLinksBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/BoxLinksBlock.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/CommittedDeployedProgressBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CommittedDeployedProgressBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/ContentBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContentBlock.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/ContentBlockStylized.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContentBlockStylized.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/HamburgerMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/HamburgerMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/HeroBanner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/HeroBanner.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navigation.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Phases.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Phases.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SecondaryNavigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SecondaryNavigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/investments/InvestmentLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/InvestmentLink.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/opportunities/OpportunityLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/OpportunityLink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/opportunities/ProjectBasedOpportunities.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/ProjectBasedOpportunities.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/workWithIon/JobLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/JobLink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/workWithIon/JobLinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/JobLinks.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/workWithIon/WorkWithIon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/WorkWithIon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/BoxLinks.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/BoxLinks.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/Navigation.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/Navigation.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/Phases.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/Phases.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/ReactHamburger.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/ReactHamburger.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,14 +139,7 @@
       <workItem from="1668560420375" duration="10880000" />
       <workItem from="1668878590110" duration="26398000" />
       <workItem from="1669042405919" duration="38541000" />
-      <workItem from="1669144168999" duration="18219000" />
-    </task>
-    <task id="LOCAL-00074" summary="Hooked up API request for opportunity category selection.">
-      <created>1668350569586</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1668350569586</updated>
+      <workItem from="1669144168999" duration="21956000" />
     </task>
     <task id="LOCAL-00075" summary="Linked copied notification.">
       <created>1668353111983</created>
@@ -495,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669220253830</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="First pass at scroll trigger animations.">
+      <created>1669490082345</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1669490082345</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,7 +504,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Fixing UI bug w/ 'show more' being displayed when there were no more results to be fetched." />
     <MESSAGE value="Adding plays inline prop." />
     <MESSAGE value="UI fixes. Responsive tweaks." />
     <MESSAGE value="Adding tint for more contrast." />
@@ -540,7 +528,8 @@
     <MESSAGE value="Show More buttons" />
     <MESSAGE value="Removing unused css modules. Unused imports. Implementing direct linking to opportunity and investment modals." />
     <MESSAGE value="Removing unused css modules. Unused imports. Implementing direct linking to opportunity and investment modals. Slide out menu now closes when a section item is clicked." />
-    <option name="LAST_COMMIT_MESSAGE" value="Removing unused css modules. Unused imports. Implementing direct linking to opportunity and investment modals. Slide out menu now closes when a section item is clicked." />
+    <MESSAGE value="First pass at scroll trigger animations." />
+    <option name="LAST_COMMIT_MESSAGE" value="First pass at scroll trigger animations." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

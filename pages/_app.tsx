@@ -7,6 +7,8 @@ import React from "react";
 import { relayStylePagination } from "@apollo/client/utilities";
 import { Toaster } from "react-hot-toast";
 import ReactModal from "react-modal";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const cache = new InMemoryCache({
   typePolicies: {
@@ -28,6 +30,7 @@ const client = new ApolloClient({
 ReactModal.setAppElement("#__next");
 
 function MyApp({ Component, pageProps }: AppProps) {
+  gsap.registerPlugin(ScrollTrigger);
   return (
     <ApolloProvider client={client}>
       <HubspotProvider>
