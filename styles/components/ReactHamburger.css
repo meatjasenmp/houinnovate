@@ -5,10 +5,19 @@
 /* Position and sizing of burger button */
 .bm-burger-button {
     position: fixed;
-    width: 40px !important;
-    height: 40px !important;
+    width: 46px !important;
+    height: 46px !important;
     right: 16px;
     top: 16px;
+
+}
+
+.hamburger-menu svg {
+    @apply duration-300 ease-linear;
+}
+
+.bm-burger-button:hover svg {
+    @apply fill-innovate-red;
 }
 
 /* Color/shape of burger icon bars */
@@ -29,9 +38,14 @@
     right: 1rem !important;
 }
 
+.bm-cross-button:hover .bm-cross {
+    @apply bg-innovate-smoke-gray;
+}
+
 /* Color/shape of close button cross */
 .bm-cross {
     background: #FFF;
+    @apply duration-300 ease-linear;
 }
 
 /*

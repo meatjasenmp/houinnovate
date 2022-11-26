@@ -75,7 +75,7 @@ const DirectCommunityInvestment = ({
         }
       });
     }
-  }, []);
+  }, [investmentsData]);
 
   useEffect(() => {
     if (investmentsData) {
@@ -155,7 +155,7 @@ const DirectCommunityInvestment = ({
     if (pageInfo?.hasNextPage && String(currentCategory) == "all") {
       return (
         <ShowMoreButton
-          classNames="bg-innovate-neon text-black"
+          classNames="bg-innovate-neon text-black duration-300 ease-linear hover:bg-black hover:text-white"
           onClick={handleLoadMoreInvestments}
         >
           Show More Investments
@@ -203,6 +203,7 @@ const DirectCommunityInvestment = ({
                       investment={edge}
                       setCurrentID={setCurrentID}
                       setIsOpen={setIsOpen}
+                      index={index}
                     />
                   )
                 )}

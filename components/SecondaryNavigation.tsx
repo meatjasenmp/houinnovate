@@ -21,7 +21,10 @@ const SecondaryNavigation = ({ nav }: SecondaryNavigationProps) => {
         {nav.navigation?.sectionLinks?.map((link, index) => {
           if (isHome && link?.label !== "Home") {
             return (
-              <li key={index} className={`mr-8 last:mr-0 text-white`}>
+              <li
+                key={index}
+                className="mr-8 last:mr-0 text-white duration-300 ease-linear hover:text-innovate-red"
+              >
                 <ScrollLink
                   href="#"
                   to={String(link?.anchorLabel)}
@@ -36,7 +39,10 @@ const SecondaryNavigation = ({ nav }: SecondaryNavigationProps) => {
           }
           if (link?.label !== "Home") {
             return (
-              <li key={index} className={`mr-8 last:mr-0 text-black`}>
+              <li
+                key={index}
+                className="mr-8 last:mr-0 text-black duration-300 ease-linear hover:text-innovate-red"
+              >
                 <Link
                   href={{
                     pathname: "/",

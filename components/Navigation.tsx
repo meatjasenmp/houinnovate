@@ -50,7 +50,10 @@ const AnnualReport = ({
           href={annualReportDownload.mediaItemUrl}
           target="_blank"
           rel="noreferrer"
-          className="text-white flex items-center"
+          className={[
+            "text-white flex items-center duration-300 ease-linear hover:text-innovate-smoke-gray",
+            styles.download_link,
+          ].join(" ")}
         >
           <span className="mr-4 font-kraftigBold">
             {report?.annualReportTitle}
@@ -72,11 +75,9 @@ const SectionLinks = ({ sectionLinks, setMenuOpen }: SectionLinksProps) => {
       <ul>
         {sectionLinks?.map((link, index) => {
           return (
-            <li
-              key={index}
-              className="text-4xl font-kraftigBold text-white mb-10"
-            >
+            <li key={index} className="mb-10">
               <ScrollLink
+                className="text-4xl font-kraftigBold text-white duration-300 ease-linear hover:text-innovate-smoke-gray"
                 href="#"
                 to={String(link?.anchorLabel)}
                 containerId="page-wrap"
@@ -122,7 +123,7 @@ const BlockLinks = ({ blockLinks }: BlockLinkProps) => {
                   <li key={index}>
                     <Link href={link?.pageUrl || ""}>
                       <a
-                        className="text-innovate-smoke-gray text-sm"
+                        className="text-innovate-smoke-gray text-sm duration-300 ease-linear hover:text-innovate-red"
                         target="_blank"
                       >
                         {link?.label}

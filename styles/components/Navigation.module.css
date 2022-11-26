@@ -6,5 +6,21 @@
 }
 
 .hou_innovate h4 a {
-    @apply text-innovate-smoke-gray block;
+    @apply text-innovate-smoke-gray duration-300 ease-linear;
+}
+
+.hou_innovate h4 a:hover {
+    @apply text-innovate-red;
+}
+
+.download_link:hover svg path {
+    @apply duration-300 ease-linear;
+}
+
+.download_link:hover svg path:first-child {
+    @apply fill-innovate-smoke-gray;
+}
+
+.download_link:hover svg path:last-child {
+    @apply stroke-innovate-smoke-gray;
 }

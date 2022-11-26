@@ -1,3 +1,4 @@
+import React, { useEffect, useRef } from "react";
 import {
   page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks,
   page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink,
@@ -15,7 +16,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import styles from "../styles/components/BoxLinks.module.css";
-import { useEffect, useRef } from "react";
 
 interface ComponentBlocksProps {
   blockContent: page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks;
@@ -40,7 +40,12 @@ const BoxLinkContent = ({ content }: BoxLinkProps) => {
     content as page_page_components_componentBlocks_Page_Components_ComponentBlocks_BoxLinks_boxLink;
 
   return (
-    <div className="relative flex flex-col flex-1 h-full">
+    <div
+      className={[
+        "relative flex flex-col flex-1 h-full",
+        styles.block_link,
+      ].join(" ")}
+    >
       <div>
         <figure
           className={["w-full h-[275px]", styles.block_link__image].join(" ")}
@@ -51,7 +56,12 @@ const BoxLinkContent = ({ content }: BoxLinkProps) => {
           <ContentEditor content={boxLinkContent} />
         </article>
       </div>
-      <figure className="w-12 h-12 relative right-[.7rem] bottom-[.7rem] self-end mt-auto">
+      <figure
+        className={[
+          "w-12 h-12 relative right-[.7rem] bottom-[.7rem] self-end mt-auto duration-300 ease-linear",
+          styles.arrow_icon,
+        ].join(" ")}
+      >
         <ArrowLinkIcon color={accentColor(backgroundColor)} />
       </figure>
     </div>
@@ -97,7 +107,7 @@ const BoxLinksBlock = ({ blockContent }: ComponentBlocksProps) => {
     if (boxLinkRef.current) {
       const ctx = gsap.context(() => {
         const targets = gsap.utils.toArray(".box_link_animated");
-        const duration = 0.25;
+        const duration = 0.1;
         const hold = 0.05;
         targets.map((target: any, index) => {
           const tl = gsap.timeline({

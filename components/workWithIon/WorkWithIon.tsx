@@ -2,7 +2,7 @@ import ContentEditor from "../ContentEditor";
 import JobSelect from "./JobSelect";
 import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_WorkWithIon } from "../../api/__generated__/page";
 import styles from "../../styles/components/WorkWithIon.module.css";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import ArrowRightIcon from "../ArrowRightIcon";
 import { useScrollToSection } from "../helpers";
 

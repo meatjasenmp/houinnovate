@@ -1,3 +1,7 @@
+.block_link:hover .arrow_icon {
+    @apply  -translate-y-3;
+}
+
 @media screen and (min-width: 1280px) {
     .box_links {
         grid-template-columns: [col1-start] 33.3333%  [col2-start] 30.9%  [col3-start] 33.3333% [col3-end];

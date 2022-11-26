@@ -1,7 +1,11 @@
+import React, { useEffect, useRef } from "react";
 import { accentColor, backgroundColorMapping, Colors } from "../styles/helpers";
 
 import styles from "../styles/components/ProgressBar.module.css";
 import ContentEditor from "./ContentEditor";
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 interface ProgressBarProps {
   deployed: number | null | undefined;
@@ -28,8 +32,36 @@ const CommittedDeployedProgressBar = ({
   accent,
   annotation,
 }: ProgressBarProps) => {
+  gsap.registerPlugin(ScrollTrigger);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (sectionRef.current) {
+      const ctx = gsap.context(() => {
+        const target = sectionRef?.current?.querySelector(
+          ".progress_bar_animated"
+        );
+        const tl = gsap.timeline({
+          delay: 0.25,
+          scrollTrigger: {
+            trigger: target,
+          },
+        });
+        if (target) {
+          tl.from(target, { width: 0 });
+          tl.to(target, {
+            width: `${calculatePercentage(deployed, committed)}%`,
+          });
+        }
+      }, sectionRef.current);
+      return () => {
+        ctx.revert();
+      };
+    }
+  }, [deployed]);
+
   return (
-    <section className="my-10">
+    <section className="my-10" ref={sectionRef}>
       <div className="h-[50px] bg-innovate-gray-2 relative flex justify-between items-center">
         <div className={`z-[2] px-4 text-innovate-${accentColor(accent)}`}>
           <span className="block leading-tight font-kraftigBold">
@@ -37,7 +69,7 @@ const CommittedDeployedProgressBar = ({
           </span>
         </div>
         <div
-          className={`absolute top-0 left-0 h-full ${backgroundColorMapping(
+          className={`absolute top-0 left-0 h-full progress_bar_animated ${backgroundColorMapping(
             accent
           )}`}
           style={{ width: `${calculatePercentage(deployed, committed)}%` }}

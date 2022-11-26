@@ -1,21 +1,49 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { allInvestments_communityInvestments_edges } from "../../api/investments/__generated__/allInvestments";
 import ArrowLinkIcon from "../ArrowLinkIcon";
 import ProgressBar, { Phase } from "../ProgressBar";
 import { Colors } from "../../styles/helpers";
 import { ModalType } from "../helpers";
 
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
 interface InvestmentLinkProps {
   investment: allInvestments_communityInvestments_edges | null;
   setCurrentID: React.Dispatch<React.SetStateAction<number | undefined>>;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  index: number;
 }
 
 const InvestmentLink = ({
   investment,
   setIsOpen,
   setCurrentID,
+  index,
 }: InvestmentLinkProps) => {
+  gsap.registerPlugin(ScrollTrigger);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (buttonRef.current) {
+      const duration = 0.1;
+      const hold = 0.05;
+      const ctx = gsap.context(() => {
+        const tl = gsap.timeline({
+          delay: duration * index + hold * index,
+          scrollTrigger: {
+            trigger: buttonRef.current,
+          },
+        });
+        tl.from(buttonRef.current, { y: 20, opacity: 0 });
+        tl.to(buttonRef.current, { y: 0, opacity: 1 });
+      }, buttonRef.current);
+      return () => {
+        ctx.revert();
+      };
+    }
+  }, [investment]);
+
   const { title, databaseId, slug, communityAndOpportunityPopUps } =
     investment?.node || {};
 
@@ -35,6 +63,7 @@ const InvestmentLink = ({
 
   return (
     <button
+      ref={buttonRef}
       onClick={handleClick}
       className={`block text-left flex flex-col justify-between ${
         progress?.currentPhase === Phase.COMPLETION

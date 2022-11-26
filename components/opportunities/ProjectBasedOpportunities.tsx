@@ -156,7 +156,7 @@ const ProjectBasedOpportunities = ({
     if (pageInfo?.hasNextPage && String(currentCategory) == "all") {
       return (
         <ShowMoreButton
-          classNames="bg-innovate-blue text-white"
+          classNames="bg-innovate-blue text-white duration-300 ease-linear hover:bg-black"
           onClick={handleLoadMoreOpportunities}
         >
           Show More Opportunities
@@ -194,6 +194,7 @@ const ProjectBasedOpportunities = ({
                       opportunity={edge}
                       setCurrentID={setCurrentID}
                       setIsOpen={setIsOpen}
+                      index={index}
                     />
                   )
                 )}

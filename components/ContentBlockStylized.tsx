@@ -6,6 +6,9 @@ import {
   page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlockStylizedList_list_listItem,
 } from "../api/__generated__/page";
 
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
 interface ComponentBlocksProps {
   blockContent: page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlockStylizedList;
 }
@@ -36,7 +39,9 @@ const ListItem = ({ listItem }: ListItemProps) => {
 };
 
 const ContentBlockStylized = ({ blockContent }: ComponentBlocksProps) => {
+  gsap.registerPlugin(ScrollTrigger);
   const contentWrapper = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (contentWrapper.current) {
@@ -60,6 +65,48 @@ const ContentBlockStylized = ({ blockContent }: ComponentBlocksProps) => {
     }
   }, []);
 
+  useEffect(() => {
+    if (sectionRef.current) {
+      const ctx = gsap.context(() => {
+        const article = sectionRef.current?.querySelector("article");
+        const articleTargets = [...(article?.querySelectorAll("h1, p") || [])];
+        const duration = 0.1;
+        const hold = 0.05;
+        articleTargets?.map((target: any, index) => {
+          const tl = gsap.timeline({
+            delay: duration * index + hold * index,
+            scrollTrigger: {
+              trigger: target,
+            },
+          });
+          tl.from(target, { y: 20, opacity: 0 });
+          tl.to(target, { y: 0, opacity: 1 });
+        });
+
+        const footer = sectionRef.current?.querySelector("footer");
+        const listTargets = [
+          ...(sectionRef.current?.querySelectorAll("li") || []),
+          footer,
+        ];
+        const listDuration = 0.1;
+        const listHold = 0.05;
+        listTargets?.map((target: any, index) => {
+          const tl = gsap.timeline({
+            delay: listDuration * index + listHold * index,
+            scrollTrigger: {
+              trigger: target,
+            },
+          });
+          tl.from(target, { x: 20, opacity: 0 });
+          tl.to(target, { x: 0, opacity: 1 });
+        });
+      }, sectionRef.current);
+      return () => {
+        ctx.revert();
+      };
+    }
+  }, []);
+
   if (!blockContent) return null;
 
   const {
@@ -72,7 +119,11 @@ const ContentBlockStylized = ({ blockContent }: ComponentBlocksProps) => {
   } = blockContent;
 
   return (
-    <section className="py-8 innovate-lg:py-24" id={String(scrollId)}>
+    <section
+      className="py-8 innovate-lg:py-24"
+      id={String(scrollId)}
+      ref={sectionRef}
+    >
       <div className="flex flex-col max-w-screen-innovate-lg mx-auto innovate-lg:flex-row">
         <div className="max-w-lg innovate-lg:mr-10" ref={contentWrapper}>
           <ContentEditor content={contentBlockStylized} />
@@ -86,9 +137,9 @@ const ContentBlockStylized = ({ blockContent }: ComponentBlocksProps) => {
             </ul>
           )}
           {showFooterText && (
-            <div className="mt-4 pt-4 border-t-[6px] border-black">
+            <footer className="mt-4 pt-4 border-t-[6px] border-black">
               <ContentEditor content={footerText} />
-            </div>
+            </footer>
           )}
         </div>
       </div>

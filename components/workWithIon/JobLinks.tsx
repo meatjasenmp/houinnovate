@@ -38,7 +38,9 @@ const JobLinks = ({ data }: { data: allOpportunities | undefined }) => {
       </div>
       <div className="max-w-[1170px] mt-6">
         {opportunities &&
-          opportunities.map((job, index) => <JobLink key={index} job={job} />)}
+          opportunities.map((job, index) => (
+            <JobLink key={index} job={job} index={index} />
+          ))}
       </div>
     </section>
   );

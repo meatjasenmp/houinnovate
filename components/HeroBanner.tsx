@@ -202,7 +202,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
                   }
                 >
                   <button
-                    className="rounded-full py-2 px-4 text-xs text-white flex items-center bg-innovate-red mt-3 relative z-[10] innovate-lg:px-5 innovate-lg:py-3 innovate-lg:text-sm"
+                    className="rounded-full py-2 px-4 text-xs text-white flex items-center bg-innovate-red mt-3 relative z-[10] innovate-lg:px-5 innovate-lg:py-3 innovate-lg:text-sm duration-300 ease-linear hover:bg-black"
                     onClick={handleButtonClick}
                   >
                     <span className="mr-1">{videoCta}</span>
@@ -219,7 +219,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
                   }
                 >
                   <button
-                    className="rounded-full py-2 px-4 text-xs text-white flex items-center bg-innovate-red mt-3 relative z-[10] innovate-lg:px-5 innovate-lg:py-3 innovate-lg:text-sm"
+                    className="rounded-full py-2 px-4 text-xs text-white flex items-center bg-innovate-red mt-3 relative z-[10] innovate-lg:px-5 innovate-lg:py-3 innovate-lg:text-sm duration-300 ease-linear hover:bg-black"
                     onClick={handleMobileButtonClick}
                   >
                     <span className="mr-1">{videoCta}</span>
