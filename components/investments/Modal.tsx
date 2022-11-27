@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import ReactModal from "react-modal";
 import ProgressBar from "../ProgressBar";
 import LoadingSpinner from "../LoadingSpinner";
@@ -30,7 +30,7 @@ const ModalContent = ({ data }: { data: communityInvestment | undefined }) => {
   const { progress, alphanumericLabel, contentBlocks, dataFields } =
     communityInvestment?.communityAndOpportunityPopUps || {};
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (contentRef.current) {
       const ctx = gsap.context(() => {
         const aside = contentRef?.current?.querySelector("aside");

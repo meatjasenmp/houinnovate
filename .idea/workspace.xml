@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Misc. tweaks." />
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Nuking content block animation for now.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/opportunities/OpportunityLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/OpportunityLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/opportunities/ProjectBasedOpportunities.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/ProjectBasedOpportunities.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,13 +133,6 @@
       <workItem from="1668878590110" duration="26398000" />
       <workItem from="1669042405919" duration="38541000" />
       <workItem from="1669144168999" duration="36693000" />
-    </task>
-    <task id="LOCAL-00079" summary="Scroll to top arrow.">
-      <created>1668356764270</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1668356764270</updated>
     </task>
     <task id="LOCAL-00080" summary="Scroll to top arrow.">
       <created>1668357151372</created>
@@ -472,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669572469514</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="Nuking content block animation for now.">
+      <created>1669573651011</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1669573651011</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,7 +497,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Responsive fixes for video banner." />
     <MESSAGE value="style updates" />
     <MESSAGE value="Video poster implemnetation." />
     <MESSAGE value="Setting up modal as fallback for devices that don't support going full screen" />
@@ -517,7 +521,8 @@
     <MESSAGE value="Animation debugging." />
     <MESSAGE value="Smooth scroll implementation." />
     <MESSAGE value="Misc. tweaks." />
-    <option name="LAST_COMMIT_MESSAGE" value="Misc. tweaks." />
+    <MESSAGE value="Nuking content block animation for now." />
+    <option name="LAST_COMMIT_MESSAGE" value="Nuking content block animation for now." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

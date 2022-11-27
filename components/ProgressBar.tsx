@@ -2,7 +2,7 @@ import { backgroundColorMapping, Colors } from "../styles/helpers";
 import { Phase } from "./helpers";
 
 import { gsap } from "gsap";
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const progressBarPercentage = (currentPhase: string | null | undefined) => {
   switch (currentPhase) {
@@ -26,7 +26,7 @@ const ProgressBar = ({
 }) => {
   const progressBarRef = useRef<HTMLDivElement>(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (progressBarRef.current) {
       const ctx = gsap.context(() => {
         const progressBar = progressBarRef?.current?.querySelector("div");

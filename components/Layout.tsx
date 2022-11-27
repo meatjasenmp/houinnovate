@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import React, { useEffect } from "react";
 import Navigation from "./Navigation";
 import { usePage } from "../api/page";
 import SecondaryNavigation from "./SecondaryNavigation";
@@ -11,7 +11,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const getPage = usePage("9");
   const { data, error, loading } = getPage;
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (data) {
       const ctx = gsap.context(() => {
         ScrollSmoother.create({

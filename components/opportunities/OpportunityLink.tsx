@@ -57,7 +57,7 @@ const OpportunityLink = ({
       `/?investment=${slug}&modalType=${ModalType.OPPORTUNITY}&id=${databaseId}`
     );
   };
-  console.log(currentPhase);
+
   return (
     <button
       ref={buttonRef}
