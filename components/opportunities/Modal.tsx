@@ -1,10 +1,11 @@
 import React, { useLayoutEffect, useRef } from "react";
 import ReactModal from "react-modal";
-import ProgressBar, { Phase } from "../ProgressBar";
+import ProgressBar from "../ProgressBar";
 import LoadingSpinner from "../LoadingSpinner";
 import { IoClose } from "@react-icons/all-files/io5/IoClose";
 import { useOpportunity } from "../../api/opportunities/opportunity";
 import ContentEditor from "../ContentEditor";
+import { Phase } from "../helpers";
 import { Colors } from "../../styles/helpers";
 import { projectBasedOpportunity } from "../../api/opportunities/__generated__/projectBasedOpportunity";
 import { gsap } from "gsap";

@@ -1,15 +1,11 @@
 import { backgroundColorMapping, Colors } from "../styles/helpers";
 
-export enum Phase {
-  PLANNING = "planning",
-  EXECUTION = "execution",
-  MONITORING = "monitoring",
-  COMPLETION = "completion",
-  ONGOING = "ongoing",
-}
+import { Phase } from "./helpers";
 
 const progressBarPercentage = (currentPhase: string | null | undefined) => {
   switch (currentPhase) {
+    case Phase.INITIAL:
+      return "0%";
     case Phase.PLANNING:
       return "25%";
     case Phase.EXECUTION:

@@ -30,6 +30,7 @@ export const formatPostDate = (date: string | null | undefined) => {
 };
 
 export enum Phase {
+  INITIAL = "initial",
   PLANNING = "planning",
   EXECUTION = "execution",
   MONITORING = "monitoring",

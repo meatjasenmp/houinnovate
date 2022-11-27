@@ -1,12 +1,5 @@
 import { backgroundColorMapping, Colors } from "../styles/helpers";
-
-export enum Phase {
-  PLANNING = "planning",
-  EXECUTION = "execution",
-  MONITORING = "monitoring",
-  COMPLETION = "completion",
-  ONGOING = "ongoing",
-}
+import { Phase } from "./helpers";
 
 import { gsap } from "gsap";
 import { useLayoutEffect, useRef } from "react";

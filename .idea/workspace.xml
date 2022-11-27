@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Misc. tweaks." />
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Misc. tweaks.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ProgressBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProgressBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ProgressBarSmall.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProgressBarSmall.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/helpers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/investments/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/Modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/opportunities/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/Modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/opportunities/OpportunityLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/OpportunityLink.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,14 +135,7 @@
       <workItem from="1668560420375" duration="10880000" />
       <workItem from="1668878590110" duration="26398000" />
       <workItem from="1669042405919" duration="38541000" />
-      <workItem from="1669144168999" duration="36022000" />
-    </task>
-    <task id="LOCAL-00078" summary="Style updates">
-      <created>1668356318039</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1668356318040</updated>
+      <workItem from="1669144168999" duration="36693000" />
     </task>
     <task id="LOCAL-00079" summary="Scroll to top arrow.">
       <created>1668356764270</created>
@@ -472,7 +473,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669572424913</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="Misc. tweaks.">
+      <created>1669572469514</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1669572469514</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
