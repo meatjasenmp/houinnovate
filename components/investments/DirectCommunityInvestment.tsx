@@ -131,6 +131,7 @@ const DirectCommunityInvestment = ({
   const ShowMore = () => {
     if (currentCategory && String(currentCategory) !== "all") {
       if (categoryPageInfo?.hasNextPage) {
+        console.log("Direct", categoryPageInfo);
         return (
           <ShowMoreButton
             classNames="bg-innovate-neon text-black"

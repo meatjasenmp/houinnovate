@@ -27,28 +27,28 @@ const PhaseList = ({
   const divRef = useRef<HTMLDivElement>(null);
   const [activePhase, setActivePhase] = useState<number | null>(null);
 
-  useEffect(() => {
-    if (divRef.current) {
-      const ctx = gsap.context(() => {
-        const targets = gsap.utils.toArray(".phase_animated");
-        const duration = 0.1;
-        const hold = 0.05;
-        targets.map((target: any, index) => {
-          const tl = gsap.timeline({
-            delay: duration * index + hold * index,
-            scrollTrigger: {
-              trigger: target,
-            },
-          });
-          tl.from(target, { y: 20, opacity: 0 });
-          tl.to(target, { y: 0, opacity: 0.25 });
-        });
-      }, divRef.current);
-      return () => {
-        ctx.revert();
-      };
-    }
-  }, [phases]);
+  // useEffect(() => {
+  //   if (divRef.current) {
+  //     const ctx = gsap.context(() => {
+  //       const targets = gsap.utils.toArray(".phase_animated");
+  //       const duration = 0.1;
+  //       const hold = 0.05;
+  //       targets.map((target: any, index) => {
+  //         const tl = gsap.timeline({
+  //           delay: duration * index + hold * index,
+  //           scrollTrigger: {
+  //             trigger: target,
+  //           },
+  //         });
+  //         tl.from(target, { y: 20, opacity: 0 });
+  //         tl.to(target, { y: 0, opacity: 0.25 });
+  //       });
+  //     }, divRef.current);
+  //     return () => {
+  //       ctx.revert();
+  //     };
+  //   }
+  // }, [phases]);
 
   const handlePhaseClick = (phaseNumber: number) => {
     setActivePhase(phaseNumber);
@@ -111,29 +111,29 @@ const Phases = ({ blockContent }: PhasesProps) => {
     }
   }, [blockContent]);
 
-  useEffect(() => {
-    if (sectionRef.current) {
-      const ctx = gsap.context(() => {
-        const articleTargets = sectionRef.current?.querySelectorAll("h1, p");
-        const targets = [...(articleTargets || [])];
-        const duration = 0.1;
-        const hold = 0.05;
-        targets.map((target: any, index) => {
-          const tl = gsap.timeline({
-            delay: duration * index + hold * index,
-            scrollTrigger: {
-              trigger: target,
-            },
-          });
-          tl.from(target, { y: 20, opacity: 0 });
-          tl.to(target, { y: 0, opacity: 1 });
-        });
-      }, sectionRef.current);
-      return () => {
-        ctx.revert();
-      };
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (sectionRef.current) {
+  //     const ctx = gsap.context(() => {
+  //       const articleTargets = sectionRef.current?.querySelectorAll("h1, p");
+  //       const targets = [...(articleTargets || [])];
+  //       const duration = 0.1;
+  //       const hold = 0.05;
+  //       targets.map((target: any, index) => {
+  //         const tl = gsap.timeline({
+  //           delay: duration * index + hold * index,
+  //           scrollTrigger: {
+  //             trigger: target,
+  //           },
+  //         });
+  //         tl.from(target, { y: 20, opacity: 0 });
+  //         tl.to(target, { y: 0, opacity: 1 });
+  //       });
+  //     }, sectionRef.current);
+  //     return () => {
+  //       ctx.revert();
+  //     };
+  //   }
+  // }, []);
 
   if (!blockContent) return null;
   const {

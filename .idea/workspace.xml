@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Nuking content block animation for now.">
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Testing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/opportunities/OpportunityLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/OpportunityLink.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/opportunities/ProjectBasedOpportunities.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/ProjectBasedOpportunities.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,20 +132,6 @@
       <workItem from="1668878590110" duration="26398000" />
       <workItem from="1669042405919" duration="38541000" />
       <workItem from="1669144168999" duration="36693000" />
-    </task>
-    <task id="LOCAL-00080" summary="Scroll to top arrow.">
-      <created>1668357151372</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1668357151372</updated>
-    </task>
-    <task id="LOCAL-00081" summary="Style updates">
-      <created>1668357832174</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1668357832174</updated>
     </task>
     <task id="LOCAL-00082" summary="UI updates">
       <created>1668358436724</created>
@@ -477,7 +462,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669573651011</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="Removing useLayoutEffect. Doesn't seem to make much of a difference.">
+      <created>1669574649338</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1669574649339</updated>
+    </task>
+    <task id="LOCAL-00130" summary="Testing">
+      <created>1669575189907</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1669575189907</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,8 +496,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="style updates" />
-    <MESSAGE value="Video poster implemnetation." />
     <MESSAGE value="Setting up modal as fallback for devices that don't support going full screen" />
     <MESSAGE value="Updating poster image" />
     <MESSAGE value="Refactoring Jobs Select, misc changes." />
@@ -522,7 +519,9 @@
     <MESSAGE value="Smooth scroll implementation." />
     <MESSAGE value="Misc. tweaks." />
     <MESSAGE value="Nuking content block animation for now." />
-    <option name="LAST_COMMIT_MESSAGE" value="Nuking content block animation for now." />
+    <MESSAGE value="Removing useLayoutEffect. Doesn't seem to make much of a difference." />
+    <MESSAGE value="Testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
