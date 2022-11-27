@@ -11,20 +11,20 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const getPage = usePage("9");
   const { data, error, loading } = getPage;
 
-  useEffect(() => {
-    if (data) {
-      const ctx = gsap.context(() => {
-        ScrollSmoother.create({
-          smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
-          effects: true, // looks for data-speed and data-lag attributes on elements
-          smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-        });
-      });
-      return () => {
-        ctx.revert();
-      };
-    }
-  }, [data]);
+  // useEffect(() => {
+  //   if (data) {
+  //     const ctx = gsap.context(() => {
+  //       ScrollSmoother.create({
+  //         smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
+  //         effects: true, // looks for data-speed and data-lag attributes on elements
+  //         smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+  //       });
+  //     });
+  //     return () => {
+  //       ctx.revert();
+  //     };
+  //   }
+  // }, [data]);
 
   if (loading) {
     return <div className="loading">Loading...</div>;

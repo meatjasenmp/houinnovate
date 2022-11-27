@@ -275,7 +275,9 @@ const SignUpForm = ({ cta }: OpportunitySignUpFormProps) => {
 
 const LoadingContainer = () => (
   <div className="flex flex-col h-screen items-center justify-center">
-    <LoadingSpinner fill="#F54932" />
+    <div className="w-8 h-8">
+      <LoadingSpinner fill="#F54932" />
+    </div>
   </div>
 );
 
