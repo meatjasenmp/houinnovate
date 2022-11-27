@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import ContentEditor from "./ContentEditor";
 import { backgroundColorMapping, accentColor } from "../styles/helpers";
 import {
@@ -41,6 +41,15 @@ const ContentBlockStylized = ({ blockContent }: ComponentBlocksProps) => {
   const contentWrapper = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
 
+  const {
+    contentBlockStylized,
+    list,
+    showFooterText,
+    footerText,
+    scrollId,
+    headerUnderlineAccent,
+  } = blockContent;
+
   useEffect(() => {
     if (contentWrapper.current) {
       const content = contentWrapper.current;
@@ -63,7 +72,7 @@ const ContentBlockStylized = ({ blockContent }: ComponentBlocksProps) => {
     }
   }, []);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (sectionRef.current) {
       const ctx = gsap.context(() => {
         const article = sectionRef.current?.querySelector("article");
@@ -103,18 +112,7 @@ const ContentBlockStylized = ({ blockContent }: ComponentBlocksProps) => {
         ctx.revert();
       };
     }
-  }, []);
-
-  if (!blockContent) return null;
-
-  const {
-    contentBlockStylized,
-    list,
-    showFooterText,
-    footerText,
-    scrollId,
-    headerUnderlineAccent,
-  } = blockContent;
+  }, [blockContent]);
 
   return (
     <section

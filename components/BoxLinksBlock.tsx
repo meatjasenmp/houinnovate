@@ -122,9 +122,10 @@ const BoxLinksBlock = ({ blockContent }: ComponentBlocksProps) => {
         ctx.revert();
       };
     }
-  }, []);
+  }, [blockContent]);
 
   if (!blockContent.boxLink) return null;
+
   return (
     <section
       className={[
