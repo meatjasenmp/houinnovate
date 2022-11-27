@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import ContentEditor from "./ContentEditor";
 import { backgroundColorMapping, accentColor } from "../styles/helpers";
 import {
@@ -63,7 +63,7 @@ const ContentBlockStylized = ({ blockContent }: ComponentBlocksProps) => {
     }
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (sectionRef.current) {
       const ctx = gsap.context(() => {
         const article = sectionRef.current?.querySelector("article");
