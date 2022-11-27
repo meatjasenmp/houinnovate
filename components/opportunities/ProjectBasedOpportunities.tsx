@@ -13,6 +13,7 @@ import { Colors } from "../../styles/helpers";
 import { ModalType, Options } from "../helpers";
 import { allProjectOpportunities } from "../../api/opportunities/__generated__/allProjectOpportunities";
 import { useRouter } from "next/router";
+import LoadingSpinner from "../LoadingSpinner";
 
 interface ProjectBasedOpportunitiesProps {
   blockContent: page_page_components_componentBlocks_Page_Components_ComponentBlocks_ProjectBasedOpportunities;
@@ -25,7 +26,7 @@ const ProjectBasedOpportunities = ({
   const { query } = router;
   const contentWrapper = useRef<HTMLDivElement>(null);
   const [selectedOption, setSelectedOption] = useState<Options>();
-  const [showLoadLoader, setShowLoader] = useState<boolean>(false);
+  const [showLoader, setShowLoader] = useState<boolean>(false);
   const [currentCategory, setCurrentCategory] = useState<
     (string | null)[] | null | undefined
   >();
@@ -88,17 +89,6 @@ const ProjectBasedOpportunities = ({
   const { pageInfo: categoryPageInfo } =
     opportunitiesByCategoryData?.projectBasedOpportunities || {};
 
-  const Loading = () => {
-    if (showLoadLoader) {
-      return (
-        <div>
-          <p>Loading...</p>
-        </div>
-      );
-    }
-    return <></>;
-  };
-
   useEffect(() => {
     if (currentCategory && String(currentCategory) !== "all") {
       getOpportunities().then((data) => {
@@ -147,7 +137,12 @@ const ProjectBasedOpportunities = ({
             classNames="bg-innovate-blue text-white"
             onClick={handleLoadMoreByCategory}
           >
-            Show More Opportunities
+            {showLoader && (
+              <div className="w-4 h-4 mr-4">
+                <LoadingSpinner fill="white" />
+              </div>
+            )}
+            <div>Show More Opportunities</div>
           </ShowMoreButton>
         );
       }
@@ -159,7 +154,12 @@ const ProjectBasedOpportunities = ({
           classNames="bg-innovate-blue text-white duration-300 ease-linear hover:bg-black"
           onClick={handleLoadMoreOpportunities}
         >
-          Show More Opportunities
+          {showLoader && (
+            <div className="w-4 h-4 mr-4">
+              <LoadingSpinner fill="white" />
+            </div>
+          )}
+          <div>Show More Opportunities</div>
         </ShowMoreButton>
       );
     }
@@ -182,26 +182,20 @@ const ProjectBasedOpportunities = ({
             setSelectedOption={setSelectedOption}
             setCategory={setCurrentCategory}
           />
-          {opportunitiesLoading || opportunitiesError ? (
-            <Loading />
-          ) : (
-            <>
-              <section className="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {opportunities?.projectBasedOpportunities?.edges?.map(
-                  (edge, index) => (
-                    <OpportunityLink
-                      key={index}
-                      opportunity={edge}
-                      setCurrentID={setCurrentID}
-                      setIsOpen={setIsOpen}
-                      index={index}
-                    />
-                  )
-                )}
-              </section>
-              <ShowMore />
-            </>
-          )}
+          <section className="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {opportunities?.projectBasedOpportunities?.edges?.map(
+              (edge, index) => (
+                <OpportunityLink
+                  key={index}
+                  opportunity={edge}
+                  setCurrentID={setCurrentID}
+                  setIsOpen={setIsOpen}
+                  index={index}
+                />
+              )
+            )}
+          </section>
+          <ShowMore />
         </div>
       </section>
       <Modal id={currentID} isOpen={isOpen} setIsOpen={setIsOpen} />

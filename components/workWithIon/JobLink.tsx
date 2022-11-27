@@ -4,7 +4,6 @@ import React, { useEffect, useRef } from "react";
 import ArrowLinkIcon from "../ArrowLinkIcon";
 
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 interface JobLinkProps {
   job: Opportunity;
@@ -14,31 +13,25 @@ interface JobLinkProps {
 export const JobLink = ({ job, index }: JobLinkProps) => {
   const linkRef = useRef<HTMLAnchorElement>(null);
 
-  useEffect(() => {
-    if (linkRef.current) {
-      const duration = 0.1;
-      const hold = 0.05;
-      const ctx = gsap.context(() => {
-        const tl = gsap.timeline({
-          delay: duration * index + hold * index,
-          paused: true,
-        });
-        tl.from(linkRef.current, { y: 20, opacity: 0 });
-        tl.to(linkRef.current, { y: 0, opacity: 1 });
-
-        ScrollTrigger.create({
-          trigger: linkRef.current,
-          onEnter: () => {
-            tl.play();
-          },
-        });
-      }, linkRef.current);
-      return () => {
-        ctx.revert();
-      };
-    }
-    ScrollTrigger.refresh();
-  }, [job]);
+  // useEffect(() => {
+  //   if (linkRef.current) {
+  //     const duration = 0.1;
+  //     const hold = 0.05;
+  //     const ctx = gsap.context(() => {
+  //       const tl = gsap.timeline({
+  //         delay: duration * index + hold * index,
+  //         scrollTrigger: {
+  //           trigger: linkRef.current,
+  //         },
+  //       });
+  //       tl.from(linkRef.current, { y: 20, opacity: 0 });
+  //       tl.to(linkRef.current, { y: 0, opacity: 1 });
+  //     }, linkRef.current);
+  //     return () => {
+  //       ctx.revert();
+  //     };
+  //   }
+  // }, [job]);
 
   if (!job) return <></>;
   const { title, databaseId } = job;

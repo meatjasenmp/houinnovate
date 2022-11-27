@@ -1,8 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import ContentEditor from "./ContentEditor";
 import { backgroundColorMapping } from "../styles/helpers";
 import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_ContentBlock } from "../api/__generated__/page";
-
 import { gsap } from "gsap";
 
 interface ComponentBlocksProps {
@@ -17,15 +16,27 @@ enum contentTypes {
 const ContentBlock = ({ blockContent }: ComponentBlocksProps) => {
   const contentBlockRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  const {
+    contentBlockContent,
+    backgroundColor,
+    contentBlockColumnContent,
+    contentType,
+    scrollId,
+  } = blockContent;
+
+  useLayoutEffect(() => {
     if (contentBlockRef.current) {
       const ctx = gsap.context(() => {
-        const targets = gsap.utils.toArray(`.content_block_animated`);
+        const content = contentBlockRef?.current?.querySelectorAll(
+          ".content_block_animated"
+        );
+        const targets = [...(content || [])];
         const duration = 0.1;
         const hold = 0.1;
         targets.map((target: any, index) => {
           const tl = gsap.timeline({
             delay: duration * index + hold * index,
+            paused: true,
             scrollTrigger: {
               trigger: target,
             },
@@ -40,13 +51,7 @@ const ContentBlock = ({ blockContent }: ComponentBlocksProps) => {
     }
   }, []);
 
-  const {
-    contentBlockContent,
-    backgroundColor,
-    contentBlockColumnContent,
-    contentType,
-    scrollId,
-  } = blockContent;
+  if (!blockContent) return null;
 
   return (
     <section className="mt-5 full-screen" id={String(scrollId)}>
@@ -55,8 +60,8 @@ const ContentBlock = ({ blockContent }: ComponentBlocksProps) => {
         ref={contentBlockRef}
       >
         {contentType === contentTypes.ContentBlock && contentBlockContent && (
-          <div className="max-w-screen-innovate-lg mx-auto content_block_animated">
-            <div className="max-w-screen-innovate-lg">
+          <div className="max-w-screen-innovate-lg mx-auto">
+            <div className="max-w-screen-innovate-lg content_block_animated">
               <ContentEditor content={contentBlockContent} />
             </div>
           </div>

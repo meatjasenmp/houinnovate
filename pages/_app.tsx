@@ -32,30 +32,13 @@ const client = new ApolloClient({
 ReactModal.setAppElement("#__next");
 
 function MyApp({ Component, pageProps }: AppProps) {
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      ScrollSmoother.create({
-        smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
-        effects: true, // looks for data-speed and data-lag attributes on elements
-        smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-      });
-    });
-    return () => {
-      ctx.revert();
-    };
-  }, []);
-
   return (
     <ApolloProvider client={client}>
       <HubspotProvider>
-        <div id="smooth-wrapper">
-          <div id="smooth-content">
-            <Layout>
-              <Toaster />
-              <Component {...pageProps} />
-            </Layout>
-          </div>
-        </div>
+        <Layout>
+          <Toaster />
+          <Component {...pageProps} />
+        </Layout>
       </HubspotProvider>
     </ApolloProvider>
   );

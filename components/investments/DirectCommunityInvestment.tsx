@@ -14,6 +14,7 @@ import { page_page_components_componentBlocks_Page_Components_ComponentBlocks_Co
 import { Colors } from "../../styles/helpers";
 import { Options, ModalType } from "../helpers";
 import { allInvestments } from "../../api/investments/__generated__/allInvestments";
+import LoadingSpinner from "../LoadingSpinner";
 
 interface DirectCommunityInvestmentProps {
   blockContent: page_page_components_componentBlocks_Page_Components_ComponentBlocks_CommunityInvestment;
@@ -26,7 +27,7 @@ const DirectCommunityInvestment = ({
   const { query } = router;
   const contentWrapper = useRef<HTMLDivElement>(null);
   const [selectedOption, setSelectedOption] = useState<Options>();
-  const [showLoadLoader, setShowLoader] = useState<boolean>(false);
+  const [showLoader, setShowLoader] = useState<boolean>(false);
   const [currentCategory, setCurrentCategory] = useState<
     (string | null)[] | null | undefined
   >();
@@ -99,17 +100,6 @@ const DirectCommunityInvestment = ({
   const { pageInfo: categoryPageInfo } =
     investmentsByCategoryData?.communityInvestments || {};
 
-  const Loading = () => {
-    if (showLoadLoader) {
-      return (
-        <div>
-          <p>Loading...</p>
-        </div>
-      );
-    }
-    return <></>;
-  };
-
   const handleLoadMoreInvestments = () => {
     if (pageInfo?.hasNextPage) {
       setShowLoader(true);
@@ -146,7 +136,12 @@ const DirectCommunityInvestment = ({
             classNames="bg-innovate-neon text-black"
             onClick={handleLoadMoreByCategory}
           >
-            Show More Investments
+            {showLoader && (
+              <div className="w-4 h-4 mr-4">
+                <LoadingSpinner fill="black" />
+              </div>
+            )}
+            <div>Show More Investments</div>
           </ShowMoreButton>
         );
       }
@@ -158,7 +153,12 @@ const DirectCommunityInvestment = ({
           classNames="bg-innovate-neon text-black duration-300 ease-linear hover:bg-black hover:text-white"
           onClick={handleLoadMoreInvestments}
         >
-          Show More Investments
+          {showLoader && (
+            <div className="w-4 h-4 mr-4">
+              <LoadingSpinner fill="black" />
+            </div>
+          )}
+          <div>Show More Investments</div>
         </ShowMoreButton>
       );
     }
@@ -191,26 +191,18 @@ const DirectCommunityInvestment = ({
             setSelectedOption={setSelectedOption}
             setCategory={setCurrentCategory}
           />
-          {investmentsLoading || investmentsError ? (
-            <Loading />
-          ) : (
-            <>
-              <section className="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {investments?.communityInvestments?.edges?.map(
-                  (edge, index) => (
-                    <InvestmentLink
-                      key={index}
-                      investment={edge}
-                      setCurrentID={setCurrentID}
-                      setIsOpen={setIsOpen}
-                      index={index}
-                    />
-                  )
-                )}
-              </section>
-              <ShowMore />
-            </>
-          )}
+          <section className="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {investments?.communityInvestments?.edges?.map((edge, index) => (
+              <InvestmentLink
+                key={index}
+                investment={edge}
+                setCurrentID={setCurrentID}
+                setIsOpen={setIsOpen}
+                index={index}
+              />
+            ))}
+          </section>
+          <ShowMore />
         </div>
       </section>
       <Modal id={currentID} isOpen={isOpen} setIsOpen={setIsOpen} />

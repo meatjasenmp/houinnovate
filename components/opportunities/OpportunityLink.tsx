@@ -1,11 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import { allProjectOpportunities_projectBasedOpportunities_edges } from "../../api/opportunities/__generated__/allProjectOpportunities";
 import ArrowLinkIcon from "../ArrowLinkIcon";
-import ProgressBar, { Phase } from "../ProgressBar";
+import ProgressBarSmall from "../ProgressBarSmall";
 import { Colors } from "../../styles/helpers";
-import { ModalType } from "../helpers";
+import { ModalType, Phase } from "../helpers";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 interface OpportunityLinkProps {
   opportunity: allProjectOpportunities_projectBasedOpportunities_edges | null;
@@ -22,30 +21,25 @@ const OpportunityLink = ({
 }: OpportunityLinkProps) => {
   const buttonRef = useRef<HTMLButtonElement>(null);
 
-  useEffect(() => {
-    if (buttonRef.current) {
-      const duration = 0.1;
-      const hold = 0.05;
-      const ctx = gsap.context(() => {
-        const tl = gsap.timeline({
-          delay: duration * index + hold * index,
-          paused: true,
-        });
-        tl.from(buttonRef.current, { y: 20, opacity: 0 });
-        tl.to(buttonRef.current, { y: 0, opacity: 1 });
-
-        ScrollTrigger.create({
-          trigger: buttonRef.current,
-          onEnter: () => {
-            tl.play();
-          },
-        });
-      }, buttonRef.current);
-      return () => {
-        ctx.revert();
-      };
-    }
-  }, [opportunity]);
+  // useEffect(() => {
+  //   if (buttonRef.current) {
+  //     const duration = 0.1;
+  //     const hold = 0.05;
+  //     const ctx = gsap.context(() => {
+  //       const tl = gsap.timeline({
+  //         delay: duration * index + hold * index,
+  //         scrollTrigger: {
+  //           trigger: buttonRef.current,
+  //         },
+  //       });
+  //       tl.from(buttonRef.current, { y: 20, opacity: 0 });
+  //       tl.to(buttonRef.current, { y: 0, opacity: 1 });
+  //     }, buttonRef.current);
+  //     return () => {
+  //       ctx.revert();
+  //     };
+  //   }
+  // }, [opportunity]);
 
   const { title, databaseId, slug, communityAndOpportunityPopUps } =
     opportunity?.node || {};
@@ -68,7 +62,7 @@ const OpportunityLink = ({
     <button
       ref={buttonRef}
       onClick={handleClick}
-      className={`block text-left flex flex-col justify-between ${
+      className={`block text-left flex flex-col justify-between border duration-300 ease-linear hover:bg-innovate-blue/50 hover:drop-shadow-md hover:border-innovate-smoke-gray hover:text-white ${
         progress?.currentPhase === Phase.COMPLETION
           ? "bg-innovate-blue"
           : "bg-innovate-gray"
@@ -96,7 +90,7 @@ const OpportunityLink = ({
             </figure>
           </figure>
         </div>
-        <ProgressBar currentPhase={currentPhase} accent={Colors.BLUE} />
+        <ProgressBarSmall currentPhase={currentPhase} accent={Colors.BLUE} />
       </div>
     </button>
   );

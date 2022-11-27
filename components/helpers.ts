@@ -29,6 +29,14 @@ export const formatPostDate = (date: string | null | undefined) => {
   });
 };
 
+export enum Phase {
+  PLANNING = "planning",
+  EXECUTION = "execution",
+  MONITORING = "monitoring",
+  COMPLETION = "completion",
+  ONGOING = "ongoing",
+}
+
 export const handleScroll = (to: string | null | undefined) => {
   scroller.scrollTo(String(to), {
     duration: 800,
