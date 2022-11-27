@@ -24,32 +24,32 @@ const ContentBlock = ({ blockContent }: ComponentBlocksProps) => {
     scrollId,
   } = blockContent;
 
-  useLayoutEffect(() => {
-    if (contentBlockRef.current) {
-      const ctx = gsap.context(() => {
-        const content = contentBlockRef?.current?.querySelectorAll(
-          ".content_block_animated"
-        );
-        const targets = [...(content || [])];
-        const duration = 0.1;
-        const hold = 0.1;
-        targets.map((target: any, index) => {
-          const tl = gsap.timeline({
-            delay: duration * index + hold * index,
-            paused: true,
-            scrollTrigger: {
-              trigger: target,
-            },
-          });
-          tl.from(target, { y: 20, opacity: 0 });
-          tl.to(target, { y: 0, opacity: 1 });
-        });
-      }, contentBlockRef.current);
-      return () => {
-        ctx.revert();
-      };
-    }
-  }, []);
+  // useLayoutEffect(() => {
+  //   if (contentBlockRef.current) {
+  //     const ctx = gsap.context(() => {
+  //       const content = contentBlockRef?.current?.querySelectorAll(
+  //         ".content_block_animated"
+  //       );
+  //       const targets = [...(content || [])];
+  //       const duration = 0.1;
+  //       const hold = 0.1;
+  //       targets.map((target: any, index) => {
+  //         const tl = gsap.timeline({
+  //           delay: duration * index + hold * index,
+  //           paused: true,
+  //           scrollTrigger: {
+  //             trigger: target,
+  //           },
+  //         });
+  //         tl.from(target, { y: 20, opacity: 0 });
+  //         tl.to(target, { y: 0, opacity: 1 });
+  //       });
+  //     }, contentBlockRef.current);
+  //     return () => {
+  //       ctx.revert();
+  //     };
+  //   }
+  // }, []);
 
   if (!blockContent) return null;
 
