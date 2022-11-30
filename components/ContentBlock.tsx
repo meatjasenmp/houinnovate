@@ -49,7 +49,7 @@ const ContentBlock = ({ blockContent }: ComponentBlocksProps) => {
         ctx.revert();
       };
     }
-  }, []);
+  }, [blockContent]);
 
   if (!blockContent) return null;
 

@@ -72,47 +72,47 @@ const ContentBlockStylized = ({ blockContent }: ComponentBlocksProps) => {
     }
   }, []);
 
-  // useEffect(() => {
-  //   if (sectionRef.current) {
-  //     const ctx = gsap.context(() => {
-  //       const article = sectionRef.current?.querySelector("article");
-  //       const articleTargets = [...(article?.querySelectorAll("h1, p") || [])];
-  //       const duration = 0.1;
-  //       const hold = 0.05;
-  //       articleTargets?.map((target: any, index) => {
-  //         const tl = gsap.timeline({
-  //           delay: duration * index + hold * index,
-  //           scrollTrigger: {
-  //             trigger: target,
-  //           },
-  //         });
-  //         tl.from(target, { y: 20, opacity: 0 });
-  //         tl.to(target, { y: 0, opacity: 1 });
-  //       });
-  //
-  //       const footer = sectionRef.current?.querySelector("footer");
-  //       const listTargets = [
-  //         ...(sectionRef.current?.querySelectorAll("li") || []),
-  //         footer,
-  //       ];
-  //       const listDuration = 0.1;
-  //       const listHold = 0.05;
-  //       listTargets?.map((target: any, index) => {
-  //         const tl = gsap.timeline({
-  //           delay: listDuration * index + listHold * index,
-  //           scrollTrigger: {
-  //             trigger: target,
-  //           },
-  //         });
-  //         tl.from(target, { x: 20, opacity: 0 });
-  //         tl.to(target, { x: 0, opacity: 1 });
-  //       });
-  //     }, sectionRef.current);
-  //     return () => {
-  //       ctx.revert();
-  //     };
-  //   }
-  // }, [blockContent]);
+  useEffect(() => {
+    if (sectionRef.current) {
+      const ctx = gsap.context(() => {
+        const article = sectionRef.current?.querySelector("article");
+        const articleTargets = [...(article?.querySelectorAll("h1, p") || [])];
+        const duration = 0.1;
+        const hold = 0.05;
+        articleTargets?.map((target: any, index) => {
+          const tl = gsap.timeline({
+            delay: duration * index + hold * index,
+            scrollTrigger: {
+              trigger: target,
+            },
+          });
+          tl.from(target, { y: 20, opacity: 0 });
+          tl.to(target, { y: 0, opacity: 1 });
+        });
+
+        const footer = sectionRef.current?.querySelector("footer");
+        const listTargets = [
+          ...(sectionRef.current?.querySelectorAll("li") || []),
+          footer,
+        ];
+        const listDuration = 0.1;
+        const listHold = 0.05;
+        listTargets?.map((target: any, index) => {
+          const tl = gsap.timeline({
+            delay: listDuration * index + listHold * index,
+            scrollTrigger: {
+              trigger: target,
+            },
+          });
+          tl.from(target, { x: 20, opacity: 0 });
+          tl.to(target, { x: 0, opacity: 1 });
+        });
+      }, sectionRef.current);
+      return () => {
+        ctx.revert();
+      };
+    }
+  }, [blockContent]);
 
   return (
     <section
