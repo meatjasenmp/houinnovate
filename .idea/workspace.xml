@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Margin on job form">
-      <change beforePath="$PROJECT_DIR$/components/BoxLinksBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/BoxLinksBlock.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Stylized block animations" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -132,28 +130,7 @@
       <workItem from="1669042405919" duration="38541000" />
       <workItem from="1669144168999" duration="36693000" />
       <workItem from="1669727489103" duration="619000" />
-      <workItem from="1669793084966" duration="2431000" />
-    </task>
-    <task id="LOCAL-00087" summary="Success/error message for newsletter input. CSS updates to video banner.">
-      <created>1668474791611</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1668474791611</updated>
-    </task>
-    <task id="LOCAL-00088" summary="Success/error message for opportunities input.">
-      <created>1668475974822</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1668475974823</updated>
-    </task>
-    <task id="LOCAL-00089" summary="video test.">
-      <created>1668477544020</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1668477544020</updated>
+      <workItem from="1669793084966" duration="2756000" />
     </task>
     <task id="LOCAL-00090" summary="Reverting.">
       <created>1668478469917</created>
@@ -477,7 +454,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669795378244</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="Testing animation">
+      <created>1669795533705</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1669795533705</updated>
+    </task>
+    <task id="LOCAL-00137" summary="Testing animation">
+      <created>1669795670158</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1669795670159</updated>
+    </task>
+    <task id="LOCAL-00138" summary="Stylized block animations">
+      <created>1669795834508</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1669795834508</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,8 +495,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="hubspot test WIP." />
-    <MESSAGE value="Removing unused files" />
     <MESSAGE value="Basic hubspot integration for newsletter subscribe." />
     <MESSAGE value="env variables for hubspot newsletter form" />
     <MESSAGE value="Apparently the hubspot library hates environment variables." />
@@ -522,7 +518,9 @@
     <MESSAGE value="Updating phase percentage" />
     <MESSAGE value="Job Link hover" />
     <MESSAGE value="Margin on job form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Margin on job form" />
+    <MESSAGE value="Testing animation" />
+    <MESSAGE value="Stylized block animations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stylized block animations" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
