@@ -1,0 +1,7 @@
+.job_link {
+    @apply duration-300 ease-linear hover:bg-innovate-red hover:text-white;
+}
+
+.job_link:hover svg path {
+    @apply fill-current stroke-current;
+}

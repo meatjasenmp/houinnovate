@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Opportunity } from "./JobLinks";
 import React, { useEffect, useRef } from "react";
 import ArrowLinkIcon from "../ArrowLinkIcon";
-
+import styles from "../../styles/components/JobLink.module.css";
 import { gsap } from "gsap";
 
 interface JobLinkProps {
@@ -41,7 +41,10 @@ export const JobLink = ({ job, index }: JobLinkProps) => {
     >
       <a
         ref={linkRef}
-        className="flex justify-between items-center bg-innovate-tan font-kraftigBold text-xl p-3.5 mb-1.5 last:mb-0"
+        className={[
+          "flex justify-between items-center bg-innovate-tan font-kraftigBold text-xl p-3.5 mb-1.5 last:mb-0",
+          styles.job_link,
+        ].join(" ")}
       >
         <span>{title}</span>
         <figure className="w-8">
