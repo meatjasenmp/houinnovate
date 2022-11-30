@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Hubspot form implementation. Basic styling.">
-      <change beforePath="$PROJECT_DIR$/components/ProgressBarSmall.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProgressBarSmall.tsx" afterDir="false" />
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Margin on job form">
+      <change beforePath="$PROJECT_DIR$/components/BoxLinksBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/BoxLinksBlock.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
-        <option value="CSS File" />
         <option value="TypeScript JSX File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -132,28 +132,7 @@
       <workItem from="1669042405919" duration="38541000" />
       <workItem from="1669144168999" duration="36693000" />
       <workItem from="1669727489103" duration="619000" />
-      <workItem from="1669793084966" duration="1999000" />
-    </task>
-    <task id="LOCAL-00084" summary="Basic implementation of opportunities sign up form.">
-      <created>1668369674858</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1668369674858</updated>
-    </task>
-    <task id="LOCAL-00085" summary="Responsive update.">
-      <created>1668430444415</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1668430444415</updated>
-    </task>
-    <task id="LOCAL-00086" summary="isSearchableProp">
-      <created>1668430786101</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1668430786101</updated>
+      <workItem from="1669793084966" duration="2431000" />
     </task>
     <task id="LOCAL-00087" summary="Success/error message for newsletter input. CSS updates to video banner.">
       <created>1668474791611</created>
@@ -477,7 +456,28 @@
       <option name="project" value="LOCAL" />
       <updated>1669794908459</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="Updating phase percentage">
+      <created>1669795151480</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1669795151480</updated>
+    </task>
+    <task id="LOCAL-00134" summary="Job Link hover">
+      <created>1669795337969</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1669795337969</updated>
+    </task>
+    <task id="LOCAL-00135" summary="Margin on job form">
+      <created>1669795378243</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1669795378244</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,9 +497,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Refactoring Jobs Select, misc changes." />
-    <MESSAGE value="A lot of cleaning up. Refactor of Direct Community Investments so it's response is paginated. Load more functionality." />
-    <MESSAGE value="Refactoring project based opportunities" />
     <MESSAGE value="hubspot test WIP." />
     <MESSAGE value="Removing unused files" />
     <MESSAGE value="Basic hubspot integration for newsletter subscribe." />
@@ -522,7 +519,10 @@
     <MESSAGE value="Testing" />
     <MESSAGE value="Nuking smooth scroll for now." />
     <MESSAGE value="Hubspot form implementation. Basic styling." />
-    <option name="LAST_COMMIT_MESSAGE" value="Hubspot form implementation. Basic styling." />
+    <MESSAGE value="Updating phase percentage" />
+    <MESSAGE value="Job Link hover" />
+    <MESSAGE value="Margin on job form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Margin on job form" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

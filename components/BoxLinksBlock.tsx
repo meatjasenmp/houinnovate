@@ -101,28 +101,29 @@ const BoxPageLinkAnchor = ({
 const BoxLinksBlock = ({ blockContent }: ComponentBlocksProps) => {
   const boxLinkRef = useRef<HTMLDivElement>(null);
 
-  // useEffect(() => {
-  //   if (boxLinkRef.current) {
-  //     const ctx = gsap.context(() => {
-  //       const targets = gsap.utils.toArray(".box_link_animated");
-  //       const duration = 0.1;
-  //       const hold = 0.05;
-  //       targets.map((target: any, index) => {
-  //         const tl = gsap.timeline({
-  //           delay: duration * index + hold * index,
-  //           scrollTrigger: {
-  //             trigger: target,
-  //           },
-  //         });
-  //         tl.from(target, { y: 20, opacity: 0 });
-  //         tl.to(target, { y: 0, opacity: 1 });
-  //       });
-  //     }, boxLinkRef.current);
-  //     return () => {
-  //       ctx.revert();
-  //     };
-  //   }
-  // }, [blockContent]);
+  useEffect(() => {
+    if (boxLinkRef.current) {
+      const ctx = gsap.context(() => {
+        const targets = gsap.utils.toArray(".box_link_animated");
+        const duration = 0.1;
+        const hold = 0.05;
+        targets.map((target: any, index) => {
+          const tl = gsap.timeline({
+            delay: duration * index + hold * index,
+            scrollTrigger: {
+              trigger: target,
+              markers: true,
+            },
+          });
+          tl.from(target, { y: 20, opacity: 0 });
+          tl.to(target, { y: 0, opacity: 1 });
+        });
+      }, boxLinkRef.current);
+      return () => {
+        ctx.revert();
+      };
+    }
+  }, [blockContent]);
 
   if (!blockContent.boxLink) return null;
 
