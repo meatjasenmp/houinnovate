@@ -267,7 +267,7 @@ const ImportantNotice = ({ importantNotice }: ImportantNoticeProps) => {
 const SignUpForm = ({ cta }: OpportunitySignUpFormProps) => {
   if (!cta) return <></>;
   return (
-    <section className="mt-6 bg-innovate-red p-6">
+    <section className="my-6 bg-innovate-red p-6">
       <OpportunitySignUpForm cta={cta} />
     </section>
   );
