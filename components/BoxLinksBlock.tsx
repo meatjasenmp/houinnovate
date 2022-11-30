@@ -112,7 +112,6 @@ const BoxLinksBlock = ({ blockContent }: ComponentBlocksProps) => {
             delay: duration * index + hold * index,
             scrollTrigger: {
               trigger: target,
-              markers: true,
             },
           });
           tl.from(target, { y: 20, opacity: 0 });
