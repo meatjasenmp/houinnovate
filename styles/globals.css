@@ -166,3 +166,41 @@
 .ReactModal__Overlay {
     z-index: 1000;
 }
+
+/* Hubspot Job Form */
+#hubspot-job-form-wrapper input:not([type="submit"]) {
+    @apply w-full pb-2 bg-transparent border-0 border-b-2 border-white text-white text-sm focus:outline-none focus:border-black;
+}
+
+#hubspot-job-form-wrapper label {
+    @apply text-sm;
+}
+
+#hubspot-job-form-wrapper form > div {
+    @apply mb-4 last:mb-0;
+}
+
+#hubspot-job-form-wrapper input[type="submit"] {
+    @apply bg-white text-innovate-red text-xs py-2 px-8 rounded-full border-0 cursor-pointer hover:bg-black hover:text-white duration-300 ease-linear;
+}
+
+#hubspot-job-form-wrapper .hs-error-msgs li label {
+    @apply text-xs;
+}
+
+#hubspot-form-wrapper label,
+#hubspot-form-wrapper .submitted-message{
+    @apply text-xs;
+}
+
+#hubspot-form-wrapper input[type="email"] {
+    @apply p-2 w-full pb-2 bg-transparent border-2 border-white text-white text-sm focus:outline-none focus:border-innovate-red;
+}
+
+#hubspot-form-wrapper input[type="email"]::placeholder {
+    @apply text-white;
+}
+
+#hubspot-form-wrapper input[type="submit"] {
+    @apply mt-4 bg-innovate-red text-white text-xs py-2 px-8 rounded-full border-0 cursor-pointer hover:bg-innovate-gray hover:text-black duration-300 ease-linear;
+}

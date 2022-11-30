@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Testing">
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Nuking smooth scroll for now.">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/opportunities/ProjectBasedOpportunities.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/ProjectBasedOpportunities.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/NewsLetterSubscribe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NewsLetterSubscribe.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/OpportnunitySignUpForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/OpportnunitySignUpForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/jobPosting/JobPosting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/jobPosting/JobPosting.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,32 +70,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/jasenpeterson/Local Sites/houinnovate/app/public/site&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/jasenpeterson/Local Sites/houinnovate/app/public/site/node_modules/prettier&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/jasenpeterson/Local Sites/houinnovate/app/public/site/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "/Users/jasenpeterson/Local Sites/houinnovate/app/public/site",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_interpreter_path": "/Users/jasenpeterson/.nvm/versions/node/v18.6.0/bin/node",
+    "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "/Users/jasenpeterson/Local Sites/houinnovate/app/public/site/node_modules/prettier",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "editing.templates",
+    "ts.external.directory.path": "/Users/jasenpeterson/Local Sites/houinnovate/app/public/site/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/components" />
@@ -132,13 +136,8 @@
       <workItem from="1668878590110" duration="26398000" />
       <workItem from="1669042405919" duration="38541000" />
       <workItem from="1669144168999" duration="36693000" />
-    </task>
-    <task id="LOCAL-00082" summary="UI updates">
-      <created>1668358436724</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1668358436725</updated>
+      <workItem from="1669727489103" duration="619000" />
+      <workItem from="1669793084966" duration="1645000" />
     </task>
     <task id="LOCAL-00083" summary="Newsletter implementation.">
       <created>1668364610763</created>
@@ -476,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669575189907</updated>
     </task>
-    <option name="localTasksCounter" value="131" />
+    <task id="LOCAL-00131" summary="Nuking smooth scroll for now.">
+      <created>1669579890640</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1669579890640</updated>
+    </task>
+    <option name="localTasksCounter" value="132" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,7 +502,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Setting up modal as fallback for devices that don't support going full screen" />
     <MESSAGE value="Updating poster image" />
     <MESSAGE value="Refactoring Jobs Select, misc changes." />
     <MESSAGE value="A lot of cleaning up. Refactor of Direct Community Investments so it's response is paginated. Load more functionality." />
@@ -521,7 +526,8 @@
     <MESSAGE value="Nuking content block animation for now." />
     <MESSAGE value="Removing useLayoutEffect. Doesn't seem to make much of a difference." />
     <MESSAGE value="Testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing" />
+    <MESSAGE value="Nuking smooth scroll for now." />
+    <option name="LAST_COMMIT_MESSAGE" value="Nuking smooth scroll for now." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
