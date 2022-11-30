@@ -33,30 +33,30 @@ const CommittedDeployedProgressBar = ({
 }: ProgressBarProps) => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
-  // useEffect(() => {
-  //   if (sectionRef.current) {
-  //     const ctx = gsap.context(() => {
-  //       const target = sectionRef?.current?.querySelector(
-  //         ".progress_bar_animated"
-  //       );
-  //       const tl = gsap.timeline({
-  //         delay: 0.25,
-  //         scrollTrigger: {
-  //           trigger: target,
-  //         },
-  //       });
-  //       if (target) {
-  //         tl.from(target, { width: 0 });
-  //         tl.to(target, {
-  //           width: `${calculatePercentage(deployed, committed)}%`,
-  //         });
-  //       }
-  //     }, sectionRef.current);
-  //     return () => {
-  //       ctx.revert();
-  //     };
-  //   }
-  // }, [deployed]);
+  useEffect(() => {
+    if (sectionRef.current) {
+      const ctx = gsap.context(() => {
+        const target = sectionRef?.current?.querySelector(
+          ".progress_bar_animated"
+        );
+        const tl = gsap.timeline({
+          delay: 0.25,
+          scrollTrigger: {
+            trigger: target,
+          },
+        });
+        if (target) {
+          tl.from(target, { width: 0 });
+          tl.to(target, {
+            width: `${calculatePercentage(deployed, committed)}%`,
+          });
+        }
+      }, sectionRef.current);
+      return () => {
+        ctx.revert();
+      };
+    }
+  }, [deployed, committed]);
 
   return (
     <section className="my-10" ref={sectionRef}>
