@@ -7,10 +7,12 @@ const progressBarPercentage = (currentPhase: string | null | undefined) => {
     case Phase.INITIAL:
       return "0%";
     case Phase.PLANNING:
+      return "15%";
+    case Phase.ONGOING:
       return "25%";
     case Phase.EXECUTION:
       return "50%";
-    case Phase.MONITORING || Phase.ONGOING:
+    case Phase.MONITORING:
       return "75%";
     default:
       return "100%";
@@ -26,6 +28,7 @@ const ProgressBarSmall = ({
   accent: Colors;
   height?: string;
 }) => {
+  console.log(currentPhase);
   return (
     <div className="bg-innovate-gray-2">
       <div
