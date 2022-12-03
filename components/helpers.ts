@@ -57,7 +57,7 @@ export const useScrollToSection = (
     if (scrollTo && scrollTo === section) {
       scroller.scrollTo(String(scrollTo), {
         duration: 800,
-        delay: 0,
+        delay: 300,
         offset: offset ? offset : 0,
         smooth: "easeInOutQuart",
       });
