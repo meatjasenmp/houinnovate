@@ -75,7 +75,7 @@ const InvestmentLink = ({
         {showProgressLabel && progressLabel && <p>{progressLabel}</p>}
       </div>
       <div className="mt-auto w-full">
-        <div className="px-6">
+        <div className="pl-6">
           <figure className="flex items-center justify-between">
             <span className="capitalize font-kraftigBold text-xl">
               {currentPhase} Phase

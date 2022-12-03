@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="FINALLY figured out the scroll trigger issue.">
-      <change beforePath="$PROJECT_DIR$/components/opportunities/ProjectBasedOpportunities.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/ProjectBasedOpportunities.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/workWithIon/JobLinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/JobLinks.tsx" afterDir="false" />
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Results count.">
+      <change beforePath="$PROJECT_DIR$/components/investments/InvestmentLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/InvestmentLink.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,14 +133,7 @@
       <workItem from="1669144168999" duration="36693000" />
       <workItem from="1669727489103" duration="619000" />
       <workItem from="1669793084966" duration="3249000" />
-      <workItem from="1670085264533" duration="9797000" />
-    </task>
-    <task id="LOCAL-00099" summary="Video poster implemnetation.">
-      <created>1668569515965</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1668569515965</updated>
+      <workItem from="1670085264533" duration="10192000" />
     </task>
     <task id="LOCAL-00100" summary="Setting up modal as fallback for devices that don't support going full screen">
       <created>1668570831555</created>
@@ -479,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670098641590</updated>
     </task>
-    <option name="localTasksCounter" value="148" />
+    <task id="LOCAL-00148" summary="Results count.">
+      <created>1670098973919</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1670098973919</updated>
+    </task>
+    <option name="localTasksCounter" value="149" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,7 +498,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Show More buttons" />
     <MESSAGE value="Removing unused css modules. Unused imports. Implementing direct linking to opportunity and investment modals." />
     <MESSAGE value="Removing unused css modules. Unused imports. Implementing direct linking to opportunity and investment modals. Slide out menu now closes when a section item is clicked." />
     <MESSAGE value="First pass at scroll trigger animations." />
@@ -524,7 +522,8 @@
     <MESSAGE value="Opportunity and investment link animations" />
     <MESSAGE value="Testing out hover only when supported" />
     <MESSAGE value="FINALLY figured out the scroll trigger issue." />
-    <option name="LAST_COMMIT_MESSAGE" value="FINALLY figured out the scroll trigger issue." />
+    <MESSAGE value="Results count." />
+    <option name="LAST_COMMIT_MESSAGE" value="Results count." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
