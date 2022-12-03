@@ -105,7 +105,7 @@ export const useOpportunitiesByCategory = (
     fetchPolicy: "no-cache",
     nextFetchPolicy: "cache-and-network",
     variables: {
-      first: 5,
+      first: 50,
       terms: category,
     },
   });
@@ -125,7 +125,7 @@ export const useOpportunities = () => {
     allProjectOpportunitiesVariables
   >(PROJECT_OPPORTUNITIES, {
     variables: {
-      first: 5,
+      first: 50,
       after: null,
     },
   });

@@ -23,7 +23,7 @@ const JobCategorySelect = ({
           jobCategories.jobCategories?.edges,
           setSelectedOption,
           setCategory,
-          "All Jobs"
+          "All Opportunities"
         )
       );
     }

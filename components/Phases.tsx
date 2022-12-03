@@ -25,7 +25,7 @@ const PhaseList = ({
   scrollId: string | null;
 }) => {
   const divRef = useRef<HTMLDivElement>(null);
-  const [activePhase, setActivePhase] = useState<number | null>(null);
+  const [activePhase, setActivePhase] = useState<number>(0);
 
   useEffect(() => {
     if (divRef.current) {

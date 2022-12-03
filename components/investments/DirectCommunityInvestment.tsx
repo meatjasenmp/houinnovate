@@ -53,6 +53,8 @@ const DirectCommunityInvestment = ({
   const {
     getInvestments,
     data: investmentsByCategoryData,
+    loading: investmentsByCategoryLoading,
+    error: investmentsByCategoryError,
     fetchMore: fetchMoreByCategory,
   } = useInvestmentsByCategory(currentCategory);
 
@@ -96,81 +98,89 @@ const DirectCommunityInvestment = ({
     });
   }, [currentCategory]);
 
-  const { pageInfo } = investmentsData?.communityInvestments || {};
-  const { pageInfo: categoryPageInfo } =
-    investmentsByCategoryData?.communityInvestments || {};
+  // const { pageInfo } = investmentsData?.communityInvestments || {};
+  // const { pageInfo: categoryPageInfo } =
+  //   investmentsByCategoryData?.communityInvestments || {};
 
-  const handleLoadMoreInvestments = () => {
-    if (pageInfo?.hasNextPage) {
-      setShowLoader(true);
-      fetchMoreInvestments({
-        variables: {
-          after: pageInfo?.endCursor,
-        },
-      }).then((data) => {
-        setShowLoader(false);
-        setInvestments(data.data);
-      });
-    }
+  const LoadingContainer = () => {
+    return (
+      <div className="w-full flex justify-center items-center h-[200px]">
+        <div className="w-8 h-8">
+          <LoadingSpinner fill="black" />
+        </div>
+      </div>
+    );
   };
 
-  const handleLoadMoreByCategory = () => {
-    if (categoryPageInfo?.hasNextPage) {
-      setShowLoader(true);
-      fetchMoreByCategory({
-        variables: {
-          after: categoryPageInfo?.endCursor,
-        },
-      }).then((data) => {
-        setShowLoader(false);
-        setInvestments(data.data);
-      });
-    }
-  };
-
-  const ShowMore = () => {
-    if (currentCategory && String(currentCategory) !== "all") {
-      if (categoryPageInfo?.hasNextPage) {
-        console.log("Direct", categoryPageInfo);
-        return (
-          <ShowMoreButton
-            classNames="bg-innovate-neon text-black"
-            onClick={handleLoadMoreByCategory}
-          >
-            {showLoader && (
-              <div className="w-4 h-4 mr-4">
-                <LoadingSpinner fill="black" />
-              </div>
-            )}
-            <div>Show More Investments</div>
-          </ShowMoreButton>
-        );
-      }
-      return <></>;
-    }
-    if (pageInfo?.hasNextPage && String(currentCategory) == "all") {
-      return (
-        <ShowMoreButton
-          classNames="bg-innovate-neon text-black duration-300 ease-linear hover:bg-black hover:text-white"
-          onClick={handleLoadMoreInvestments}
-        >
-          {showLoader && (
-            <div className="w-4 h-4 mr-4">
-              <LoadingSpinner fill="black" />
-            </div>
-          )}
-          <div>Show More Investments</div>
-        </ShowMoreButton>
-      );
-    }
-    return <></>;
-  };
+  // const handleLoadMoreInvestments = () => {
+  //   if (pageInfo?.hasNextPage) {
+  //     setShowLoader(true);
+  //     fetchMoreInvestments({
+  //       variables: {
+  //         after: pageInfo?.endCursor,
+  //       },
+  //     }).then((data) => {
+  //       setShowLoader(false);
+  //       setInvestments(data.data);
+  //     });
+  //   }
+  // };
+  //
+  // const handleLoadMoreByCategory = () => {
+  //   if (categoryPageInfo?.hasNextPage) {
+  //     setShowLoader(true);
+  //     fetchMoreByCategory({
+  //       variables: {
+  //         after: categoryPageInfo?.endCursor,
+  //       },
+  //     }).then((data) => {
+  //       setShowLoader(false);
+  //       setInvestments(data.data);
+  //     });
+  //   }
+  // };
+  //
+  // const ShowMore = () => {
+  //   if (currentCategory && String(currentCategory) !== "all") {
+  //     if (categoryPageInfo?.hasNextPage) {
+  //       console.log("Direct", categoryPageInfo);
+  //       return (
+  //         <ShowMoreButton
+  //           classNames="bg-innovate-neon text-black"
+  //           onClick={handleLoadMoreByCategory}
+  //         >
+  //           {showLoader && (
+  //             <div className="w-4 h-4 mr-4">
+  //               <LoadingSpinner fill="black" />
+  //             </div>
+  //           )}
+  //           <div>Show More Investments</div>
+  //         </ShowMoreButton>
+  //       );
+  //     }
+  //     return <></>;
+  //   }
+  //   if (pageInfo?.hasNextPage && String(currentCategory) == "all") {
+  //     return (
+  //       <ShowMoreButton
+  //         classNames="bg-innovate-neon text-black duration-300 ease-linear hover:bg-black hover:text-white"
+  //         onClick={handleLoadMoreInvestments}
+  //       >
+  //         {showLoader && (
+  //           <div className="w-4 h-4 mr-4">
+  //             <LoadingSpinner fill="black" />
+  //           </div>
+  //         )}
+  //         <div>Show More Investments</div>
+  //       </ShowMoreButton>
+  //     );
+  //   }
+  //   return <></>;
+  // };
 
   if (!blockContent) return null;
 
   const { communityInvestmentContent, deployment, scrollId } = blockContent;
-
-  // TODO: Loading State & Error State
 
   return (
     <>
@@ -192,18 +202,24 @@ const DirectCommunityInvestment = ({
             setSelectedOption={setSelectedOption}
             setCategory={setCurrentCategory}
           />
-          <section className="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {investments?.communityInvestments?.edges?.map((edge, index) => (
-              <InvestmentLink
-                key={index}
-                investment={edge}
-                setCurrentID={setCurrentID}
-                setIsOpen={setIsOpen}
-                index={index}
-              />
-            ))}
-          </section>
-          <ShowMore />
+          {investmentsLoading ||
+          investmentsByCategoryLoading ||
+          investmentsError ||
+          investmentsByCategoryError ? (
+            <LoadingContainer />
+          ) : (
+            <section className="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {investments?.communityInvestments?.edges?.map((edge, index) => (
+                <InvestmentLink
+                  key={index}
+                  investment={edge}
+                  setCurrentID={setCurrentID}
+                  setIsOpen={setIsOpen}
+                  index={index}
+                />
+              ))}
+            </section>
+          )}
         </div>
       </section>
       <Modal id={currentID} isOpen={isOpen} setIsOpen={setIsOpen} />

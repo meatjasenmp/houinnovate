@@ -54,6 +54,8 @@ const ProjectBasedOpportunities = ({
   const {
     getOpportunities,
     data: opportunitiesByCategoryData,
+    error: opportunitiesByCategoryError,
+    loading: opportunitiesByCategoryLoading,
     fetchMore: fetchMoreByCategory,
   } = useOpportunitiesByCategory(currentCategory);
 
@@ -85,9 +87,19 @@ const ProjectBasedOpportunities = ({
     }
   }, [opportunitiesData]);
 
-  const { pageInfo } = opportunitiesData?.projectBasedOpportunities || {};
-  const { pageInfo: categoryPageInfo } =
-    opportunitiesByCategoryData?.projectBasedOpportunities || {};
+  // const { pageInfo } = opportunitiesData?.projectBasedOpportunities || {};
+  // const { pageInfo: categoryPageInfo } =
+  //   opportunitiesByCategoryData?.projectBasedOpportunities || {};
+
+  const LoadingContainer = () => {
+    return (
+      <div className="w-full flex justify-center items-center h-[200px]">
+        <div className="w-8 h-8">
+          <LoadingSpinner fill="black" />
+        </div>
+      </div>
+    );
+  };
 
   useEffect(() => {
     if (currentCategory && String(currentCategory) !== "all") {
@@ -101,70 +113,70 @@ const ProjectBasedOpportunities = ({
     });
   }, [currentCategory]);
 
-  const handleLoadMoreOpportunities = () => {
-    if (pageInfo?.hasNextPage) {
-      setShowLoader(true);
-      fetchMoreOpportunities({
-        variables: {
-          after: pageInfo?.endCursor,
-        },
-      }).then((data) => {
-        setShowLoader(false);
-        setOpportunities(data.data);
-      });
-    }
-  };
-
-  const handleLoadMoreByCategory = () => {
-    if (categoryPageInfo?.hasNextPage) {
-      setShowLoader(true);
-      fetchMoreByCategory({
-        variables: {
-          after: categoryPageInfo?.endCursor,
-        },
-      }).then((data) => {
-        setShowLoader(false);
-        setOpportunities(data.data);
-      });
-    }
-  };
-
-  const ShowMore = () => {
-    if (currentCategory && String(currentCategory) !== "all") {
-      if (categoryPageInfo?.hasNextPage) {
-        return (
-          <ShowMoreButton
-            classNames="bg-innovate-blue text-white"
-            onClick={handleLoadMoreByCategory}
-          >
-            {showLoader && (
-              <div className="w-4 h-4 mr-4">
-                <LoadingSpinner fill="white" />
-              </div>
-            )}
-            <div>Show More Opportunities</div>
-          </ShowMoreButton>
-        );
-      }
-      return <></>;
-    }
-    if (pageInfo?.hasNextPage && String(currentCategory) == "all") {
-      return (
-        <ShowMoreButton
-          classNames="bg-innovate-blue text-white duration-300 ease-linear hover:bg-black"
-          onClick={handleLoadMoreOpportunities}
-        >
-          {showLoader && (
-            <div className="w-4 h-4 mr-4">
-              <LoadingSpinner fill="white" />
-            </div>
-          )}
-          <div>Show More Opportunities</div>
-        </ShowMoreButton>
-      );
-    }
-    return <></>;
-  };
+  // const handleLoadMoreOpportunities = () => {
+  //   if (pageInfo?.hasNextPage) {
+  //     setShowLoader(true);
+  //     fetchMoreOpportunities({
+  //       variables: {
+  //         after: pageInfo?.endCursor,
+  //       },
+  //     }).then((data) => {
+  //       setShowLoader(false);
+  //       setOpportunities(data.data);
+  //     });
+  //   }
+  // };
+  //
+  // const handleLoadMoreByCategory = () => {
+  //   if (categoryPageInfo?.hasNextPage) {
+  //     setShowLoader(true);
+  //     fetchMoreByCategory({
+  //       variables: {
+  //         after: categoryPageInfo?.endCursor,
+  //       },
+  //     }).then((data) => {
+  //       setShowLoader(false);
+  //       setOpportunities(data.data);
+  //     });
+  //   }
+  // };
+  //
+  // const ShowMore = () => {
+  //   if (currentCategory && String(currentCategory) !== "all") {
+  //     if (categoryPageInfo?.hasNextPage) {
+  //       return (
+  //         <ShowMoreButton
+  //           classNames="bg-innovate-blue text-white"
+  //           onClick={handleLoadMoreByCategory}
+  //         >
+  //           {showLoader && (
+  //             <div className="w-4 h-4 mr-4">
+  //               <LoadingSpinner fill="white" />
+  //             </div>
+  //           )}
+  //           <div>Show More Opportunities</div>
+  //         </ShowMoreButton>
+  //       );
+  //     }
+  //     return <></>;
+  //   }
+  //   if (pageInfo?.hasNextPage && String(currentCategory) == "all") {
+  //     return (
+  //       <ShowMoreButton
+  //         classNames="bg-innovate-blue text-white duration-300 ease-linear hover:bg-black"
+  //         onClick={handleLoadMoreOpportunities}
+  //       >
+  //         {showLoader && (
+  //           <div className="w-4 h-4 mr-4">
+  //             <LoadingSpinner fill="white" />
+  //           </div>
+  //         )}
+  //         <div>Show More Opportunities</div>
+  //       </ShowMoreButton>
+  //     );
+  //   }
+  //   return <></>;
+  // };
 
   if (!blockContent) return null;
 
@@ -182,20 +194,26 @@ const ProjectBasedOpportunities = ({
             setSelectedOption={setSelectedOption}
             setCategory={setCurrentCategory}
           />
-          <section className="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {opportunities?.projectBasedOpportunities?.edges?.map(
-              (edge, index) => (
-                <OpportunityLink
-                  key={index}
-                  opportunity={edge}
-                  setCurrentID={setCurrentID}
-                  setIsOpen={setIsOpen}
-                  index={index}
-                />
-              )
-            )}
-          </section>
-          <ShowMore />
+          {opportunitiesLoading ||
+          opportunitiesByCategoryLoading ||
+          opportunitiesError ||
+          opportunitiesByCategoryError ? (
+            <LoadingContainer />
+          ) : (
+            <section className="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {opportunities?.projectBasedOpportunities?.edges?.map(
+                (edge, index) => (
+                  <OpportunityLink
+                    key={index}
+                    opportunity={edge}
+                    setCurrentID={setCurrentID}
+                    setIsOpen={setIsOpen}
+                    index={index}
+                  />
+                )
+              )}
+            </section>
+          )}
         </div>
       </section>
       <Modal id={currentID} isOpen={isOpen} setIsOpen={setIsOpen} />

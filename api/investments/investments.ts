@@ -101,7 +101,7 @@ export const useInvestmentsByCategory = (
     fetchPolicy: "no-cache",
     nextFetchPolicy: "cache-and-network",
     variables: {
-      first: 5,
+      first: 50,
       terms: category,
     },
   });
@@ -121,7 +121,7 @@ export const useInvestments = () => {
     allInvestmentsVariables
   >(INVESTMENTS, {
     variables: {
-      first: 5,
+      first: 50,
       after: null,
     },
   });
