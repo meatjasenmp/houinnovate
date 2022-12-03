@@ -203,19 +203,29 @@ const ProjectBasedOpportunities = ({
           opportunitiesByCategoryError ? (
             <LoadingContainer />
           ) : (
-            <section className="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {opportunities?.projectBasedOpportunities?.edges?.map(
-                (edge, index) => (
-                  <OpportunityLink
-                    key={index}
-                    opportunity={edge}
-                    setCurrentID={setCurrentID}
-                    setIsOpen={setIsOpen}
-                    index={index}
-                  />
-                )
-              )}
-            </section>
+            <>
+              <div className="mt-2.5 flex justify-end">
+                <p className="text-sm mb-0">
+                  {opportunities?.projectBasedOpportunities?.edges?.length}{" "}
+                  {opportunities?.projectBasedOpportunities?.edges?.length === 1
+                    ? "Result"
+                    : "Results"}
+                </p>
+              </div>
+              <section className="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {opportunities?.projectBasedOpportunities?.edges?.map(
+                  (edge, index) => (
+                    <OpportunityLink
+                      key={index}
+                      opportunity={edge}
+                      setCurrentID={setCurrentID}
+                      setIsOpen={setIsOpen}
+                      index={index}
+                    />
+                  )
+                )}
+              </section>
+            </>
           )}
         </div>
       </section>

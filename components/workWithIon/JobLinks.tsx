@@ -33,8 +33,10 @@ const JobLinks = ({ data }: { data: allOpportunities | undefined }) => {
   return (
     <section>
       <div className="mt-2.5 flex justify-end">
-        {opportunities?.length}{" "}
-        {opportunities?.length === 1 ? "Result" : "Results"}
+        <p className="text-sm mb-0">
+          {opportunities?.length}{" "}
+          {opportunities?.length === 1 ? "Result" : "Results"}
+        </p>
       </div>
       <div className="max-w-[1170px] mt-6">
         {opportunities &&

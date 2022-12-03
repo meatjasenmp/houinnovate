@@ -211,17 +211,29 @@ const DirectCommunityInvestment = ({
           investmentsByCategoryError ? (
             <LoadingContainer />
           ) : (
-            <section className="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {investments?.communityInvestments?.edges?.map((edge, index) => (
-                <InvestmentLink
-                  key={index}
-                  investment={edge}
-                  setCurrentID={setCurrentID}
-                  setIsOpen={setIsOpen}
-                  index={index}
-                />
-              ))}
-            </section>
+            <>
+              <div className="mt-2.5 flex justify-end">
+                <p className="text-sm mb-0">
+                  {investments?.communityInvestments?.edges?.length}{" "}
+                  {investments?.communityInvestments?.edges?.length === 1
+                    ? "Result"
+                    : "Results"}
+                </p>
+              </div>
+              <section className="my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {investments?.communityInvestments?.edges?.map(
+                  (edge, index) => (
+                    <InvestmentLink
+                      key={index}
+                      investment={edge}
+                      setCurrentID={setCurrentID}
+                      setIsOpen={setIsOpen}
+                      index={index}
+                    />
+                  )
+                )}
+              </section>
+            </>
           )}
         </div>
       </section>
