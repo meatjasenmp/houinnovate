@@ -61,6 +61,7 @@ export const useScrollToSection = (
         offset: offset ? offset : 0,
         smooth: "easeInOutQuart",
       });
+      history.pushState(null, "", `/`);
     }
   }, []);
 };

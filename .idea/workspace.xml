@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Updating next config. Updating Investments and Project opportunities to nuke load more functionality. Will not fetch a max of 50 entries. Leaving load more in but commented out just in case this need to be implemented in the future. Phases now has one default active state. Index of 0.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Updating inputs hubspot form inputs so they do not have rounded corners. Updating useScroll hook to handle offset.">
       <change beforePath="$PROJECT_DIR$/components/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/helpers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/workWithIon/WorkWithIon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/WorkWithIon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,14 +133,7 @@
       <workItem from="1669144168999" duration="36693000" />
       <workItem from="1669727489103" duration="619000" />
       <workItem from="1669793084966" duration="3249000" />
-      <workItem from="1670085264533" duration="2496000" />
-    </task>
-    <task id="LOCAL-00093" summary="Fixing UI bug w/ 'show more' being displayed when there were no more results to be fetched.">
-      <created>1668481050654</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1668481050654</updated>
+      <workItem from="1670085264533" duration="2799000" />
     </task>
     <task id="LOCAL-00094" summary="Adding plays inline prop.">
       <created>1668560699732</created>
@@ -481,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670091026014</updated>
     </task>
-    <option name="localTasksCounter" value="142" />
+    <task id="LOCAL-00142" summary="Updating inputs hubspot form inputs so they do not have rounded corners. Updating useScroll hook to handle offset.">
+      <created>1670091769006</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1670091769006</updated>
+    </task>
+    <option name="localTasksCounter" value="143" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,7 +498,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Never mind. I'm dumb." />
     <MESSAGE value="Updating phases" />
     <MESSAGE value="Responsive tweaks." />
     <MESSAGE value="Desktop tweaks." />
@@ -526,7 +522,8 @@
     <MESSAGE value="Phases animations" />
     <MESSAGE value="Deployed progress bar animation" />
     <MESSAGE value="Updating next config. Updating Investments and Project opportunities to nuke load more functionality. Will not fetch a max of 50 entries. Leaving load more in but commented out just in case this need to be implemented in the future. Phases now has one default active state. Index of 0." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating next config. Updating Investments and Project opportunities to nuke load more functionality. Will not fetch a max of 50 entries. Leaving load more in but commented out just in case this need to be implemented in the future. Phases now has one default active state. Index of 0." />
+    <MESSAGE value="Updating inputs hubspot form inputs so they do not have rounded corners. Updating useScroll hook to handle offset." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating inputs hubspot form inputs so they do not have rounded corners. Updating useScroll hook to handle offset." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
