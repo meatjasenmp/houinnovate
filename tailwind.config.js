@@ -23,6 +23,9 @@ module.exports = {
     "text-innovate-white",
     "text-kraftigBold",
   ],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   theme: {
     fontFamily: {
       body: ["Sohne-Kraftig-Normal", "sans-serif"],

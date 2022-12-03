@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Clearing query param after scroll.">
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Opportunity and investment link animations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ContentBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContentBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProgressBarSmall.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProgressBarSmall.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/investments/InvestmentLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/InvestmentLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/workWithIon/JobLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/JobLink.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,14 +134,7 @@
       <workItem from="1669144168999" duration="36693000" />
       <workItem from="1669727489103" duration="619000" />
       <workItem from="1669793084966" duration="3249000" />
-      <workItem from="1670085264533" duration="4356000" />
-    </task>
-    <task id="LOCAL-00096" summary="Adding tint for more contrast.">
-      <created>1668566507572</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1668566507572</updated>
+      <workItem from="1670085264533" duration="5839000" />
     </task>
     <task id="LOCAL-00097" summary="Responsive fixes for video banner.">
       <created>1668568285717</created>
@@ -481,7 +472,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670092411624</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <task id="LOCAL-00145" summary="Opportunity and investment link animations">
+      <created>1670093749451</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1670093749451</updated>
+    </task>
+    <option name="localTasksCounter" value="146" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,7 +499,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Responsive tweaks." />
     <MESSAGE value="Desktop tweaks." />
     <MESSAGE value="Job post updates." />
     <MESSAGE value="Show More buttons" />
@@ -526,7 +523,8 @@
     <MESSAGE value="Updating next config. Updating Investments and Project opportunities to nuke load more functionality. Will not fetch a max of 50 entries. Leaving load more in but commented out just in case this need to be implemented in the future. Phases now has one default active state. Index of 0." />
     <MESSAGE value="Updating inputs hubspot form inputs so they do not have rounded corners. Updating useScroll hook to handle offset." />
     <MESSAGE value="Clearing query param after scroll." />
-    <option name="LAST_COMMIT_MESSAGE" value="Clearing query param after scroll." />
+    <MESSAGE value="Opportunity and investment link animations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Opportunity and investment link animations" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
