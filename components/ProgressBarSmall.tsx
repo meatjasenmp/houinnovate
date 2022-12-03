@@ -1,5 +1,4 @@
 import { backgroundColorMapping, Colors } from "../styles/helpers";
-
 import { Phase } from "./helpers";
 
 const progressBarPercentage = (currentPhase: string | null | undefined) => {
@@ -22,19 +21,19 @@ const progressBarPercentage = (currentPhase: string | null | undefined) => {
 const ProgressBarSmall = ({
   currentPhase,
   accent,
-  height,
 }: {
   currentPhase: string | null | undefined;
   accent: Colors;
-  height?: string;
 }) => {
-  console.log(currentPhase);
   return (
     <div className="bg-innovate-gray-2">
       <div
-        className={backgroundColorMapping(accent)}
+        className={[
+          backgroundColorMapping(accent),
+          "progress_bar_animated",
+        ].join(" ")}
         style={{
-          width: `${progressBarPercentage(currentPhase)}`,
+          width: progressBarPercentage(currentPhase),
           height: "20px",
         }}
       ></div>

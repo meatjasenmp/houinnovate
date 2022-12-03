@@ -22,27 +22,25 @@ const InvestmentLink = ({
 }: InvestmentLinkProps) => {
   const buttonRef = useRef<HTMLButtonElement>(null);
 
-  // useEffect(() => {
-  //   if (buttonRef.current) {
-  //     const duration = 0.1;
-  //     const hold = 0.05;
-  //     const ctx = gsap.context(() => {
-  //       const tl = gsap.timeline({
-  //         delay: duration * index + hold * index,
-  //         scrollTrigger: {
-  //           trigger: buttonRef.current,
-  //           markers: true,
-  //         },
-  //       });
-  //       tl.from(buttonRef.current, { y: 20, opacity: 0 });
-  //       tl.to(buttonRef.current, { y: 0, opacity: 1 });
-  //     }, buttonRef.current);
-  //
-  //     return () => {
-  //       ctx.revert();
-  //     };
-  //   }
-  // }, [investment]);
+  useEffect(() => {
+    if (buttonRef.current) {
+      const duration = 0.02;
+      const hold = 0.01;
+      const ctx = gsap.context(() => {
+        const tl = gsap.timeline({
+          delay: duration * index + hold * index,
+          scrollTrigger: {
+            trigger: buttonRef.current,
+          },
+        });
+        tl.to(buttonRef.current, { y: 0, opacity: 1 });
+      }, buttonRef.current);
+
+      return () => {
+        ctx.revert();
+      };
+    }
+  }, [investment]);
 
   const { title, databaseId, slug, communityAndOpportunityPopUps } =
     investment?.node || {};
@@ -65,7 +63,7 @@ const InvestmentLink = ({
     <button
       ref={buttonRef}
       onClick={handleClick}
-      className={`block text-left flex flex-col justify-between border duration-300 ease-linear hover:bg-innovate-neon/50 hover:drop-shadow-md hover:border-innovate-smoke-gray ${
+      className={`block translate-y-3 opacity-0 text-left flex flex-col justify-between border duration-300 ease-linear hover:bg-innovate-neon/50 hover:drop-shadow-md hover:border-innovate-smoke-gray ${
         progress?.currentPhase === Phase.COMPLETION
           ? "bg-innovate-neon"
           : "bg-innovate-gray"

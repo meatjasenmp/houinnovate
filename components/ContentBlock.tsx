@@ -36,9 +36,9 @@ const ContentBlock = ({ blockContent }: ComponentBlocksProps) => {
         targets.map((target: any, index) => {
           const tl = gsap.timeline({
             delay: duration * index + hold * index,
-            paused: true,
             scrollTrigger: {
               trigger: target,
+              markers: true,
             },
           });
           tl.from(target, { y: 20, opacity: 0 });
@@ -56,7 +56,9 @@ const ContentBlock = ({ blockContent }: ComponentBlocksProps) => {
   return (
     <section className="mt-5 full-screen" id={String(scrollId)}>
       <div
-        className={`py-24 px-8 ${backgroundColorMapping(backgroundColor)}`}
+        className={`py-24 px-8 ${scrollId} ${backgroundColorMapping(
+          backgroundColor
+        )}`}
         ref={contentBlockRef}
       >
         {contentType === contentTypes.ContentBlock && contentBlockContent && (

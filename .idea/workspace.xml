@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Clearing query param after scroll.">
-      <change beforePath="$PROJECT_DIR$/components/jobPosting/JobPosting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/jobPosting/JobPosting.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ContentBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContentBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ProgressBarSmall.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProgressBarSmall.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/investments/InvestmentLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/InvestmentLink.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,14 +136,7 @@
       <workItem from="1669144168999" duration="36693000" />
       <workItem from="1669727489103" duration="619000" />
       <workItem from="1669793084966" duration="3249000" />
-      <workItem from="1670085264533" duration="3171000" />
-    </task>
-    <task id="LOCAL-00095" summary="UI fixes. Responsive tweaks.">
-      <created>1668566328420</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1668566328420</updated>
+      <workItem from="1670085264533" duration="4356000" />
     </task>
     <task id="LOCAL-00096" summary="Adding tint for more contrast.">
       <created>1668566507572</created>
@@ -478,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670091942603</updated>
     </task>
-    <option name="localTasksCounter" value="144" />
+    <task id="LOCAL-00144" summary="Clearing query param after scroll.">
+      <created>1670092411624</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1670092411624</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
