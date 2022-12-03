@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Deployed progress bar animation">
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Updating next config. Updating Investments and Project opportunities to nuke load more functionality. Will not fetch a max of 50 entries. Leaving load more in but commented out just in case this need to be implemented in the future. Phases now has one default active state. Index of 0.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/investments/investments.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/investments/investments.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Phases.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Phases.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/opportunities/ProjectBasedOpportunities.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/ProjectBasedOpportunities.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/workWithIon/JobCategorySelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/JobCategorySelect.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/helpers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/workWithIon/WorkWithIon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/WorkWithIon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,14 +136,7 @@
       <workItem from="1669144168999" duration="36693000" />
       <workItem from="1669727489103" duration="619000" />
       <workItem from="1669793084966" duration="3249000" />
-      <workItem from="1670085264533" duration="1657000" />
-    </task>
-    <task id="LOCAL-00092" summary="Fixing bug in select UI where state wasn't properly updating when categories/options were loaded.">
-      <created>1668478928587</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1668478928587</updated>
+      <workItem from="1670085264533" duration="2496000" />
     </task>
     <task id="LOCAL-00093" summary="Fixing UI bug w/ 'show more' being displayed when there were no more results to be fetched.">
       <created>1668481050654</created>
@@ -484,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669796026454</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="Updating next config. Updating Investments and Project opportunities to nuke load more functionality. Will not fetch a max of 50 entries. Leaving load more in but commented out just in case this need to be implemented in the future. Phases now has one default active state. Index of 0.">
+      <created>1670091026014</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1670091026014</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -504,7 +501,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Apparently the hubspot library hates environment variables." />
     <MESSAGE value="Never mind. I'm dumb." />
     <MESSAGE value="Updating phases" />
     <MESSAGE value="Responsive tweaks." />
@@ -529,7 +525,8 @@
     <MESSAGE value="Stylized block animations" />
     <MESSAGE value="Phases animations" />
     <MESSAGE value="Deployed progress bar animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deployed progress bar animation" />
+    <MESSAGE value="Updating next config. Updating Investments and Project opportunities to nuke load more functionality. Will not fetch a max of 50 entries. Leaving load more in but commented out just in case this need to be implemented in the future. Phases now has one default active state. Index of 0." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating next config. Updating Investments and Project opportunities to nuke load more functionality. Will not fetch a max of 50 entries. Leaving load more in but commented out just in case this need to be implemented in the future. Phases now has one default active state. Index of 0." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

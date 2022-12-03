@@ -169,6 +169,8 @@
 
 /* Hubspot Job Form */
 #hubspot-job-form-wrapper input:not([type="submit"]) {
+    -webkit-appearance: none;
+    border-radius: 0;
     @apply w-full pb-2 bg-transparent border-0 border-b-2 border-white text-white text-sm focus:outline-none focus:border-black;
 }
 

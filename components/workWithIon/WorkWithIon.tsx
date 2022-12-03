@@ -13,7 +13,7 @@ const WorkWithIon = ({ blockContent }: WorkWithIonProps) => {
   const contentWrapper = useRef<HTMLDivElement>(null);
   const { workWithIonContent, cta, scrollId, selectText } = blockContent;
 
-  useScrollToSection(scrollId);
+  useScrollToSection(scrollId, 500);
 
   useEffect(() => {
     if (contentWrapper.current) {

@@ -46,7 +46,10 @@ export const handleScroll = (to: string | null | undefined) => {
   });
 };
 
-export const useScrollToSection = (section: string | null | undefined) => {
+export const useScrollToSection = (
+  section: string | null | undefined,
+  offset?: number
+) => {
   const router = useRouter();
   const { scrollTo } = router.query;
 
@@ -55,6 +58,7 @@ export const useScrollToSection = (section: string | null | undefined) => {
       scroller.scrollTo(String(scrollTo), {
         duration: 800,
         delay: 0,
+        offset: offset ? offset : 0,
         smooth: "easeInOutQuart",
       });
     }
