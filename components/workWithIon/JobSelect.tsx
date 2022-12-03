@@ -8,6 +8,8 @@ import { Options } from "../helpers";
 import JobLinks from "./JobLinks";
 import ShowMoreButton from "../ShowMoreButton";
 import { allOpportunities } from "../../api/opportunities/__generated__/allOpportunities";
+import LoadingSpinner from "../LoadingSpinner";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const JobSelect = () => {
   const [selectedOption, setSelectedOption] = useState<Options>();
@@ -30,12 +32,15 @@ const JobSelect = () => {
   const {
     getOpportunities,
     data: opportunitiesByCategoryData,
+    error: opportunitiesByCategoryError,
+    loading: opportunitiesByCategoryLoading,
     fetchMore: fetchMoreByCategory,
   } = useJobOpportunitiesByCategory(currentCategory);
 
   useEffect(() => {
     if (opportunitiesData) {
       setOpportunities(opportunitiesData);
+      ScrollTrigger.refresh();
     }
   }, [opportunitiesData]);
 
@@ -43,6 +48,7 @@ const JobSelect = () => {
     if (currentCategory && String(currentCategory) !== "all") {
       getOpportunities().then((data) => {
         setOpportunities(data.data);
+        ScrollTrigger.refresh();
       });
       return;
     }
@@ -54,17 +60,6 @@ const JobSelect = () => {
   const { pageInfo } = opportunitiesData?.iONJobs || {};
   const { pageInfo: categoryPageInfo } =
     opportunitiesByCategoryData?.iONJobs || {};
-
-  const Loading = () => {
-    if (showLoadLoader) {
-      return (
-        <div>
-          <p>Loading...</p>
-        </div>
-      );
-    }
-    return <></>;
-  };
 
   const handleLoadMoreOpportunities = () => {
     setShowLoader(true);
@@ -102,6 +97,16 @@ const JobSelect = () => {
       });
   };
 
+  const LoadingContainer = () => {
+    return (
+      <div className="w-full flex justify-center items-center h-[200px]">
+        <div className="w-8 h-8">
+          <LoadingSpinner fill="black" />
+        </div>
+      </div>
+    );
+  };
+
   const ShowMore = () => {
     if (categoryPageInfo?.hasNextPage && String(currentCategory) !== "all") {
       return (
@@ -116,7 +121,6 @@ const JobSelect = () => {
               Show More Jobs
             </ShowMoreButton>
           </div>
-          <Loading />
         </>
       );
     }
@@ -133,7 +137,6 @@ const JobSelect = () => {
               Show More Jobs
             </ShowMoreButton>
           </div>
-          <Loading />
         </>
       );
     }
@@ -149,8 +152,11 @@ const JobSelect = () => {
         setSelectedOption={setSelectedOption}
         setCategory={setCurrentCategory}
       />
-      {opportunitiesLoading || opportunitiesError ? (
-        <Loading />
+      {opportunitiesLoading ||
+      opportunitiesByCategoryLoading ||
+      opportunitiesError ||
+      opportunitiesByCategoryError ? (
+        <LoadingContainer />
       ) : (
         <>
           <JobLinks data={opportunities} />

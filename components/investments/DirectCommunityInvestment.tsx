@@ -15,6 +15,7 @@ import { Colors } from "../../styles/helpers";
 import { Options, ModalType } from "../helpers";
 import { allInvestments } from "../../api/investments/__generated__/allInvestments";
 import LoadingSpinner from "../LoadingSpinner";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 interface DirectCommunityInvestmentProps {
   blockContent: page_page_components_componentBlocks_Page_Components_ComponentBlocks_CommunityInvestment;
@@ -83,6 +84,7 @@ const DirectCommunityInvestment = ({
   useEffect(() => {
     if (investmentsData) {
       setInvestments(investmentsData);
+      ScrollTrigger.refresh();
     }
   }, [investmentsData]);
 
@@ -90,6 +92,7 @@ const DirectCommunityInvestment = ({
     if (currentCategory && String(currentCategory) !== "all") {
       getInvestments().then((data) => {
         setInvestments(data.data);
+        ScrollTrigger.refresh();
       });
       return;
     }

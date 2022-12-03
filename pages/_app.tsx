@@ -9,8 +9,7 @@ import { Toaster } from "react-hot-toast";
 import ReactModal from "react-modal";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { ScrollSmoother } from "gsap/dist/ScrollSmoother";
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger);
 
 const cache = new InMemoryCache({
   typePolicies: {

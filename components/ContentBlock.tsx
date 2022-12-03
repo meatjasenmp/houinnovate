@@ -37,6 +37,7 @@ const ContentBlock = ({ blockContent }: ComponentBlocksProps) => {
           const tl = gsap.timeline({
             delay: duration * index + hold * index,
             scrollTrigger: {
+              start: scrollId === "engage" ? "top bottom-=200px" : "top bottom",
               trigger: target,
             },
           });
@@ -48,7 +49,7 @@ const ContentBlock = ({ blockContent }: ComponentBlocksProps) => {
         ctx.revert();
       };
     }
-  }, [blockContent]);
+  }, [contentBlockContent]);
 
   if (!blockContent) return null;
 

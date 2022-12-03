@@ -14,6 +14,7 @@ import { ModalType, Options } from "../helpers";
 import { allProjectOpportunities } from "../../api/opportunities/__generated__/allProjectOpportunities";
 import { useRouter } from "next/router";
 import LoadingSpinner from "../LoadingSpinner";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 interface ProjectBasedOpportunitiesProps {
   blockContent: page_page_components_componentBlocks_Page_Components_ComponentBlocks_ProjectBasedOpportunities;
@@ -84,6 +85,7 @@ const ProjectBasedOpportunities = ({
   useEffect(() => {
     if (opportunitiesData) {
       setOpportunities(opportunitiesData);
+      ScrollTrigger.refresh();
     }
   }, [opportunitiesData]);
 
@@ -105,6 +107,7 @@ const ProjectBasedOpportunities = ({
     if (currentCategory && String(currentCategory) !== "all") {
       getOpportunities().then((data) => {
         setOpportunities(data.data);
+        ScrollTrigger.refresh();
       });
       return;
     }
