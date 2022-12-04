@@ -3,7 +3,7 @@ import type { AppProps } from "next/app";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { HubspotProvider } from "next-hubspot";
 import Layout from "../components/Layout";
-import React, { useEffect } from "react";
+import React from "react";
 import { relayStylePagination } from "@apollo/client/utilities";
 import { Toaster } from "react-hot-toast";
 import ReactModal from "react-modal";
@@ -24,7 +24,7 @@ const cache = new InMemoryCache({
 });
 
 const client = new ApolloClient({
-  uri: process.env.NEXT_PUBLIC_API_URL,
+  uri: process.env.NEXT_PUBLIC_API_PRODUCTION_URL,
   cache: cache,
 });
 

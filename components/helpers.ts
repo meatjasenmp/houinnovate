@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 import { scroller } from "react-scroll";
 import { useRouter } from "next/router";
 import { jobCategories_jobCategories_edges } from "../api/jobs/__generated__/jobCategories";
@@ -19,6 +19,26 @@ export enum ModalType {
   OPPORTUNITY = "opportunity",
   INVESTMENT = "investment",
 }
+
+export const useDocumentTitle = (
+  title: string,
+  prevailOnUnmount: boolean = false
+) => {
+  const defaultTitle = useRef(document.title);
+
+  useEffect(() => {
+    document.title = `${title} | ${defaultTitle.current} `;
+  }, [title]);
+
+  useEffect(
+    () => () => {
+      if (!prevailOnUnmount) {
+        document.title = defaultTitle.current;
+      }
+    },
+    []
+  );
+};
 
 export const formatPostDate = (date: string | null | undefined) => {
   if (!date) return;
@@ -79,6 +99,7 @@ export const useScrollToSection = (
         delay: 300,
         offset: offset ? offset : 0,
         smooth: "easeInOutQuart",
+        dynamic: true,
       });
       history.pushState(null, "", `/`);
     }

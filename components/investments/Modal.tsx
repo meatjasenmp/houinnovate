@@ -6,7 +6,7 @@ import { IoClose } from "@react-icons/all-files/io5/IoClose";
 import { useInvestment } from "../../api/investments/investment";
 import ContentEditor from "../ContentEditor";
 import { Colors } from "../../styles/helpers";
-import { Phase } from "../helpers";
+import { Phase, useDocumentTitle } from "../helpers";
 import { gsap } from "gsap";
 import { communityInvestment } from "../../api/investments/__generated__/communityInvestment";
 
@@ -29,6 +29,8 @@ const ModalContent = ({ data }: { data: communityInvestment | undefined }) => {
   const { communityInvestment } = data || {};
   const { progress, alphanumericLabel, contentBlocks, dataFields } =
     communityInvestment?.communityAndOpportunityPopUps || {};
+
+  useDocumentTitle(communityInvestment?.title || "");
 
   useEffect(() => {
     if (contentRef.current) {

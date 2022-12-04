@@ -16,6 +16,7 @@
     "gsap": "file:gsap-bonus.tgz",
     "next": "12.3.1",
     "next-hubspot": "^1.0.6",
+    "next-seo": "^5.15.0",
     "react": "18.2.0",
     "react-burger-menu": "^3.0.8",
     "react-dom": "18.2.0",

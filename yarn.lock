@@ -4604,6 +4604,11 @@ next-hubspot@^1.0.6:
   resolved "https://registry.yarnpkg.com/next-hubspot/-/next-hubspot-1.0.6.tgz#87b1ed63f7f89109b7b5919812abf2a5ffda9eb8"
   integrity sha512-Bi+tZ9iauCnY/tvzJekEgZz9UeB1Ebo0ne+N/C4TRwLhH7sebEsNU0fiycsD7dJracCWROZ1XB8pPuy4n8H4oQ==
 
+next-seo@^5.15.0:
+  version "5.15.0"
+  resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-5.15.0.tgz#b1a90508599774982909ea44803323c6fb7b50f4"
+  integrity sha512-LGbcY91yDKGMb7YI+28n3g+RuChUkt6pXNpa8FkfKkEmNiJkeRDEXTnnjVtwT9FmMhG6NH8qwHTelGrlYm9rgg==
+
 next@12.3.1:
   version "12.3.1"
   resolved "https://registry.yarnpkg.com/next/-/next-12.3.1.tgz#127b825ad2207faf869b33393ec8c75fe61e50f1"
