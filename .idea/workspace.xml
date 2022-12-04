@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Fixing bug with modal progress percentage.">
-      <change afterPath="$PROJECT_DIR$/public/sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/helpers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/investments/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/Modal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/opportunities/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/Modal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="SEO.">
       <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,14 +133,7 @@
       <workItem from="1669144168999" duration="36693000" />
       <workItem from="1669727489103" duration="619000" />
       <workItem from="1669793084966" duration="3249000" />
-      <workItem from="1670085264533" duration="14701000" />
-    </task>
-    <task id="LOCAL-00102" summary="Refactoring Jobs Select, misc changes.">
-      <created>1668883279240</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1668883279240</updated>
+      <workItem from="1670085264533" duration="15097000" />
     </task>
     <task id="LOCAL-00103" summary="Refactoring Jobs Select, misc changes.">
       <created>1668883286905</created>
@@ -487,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670165699495</updated>
     </task>
-    <option name="localTasksCounter" value="151" />
+    <task id="LOCAL-00151" summary="SEO.">
+      <created>1670174380658</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1670174380658</updated>
+    </task>
+    <option name="localTasksCounter" value="152" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,7 +498,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="First pass at scroll trigger animations." />
     <MESSAGE value="Animation debugging." />
     <MESSAGE value="Smooth scroll implementation." />
     <MESSAGE value="Misc. tweaks." />
@@ -532,7 +522,8 @@
     <MESSAGE value="Results count." />
     <MESSAGE value="Icon positioning adjustment." />
     <MESSAGE value="Fixing bug with modal progress percentage." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing bug with modal progress percentage." />
+    <MESSAGE value="SEO." />
+    <option name="LAST_COMMIT_MESSAGE" value="SEO." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
