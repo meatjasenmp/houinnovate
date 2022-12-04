@@ -3,7 +3,7 @@ import { useQuery, gql } from "@apollo/client";
 import {
   communityInvestment,
   communityInvestmentVariables,
-} from "../__generated__/communityInvestment";
+} from "./__generated__/communityInvestment";
 
 export const useInvestment = (id: string) => {
   const { data, loading, error } = useQuery<
