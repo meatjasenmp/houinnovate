@@ -44,7 +44,7 @@ export interface communityInvestment_communityInvestment_communityAndOpportunity
 export interface communityInvestment_communityInvestment {
   __typename: "CommunityInvestment";
   /**
-   * The unique resource identifier path
+   * The unique identifier stored in the database
    */
   databaseId: number;
   /**

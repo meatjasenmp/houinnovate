@@ -38,6 +38,14 @@ const ProjectBasedOpportunities = ({
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   useEffect(() => {
+    if (!isOpen) {
+      document
+        ?.querySelector("body")
+        ?.classList.remove("ReactModal__Body--open");
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
     if (query.id && query.modalType === ModalType.OPPORTUNITY) {
       setCurrentID(Number(query.id));
       setIsOpen(true);

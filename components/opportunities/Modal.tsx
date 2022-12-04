@@ -129,7 +129,7 @@ const ModalContent = ({
 };
 
 const Modal = ({ id, isOpen, setIsOpen }: ModalProps) => {
-  const { data, loading } = useOpportunity(String(id));
+  const { data, loading, error } = useOpportunity(String(id));
   const { projectBasedOpportunity } = data || {};
   const { progress } =
     projectBasedOpportunity?.communityAndOpportunityPopUps || {};
@@ -152,9 +152,7 @@ const Modal = ({ id, isOpen, setIsOpen }: ModalProps) => {
           <IoClose size="2rem" />
         </button>
 
-        {loading && <LoadingContainer />}
-
-        {!loading && <ModalContent data={data} />}
+        {loading || error ? <LoadingContainer /> : <ModalContent data={data} />}
       </div>
     </ReactModal>
   );

@@ -59,7 +59,7 @@ export interface allProjectOpportunities_projectBasedOpportunities_edges_node {
    */
   title: string | null;
   /**
-   * The unique resource identifier path
+   * The unique identifier stored in the database
    */
   databaseId: number;
   /**
@@ -77,7 +77,7 @@ export interface allProjectOpportunities_projectBasedOpportunities_edges {
   /**
    * The item at the end of the edge
    */
-  node: allProjectOpportunities_projectBasedOpportunities_edges_node | null;
+  node: allProjectOpportunities_projectBasedOpportunities_edges_node;
 }
 
 export interface allProjectOpportunities_projectBasedOpportunities {
@@ -89,7 +89,7 @@ export interface allProjectOpportunities_projectBasedOpportunities {
   /**
    * Edges for the RootQueryToProjectBasedOpportunityConnection connection
    */
-  edges: (allProjectOpportunities_projectBasedOpportunities_edges | null)[] | null;
+  edges: allProjectOpportunities_projectBasedOpportunities_edges[];
 }
 
 export interface allProjectOpportunities {

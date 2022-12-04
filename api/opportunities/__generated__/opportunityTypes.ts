@@ -20,13 +20,13 @@ export interface opportunityTypes_opportunityTypes_edges_node_pages {
   /**
    * The nodes of the connection, without the edges
    */
-  nodes: (opportunityTypes_opportunityTypes_edges_node_pages_nodes | null)[] | null;
+  nodes: opportunityTypes_opportunityTypes_edges_node_pages_nodes[];
 }
 
 export interface opportunityTypes_opportunityTypes_edges_node {
   __typename: "OpportunityType";
   /**
-   * The unique resource identifier path
+   * The unique identifier stored in the database
    */
   databaseId: number;
   /**
@@ -48,7 +48,7 @@ export interface opportunityTypes_opportunityTypes_edges {
   /**
    * The item at the end of the edge
    */
-  node: opportunityTypes_opportunityTypes_edges_node | null;
+  node: opportunityTypes_opportunityTypes_edges_node;
 }
 
 export interface opportunityTypes_opportunityTypes {
@@ -56,7 +56,7 @@ export interface opportunityTypes_opportunityTypes {
   /**
    * Edges for the RootQueryToOpportunityTypeConnection connection
    */
-  edges: (opportunityTypes_opportunityTypes_edges | null)[] | null;
+  edges: opportunityTypes_opportunityTypes_edges[];
 }
 
 export interface opportunityTypes {

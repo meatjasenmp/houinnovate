@@ -1,17 +1,24 @@
-import Link from "next/link";
-import { Opportunity } from "./JobLinks";
 import React, { useEffect, useRef } from "react";
 import ArrowLinkIcon from "../ArrowLinkIcon";
 import styles from "../../styles/components/JobLink.module.css";
 import { gsap } from "gsap";
+import { ModalType } from "../helpers";
+import { allOpportunities_iONJobs_edges } from "../../api/jobs/__generated__/allOpportunities";
 
 interface JobLinkProps {
-  job: Opportunity;
+  job: allOpportunities_iONJobs_edges;
   index: number;
+  setCurrentID: React.Dispatch<React.SetStateAction<number | undefined>>;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export const JobLink = ({ job, index }: JobLinkProps) => {
-  const linkRef = useRef<HTMLAnchorElement>(null);
+export const JobLink = ({
+  job,
+  index,
+  setCurrentID,
+  setIsOpen,
+}: JobLinkProps) => {
+  const linkRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     if (linkRef.current) {
@@ -34,24 +41,32 @@ export const JobLink = ({ job, index }: JobLinkProps) => {
   }, [job]);
 
   if (!job) return <></>;
-  const { title, databaseId } = job;
+  const { title, databaseId, slug } = job.node;
+
+  const handleClick = () => {
+    setCurrentID(databaseId);
+    setIsOpen(true);
+    history.pushState(
+      null,
+      "",
+      `/?job=${slug}&modalType=${ModalType.JOB}&id=${databaseId}`
+    );
+  };
+
   return (
-    <Link
-      href={{ pathname: `/jobs/${databaseId}`, query: { pageTitle: title } }}
+    <button
+      onClick={handleClick}
+      ref={linkRef}
+      className={[
+        "w-full flex translate-y-3 opacity-0 justify-between items-center bg-innovate-tan font-kraftigBold text-xl p-3.5 mb-1.5 last:mb-0",
+        styles.job_link,
+      ].join(" ")}
     >
-      <a
-        ref={linkRef}
-        className={[
-          "flex translate-y-3 opacity-0 justify-between items-center bg-innovate-tan font-kraftigBold text-xl p-3.5 mb-1.5 last:mb-0",
-          styles.job_link,
-        ].join(" ")}
-      >
-        <span>{title}</span>
-        <figure className="w-8">
-          <ArrowLinkIcon />
-        </figure>
-      </a>
-    </Link>
+      <span>{title}</span>
+      <figure className="w-8">
+        <ArrowLinkIcon />
+      </figure>
+    </button>
   );
 };
 

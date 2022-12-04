@@ -37,6 +37,14 @@ const DirectCommunityInvestment = ({
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   useEffect(() => {
+    if (!isOpen) {
+      document
+        ?.querySelector("body")
+        ?.classList.remove("ReactModal__Body--open");
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
     if (query.id && query.modalType === ModalType.INVESTMENT) {
       setCurrentID(Number(query.id));
       setIsOpen(true);

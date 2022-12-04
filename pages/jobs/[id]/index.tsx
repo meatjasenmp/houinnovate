@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import JobPosting from "../../../components/jobPosting/JobPosting";
+import JobPosting from "../../../components/workWithIon/JobPosting";
 import Head from "next/head";
 import React from "react";
 

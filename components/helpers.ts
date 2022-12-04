@@ -18,6 +18,7 @@ export enum Components {
 export enum ModalType {
   OPPORTUNITY = "opportunity",
   INVESTMENT = "investment",
+  JOB = "job",
 }
 
 export const useDocumentTitle = (
@@ -83,27 +84,6 @@ export const handleScroll = (to: string | null | undefined) => {
     delay: 0,
     smooth: "easeInOutQuart",
   });
-};
-
-export const useScrollToSection = (
-  section: string | null | undefined,
-  offset?: number
-) => {
-  const router = useRouter();
-  const { scrollTo } = router.query;
-
-  useEffect(() => {
-    if (scrollTo && scrollTo === section) {
-      scroller.scrollTo(String(scrollTo), {
-        duration: 800,
-        delay: 300,
-        offset: offset ? offset : 0,
-        smooth: "easeInOutQuart",
-        isDynamic: true,
-      });
-      history.pushState(null, "", `/`);
-    }
-  }, []);
 };
 
 export interface Options {

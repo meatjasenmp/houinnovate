@@ -20,13 +20,13 @@ export interface jobCategories_jobCategories_edges_node_pages {
   /**
    * The nodes of the connection, without the edges
    */
-  nodes: (jobCategories_jobCategories_edges_node_pages_nodes | null)[] | null;
+  nodes: jobCategories_jobCategories_edges_node_pages_nodes[];
 }
 
 export interface jobCategories_jobCategories_edges_node {
   __typename: "JobCategory";
   /**
-   * The unique resource identifier path
+   * The unique identifier stored in the database
    */
   databaseId: number;
   /**
@@ -48,7 +48,7 @@ export interface jobCategories_jobCategories_edges {
   /**
    * The item at the end of the edge
    */
-  node: jobCategories_jobCategories_edges_node | null;
+  node: jobCategories_jobCategories_edges_node;
 }
 
 export interface jobCategories_jobCategories {
@@ -56,7 +56,7 @@ export interface jobCategories_jobCategories {
   /**
    * Edges for the RootQueryToJobCategoryConnection connection
    */
-  edges: (jobCategories_jobCategories_edges | null)[] | null;
+  edges: jobCategories_jobCategories_edges[];
 }
 
 export interface jobCategories {

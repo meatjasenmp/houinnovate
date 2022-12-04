@@ -2,7 +2,7 @@ import { useQuery, useLazyQuery, gql } from "@apollo/client";
 import {
   allOpportunities,
   allOpportunitiesVariables,
-} from "../opportunities/__generated__/allOpportunities";
+} from "./__generated__/allOpportunities";
 import {
   opportunitiesByCategory,
   opportunitiesByCategoryVariables,
@@ -29,6 +29,7 @@ const OPPORTUNITIES_BY_CATEGORY = gql`
         node {
           title
           databaseId
+          slug
         }
       }
     }
@@ -46,6 +47,7 @@ const OPPORTUNITIES = gql`
         node {
           title
           databaseId
+          slug
         }
       }
     }

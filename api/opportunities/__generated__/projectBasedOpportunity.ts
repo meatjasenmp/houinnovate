@@ -44,7 +44,7 @@ export interface projectBasedOpportunity_projectBasedOpportunity_communityAndOpp
 export interface projectBasedOpportunity_projectBasedOpportunity {
   __typename: "ProjectBasedOpportunity";
   /**
-   * The unique resource identifier path
+   * The unique identifier stored in the database
    */
   databaseId: number;
   /**

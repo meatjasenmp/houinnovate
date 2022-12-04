@@ -59,7 +59,7 @@ export interface investmentsByCategory_communityInvestments_edges_node {
    */
   title: string | null;
   /**
-   * The unique resource identifier path
+   * The unique identifier stored in the database
    */
   databaseId: number;
   /**
@@ -77,7 +77,7 @@ export interface investmentsByCategory_communityInvestments_edges {
   /**
    * The item at the end of the edge
    */
-  node: investmentsByCategory_communityInvestments_edges_node | null;
+  node: investmentsByCategory_communityInvestments_edges_node;
 }
 
 export interface investmentsByCategory_communityInvestments {
@@ -89,7 +89,7 @@ export interface investmentsByCategory_communityInvestments {
   /**
    * Edges for the RootQueryToCommunityInvestmentConnection connection
    */
-  edges: (investmentsByCategory_communityInvestments_edges | null)[] | null;
+  edges: investmentsByCategory_communityInvestments_edges[];
 }
 
 export interface investmentsByCategory {

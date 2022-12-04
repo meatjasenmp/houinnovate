@@ -1,20 +1,17 @@
 import React, { useEffect, useRef } from "react";
-import { useRouter } from "next/router";
-import useJob from "../../api/jobs/job";
 import ContentEditor from "../ContentEditor";
 import { BiArrowToTop } from "@react-icons/all-files/bi/BiArrowToTop";
 import { FaArrowLeft } from "@react-icons/all-files/fa/FaArrowLeft";
-import { formatPostDate } from "../helpers";
+import { formatPostDate, ModalType } from "../helpers";
 import toast from "react-hot-toast";
 import OpportunitySignUpForm from "../OpportnunitySignUpForm";
-import Link from "next/link";
 
 import {
   iONJobs_iONJob_jobPosting_contact,
   iONJobs_iONJob_jobPosting_dataFields,
   iONJobs_iONJob_jobPosting_metaData,
-} from "../../api/__generated__/iONJobs";
-import LoadingSpinner from "../LoadingSpinner";
+} from "../../api/jobs/__generated__/iONJobs";
+import { iONJobs } from "../../api/jobs/__generated__/iONJobs";
 
 interface ImportantNoticeProps {
   importantNotice: string | null | undefined;
@@ -26,11 +23,13 @@ export interface OpportunitySignUpFormProps {
 
 interface SidebarProps {
   data: {
+    slug: string | null | undefined;
     title: string | null | undefined;
     postDate: string | null | undefined;
     contact: iONJobs_iONJob_jobPosting_contact | null | undefined;
     jobCTA: string | null | undefined;
     dataFields: iONJobs_iONJob_jobPosting_dataFields | null | undefined;
+    id: number | undefined;
   };
 }
 
@@ -51,9 +50,14 @@ const handleShareButton = (url: string | null | undefined) => {
   return navigator.clipboard.writeText(url);
 };
 
-const ShareButton = () => {
-  const router = useRouter();
-  const path = `${window.location.origin}${router.asPath}`;
+const ShareButton = ({
+  id,
+  slug,
+}: {
+  id: number | undefined;
+  slug: string | null | undefined;
+}) => {
+  const path = `${window.location.origin}/?job=${slug}&modalType=${ModalType.JOB}&id=${id}`;
   return (
     <>
       <button
@@ -73,7 +77,7 @@ const ShareButton = () => {
 };
 
 const Sidebar = ({ data }: SidebarProps) => {
-  const { title, postDate, contact, dataFields, jobCTA } = data;
+  const { title, postDate, contact, dataFields, jobCTA, id, slug } = data;
 
   const contentWrapper = useRef<HTMLDivElement>(null);
 
@@ -128,7 +132,7 @@ const Sidebar = ({ data }: SidebarProps) => {
             ))}
           </section>
         )}
-        <ShareButton />
+        <ShareButton slug={slug} id={id} />
       </div>
     </>
   );
@@ -273,23 +277,17 @@ const SignUpForm = ({ cta }: OpportunitySignUpFormProps) => {
   );
 };
 
-const LoadingContainer = () => (
-  <div className="flex flex-col h-screen items-center justify-center">
-    <div className="w-8 h-8">
-      <LoadingSpinner fill="#F54932" />
-    </div>
-  </div>
-);
-
-const JobPosting = ({ id }: { id: string }) => {
-  const { data, loading, error } = useJob(id);
-
-  if (loading || error) {
-    return <LoadingContainer />;
-  }
-
+const JobPosting = ({
+  data,
+  handleClose,
+  id,
+}: {
+  data: iONJobs | undefined;
+  handleClose: () => void;
+  id: number | undefined;
+}) => {
   const { siteOptionsPage, iONJob } = data || {};
-  const { title, postDate, jobPosting } = iONJob || {};
+  const { title, postDate, jobPosting, slug } = iONJob || {};
   const {
     opportunityImportantNotice,
     jobOpportunityCta,
@@ -300,29 +298,24 @@ const JobPosting = ({ id }: { id: string }) => {
   return (
     <div className="px-4 max-w-screen-xl mx-auto">
       <div className="mb-10">
-        <Link
-          href={{
-            pathname: "/",
-            query: { scrollTo: "work-with-ion" },
-          }}
-        >
-          <a className="flex items-center">
-            <FaArrowLeft size="1.5rem" color="#F54932" />
-            <span className="ml-[.75rem] text-sm font-kraftigBold">
-              Back to Job Opportunities
-            </span>
-          </a>
-        </Link>
+        <button onClick={handleClose} className="flex items-center">
+          <FaArrowLeft size="1.5rem" color="#F54932" />
+          <span className="ml-[.75rem] text-sm font-kraftigBold">
+            Back to Job Opportunities
+          </span>
+        </button>
       </div>
       <section className="innovate-lg:flex innovate-lg:mt-32">
         <aside className="innovate-lg:w-2/5 innovate-lg:mr-4 flex-grow xl:w-1/2">
           <Sidebar
             data={{
               title: title,
+              slug: slug,
               postDate: postDate,
               contact: jobPosting?.contact,
               jobCTA: jobOpportunityCta,
               dataFields: jobPosting?.dataFields,
+              id: id,
             }}
           />
         </aside>

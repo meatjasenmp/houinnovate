@@ -4,8 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="SEO.">
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Updating api url">
+      <change afterPath="$PROJECT_DIR$/components/workWithIon/Modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/investments/__generated__/allInvestments.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/investments/__generated__/allInvestments.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/investments/__generated__/communityInvestment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/investments/__generated__/communityInvestment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/investments/__generated__/communityInvestmentTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/investments/__generated__/communityInvestmentTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/investments/__generated__/investmentsByCategory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/investments/__generated__/investmentsByCategory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/jobs/__generated__/allOpportunities.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/jobs/__generated__/allOpportunities.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/jobs/__generated__/iONJobs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/jobs/__generated__/iONJobs.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/jobs/__generated__/jobCategories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/jobs/__generated__/jobCategories.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/jobs/__generated__/opportunitiesByCategory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/jobs/__generated__/opportunitiesByCategory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/jobs/job.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/jobs/job.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/jobs/opportunities.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/jobs/opportunities.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/opportunities/__generated__/allProjectOpportunities.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/opportunities/__generated__/allProjectOpportunities.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/opportunities/__generated__/opportunityTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/opportunities/__generated__/opportunityTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/opportunities/__generated__/projectBasedOpportunity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/opportunities/__generated__/projectBasedOpportunity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/opportunities/__generated__/projectOpportunitiesByCategory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/opportunities/__generated__/projectOpportunitiesByCategory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/opportunities/__generated__/projectOpportunitiesSelect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/opportunities/__generated__/projectOpportunitiesSelect.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/helpers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/DirectCommunityInvestment.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/investments/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/Modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/jobPosting/JobPosting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/JobPosting.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/opportunities/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/Modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/opportunities/ProjectBasedOpportunities.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/ProjectBasedOpportunities.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/workWithIon/JobLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/JobLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/workWithIon/JobLinks.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/workWithIon/JobSelect.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/workWithIon/WorkWithIon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/WorkWithIon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/jobs/[id]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/jobs/[id]/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +47,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
-        <option value="TypeScript JSX File" />
         <option value="CSS File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -94,11 +122,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components/workWithIon" />
       <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/components/opportunities" />
       <recent name="$PROJECT_DIR$/api/opportunities/__generated__" />
       <recent name="$PROJECT_DIR$/api/jobs" />
-      <recent name="$PROJECT_DIR$/api/opportunities" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -133,28 +161,7 @@
       <workItem from="1669144168999" duration="36693000" />
       <workItem from="1669727489103" duration="619000" />
       <workItem from="1669793084966" duration="3249000" />
-      <workItem from="1670085264533" duration="15097000" />
-    </task>
-    <task id="LOCAL-00103" summary="Refactoring Jobs Select, misc changes.">
-      <created>1668883286905</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1668883286905</updated>
-    </task>
-    <task id="LOCAL-00104" summary="A lot of cleaning up. Refactor of Direct Community Investments so it's response is paginated. Load more functionality.">
-      <created>1668957173568</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1668957173569</updated>
-    </task>
-    <task id="LOCAL-00105" summary="Refactoring project based opportunities">
-      <created>1668960305431</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1668960305431</updated>
+      <workItem from="1670085264533" duration="20011000" />
     </task>
     <task id="LOCAL-00106" summary="hubspot test WIP.">
       <created>1668962395001</created>
@@ -478,7 +485,28 @@
       <option name="project" value="LOCAL" />
       <updated>1670174380658</updated>
     </task>
-    <option name="localTasksCounter" value="152" />
+    <task id="LOCAL-00152" summary="Updating api url">
+      <created>1670174614504</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1670174614504</updated>
+    </task>
+    <task id="LOCAL-00153" summary="Updating api url">
+      <created>1670174729049</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1670174729049</updated>
+    </task>
+    <task id="LOCAL-00154" summary="Updating api url">
+      <created>1670174814874</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1670174814874</updated>
+    </task>
+    <option name="localTasksCounter" value="155" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,7 +526,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Animation debugging." />
     <MESSAGE value="Smooth scroll implementation." />
     <MESSAGE value="Misc. tweaks." />
     <MESSAGE value="Nuking content block animation for now." />
@@ -523,7 +550,8 @@
     <MESSAGE value="Icon positioning adjustment." />
     <MESSAGE value="Fixing bug with modal progress percentage." />
     <MESSAGE value="SEO." />
-    <option name="LAST_COMMIT_MESSAGE" value="SEO." />
+    <MESSAGE value="Updating api url" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating api url" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

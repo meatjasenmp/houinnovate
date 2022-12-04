@@ -20,13 +20,13 @@ export interface communityInvestmentTypes_communityInvestmentTypes_edges_node_pa
   /**
    * The nodes of the connection, without the edges
    */
-  nodes: (communityInvestmentTypes_communityInvestmentTypes_edges_node_pages_nodes | null)[] | null;
+  nodes: communityInvestmentTypes_communityInvestmentTypes_edges_node_pages_nodes[];
 }
 
 export interface communityInvestmentTypes_communityInvestmentTypes_edges_node {
   __typename: "CommunityInvestmentType";
   /**
-   * The unique resource identifier path
+   * The unique identifier stored in the database
    */
   databaseId: number;
   /**
@@ -48,7 +48,7 @@ export interface communityInvestmentTypes_communityInvestmentTypes_edges {
   /**
    * The item at the end of the edge
    */
-  node: communityInvestmentTypes_communityInvestmentTypes_edges_node | null;
+  node: communityInvestmentTypes_communityInvestmentTypes_edges_node;
 }
 
 export interface communityInvestmentTypes_communityInvestmentTypes {
@@ -56,7 +56,7 @@ export interface communityInvestmentTypes_communityInvestmentTypes {
   /**
    * Edges for the RootQueryToCommunityInvestmentTypeConnection connection
    */
-  edges: (communityInvestmentTypes_communityInvestmentTypes_edges | null)[] | null;
+  edges: communityInvestmentTypes_communityInvestmentTypes_edges[];
 }
 
 export interface communityInvestmentTypes {

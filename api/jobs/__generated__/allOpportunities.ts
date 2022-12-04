@@ -26,9 +26,13 @@ export interface allOpportunities_iONJobs_edges_node {
    */
   title: string | null;
   /**
-   * The unique resource identifier path
+   * The unique identifier stored in the database
    */
   databaseId: number;
+  /**
+   * The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table.
+   */
+  slug: string | null;
 }
 
 export interface allOpportunities_iONJobs_edges {
@@ -36,7 +40,7 @@ export interface allOpportunities_iONJobs_edges {
   /**
    * The item at the end of the edge
    */
-  node: allOpportunities_iONJobs_edges_node | null;
+  node: allOpportunities_iONJobs_edges_node;
 }
 
 export interface allOpportunities_iONJobs {
@@ -48,7 +52,7 @@ export interface allOpportunities_iONJobs {
   /**
    * Edges for the RootQueryToIONJobConnection connection
    */
-  edges: (allOpportunities_iONJobs_edges | null)[] | null;
+  edges: allOpportunities_iONJobs_edges[];
 }
 
 export interface allOpportunities {

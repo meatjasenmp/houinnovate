@@ -121,7 +121,7 @@ const ModalContent = ({ data }: { data: communityInvestment | undefined }) => {
 };
 
 const Modal = ({ id, isOpen, setIsOpen }: ModalProps) => {
-  const { data, loading } = useInvestment(String(id));
+  const { data, loading, error } = useInvestment(String(id));
   const { communityInvestment } = data || {};
   const { progress } = communityInvestment?.communityAndOpportunityPopUps || {};
 
@@ -143,9 +143,7 @@ const Modal = ({ id, isOpen, setIsOpen }: ModalProps) => {
           <IoClose size="2rem" />
         </button>
 
-        {loading && <LoadingContainer />}
-
-        {!loading && <ModalContent data={data} />}
+        {loading || error ? <LoadingContainer /> : <ModalContent data={data} />}
       </div>
     </ReactModal>
   );
