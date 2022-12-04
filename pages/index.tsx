@@ -21,7 +21,7 @@ const Home: NextPage = () => {
   const { title, description } = data?.generalSettings as page_generalSettings;
 
   const siteOpenGraph = {
-    title: String(title),
+    title: title || "",
     description: String(description),
     url: process.env.NEXT_PUBLIC_PRODUCTION_URL,
     images: [
@@ -31,7 +31,7 @@ const Home: NextPage = () => {
         height: 600,
         alt: "Open Graph Image Alt",
         type: "image/jpeg",
-        siteName: String(title),
+        siteName: title || "",
       },
     ],
   };
@@ -52,8 +52,8 @@ const Home: NextPage = () => {
   return (
     <>
       <NextSeo
-        title={String(title)}
-        description={String(description)}
+        title={title || ""}
+        description={description || ""}
         openGraph={siteOpenGraph}
         twitter={twitter}
         additionalLinkTags={additionalLinkTags}
