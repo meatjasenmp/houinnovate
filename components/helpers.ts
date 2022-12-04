@@ -38,6 +38,25 @@ export enum Phase {
   ONGOING = "ongoing",
 }
 
+export const progressBarPercentage = (
+  currentPhase: string | null | undefined
+) => {
+  switch (currentPhase) {
+    case Phase.INITIAL:
+      return "0%";
+    case Phase.PLANNING:
+      return "15%";
+    case Phase.ONGOING:
+      return "25%";
+    case Phase.EXECUTION:
+      return "50%";
+    case Phase.MONITORING:
+      return "75%";
+    default:
+      return "100%";
+  }
+};
+
 export const handleScroll = (to: string | null | undefined) => {
   scroller.scrollTo(String(to), {
     duration: 800,
