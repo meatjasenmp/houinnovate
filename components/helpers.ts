@@ -99,7 +99,7 @@ export const useScrollToSection = (
         delay: 300,
         offset: offset ? offset : 0,
         smooth: "easeInOutQuart",
-        dynamic: true,
+        isDynamic: true,
       });
       history.pushState(null, "", `/`);
     }
