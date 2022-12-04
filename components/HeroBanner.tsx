@@ -128,7 +128,7 @@ const HeroBanner = ({ blockContent }: ComponentBlocksProps) => {
             </div>
             <div ref={videoWrapRef}>
               <div
-                className={`z-[999999999999] absolute top-0 left-0 right-0 p-5 ${
+                className={`z-[999999999999] absolute top-0 right-0 p-5 ${
                   videoIsFullscreen ? "block" : "hidden"
                 }`}
               >
