@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import ContentEditor from "../ContentEditor";
 import { BiArrowToTop } from "@react-icons/all-files/bi/BiArrowToTop";
 import { FaArrowLeft } from "@react-icons/all-files/fa/FaArrowLeft";
-import { formatPostDate, ModalType } from "../helpers";
+import { formatPostDate, ModalType, useDocumentTitle } from "../helpers";
 import toast from "react-hot-toast";
 import OpportunitySignUpForm from "../OpportnunitySignUpForm";
 
@@ -294,6 +294,8 @@ const JobPosting = ({
     aaEeo,
     opportunitySignupCta,
   } = siteOptionsPage?.opportunityPageOptions || {};
+
+  useDocumentTitle(title || "");
 
   return (
     <div className="px-4 max-w-screen-xl mx-auto">

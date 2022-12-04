@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Updating module dependencies. Nuking unused files.">
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Updating position of full screen video close button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/workWithIon/JobPosting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/JobPosting.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,14 +134,7 @@
       <workItem from="1669144168999" duration="36693000" />
       <workItem from="1669727489103" duration="619000" />
       <workItem from="1669793084966" duration="3249000" />
-      <workItem from="1670085264533" duration="20996000" />
-    </task>
-    <task id="LOCAL-00109" summary="env variables for hubspot newsletter form">
-      <created>1668963472296</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1668963472296</updated>
+      <workItem from="1670085264533" duration="21681000" />
     </task>
     <task id="LOCAL-00110" summary="Apparently the hubspot library hates environment variables.">
       <created>1668963777345</created>
@@ -478,7 +472,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670180176006</updated>
     </task>
-    <option name="localTasksCounter" value="158" />
+    <task id="LOCAL-00158" summary="Updating position of full screen video close button">
+      <created>1670180557477</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1670180557477</updated>
+    </task>
+    <option name="localTasksCounter" value="159" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,7 +499,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Nuking content block animation for now." />
     <MESSAGE value="Removing useLayoutEffect. Doesn't seem to make much of a difference." />
     <MESSAGE value="Testing" />
     <MESSAGE value="Nuking smooth scroll for now." />
@@ -523,7 +523,8 @@
     <MESSAGE value="Updating api url" />
     <MESSAGE value="WorkWithIon.tsx refactor. Modal instead of page, eliminates the scroll back to section nonsense.Removed unused generated types." />
     <MESSAGE value="Updating module dependencies. Nuking unused files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating module dependencies. Nuking unused files." />
+    <MESSAGE value="Updating position of full screen video close button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating position of full screen video close button" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
