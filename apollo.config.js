@@ -7,7 +7,7 @@ module.exports = {
     service: {
       name: "houinnovate-service",
       localSchemaFile: "./graphql-schema.json",
-      url: process.env.NEXT_PUBLIC_API_URL,
+      url: process.env.NEXT_PUBLIC_API_PRODUCTION_URL,
     },
   },
 };
