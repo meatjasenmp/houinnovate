@@ -26,7 +26,7 @@ const Home: NextPage = () => {
     url: process.env.NEXT_PUBLIC_PRODUCTION_URL,
     images: [
       {
-        url: "http://3.142.68.248/wp-content/uploads/2022/11/poster-min.jpg",
+        url: "https://iondistrict-admin.rice.edu/wp-content/uploads/2022/11/poster-min.jpg",
         width: 800,
         height: 600,
         alt: "Open Graph Image Alt",
@@ -45,7 +45,7 @@ const Home: NextPage = () => {
   const additionalLinkTags = [
     {
       rel: "icon",
-      href: "http://3.142.68.248/wp-content/uploads/2022/12/favicon.png",
+      href: "https://iondistrict-admin.rice.edu/wp-content/uploads/2022/12/favicon.png",
     },
   ];
 
