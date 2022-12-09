@@ -37,3 +37,4 @@ next-env.d.ts
 /.idea/git_toolbox_prj.xml
 
 __generated__/globalTypes.ts
+.env
