@@ -5,7 +5,7 @@ import LoadingSpinner from "../LoadingSpinner";
 import { IoClose } from "@react-icons/all-files/io5/IoClose";
 import { useOpportunity } from "../../api/opportunities/opportunity";
 import ContentEditor from "../ContentEditor";
-import { Phase, useDocumentTitle } from "../helpers";
+import { OpportunityPhases, useDocumentTitle } from "../helpers";
 import { Colors } from "../../styles/helpers";
 import { projectBasedOpportunity } from "../../api/opportunities/__generated__/projectBasedOpportunity";
 import { gsap } from "gsap";
@@ -99,7 +99,8 @@ const ModalContent = ({
                 className={`h-[4px] my-6 ${
                   index === 0 && contentBlocks.length > 1 ? "block" : "hidden"
                 } ${
-                  progress?.currentPhase === Phase.COMPLETION
+                  progress?.phases?.opportunityPhases ===
+                  OpportunityPhases.COMPLETION
                     ? "bg-white"
                     : "bg-black"
                 }`}
@@ -109,18 +110,17 @@ const ModalContent = ({
         </div>
       </div>
       <div className="mt-auto">
-        {progress?.currentPhase && (
+        {progress?.phases?.opportunityPhases && (
           <h3 className="capitalize">
-            {progress?.currentPhase}{" "}
-            {progress?.currentPhase !== Phase.COMPLETION && "Phase"}
+            {progress?.phases?.opportunityPhases}{" "}
+            {progress?.phases?.opportunityPhases !==
+              OpportunityPhases.COMPLETION && "Phase"}
           </h3>
         )}
-        {progress?.currentPhase !== Phase.COMPLETION && (
+        {progress?.phases?.opportunityPhases !==
+          OpportunityPhases.COMPLETION && (
           <div className="full-screen">
-            <ProgressBar
-              currentPhase={progress?.currentPhase}
-              accent={Colors.BLUE}
-            />
+            <ProgressBar phases={progress?.phases} accent={Colors.BLUE} />
           </div>
         )}
       </div>
@@ -143,7 +143,7 @@ const Modal = ({ id, isOpen, setIsOpen }: ModalProps) => {
     <ReactModal className="w-full h-full z-[1000] bg-white" isOpen={isOpen}>
       <div
         className={`flex flex-col overflow-y-scroll overflow-x-hidden h-full px-6 pt-6 ${
-          progress?.currentPhase === Phase.COMPLETION
+          progress?.phases?.opportunityPhases === OpportunityPhases.COMPLETION
             ? "bg-innovate-blue"
             : "bg-white"
         }`}

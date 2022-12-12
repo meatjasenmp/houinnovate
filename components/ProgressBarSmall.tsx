@@ -1,12 +1,18 @@
 import { backgroundColorMapping, Colors } from "../styles/helpers";
 import { progressBarPercentage } from "./helpers";
+import { allInvestments_communityInvestments_edges_node_communityAndOpportunityPopUps_progress_phases } from "../api/investments/__generated__/allInvestments";
+import { allProjectOpportunities_projectBasedOpportunities_edges_node_communityAndOpportunityPopUps_progress_phases } from "../api/opportunities/__generated__/allProjectOpportunities";
 
 const ProgressBarSmall = ({
-  currentPhase,
   accent,
+  phases,
 }: {
-  currentPhase: string | null | undefined;
   accent: Colors;
+  phases:
+    | allInvestments_communityInvestments_edges_node_communityAndOpportunityPopUps_progress_phases
+    | allProjectOpportunities_projectBasedOpportunities_edges_node_communityAndOpportunityPopUps_progress_phases
+    | null
+    | undefined;
 }) => {
   return (
     <div className="bg-innovate-gray-2">
@@ -16,7 +22,7 @@ const ProgressBarSmall = ({
           "progress_bar_animated",
         ].join(" ")}
         style={{
-          width: progressBarPercentage(currentPhase),
+          width: progressBarPercentage(phases),
           height: "20px",
         }}
       ></div>

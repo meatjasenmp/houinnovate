@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write ./components/**/*.tsx",
-    "gql_types": "apollo client:codegen --target typescript --endpoint=https://innovate.blackgraystudio.com/graphql"
+    "gql_types": "apollo client:codegen --target typescript --endpoint=https://iondistrict-admin.rice.edu/graphql"
   },
   "dependencies": {
     "@apollo/client": "^3.6.9",

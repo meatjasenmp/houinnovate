@@ -3,12 +3,18 @@ import { progressBarPercentage } from "./helpers";
 
 import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
+import { allInvestments_communityInvestments_edges_node_communityAndOpportunityPopUps_progress_phases } from "../api/investments/__generated__/allInvestments";
+import { allProjectOpportunities_projectBasedOpportunities_edges_node_communityAndOpportunityPopUps_progress_phases } from "../api/opportunities/__generated__/allProjectOpportunities";
 
 const ProgressBar = ({
-  currentPhase,
+  phases,
   accent,
 }: {
-  currentPhase: string | null | undefined;
+  phases:
+    | allInvestments_communityInvestments_edges_node_communityAndOpportunityPopUps_progress_phases
+    | allProjectOpportunities_projectBasedOpportunities_edges_node_communityAndOpportunityPopUps_progress_phases
+    | null
+    | undefined;
   accent: Colors;
 }) => {
   const progressBarRef = useRef<HTMLDivElement>(null);
@@ -22,7 +28,7 @@ const ProgressBar = ({
         });
         if (progressBar) {
           tl.from(progressBar, { width: 0 });
-          tl.to(progressBar, { width: progressBarPercentage(currentPhase) });
+          tl.to(progressBar, { width: progressBarPercentage(phases) });
         }
       }, progressBarRef.current);
       return () => {
@@ -36,7 +42,7 @@ const ProgressBar = ({
       <div
         className={backgroundColorMapping(accent)}
         style={{
-          width: `${progressBarPercentage(currentPhase)}`,
+          width: `${progressBarPercentage(phases)}`,
           height: "35px",
         }}
       ></div>

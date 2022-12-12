@@ -3,7 +3,7 @@ import { allProjectOpportunities_projectBasedOpportunities_edges } from "../../a
 import ArrowLinkIcon from "../ArrowLinkIcon";
 import ProgressBarSmall from "../ProgressBarSmall";
 import { Colors } from "../../styles/helpers";
-import { ModalType, Phase } from "../helpers";
+import { ModalType, OpportunityPhases } from "../helpers";
 import { gsap } from "gsap";
 
 interface OpportunityLinkProps {
@@ -46,7 +46,7 @@ const OpportunityLink = ({
 
   const { progress, alphanumericLabel } = communityAndOpportunityPopUps || {};
 
-  const { currentPhase, progressLabel, showProgressLabel } = progress || {};
+  const { progressLabel, showProgressLabel, phases } = progress || {};
 
   const handleClick = () => {
     setCurrentID(databaseId);
@@ -63,7 +63,7 @@ const OpportunityLink = ({
       ref={buttonRef}
       onClick={handleClick}
       className={`block translate-y-3 opacity-0 text-left flex flex-col justify-between border duration-300 ease-linear hover:bg-innovate-blue/50 hover:drop-shadow-md hover:border-innovate-smoke-gray hover:text-white ${
-        progress?.currentPhase === Phase.COMPLETION
+        phases?.opportunityPhases === OpportunityPhases.COMPLETION
           ? "bg-innovate-blue"
           : "bg-innovate-gray"
       }`}
@@ -77,12 +77,12 @@ const OpportunityLink = ({
         <div className="pl-6">
           <figure className="flex items-center justify-between">
             <span className="capitalize font-kraftigBold text-xl">
-              {currentPhase} Phase
+              {phases?.opportunityPhases} Phase
             </span>
             <figure className="w-12 h-12">
               <ArrowLinkIcon
                 color={
-                  progress?.currentPhase === Phase.COMPLETION
+                  phases?.opportunityPhases === OpportunityPhases.COMPLETION
                     ? "white"
                     : "black"
                 }
@@ -90,7 +90,7 @@ const OpportunityLink = ({
             </figure>
           </figure>
         </div>
-        <ProgressBarSmall currentPhase={currentPhase} accent={Colors.BLUE} />
+        <ProgressBarSmall phases={phases} accent={Colors.BLUE} />
       </div>
     </button>
   );

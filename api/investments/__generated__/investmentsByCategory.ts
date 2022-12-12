@@ -35,6 +35,13 @@ export interface investmentsByCategory_communityInvestments_edges_node_community
   name: string | null;
 }
 
+export interface investmentsByCategory_communityInvestments_edges_node_communityAndOpportunityPopUps_progress_phases {
+  __typename: "CommunityInvestment_Communityandopportunitypopups_Progress_Phases";
+  phasePercentageType: string | null;
+  opportunityPhases: string | null;
+  investmentPhases: string | null;
+}
+
 export interface investmentsByCategory_communityInvestments_edges_node_communityAndOpportunityPopUps_progress {
   __typename: "CommunityInvestment_Communityandopportunitypopups_Progress";
   progressLabel: string | null;
@@ -43,6 +50,7 @@ export interface investmentsByCategory_communityInvestments_edges_node_community
   deployed: number | null;
   currentPhase: string | null;
   progressPercentage: number | null;
+  phases: investmentsByCategory_communityInvestments_edges_node_communityAndOpportunityPopUps_progress_phases | null;
 }
 
 export interface investmentsByCategory_communityInvestments_edges_node_communityAndOpportunityPopUps {

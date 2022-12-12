@@ -4,6 +4,8 @@ import { useRouter } from "next/router";
 import { jobCategories_jobCategories_edges } from "../api/jobs/__generated__/jobCategories";
 import { communityInvestmentTypes_communityInvestmentTypes_edges } from "../api/investments/__generated__/communityInvestmentTypes";
 import { opportunityTypes_opportunityTypes_edges } from "../api/opportunities/__generated__/opportunityTypes";
+import { allInvestments_communityInvestments_edges_node_communityAndOpportunityPopUps_progress_phases } from "../api/investments/__generated__/allInvestments";
+import { allProjectOpportunities_projectBasedOpportunities_edges_node_communityAndOpportunityPopUps_progress_phases } from "../api/opportunities/__generated__/allProjectOpportunities";
 
 export enum Components {
   HERO_BANNER = "Page_Components_ComponentBlocks_HeroBanner",
@@ -50,8 +52,7 @@ export const formatPostDate = (date: string | null | undefined) => {
   });
 };
 
-export enum Phase {
-  INITIAL = "initial",
+export enum OpportunityPhases {
   PLANNING = "planning",
   EXECUTION = "execution",
   MONITORING = "monitoring",
@@ -59,22 +60,50 @@ export enum Phase {
   ONGOING = "ongoing",
 }
 
+export enum InvestmentPhases {
+  INITIAL = "initial",
+  PLANNING = "planning",
+  EXECUTION = "execution",
+  COMPLETION = "completion",
+}
+
+export enum PhaseType {
+  OPPORTUNITY = "opportunity",
+  INVESTMENT = "investment",
+}
+
 export const progressBarPercentage = (
-  currentPhase: string | null | undefined
+  phases:
+    | allInvestments_communityInvestments_edges_node_communityAndOpportunityPopUps_progress_phases
+    | allProjectOpportunities_projectBasedOpportunities_edges_node_communityAndOpportunityPopUps_progress_phases
+    | null
+    | undefined
 ) => {
-  switch (currentPhase) {
-    case Phase.INITIAL:
-      return "0%";
-    case Phase.PLANNING:
-      return "15%";
-    case Phase.ONGOING:
-      return "25%";
-    case Phase.EXECUTION:
-      return "50%";
-    case Phase.MONITORING:
-      return "75%";
-    default:
-      return "100%";
+  if (phases?.phasePercentageType === PhaseType.OPPORTUNITY) {
+    switch (phases?.opportunityPhases) {
+      case OpportunityPhases.PLANNING:
+        return "20%";
+      case OpportunityPhases.EXECUTION:
+        return "40%";
+      case OpportunityPhases.MONITORING:
+        return "60%";
+      case OpportunityPhases.COMPLETION:
+        return "80%";
+      case OpportunityPhases.ONGOING:
+        return "100%";
+    }
+  }
+  if (phases?.phasePercentageType === PhaseType.INVESTMENT) {
+    switch (phases?.investmentPhases) {
+      case InvestmentPhases.INITIAL:
+        return "25%";
+      case InvestmentPhases.PLANNING:
+        return "50%";
+      case InvestmentPhases.EXECUTION:
+        return "75%";
+      case InvestmentPhases.COMPLETION:
+        return "100%";
+    }
   }
 };
 

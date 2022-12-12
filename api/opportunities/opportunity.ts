@@ -34,6 +34,11 @@ export const useOpportunity = (id: string) => {
               deployed
               currentPhase
               progressPercentage
+              phases {
+                phasePercentageType
+                opportunityPhases
+                investmentPhases
+              }
             }
           }
         }

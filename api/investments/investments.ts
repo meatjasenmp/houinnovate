@@ -49,6 +49,11 @@ const INVESTMENTS_BY_CATEGORY = gql`
               deployed
               currentPhase
               progressPercentage
+              phases {
+                phasePercentageType
+                opportunityPhases
+                investmentPhases
+              }
             }
           }
         }
@@ -83,6 +88,11 @@ const INVESTMENTS = gql`
               deployed
               currentPhase
               progressPercentage
+              phases {
+                phasePercentageType
+                opportunityPhases
+                investmentPhases
+              }
             }
           }
         }

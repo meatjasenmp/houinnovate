@@ -35,6 +35,13 @@ export interface allProjectOpportunities_projectBasedOpportunities_edges_node_co
   name: string | null;
 }
 
+export interface allProjectOpportunities_projectBasedOpportunities_edges_node_communityAndOpportunityPopUps_progress_phases {
+  __typename: "ProjectBasedOpportunity_Communityandopportunitypopups_Progress_Phases";
+  phasePercentageType: string | null;
+  opportunityPhases: string | null;
+  investmentPhases: string | null;
+}
+
 export interface allProjectOpportunities_projectBasedOpportunities_edges_node_communityAndOpportunityPopUps_progress {
   __typename: "ProjectBasedOpportunity_Communityandopportunitypopups_Progress";
   progressLabel: string | null;
@@ -43,6 +50,7 @@ export interface allProjectOpportunities_projectBasedOpportunities_edges_node_co
   deployed: number | null;
   currentPhase: string | null;
   progressPercentage: number | null;
+  phases: allProjectOpportunities_projectBasedOpportunities_edges_node_communityAndOpportunityPopUps_progress_phases | null;
 }
 
 export interface allProjectOpportunities_projectBasedOpportunities_edges_node_communityAndOpportunityPopUps {

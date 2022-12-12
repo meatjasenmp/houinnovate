@@ -53,6 +53,11 @@ const PROJECT_OPPORTUNITIES_BY_CATEGORY = gql`
               deployed
               currentPhase
               progressPercentage
+              phases {
+                phasePercentageType
+                opportunityPhases
+                investmentPhases
+              }
             }
           }
         }
@@ -87,6 +92,11 @@ const PROJECT_OPPORTUNITIES = gql`
               deployed
               currentPhase
               progressPercentage
+              phases {
+                phasePercentageType
+                opportunityPhases
+                investmentPhases
+              }
             }
           }
         }

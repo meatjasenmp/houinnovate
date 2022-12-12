@@ -6,7 +6,7 @@ import { IoClose } from "@react-icons/all-files/io5/IoClose";
 import { useInvestment } from "../../api/investments/investment";
 import ContentEditor from "../ContentEditor";
 import { Colors } from "../../styles/helpers";
-import { Phase, useDocumentTitle } from "../helpers";
+import { InvestmentPhases, useDocumentTitle } from "../helpers";
 import { gsap } from "gsap";
 import { communityInvestment } from "../../api/investments/__generated__/communityInvestment";
 
@@ -91,7 +91,8 @@ const ModalContent = ({ data }: { data: communityInvestment | undefined }) => {
                 className={`h-[4px] my-6 ${
                   index === 0 && contentBlocks.length > 1 ? "block" : "hidden"
                 } ${
-                  progress?.currentPhase === Phase.COMPLETION
+                  progress?.phases?.investmentPhases ===
+                  InvestmentPhases.COMPLETION
                     ? "bg-white"
                     : "bg-black"
                 }`}
@@ -101,18 +102,16 @@ const ModalContent = ({ data }: { data: communityInvestment | undefined }) => {
         </div>
       </div>
       <div className="mt-auto">
-        {progress?.currentPhase && (
+        {progress?.phases?.investmentPhases && (
           <h3 className="capitalize">
-            {progress?.currentPhase}{" "}
-            {progress?.currentPhase !== Phase.COMPLETION && "Phase"}
+            {progress?.phases?.investmentPhases}{" "}
+            {progress?.phases?.investmentPhases !==
+              InvestmentPhases.COMPLETION && "Phase"}
           </h3>
         )}
-        {progress?.currentPhase !== Phase.COMPLETION && (
+        {progress?.phases?.investmentPhases !== InvestmentPhases.COMPLETION && (
           <div className="full-screen">
-            <ProgressBar
-              currentPhase={progress?.currentPhase}
-              accent={Colors.NEON}
-            />
+            <ProgressBar phases={progress?.phases} accent={Colors.NEON} />
           </div>
         )}
       </div>
@@ -134,7 +133,7 @@ const Modal = ({ id, isOpen, setIsOpen }: ModalProps) => {
     <ReactModal className="w-full h-full z-[1000] bg-white" isOpen={isOpen}>
       <div
         className={`flex flex-col overflow-y-scroll overflow-x-hidden h-full px-6 pt-6 ${
-          progress?.currentPhase === Phase.COMPLETION
+          progress?.phases?.investmentPhases === InvestmentPhases.COMPLETION
             ? "bg-innovate-neon"
             : "bg-white"
         }`}

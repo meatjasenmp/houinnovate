@@ -150,42 +150,37 @@ const JobContent = ({ data }: JobContentProps) => {
           <p className="text-sm">{metaData?.status}</p>
         </section>
       )}
-
       {metaData?.solicitationNumber && (
         <section className={MARGIN_BOTTOM}>
           <h6 className={HEADER}>Solicitation Number:</h6>
           <p className="text-sm">{metaData?.solicitationNumber}</p>
         </section>
       )}
-
+      You
       {metaData?.opportunityOpensOn && (
         <section className={MARGIN_BOTTOM}>
           <h6 className={HEADER}>Opportunity Opens On:</h6>
           <p>{metaData?.opportunityOpensOn}</p>
         </section>
       )}
-
       {metaData?.opportunityClosesOn && (
         <section className={MARGIN_BOTTOM}>
-          <h6 className={HEADER}>Opportunity Opens On:</h6>
+          <h6 className={HEADER}>Opportunity Closes On:</h6>
           <p className="text-sm">{metaData?.opportunityClosesOn}</p>
         </section>
       )}
-
       {metaData?.jobType?.name && (
         <section className={MARGIN_BOTTOM}>
           <h6 className={HEADER}>Categories:</h6>
           <p className="text-sm">{metaData?.jobType?.name}</p>
         </section>
       )}
-
       {metaData?.description && (
         <section className={MARGIN_BOTTOM}>
           <h6 className={HEADER}>Description:</h6>
           <ContentEditor content={metaData?.description} />
         </section>
       )}
-
       {downloads && (
         <section className={MARGIN_BOTTOM}>
           <h6 className={HEADER}>Files</h6>
@@ -206,7 +201,6 @@ const JobContent = ({ data }: JobContentProps) => {
           </ul>
         </section>
       )}
-
       {specifications && (
         <section className={MARGIN_BOTTOM}>
           <h6 className={HEADER}>Specifications</h6>
@@ -227,7 +221,6 @@ const JobContent = ({ data }: JobContentProps) => {
           </ul>
         </section>
       )}
-
       {addenda && (
         <section className={MARGIN_BOTTOM}>
           <h6 className={HEADER}>Addenda</h6>
@@ -248,7 +241,6 @@ const JobContent = ({ data }: JobContentProps) => {
           </ul>
         </section>
       )}
-
       {aaEeo && (
         <section className={MARGIN_BOTTOM}>
           <h6 className={HEADER}>AA/EEO</h6>
