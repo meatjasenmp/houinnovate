@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Updating gitignore">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/investments/__generated__/allInvestments.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/investments/__generated__/allInvestments.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/investments/__generated__/communityInvestment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/investments/__generated__/communityInvestment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/investments/__generated__/investmentsByCategory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/investments/__generated__/investmentsByCategory.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/investments/investment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/investments/investment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/investments/investments.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/investments/investments.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/opportunities/__generated__/allProjectOpportunities.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/opportunities/__generated__/allProjectOpportunities.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/opportunities/__generated__/projectBasedOpportunity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/opportunities/__generated__/projectBasedOpportunity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/opportunities/__generated__/projectOpportunitiesByCategory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/opportunities/__generated__/projectOpportunitiesByCategory.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/opportunities/opportunities.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/opportunities/opportunities.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/opportunities/opportunity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/opportunities/opportunity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProgressBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProgressBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProgressBarSmall.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProgressBarSmall.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/helpers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/helpers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/investments/InvestmentLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/InvestmentLink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/investments/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/investments/Modal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/opportunities/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/Modal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/opportunities/OpportunityLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/opportunities/OpportunityLink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/workWithIon/JobPosting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/workWithIon/JobPosting.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Updating the way phases works." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -158,14 +137,7 @@
       <workItem from="1670529120431" duration="916000" />
       <workItem from="1670539707430" duration="519000" />
       <workItem from="1670865449990" duration="56000" />
-      <workItem from="1670880346429" duration="5590000" />
-    </task>
-    <task id="LOCAL-00113" summary="Updating phases">
-      <created>1669050614146</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1669050614147</updated>
+      <workItem from="1670880346429" duration="6298000" />
     </task>
     <task id="LOCAL-00114" summary="Updating phases">
       <created>1669050634447</created>
@@ -503,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670620831572</updated>
     </task>
-    <option name="localTasksCounter" value="162" />
+    <task id="LOCAL-00162" summary="Updating the way phases works.">
+      <created>1670887799409</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1670887799411</updated>
+    </task>
+    <option name="localTasksCounter" value="163" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,7 +502,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Hubspot form implementation. Basic styling." />
     <MESSAGE value="Updating phase percentage" />
     <MESSAGE value="Job Link hover" />
     <MESSAGE value="Margin on job form" />
@@ -548,7 +526,8 @@
     <MESSAGE value="Document title update for job posting." />
     <MESSAGE value="Updating environment variables" />
     <MESSAGE value="Updating gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating gitignore" />
+    <MESSAGE value="Updating the way phases works." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating the way phases works." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

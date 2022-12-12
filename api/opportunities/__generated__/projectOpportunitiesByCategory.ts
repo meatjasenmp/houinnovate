@@ -48,8 +48,6 @@ export interface projectOpportunitiesByCategory_projectBasedOpportunities_edges_
   showProgressLabel: boolean | null;
   committed: number | null;
   deployed: number | null;
-  currentPhase: string | null;
-  progressPercentage: number | null;
   phases: projectOpportunitiesByCategory_projectBasedOpportunities_edges_node_communityAndOpportunityPopUps_progress_phases | null;
 }
 

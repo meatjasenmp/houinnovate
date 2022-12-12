@@ -32,8 +32,6 @@ export const useInvestment = (id: string) => {
               progressLabel
               committed
               deployed
-              currentPhase
-              progressPercentage
               phases {
                 phasePercentageType
                 opportunityPhases

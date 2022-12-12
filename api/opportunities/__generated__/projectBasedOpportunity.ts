@@ -36,8 +36,6 @@ export interface projectBasedOpportunity_projectBasedOpportunity_communityAndOpp
   progressLabel: string | null;
   committed: number | null;
   deployed: number | null;
-  currentPhase: string | null;
-  progressPercentage: number | null;
   phases: projectBasedOpportunity_projectBasedOpportunity_communityAndOpportunityPopUps_progress_phases | null;
 }
 

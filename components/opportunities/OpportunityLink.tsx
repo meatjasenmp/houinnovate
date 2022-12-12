@@ -63,7 +63,7 @@ const OpportunityLink = ({
       ref={buttonRef}
       onClick={handleClick}
       className={`block translate-y-3 opacity-0 text-left flex flex-col justify-between border duration-300 ease-linear hover:bg-innovate-blue/50 hover:drop-shadow-md hover:border-innovate-smoke-gray hover:text-white ${
-        phases?.opportunityPhases === OpportunityPhases.COMPLETION
+        phases?.opportunityPhases === OpportunityPhases.ONGOING
           ? "bg-innovate-blue"
           : "bg-innovate-gray"
       }`}
@@ -82,7 +82,7 @@ const OpportunityLink = ({
             <figure className="w-12 h-12">
               <ArrowLinkIcon
                 color={
-                  phases?.opportunityPhases === OpportunityPhases.COMPLETION
+                  phases?.opportunityPhases === OpportunityPhases.ONGOING
                     ? "white"
                     : "black"
                 }

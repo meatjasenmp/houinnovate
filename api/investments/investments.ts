@@ -47,8 +47,6 @@ const INVESTMENTS_BY_CATEGORY = gql`
               showProgressLabel
               committed
               deployed
-              currentPhase
-              progressPercentage
               phases {
                 phasePercentageType
                 opportunityPhases
@@ -86,8 +84,6 @@ const INVESTMENTS = gql`
               showProgressLabel
               committed
               deployed
-              currentPhase
-              progressPercentage
               phases {
                 phasePercentageType
                 opportunityPhases

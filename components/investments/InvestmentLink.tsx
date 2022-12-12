@@ -59,8 +59,6 @@ const InvestmentLink = ({
     );
   };
 
-  console.log(title, phases);
-
   return (
     <button
       ref={buttonRef}

@@ -36,8 +36,6 @@ export interface communityInvestment_communityInvestment_communityAndOpportunity
   progressLabel: string | null;
   committed: number | null;
   deployed: number | null;
-  currentPhase: string | null;
-  progressPercentage: number | null;
   phases: communityInvestment_communityInvestment_communityAndOpportunityPopUps_progress_phases | null;
 }
 

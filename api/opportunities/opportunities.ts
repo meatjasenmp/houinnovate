@@ -51,8 +51,6 @@ const PROJECT_OPPORTUNITIES_BY_CATEGORY = gql`
               showProgressLabel
               committed
               deployed
-              currentPhase
-              progressPercentage
               phases {
                 phasePercentageType
                 opportunityPhases
@@ -90,8 +88,6 @@ const PROJECT_OPPORTUNITIES = gql`
               showProgressLabel
               committed
               deployed
-              currentPhase
-              progressPercentage
               phases {
                 phasePercentageType
                 opportunityPhases
