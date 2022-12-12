@@ -100,7 +100,7 @@ const ModalContent = ({
                   index === 0 && contentBlocks.length > 1 ? "block" : "hidden"
                 } ${
                   progress?.phases?.opportunityPhases ===
-                  OpportunityPhases.COMPLETION
+                  OpportunityPhases.ONGOING
                     ? "bg-white"
                     : "bg-black"
                 }`}
@@ -114,11 +114,10 @@ const ModalContent = ({
           <h3 className="capitalize">
             {progress?.phases?.opportunityPhases}{" "}
             {progress?.phases?.opportunityPhases !==
-              OpportunityPhases.COMPLETION && "Phase"}
+              OpportunityPhases.ONGOING && "Phase"}
           </h3>
         )}
-        {progress?.phases?.opportunityPhases !==
-          OpportunityPhases.COMPLETION && (
+        {progress?.phases?.opportunityPhases !== OpportunityPhases.ONGOING && (
           <div className="full-screen">
             <ProgressBar phases={progress?.phases} accent={Colors.BLUE} />
           </div>
@@ -143,7 +142,7 @@ const Modal = ({ id, isOpen, setIsOpen }: ModalProps) => {
     <ReactModal className="w-full h-full z-[1000] bg-white" isOpen={isOpen}>
       <div
         className={`flex flex-col overflow-y-scroll overflow-x-hidden h-full px-6 pt-6 ${
-          progress?.phases?.opportunityPhases === OpportunityPhases.COMPLETION
+          progress?.phases?.opportunityPhases === OpportunityPhases.ONGOING
             ? "bg-innovate-blue"
             : "bg-white"
         }`}
