@@ -100,7 +100,9 @@ const ModalContent = ({
                   index === 0 && contentBlocks.length > 1 ? "block" : "hidden"
                 } ${
                   progress?.phases?.opportunityPhases ===
-                  OpportunityPhases.ONGOING
+                    OpportunityPhases.ONGOING ||
+                  progress?.phases?.opportunityPhases ===
+                    OpportunityPhases.COMPLETION
                     ? "bg-white"
                     : "bg-black"
                 }`}
@@ -114,14 +116,19 @@ const ModalContent = ({
           <h3 className="capitalize">
             {progress?.phases?.opportunityPhases}{" "}
             {progress?.phases?.opportunityPhases !==
-              OpportunityPhases.ONGOING && "Phase"}
+              OpportunityPhases.ONGOING &&
+              progress?.phases?.opportunityPhases !==
+                OpportunityPhases.COMPLETION &&
+              "Phase"}
           </h3>
         )}
-        {progress?.phases?.opportunityPhases !== OpportunityPhases.ONGOING && (
-          <div className="full-screen">
-            <ProgressBar phases={progress?.phases} accent={Colors.BLUE} />
-          </div>
-        )}
+        {progress?.phases?.opportunityPhases !== OpportunityPhases.ONGOING &&
+          progress?.phases?.opportunityPhases !==
+            OpportunityPhases.COMPLETION && (
+            <div className="full-screen">
+              <ProgressBar phases={progress?.phases} accent={Colors.BLUE} />
+            </div>
+          )}
       </div>
     </div>
   );
@@ -142,7 +149,8 @@ const Modal = ({ id, isOpen, setIsOpen }: ModalProps) => {
     <ReactModal className="w-full h-full z-[1000] bg-white" isOpen={isOpen}>
       <div
         className={`flex flex-col overflow-y-scroll overflow-x-hidden h-full px-6 pt-6 ${
-          progress?.phases?.opportunityPhases === OpportunityPhases.ONGOING
+          progress?.phases?.opportunityPhases === OpportunityPhases.ONGOING ||
+          progress?.phases?.opportunityPhases === OpportunityPhases.COMPLETION
             ? "bg-innovate-blue"
             : "bg-white"
         }`}

@@ -88,7 +88,7 @@ export const progressBarPercentage = (
       case OpportunityPhases.MONITORING:
         return "60%";
       case OpportunityPhases.COMPLETION:
-        return "80%";
+        return "100%";
       case OpportunityPhases.ONGOING:
         return "100%";
     }
