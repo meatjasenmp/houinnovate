@@ -3,12 +3,14 @@ import type { AppProps } from "next/app";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { HubspotProvider } from "next-hubspot";
 import Layout from "../components/Layout";
-import React from "react";
+import React, { useEffect } from "react";
 import { relayStylePagination } from "@apollo/client/utilities";
 import { Toaster } from "react-hot-toast";
 import ReactModal from "react-modal";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { GoogleAnalytics } from "nextjs-google-analytics";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const cache = new InMemoryCache({
@@ -36,6 +38,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <HubspotProvider>
         <Layout>
           <Toaster />
+          <GoogleAnalytics trackPageViews />
           <Component {...pageProps} />
         </Layout>
       </HubspotProvider>

@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Updating the way phases works." />
+    <list default="true" id="698e87ef-ef81-4eb4-aa21-6e02fe37bacf" name="Changes" comment="Updating what is defined as 'completion'">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,27 +143,8 @@
       <workItem from="1670539707430" duration="519000" />
       <workItem from="1670865449990" duration="56000" />
       <workItem from="1670880346429" duration="6298000" />
-    </task>
-    <task id="LOCAL-00114" summary="Updating phases">
-      <created>1669050634447</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1669050634447</updated>
-    </task>
-    <task id="LOCAL-00115" summary="Updating phases">
-      <created>1669061604146</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1669061604148</updated>
-    </task>
-    <task id="LOCAL-00116" summary="Responsive tweaks.">
-      <created>1669066793145</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1669066793146</updated>
+      <workItem from="1670888952356" duration="962000" />
+      <workItem from="1671142645850" duration="762000" />
     </task>
     <task id="LOCAL-00117" summary="Responsive tweaks.">
       <created>1669132772742</created>
@@ -482,7 +468,28 @@
       <option name="project" value="LOCAL" />
       <updated>1670887799411</updated>
     </task>
-    <option name="localTasksCounter" value="163" />
+    <task id="LOCAL-00163" summary="Updating the way phases works.">
+      <created>1670889196415</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1670889196415</updated>
+    </task>
+    <task id="LOCAL-00164" summary="Updating the way phases works.">
+      <created>1670889320490</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1670889320490</updated>
+    </task>
+    <task id="LOCAL-00165" summary="Updating what is defined as 'completion'">
+      <created>1671142919579</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1671142919579</updated>
+    </task>
+    <option name="localTasksCounter" value="166" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,7 +509,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Updating phase percentage" />
     <MESSAGE value="Job Link hover" />
     <MESSAGE value="Margin on job form" />
     <MESSAGE value="Testing animation" />
@@ -527,7 +533,8 @@
     <MESSAGE value="Updating environment variables" />
     <MESSAGE value="Updating gitignore" />
     <MESSAGE value="Updating the way phases works." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating the way phases works." />
+    <MESSAGE value="Updating what is defined as 'completion'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating what is defined as 'completion'" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
