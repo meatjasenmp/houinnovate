@@ -156,7 +156,6 @@ const JobContent = ({ data }: JobContentProps) => {
           <p className="text-sm">{metaData?.solicitationNumber}</p>
         </section>
       )}
-      You
       {metaData?.opportunityOpensOn && (
         <section className={MARGIN_BOTTOM}>
           <h6 className={HEADER}>Opportunity Opens On:</h6>
