@@ -45,7 +45,7 @@ const Home: NextPage = () => {
   const additionalLinkTags = [
     {
       rel: "icon",
-      href: "http://iondistrict-admin.rice.edu/wp-content/uploads/2023/01/favicon.png",
+      href: "https://iondistrict-admin.rice.edu/wp-content/uploads/2023/01/favicon.png",
     },
   ];
 
